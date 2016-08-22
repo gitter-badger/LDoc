@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LDoc
+namespace LCore.LDoc
     {
     public static class LDoc
         {
