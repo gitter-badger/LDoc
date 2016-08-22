@@ -38,7 +38,5 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
             Paths.Each(this._Output.WriteLine);
             }
-
-
         }
     }
