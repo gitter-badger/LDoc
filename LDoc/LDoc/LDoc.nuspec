@@ -3,14 +3,14 @@
   <metadata>
     <id>LDoc</id>
     <version>0.9.0.9</version>
-    <title>LUnit</title>
+    <title>LDoc</title>
     <authors>Code Singularity</authors>
     <owners>Code Singularity</owners>
     <licenseUrl>https://github.com/CodeSingularity/LUnit/LICENSE</licenseUrl>
     <projectUrl>https://github.com/CodeSingularity/LUnit</projectUrl>
     <iconUrl>http://codesingularity.info/Content/Icon.ico</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Attribute-based testing, nullability testing, trait-based code coverage</description>
+    <description>Automatic MD documentation generation</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags></tags>
