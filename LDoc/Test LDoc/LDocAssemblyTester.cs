@@ -21,7 +21,6 @@ namespace Test_LDoc
     public class LDocMarkdownGenerator : MarkdownGenerator
         {
         protected override Assembly[] DocumentAssemblies => new[] {Assembly.GetAssembly(typeof(LDoc))};
-
-        override 
+        
         }
     }
