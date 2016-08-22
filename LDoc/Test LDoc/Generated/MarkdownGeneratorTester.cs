@@ -41,9 +41,17 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         [Fact]
         [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(MarkdownGenerator)+ "." + nameof(MarkdownGenerator.Generate) + "(Boolean)")]
         public void Generate()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.MarkdownGenerator.Generate
-        }
+            {
+            var Gen = new LUnitMarkdownGenerator();
+
+            Gen.Generate(WriteToDisk: true);
+
+            List<GitHubMarkdown> Markdown = Gen.GetAllMarkdown();
+
+            List<string> Paths = Markdown.Convert(MD => MD?.FilePath);
+
+            Paths.Each(this._Output.WriteLine);
+            }
 
         [Fact]
         [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(MarkdownGenerator)+ "." + nameof(MarkdownGenerator.GetAllMarkdown) + "() => List<GitHubMarkdown>")]

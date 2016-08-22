@@ -98,6 +98,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="LCore\LDoc\Markdown\MarkdownGeneratorTester.cs" />
     <Compile Include="LDocAssemblyTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

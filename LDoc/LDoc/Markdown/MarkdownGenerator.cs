@@ -825,7 +825,6 @@ namespace LCore.LDoc.Markdown
             }
 
 
-
         private List<KeyValuePair<MemberInfo[], GitHubMarkdown>> GetTypeMemberMarkdown(Type Type)
             {
             return this.Markdown_Member.Select(Member => Member.Key.First()?.DeclaringType?.Name == Type.Name);
