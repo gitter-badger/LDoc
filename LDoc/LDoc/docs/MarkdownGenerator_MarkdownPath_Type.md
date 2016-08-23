@@ -1,9 +1,10 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
 ###MarkdownGenerator
-[View Source](../Markdown/MarkdownGenerator.cs)
+[View Source](MarkdownGenerator.md)
 #MarkdownPath_Type
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Source code Available](http://b.repl.ca/v1/Source%20code-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs) [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Source code Available](http://b.repl.ca/v1/Source%20code-Available-brightgreen.png "")](MarkdownGenerator.md) [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
 
 ####InstanceMethod
 ######public [String] MarkdownPath_Type([Type] Type);

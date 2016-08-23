@@ -1,3 +1,4 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ###ExcludeFromMarkdownAttribute
 ![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")

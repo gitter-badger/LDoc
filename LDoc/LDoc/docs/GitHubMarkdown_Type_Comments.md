@@ -1,6 +1,7 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown_Type.md)
 ###GitHubMarkdown_Type
-[View Source](../Markdown/GitHubMarkdown_Type.cs)
+[View Source](GitHubMarkdown_Type.md)
 #Comments
 ---
 

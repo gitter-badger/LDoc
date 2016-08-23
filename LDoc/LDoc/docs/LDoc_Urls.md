@@ -1,3 +1,4 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](LDoc.md)
 ###LDoc
 [View Source](../LDoc.cs)

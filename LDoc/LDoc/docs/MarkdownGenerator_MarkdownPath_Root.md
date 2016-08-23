@@ -1,6 +1,7 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
 ###MarkdownGenerator
-[View Source](../Markdown/MarkdownGenerator.cs)
+[View Source](MarkdownGenerator.md)
 #MarkdownPath_Root
 ---
 

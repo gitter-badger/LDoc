@@ -415,6 +415,9 @@ namespace LCore.LDoc.Markdown
 
             Out.Add(MD.Badge("Framework", $"Version {this.GetFrameworkVersion()}", GitHubMarkdown.BadgeColor.Blue));
 
+            // TODO: add output file badge
+            // TODO: add file size badge
+
             // TODO: add total classes
             // TODO: add total lines of code (non 'empty')
             // TODO: add total extension methods

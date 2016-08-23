@@ -1,3 +1,4 @@
+![](LDoc/Content/LDoc-banner-small.png "")
 ##Table of Contents
  - [Home](README.md)
  - [Coverage Summary](CoverageSummary.md)
@@ -9,7 +10,6 @@
  - [GitHubMarkdown_Assembly](LDoc/docs/GitHubMarkdown_Assembly.md)
  - [GitHubMarkdown_Member](LDoc/docs/GitHubMarkdown_Member.md)
  - [GitHubMarkdown_Type](LDoc/docs/GitHubMarkdown_Type.md)
- - [LUnitMarkdownGenerator](LDoc/docs/LUnitMarkdownGenerator.md)
  - [MarkdownGenerator](LDoc/docs/MarkdownGenerator.md)
  - [Urls](LDoc/docs/Urls.md)
  - [BadgeColor](LDoc/docs/BadgeColor.md)

@@ -1,6 +1,7 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown_Member.md)
 ###GitHubMarkdown_Member
-[View Source](../Markdown/GitHubMarkdown_Member.cs)
+[View Source](GitHubMarkdown_Member.md)
 #Members
 ---
 

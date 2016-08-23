@@ -1,3 +1,4 @@
+![](Content/LDoc-banner-small.png "")
 [Home](../README.md)
 ##LDoc
 ![Framework Version v4.0.30319](http://b.repl.ca/v1/Framework-Version%20v4.0.30319-blue.png "")
@@ -8,7 +9,6 @@
  - [GitHubMarkdown_Assembly](docs/GitHubMarkdown_Assembly.md)
  - [GitHubMarkdown_Member](docs/GitHubMarkdown_Member.md)
  - [GitHubMarkdown_Type](docs/GitHubMarkdown_Type.md)
- - [LUnitMarkdownGenerator](docs/LUnitMarkdownGenerator.md)
  - [MarkdownGenerator](docs/MarkdownGenerator.md)
  - [Urls](docs/Urls.md)
  - [BadgeColor](docs/BadgeColor.md)

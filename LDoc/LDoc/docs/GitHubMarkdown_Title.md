@@ -1,6 +1,7 @@
+![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown.md)
 ###GitHubMarkdown
-[View Source](../Markdown/GitHubMarkdown.cs)
+[View Source](GitHubMarkdown.md)
 #Title
 ---
 
