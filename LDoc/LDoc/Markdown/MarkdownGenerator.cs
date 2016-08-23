@@ -80,10 +80,13 @@ namespace LCore.LDoc.Markdown
 
             this.WriteIntro(MD);
 
-            if (!string.IsNullOrEmpty(this.HowToInstall_Code(MD)))
+            if (!this.GetType().GetMembers().Has(
+                Member => Member.IsDeclaredMember() &&
+                    (Member.Name == nameof(this.HowToInstall))))
                 {
                 MD.Header("Installation Instructions", Size: 3);
-                MD.Code(this.HowToInstall_Code(MD).Split("\r\n"));
+
+                this.HowToInstall(MD);
                 }
 
             this.Markdown_Assembly.Each(Document =>
@@ -604,13 +607,10 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this value to indicate installation instructions.
         /// </summary>
-        protected virtual string HowToInstall_Text([NotNull]GitHubMarkdown MD) => "";
+        protected virtual void HowToInstall([NotNull] GitHubMarkdown MD)
+            {
 
-        /// <summary>
-        /// Override this value to indicate installation instructions.
-        /// This text will be formatted as C# code below <see cref="HowToInstall_Text"/>
-        /// </summary>
-        protected virtual string HowToInstall_Code([NotNull]GitHubMarkdown MD) => "";
+            }
 
 
         private void WriteFooter([NotNull]GitHubMarkdown MD)

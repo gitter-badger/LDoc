@@ -1,6 +1,7 @@
 ![](LDoc/Content/LDoc-banner-large.png "")
 ##Home
 ###Installation Instructions
+Add LDoc as a nuget package:
 ```cs
 Install-Package LDoc
 ```

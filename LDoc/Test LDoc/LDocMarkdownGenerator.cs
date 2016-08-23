@@ -5,7 +5,6 @@ using System.Reflection;
 using LCore.Extensions;
 using LCore.LDoc;
 using LCore.LDoc.Markdown;
-using LCore.LUnit;
 
 namespace Test_LDoc
     {
@@ -18,16 +17,11 @@ namespace Test_LDoc
 
             }
 
-        /// <summary>
-        /// Override this value to indicate installation instructions.
-        /// </summary>
-        protected override string HowToInstall_Text(GitHubMarkdown MD) => $"Add {nameof(LCore.LUnit)} as a nuget package:";
-
-        /// <summary>
-        /// Override this value to indicate installation instructions.
-        /// This text will be formatted as C# code below <see cref="MarkdownGenerator.HowToInstall_Text"/>
-        /// </summary>
-        protected override string HowToInstall_Code(GitHubMarkdown MD) => $"Install-Package {nameof(LCore.LDoc)}";
+        protected override void HowToInstall(GitHubMarkdown MD)
+            {
+            MD.Line($"Add {nameof(LCore.LDoc)} as a nuget package:");
+            MD.Code(new[] { $"Install-Package {nameof(LCore.LDoc)}" });
+            }
 
         /// <summary>
         /// Override this value to display a large image on top ofthe main document
