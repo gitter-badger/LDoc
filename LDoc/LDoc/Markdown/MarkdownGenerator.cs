@@ -45,19 +45,19 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Assembly-generated markdown documents.
         /// </summary>
-        protected Dictionary<Assembly, GitHubMarkdown> Markdown_Assembly { get; } =
-            new Dictionary<Assembly, GitHubMarkdown>();
+        protected Dictionary<Assembly, GitHubMarkdown_Assembly> Markdown_Assembly { get; } =
+            new Dictionary<Assembly, GitHubMarkdown_Assembly>();
 
         /// <summary>
         /// Type-generated markdown documents.
         /// </summary>
-        protected Dictionary<Type, GitHubMarkdown> Markdown_Type { get; } = new Dictionary<Type, GitHubMarkdown>();
+        protected Dictionary<Type, GitHubMarkdown_Type> Markdown_Type { get; } = new Dictionary<Type, GitHubMarkdown_Type>();
 
         /// <summary>
         /// Member-generated markdown documents.
         /// </summary>
-        protected Dictionary<MemberInfo[], GitHubMarkdown> Markdown_Member { get; } =
-            new Dictionary<MemberInfo[], GitHubMarkdown>();
+        protected Dictionary<MemberInfo[], GitHubMarkdown_Member> Markdown_Member { get; } =
+            new Dictionary<MemberInfo[], GitHubMarkdown_Member>();
 
 
         #endregion
@@ -69,8 +69,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected virtual GitHubMarkdown GenerateRootMarkdown()
             {
-            var MD = this.GetMarkdown(this.MarkdownPath_Root, this.MarkdownTitle_MainReadme);
-
+            var MD = new GitHubMarkdown(this, this.MarkdownPath_Root, this.MarkdownTitle_MainReadme);
+            this.WriteHeader(MD);
             MD.Header(this.MarkdownTitle_MainReadme, Size: 2);
 
             if (!string.IsNullOrEmpty(this.HowToInstall_Code(MD)))
@@ -100,7 +100,9 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected virtual GitHubMarkdown GenerateTableOfContentsMarkdown()
             {
-            var MD = this.GetMarkdown(this.MarkdownPath_TableOfContents, this.MarkdownTitle_TableOfContents);
+            var MD = new GitHubMarkdown(this, this.MarkdownPath_TableOfContents, this.MarkdownTitle_TableOfContents);
+
+            this.WriteHeader(MD);
 
             MD.Header(this.MarkdownTitle_TableOfContents, Size: 2);
 
@@ -119,7 +121,9 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected virtual GitHubMarkdown GenerateCoverageSummaryMarkdown()
             {
-            var MD = this.GetMarkdown(this.MarkdownPath_CoverageSummary, this.MarkdownTitle_CoverageSummary);
+            var MD = new GitHubMarkdown(this, this.MarkdownPath_CoverageSummary, this.MarkdownTitle_CoverageSummary);
+
+            this.WriteHeader(MD);
 
             MD.Header(this.MarkdownTitle_CoverageSummary);
 
@@ -144,9 +148,12 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates markdown for an Assembly
         /// </summary>
-        protected virtual GitHubMarkdown GenerateMarkdown(Assembly Assembly)
+        protected virtual GitHubMarkdown_Assembly GenerateMarkdown(Assembly Assembly)
             {
-            var MD = this.GetMarkdown(this.MarkdownPath_Assembly(Assembly), Assembly.GetName().Name);
+            var MD = new GitHubMarkdown_Assembly(Assembly, this, this.MarkdownPath_Assembly(Assembly), Assembly.GetName().Name);
+
+            this.WriteHeader(MD);
+
             var Coverage = new AssemblyCoverage(Assembly);
             ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
@@ -173,9 +180,12 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates markdown for a Type
         /// </summary>
-        protected virtual GitHubMarkdown GenerateMarkdown(Type Type)
+        protected virtual GitHubMarkdown_Type GenerateMarkdown(Type Type)
             {
-            var MD = this.GetMarkdown(this.MarkdownPath_Type(Type), Type.Name);
+            var MD = new GitHubMarkdown_Type(Type, this, this.MarkdownPath_Type(Type), Type.Name);
+
+            this.WriteHeader(MD);
+
             var Coverage = new TypeCoverage(Type);
             var Comments = Type.GetComments();
 
@@ -208,11 +218,13 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates markdown for a group of Members
         /// </summary>
-        protected virtual GitHubMarkdown GenerateMarkdown(MemberInfo[] MemberGroup)
+        protected virtual GitHubMarkdown_Member GenerateMarkdown(MemberInfo[] MemberGroup)
             {
             var Member = MemberGroup.First();
 
-            var MD = this.GetMarkdown(this.MarkdownPath_Member(Member), Member.Name);
+            var MD = new GitHubMarkdown_Member(MemberGroup, this, this.MarkdownPath_Member(Member), Member.Name);
+
+            this.WriteHeader(MD);
 
             MD.Line(MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Member.DeclaringType)), "Up"));
 
@@ -241,11 +253,7 @@ namespace LCore.LDoc.Markdown
                     ? " static"
                     : "";
 
-                string ReturnType = Method.ReturnType == typeof(void)
-                    ? "void"
-                    : Method.ReturnType.FullyQualifiedName();
-
-                ReturnType = MD.Link(this.GetTypeLink(MD, Method.ReturnType), $"{Method.ReturnType.GetGenericName()}");
+                string ReturnType = MD.Link(this.GetTypeLink(MD, Method.ReturnType), $"{Method.ReturnType.GetGenericName()}");
 
 
                 string Parameters = Method.GetParameters()
@@ -318,6 +326,11 @@ namespace LCore.LDoc.Markdown
         #endregion
 
         #region Helpers +
+
+        private string GetFrameworkVersion()
+            {
+            return this.GetType().Assembly.ImageRuntimeVersion;
+            }
 
         /// <summary>
         /// Writes the default header, including the large or small
@@ -397,77 +410,92 @@ namespace LCore.LDoc.Markdown
             {
             var Assembly = Coverage?.CoveringAssembly;
 
+            // ReSharper disable once UseObjectOrCollectionInitializer
             var Out = new List<string>();
 
-            // TODO: add Assembly badges
+            Out.Add(MD.Badge("Framework", $"Version {this.GetFrameworkVersion()}", GitHubMarkdown.BadgeColor.Blue));
+
+            // TODO: add total classes
+            // TODO: add total lines of code (non 'empty')
+            // TODO: add total extension methods
 
             return Out;
             }
 
+
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
+        [CanBeNull]
         protected virtual List<string> GetBadges([NotNull] GitHubMarkdown MD, [CanBeNull] TypeCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Type = Coverage?.CoveringType;
 
-            var Out = new List<string>();
-
-            string TypeDescription =
-                Type.IsStatic() ? "Static Class" :
-                Type.IsAbstract ? "Abstract Class" :
-                Type.IsInterface ? "Interface" :
-                "Object Class";
-
-            const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
-
-            List<KeyValuePair<MemberInfo[], GitHubMarkdown>> Members = this.GetTypeMemberMarkdown(Type);
-
-            uint TotalCoverable = 0;
-            uint Covered = 0;
-            uint TotalDocumentable = 0;
-            uint Documented = 0;
-
-            Members.Each(MemberGroup =>
+            if (Type != null)
                 {
-                    MemberGroup.Key.Each(Member =>
-                        {
-                            TotalDocumentable++;
+                var Out = new List<string>();
 
-                            var MemberComments = Member.GetComments();
+                string TypeDescription =
+                    Type.IsStatic() ? "Static Class" :
+                    Type.IsAbstract ? "Abstract Class" :
+                    Type.IsEnum ? "Enum " :
+                    Type.IsInterface ? "Interface" :
+                    "Object Class";
 
-                            if (MemberComments != null)
-                                Documented++;
+                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
 
-                            if (Member is MethodInfo)
-                                {
-                                TotalCoverable++;
+                List<KeyValuePair<MemberInfo[], GitHubMarkdown_Member>> Members = this.GetTypeMemberMarkdown(Type);
 
-                                var MemberCoverage = new MethodCoverage((MethodInfo)Member);
+                uint TotalCoverable = 0;
+                uint Covered = 0;
+                uint TotalDocumentable = 0;
+                uint Documented = 0;
 
-                                if (MemberCoverage.IsCovered)
-                                    Covered++;
-                                }
-                        });
-                });
+                // TODO: add total lines of code (non 'empty')
+
+                Members.Each(MemberGroup =>
+                    {
+                        MemberGroup.Key.Each(Member =>
+                            {
+                                TotalDocumentable++;
+
+                                var MemberComments = Member.GetComments();
+
+                                if (MemberComments != null)
+                                    Documented++;
+
+                                if (Member is MethodInfo)
+                                    {
+                                    TotalCoverable++;
+
+                                    var MemberCoverage = new MethodCoverage((MethodInfo)Member);
+
+                                    if (MemberCoverage.IsCovered)
+                                        Covered++;
+                                    }
+                            });
+                    });
 
 
-            Out.Add(MD.Badge("Type", TypeDescription, TypeColor));
+                Out.Add(MD.Badge("Type", TypeDescription));
 
-            if (TotalDocumentable > 0)
-                {
-                int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
-                Out.Add(MD.Badge("Documented", $"{DocumentedPercent}%", this.GetColorByPercentage(DocumentedPercent)));
+                if (TotalDocumentable > 0)
+                    {
+                    int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
+                    Out.Add(MD.Badge("Documented", $"{DocumentedPercent}%", this.GetColorByPercentage(DocumentedPercent)));
+                    }
+
+                if (TotalCoverable > 0)
+                    {
+                    int CoveredPercent = Covered.PercentageOf(TotalCoverable);
+                    Out.Add(MD.Badge("Covered", $"{CoveredPercent}%", this.GetColorByPercentage(CoveredPercent)));
+                    }
+
+                return Out;
                 }
 
-            if (TotalCoverable > 0)
-                {
-                int CoveredPercent = Covered.PercentageOf(TotalCoverable);
-                Out.Add(MD.Badge("Covered", $"{CoveredPercent}%", this.GetColorByPercentage(CoveredPercent)));
-                }
-
-            return Out;
+            return null;
             }
 
         /// <summary>
@@ -493,7 +521,7 @@ namespace LCore.LDoc.Markdown
                 const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
 
 
-                Out.Add(MD.Badge("Type", TypeDescription, TypeColor));
+                Out.Add(MD.Badge("Type", TypeDescription));
                 Out.Add(MD.Badge("Documented", Comments != null ? "Yes" : "No",
                     Comments != null ? GitHubMarkdown.BadgeColor.BrightGreen : GitHubMarkdown.BadgeColor.Red));
                 if (this.DocumentUnitCoverage)
@@ -513,10 +541,10 @@ namespace LCore.LDoc.Markdown
                     Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
                         MD.Badge("Source code", "Available", GitHubMarkdown.BadgeColor.BrightGreen)));
 
+                // TODO: add total lines of code (non 'empty')
 
-                //Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
-                //    MD.Badge("Assertions", Coverage.AssertionCount, GitHubMarkdown.BadgeColor.BrightGreen)));
-                // TODO: Count assertions by scanning test code '.should' 'assert'
+                Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
+                    MD.Badge("Assertions", $"{Coverage.AssertionsMade}", GitHubMarkdown.BadgeColor.BrightGreen)));
 
                 // TODO: Add Test Status: Passing / Failing / Untested
                 }
@@ -534,18 +562,6 @@ namespace LCore.LDoc.Markdown
             // TODO: google unknown types
 
             return "";
-            }
-
-        /// <summary>
-        /// Gets a new markdown document with header added.
-        /// </summary>
-        protected GitHubMarkdown GetMarkdown(string Path, string Title)
-            {
-            var MD = new GitHubMarkdown(this, Path, Title);
-
-            this.WriteHeader(MD);
-
-            return MD;
             }
 
         #endregion
@@ -834,7 +850,7 @@ namespace LCore.LDoc.Markdown
             }
 
 
-        private List<KeyValuePair<MemberInfo[], GitHubMarkdown>> GetTypeMemberMarkdown(Type Type)
+        private List<KeyValuePair<MemberInfo[], GitHubMarkdown_Member>> GetTypeMemberMarkdown(Type Type)
             {
             return this.Markdown_Member.Select(Member => Member.Key.First()?.DeclaringType?.Name == Type.Name);
             }

@@ -467,7 +467,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Adds a Buckler badge, hosted on http://b.repl.ca/
         /// </summary>
-        public string Badge(string Left, string Right, BadgeColor Color)
+        public string Badge(string Left, string Right, BadgeColor Color = BadgeColor.LightGrey)
             {
             return this.Badge(Left, Right, Color.ToString().ToLower());
             }
