@@ -13,6 +13,11 @@ namespace Test_LDoc
         {
         protected override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
 
+        protected override void WriteIntro(GitHubMarkdown MD)
+            {
+
+            }
+
         /// <summary>
         /// Override this value to indicate installation instructions.
         /// </summary>
