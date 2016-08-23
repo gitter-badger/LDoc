@@ -33,6 +33,11 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected abstract Assembly[] DocumentAssemblies { get; }
 
+        /// <summary>
+        /// Write the markdown intro to your project, in the front page README.
+        /// </summary>
+        protected abstract void WriteIntro(GitHubMarkdown MD);
+
         #region Variables + 
 
         /// <summary>
@@ -73,6 +78,8 @@ namespace LCore.LDoc.Markdown
             this.WriteHeader(MD);
             MD.Header(this.MarkdownTitle_MainReadme, Size: 2);
 
+            this.WriteIntro(MD);
+
             if (!string.IsNullOrEmpty(this.HowToInstall_Code(MD)))
                 {
                 MD.Header("Installation Instructions", Size: 3);
@@ -89,6 +96,8 @@ namespace LCore.LDoc.Markdown
 
                 MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
             });
+
+            // TODO: add related projects 
 
             this.WriteFooter(MD);
 
