@@ -157,7 +157,7 @@ namespace LCore.LDoc.Markdown
 
             // TODO add Assembly comments
 
-            // TODO separate Static and Object classes
+            // TODO sort by class type
 
             this.Markdown_Type.Select(Type => Type.Key.GetAssembly()?.GetName().Name == Assembly.GetName().Name)
                 .Each(MD2 =>
@@ -190,8 +190,6 @@ namespace LCore.LDoc.Markdown
                 {
                 MD.Line(MD.Link(MD.GetRelativePath(TypePath), "View Source"));
                 }
-
-            // TODO view source
 
             if (!string.IsNullOrEmpty(Comments?.Summary))
                 {
@@ -243,14 +241,16 @@ namespace LCore.LDoc.Markdown
                     ? " static"
                     : "";
 
-                // TODO: Add return type link
                 string ReturnType = Method.ReturnType == typeof(void)
                     ? "void"
                     : Method.ReturnType.FullyQualifiedName();
 
-                // TODO: Add parameter type link
-                string Parameters = Method.GetParameters().Convert(Param =>
-                    $"{Param.ParameterType.GetGenericName()} {Param.Name}").Combine(", ");
+                ReturnType = MD.Link(this.GetTypeLink(MD, Method.ReturnType), $"{Method.ReturnType.GetGenericName()}");
+
+
+                string Parameters = Method.GetParameters()
+                    .Convert(Param => $"{MD.Link(this.GetTypeLink(MD, Param.ParameterType), $"{Param.ParameterType.GetGenericName()}")} {Param.Name}")
+                    .Combine(", ");
 
                 List<string> Badges = this.GetBadges(MD, Coverage, Comments);
 
@@ -275,9 +275,6 @@ namespace LCore.LDoc.Markdown
                         new[] {"Parameter", "Optional", "Type", "Description"}
                         };
 
-                    // TODO: Add parameter type link
-                    MD.Line(MD.Highlight("__Add parameter type link__"));
-
                     Method.GetParameters().Each((ParamIndex, Param) =>
                     {
                         Table.Add(new[]
@@ -286,7 +283,7 @@ namespace LCore.LDoc.Markdown
                             Param.IsOptional
                                 ? "Yes"
                                 : "No",
-                            Param.ParameterType.GetGenericName(),
+                            MD.Link(this.GetTypeLink(MD, Param.ParameterType), Param.ParameterType.GetGenericName()),
                             Comments?.Parameters.GetAt(ParamIndex)?.Obj2
                             });
                     });
@@ -296,11 +293,7 @@ namespace LCore.LDoc.Markdown
 
                 MD.Header("Returns", Size: 4);
 
-                // TODO: Add return type link
-
-                MD.Header(Method.ReturnType == typeof(void)
-                    ? "void"
-                    : Method.ReturnType.GetGenericName(), Size: 6);
+                MD.Header(MD.Link(this.GetTypeLink(MD, Method.ReturnType), Method.ReturnType.GetGenericName()), Size: 6);
 
                 MD.Line(Comments?.Returns);
 
@@ -520,6 +513,9 @@ namespace LCore.LDoc.Markdown
                     Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
                         MD.Badge("Source code", "Available", GitHubMarkdown.BadgeColor.BrightGreen)));
 
+
+                //Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
+                //    MD.Badge("Assertions", Coverage.AssertionCount, GitHubMarkdown.BadgeColor.BrightGreen)));
                 // TODO: Count assertions by scanning test code '.should' 'assert'
 
                 // TODO: Add Test Status: Passing / Failing / Untested
@@ -527,6 +523,18 @@ namespace LCore.LDoc.Markdown
             return Out;
             }
 
+        protected virtual string GetTypeLink(GitHubMarkdown MD, Type Type)
+            {
+            // TODO: resolve local types
+
+            // TODO: resolve github types
+
+            // TODO: resolve microsoft-documented types
+
+            // TODO: google unknown types
+
+            return "";
+            }
 
         /// <summary>
         /// Gets a new markdown document with header added.
@@ -547,42 +555,43 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this value to display a large image on top ofthe main document
         /// </summary>
-        protected virtual string BannerImage_Large(GitHubMarkdown MD) => "";
+        protected virtual string BannerImage_Large([NotNull]GitHubMarkdown MD) => "";
 
         /// <summary>
         /// Override this value to display a small banner image on top of sub-documents
         /// </summary>
-        protected virtual string BannerImage_Small(GitHubMarkdown MD) => "";
+        protected virtual string BannerImage_Small([NotNull]GitHubMarkdown MD) => "";
 
         /// <summary>
         /// Override this value to display a large image in the upper right corner of the main document
         /// </summary>
-        protected virtual string LogoImage_Large(GitHubMarkdown MD) => "";
+        protected virtual string LogoImage_Large([NotNull]GitHubMarkdown MD) => "";
 
         /// <summary>
         /// Override this value to display a small image in the upper right corner of sub-documents
         /// </summary>
-        protected virtual string LogoImage_Small(GitHubMarkdown MD) => "";
+        protected virtual string LogoImage_Small([NotNull]GitHubMarkdown MD) => "";
 
 
         /// <summary>
         /// Override this value to indicate installation instructions.
         /// </summary>
-        protected virtual string HowToInstall_Text(GitHubMarkdown MD) => "";
+        protected virtual string HowToInstall_Text([NotNull]GitHubMarkdown MD) => "";
 
         /// <summary>
         /// Override this value to indicate installation instructions.
         /// This text will be formatted as C# code below <see cref="HowToInstall_Text"/>
         /// </summary>
-        protected virtual string HowToInstall_Code(GitHubMarkdown MD) => "";
+        protected virtual string HowToInstall_Code([NotNull]GitHubMarkdown MD) => "";
 
 
-        private void WriteFooter(GitHubMarkdown MD)
+        private void WriteFooter([NotNull]GitHubMarkdown MD)
             {
-            // TODO: Add custom copyright
-            this.WriteCustomFooter(MD);
-
             MD.HorizontalRule();
+
+            // TODO: Add custom copyright
+
+            this.WriteCustomFooter(MD);
             MD.Table(new[]
                 {
                 new[]
@@ -640,34 +649,34 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates the document title for an Assembly
         /// </summary>
-        public virtual string MarkdownPath_Assembly(Assembly Assembly) =>
+        public virtual string MarkdownPath_Assembly([NotNull]Assembly Assembly) =>
             $"{Assembly.GetRootPath()}\\{Assembly.GetName().Name.CleanFileName()}.md";
 
         /// <summary>
         /// Generates the document title for a Type
         /// </summary>
-        public virtual string MarkdownPath_Type(Type Type) =>
+        public virtual string MarkdownPath_Type([NotNull]Type Type) =>
             $"{Type.Assembly.GetRootPath()}\\{this.MarkdownPath_Documentation}\\" +
             $"{Type.Name.CleanFileName()}.md";
 
         /// <summary>
         /// Generates the document title for a Member
         /// </summary>
-        public virtual string MarkdownPath_Member(MemberInfo Member) =>
+        public virtual string MarkdownPath_Member([NotNull]MemberInfo Member) =>
             $"{Member.GetAssembly().GetRootPath()}\\{this.MarkdownPath_Documentation}\\" +
             $"{Member.DeclaringType?.Name.CleanFileName()}_{Member.Name.CleanFileName()}.md";
 
         /// <summary>
         /// Determines if a Type should be included in documentation
         /// </summary>
-        protected virtual bool IncludeType(Type Type) =>
+        protected virtual bool IncludeType([NotNull]Type Type) =>
             !Type.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
             !Type.HasAttribute<IExcludeFromMarkdownAttribute>();
 
         /// <summary>
         /// Determines if a Member should be included in documentation
         /// </summary>
-        protected virtual bool IncludeMember(MemberInfo Member) =>
+        protected virtual bool IncludeMember([NotNull]MemberInfo Member) =>
             !Member.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
             !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
             !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
