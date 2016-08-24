@@ -42,7 +42,10 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected abstract void Home_Intro(GitHubMarkdown MD);
 
-        public virtual List<ProjectInfo> Home_RelatedProjects { get; }
+        /// <summary>
+        /// Override this value to link to related projects at the bottom of your home document
+        /// </summary>
+        public virtual List<ProjectInfo> Home_RelatedProjects => new List<ProjectInfo>();
 
         /// <summary>
         /// Override this value to indicate installation instructions.
@@ -75,8 +78,8 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Member-generated markdown documents.
         /// </summary>
-        protected Dictionary<MemberInfo[], GitHubMarkdown_Member> Markdown_Member { get; } =
-            new Dictionary<MemberInfo[], GitHubMarkdown_Member>();
+        protected Dictionary<MemberInfo[], GitHubMarkdown_MemberGroup> Markdown_Member { get; } =
+            new Dictionary<MemberInfo[], GitHubMarkdown_MemberGroup>();
 
 
         #endregion
@@ -192,11 +195,10 @@ namespace LCore.LDoc.Markdown
             MD.Line(MD.Link(MD.GetRelativePath(this.MarkdownPath_Root), this.Language.LinkText_Home));
 
             MD.Header($"{Assembly.GetName().Name}", Size: 2);
+
             MD.Line(this.GetBadges(MD, Coverage, Comments).JoinLines(" "));
 
-            // TODO add Assembly comments
-
-            // TODO sort by class type
+            // TODO sort by class namespace
 
             this.Markdown_Type.Select(Type => Type.Key.GetAssembly()?.GetName().Name == Assembly.GetName().Name)
                 .Each(MD2 =>
@@ -250,11 +252,11 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates markdown for a group of Members
         /// </summary>
-        protected virtual GitHubMarkdown_Member GenerateMarkdown(MemberInfo[] MemberGroup)
+        protected virtual GitHubMarkdown_MemberGroup GenerateMarkdown(MemberInfo[] MemberGroup)
             {
             var Member = MemberGroup.First();
 
-            var MD = new GitHubMarkdown_Member(MemberGroup, this, this.MarkdownPath_Member(Member), Member.Name);
+            var MD = new GitHubMarkdown_MemberGroup(MemberGroup, this, this.MarkdownPath_Member(Member), Member.Name);
 
             this.WriteHeader(MD);
 
@@ -486,7 +488,7 @@ namespace LCore.LDoc.Markdown
 
                 const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
 
-                List<KeyValuePair<MemberInfo[], GitHubMarkdown_Member>> Members = this.GetTypeMemberMarkdown(Type);
+                List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> Members = this.GetTypeMemberMarkdown(Type);
 
                 uint TotalCoverable = 0;
                 uint Covered = 0;
@@ -592,6 +594,13 @@ namespace LCore.LDoc.Markdown
             return Out;
             }
 
+        /// <summary>
+        /// Gets a link to a type, whether it is internal to this project, a type on GitHub,
+        /// a type in related projects
+        /// or a System type.
+        /// 
+        /// Otherwise, fall back on a google search.
+        /// </summary>
         protected virtual string GetTypeLink(GitHubMarkdown MD, Type Type)
             {
             // TODO: resolve local types
@@ -603,6 +612,11 @@ namespace LCore.LDoc.Markdown
             // TODO: google unknown types
 
             return "";
+            }
+
+        private List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> GetTypeMemberMarkdown(Type Type)
+            {
+            return this.Markdown_Member.Select(Member => Member.Key.First()?.DeclaringType?.Name == Type.Name);
             }
 
         #endregion
@@ -852,12 +866,11 @@ namespace LCore.LDoc.Markdown
             return AllMarkdown;
             }
 
+        #region Language +
 
-        private List<KeyValuePair<MemberInfo[], GitHubMarkdown_Member>> GetTypeMemberMarkdown(Type Type)
-            {
-            return this.Markdown_Member.Select(Member => Member.Key.First()?.DeclaringType?.Name == Type.Name);
-            }
-
+        /// <summary>
+        /// Override this value to customize the text used for markdown generation.
+        /// </summary>
         public virtual Text Language => new Text
             {
             MainReadme = "Home",
@@ -927,35 +940,120 @@ namespace LCore.LDoc.Markdown
             /// </summary>
             public string TableOfContentsFile { get; set; }
 
+            /// <summary>
+            /// Badge title for project framework
+            /// </summary>
             public string Badge_Framework { get; set; }
+            /// <summary>
+            /// Badge title for object Type
+            /// </summary>
             public string Badge_Type { get; set; }
+            /// <summary>
+            /// Badge title for member Documented
+            /// </summary>
             public string Badge_Documented { get; set; }
+            /// <summary>
+            /// Badge title for member Assertions
+            /// </summary>
             public string Badge_Assertions { get; set; }
+
+            /// <summary>
+            /// Badge title for member UnitTested
+            /// </summary>
             public string Badge_UnitTested { get; set; }
+            /// <summary>
+            /// Badge title for member Covered
+            /// </summary>
             public string Badge_Covered { get; set; }
+            /// <summary>
+            /// Badge title for member Source Code
+            /// </summary>
             public string Badge_SourceCode { get; set; }
+            /// <summary>
+            /// Badge title for member Source Code Available
+            /// </summary>
             public string Badge_SourceCodeAvailable { get; set; }
+            /// <summary>
+            /// Badge title for member Source Code Unavailable
+            /// </summary>
             public string Badge_SourceCodeUnavailable { get; set; }
+            /// <summary>
+            /// Badge title for member AttributeTests
+            /// </summary>
             public string Badge_AttributeTests { get; set; }
 
+            /// <summary>
+            /// Badge title for Assemblies Header
+            /// </summary>
             public string Header_Assemblies { get; set; }
+            /// <summary>
+            /// Badge title for Installation Instructions Header
+            /// </summary>
             public string Header_InstallationInstructions { get; set; }
+
+            /// <summary>
+            /// Header for related projects
+            /// </summary>
             public string Header_RelatedProjects { get; set; }
+
+            /// <summary>
+            /// Header for method parameters
+            /// </summary>
             public string Header_MethodParameters { get; set; }
+
+            /// <summary>
+            /// Header for method returns
+            /// </summary>
             public string Header_MethodReturns { get; set; }
+            /// <summary>
+            /// Header for method summary
+            /// </summary>
             public string Header_Summary { get; set; }
+
+            /// <summary>
+            /// Header for method examples
+            /// </summary>
             public string Header_MethodExamples { get; set; }
 
+
+            /// <summary>
+            /// Link text for view source
+            /// </summary>
             public string LinkText_ViewSource { get; set; }
+            /// <summary>
+            /// Link text for home
+            /// </summary>
             public string LinkText_Home { get; set; }
+            /// <summary>
+            /// Link text for up
+            /// </summary>
             public string LinkText_Up { get; set; }
 
+            /// <summary>
+            /// Alt text for the logo
+            /// </summary>
             public string AltText_Logo { get; set; }
 
+            /// <summary>
+            /// Table header text method parameter
+            /// </summary>
             public string TableHeaderText_MethodParameter { get; set; }
+
+            /// <summary>
+            /// Table header text optional
+            /// </summary>
             public string TableHeaderText_Optional { get; set; }
+
+            /// <summary>
+            /// Table header text type
+            /// </summary>
             public string TableHeaderText_Type { get; set; }
+            /// <summary>
+            /// Table header text description
+            /// </summary>
             public string TableHeaderText_Description { get; set; }
             }
+
+        #endregion
         }
     }

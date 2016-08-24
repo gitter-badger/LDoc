@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ###MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 80%](http://b.repl.ca/v1/Documented-80%25-green.png "") ![Covered 100%](http://b.repl.ca/v1/Covered-100%25-brightgreen.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 78%](http://b.repl.ca/v1/Documented-78%25-green.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 [View Source]
 ######Summary
 
@@ -12,11 +12,15 @@
  - [MarkdownPath_Member](MarkdownGenerator_MarkdownPath_Member.md)
  - [Generate](MarkdownGenerator_Generate.md)
  - [GetAllMarkdown](MarkdownGenerator_GetAllMarkdown.md)
+ - [Home_RelatedProjects](MarkdownGenerator_Home_RelatedProjects.md)
  - [GeneratedMarkdownRoot](MarkdownGenerator_GeneratedMarkdownRoot.md)
  - [MarkdownPath_Root](MarkdownGenerator_MarkdownPath_Root.md)
  - [MarkdownPath_TableOfContents](MarkdownGenerator_MarkdownPath_TableOfContents.md)
  - [MarkdownPath_CoverageSummary](MarkdownGenerator_MarkdownPath_CoverageSummary.md)
+ - [Language](MarkdownGenerator_Language.md)
  - [CSharpLanguage](MarkdownGenerator_CSharpLanguage.md)
+ - [MarkdownPath_RootFile](MarkdownGenerator_MarkdownPath_RootFile.md)
+ - [Text](MarkdownGenerator_Text.md)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

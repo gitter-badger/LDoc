@@ -4,7 +4,7 @@
 [View Source](GitHubMarkdown.md)
 #BlankLine
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Source code Available](http://b.repl.ca/v1/Source%20code-Available-brightgreen.png "")](GitHubMarkdown.md) [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md) [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
 
 ####InstanceMethod
 ######public [void] BlankLine();

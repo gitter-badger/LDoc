@@ -14,7 +14,7 @@ namespace LCore.LDoc
         public static class Urls
         {
             /// <summary>
-            /// GitHub URL for the LDoc proejct
+            /// GitHub URL for the LDoc project
             /// </summary>
             public const string GitHubUrl = "https://github.com/CodeSingularity/LDoc";
         }
