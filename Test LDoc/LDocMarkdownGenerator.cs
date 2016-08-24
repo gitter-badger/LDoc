@@ -12,7 +12,7 @@ namespace Test_LDoc
         {
         protected override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
 
-        protected override void WriteIntro(GitHubMarkdown MD)
+        protected override void Home_Intro(GitHubMarkdown MD)
             {
 
             }

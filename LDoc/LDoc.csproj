@@ -96,6 +96,7 @@
     <Compile Include="Markdown\GitHubMarkdown_Member.cs" />
     <Compile Include="Markdown\GitHubMarkdown_Type.cs" />
     <Compile Include="Markdown\MarkdownGenerator.cs" />
+    <Compile Include="Markdown\ProjectInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

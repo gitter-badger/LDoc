@@ -36,7 +36,9 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Write the markdown intro to your project, in the front page README.
         /// </summary>
-        protected abstract void WriteIntro(GitHubMarkdown MD);
+        protected abstract void Home_Intro(GitHubMarkdown MD);
+
+        public virtual List<ProjectInfo> Home_RelatedProjects { get; }
 
         #region Variables + 
 
@@ -78,7 +80,7 @@ namespace LCore.LDoc.Markdown
             this.WriteHeader(MD);
             MD.Header(this.MarkdownTitle_MainReadme, Size: 2);
 
-            this.WriteIntro(MD);
+            this.Home_Intro(MD);
 
             if (!this.GetType().GetMembers().Has(
                 Member => Member.IsDeclaredMember() &&
@@ -100,7 +102,13 @@ namespace LCore.LDoc.Markdown
                 MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
             });
 
-            // TODO: add related projects 
+            if (!this.Home_RelatedProjects.IsEmpty())
+                MD.Header("Related Projects", Size: 3);
+
+            MD.UnorderedList(
+                this.Home_RelatedProjects.Convert(
+                    Project => $"{MD.Link(Project.Url, Project.Name)} {Project.Description}").Array());
+
 
             this.WriteFooter(MD);
 
