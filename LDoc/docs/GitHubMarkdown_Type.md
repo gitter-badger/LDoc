@@ -7,6 +7,7 @@
 
             Generates markdown for a Type.
             
+ - [Type](GitHubMarkdown_Type_Type.md)
  - [Comments](GitHubMarkdown_Type_Comments.md)
  - [Coverage](GitHubMarkdown_Type_Coverage.md)
 ---

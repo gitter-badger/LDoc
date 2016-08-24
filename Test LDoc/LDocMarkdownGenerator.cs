@@ -10,14 +10,14 @@ namespace Test_LDoc
     {
     public class LDocMarkdownGenerator : MarkdownGenerator
         {
-        protected override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
+        public override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
 
-        protected override void Home_Intro(GitHubMarkdown MD)
+        public override void Home_Intro(GitHubMarkdown MD)
             {
 
             }
 
-        protected override void HowToInstall(GitHubMarkdown MD)
+        public override void HowToInstall(GitHubMarkdown MD)
             {
             MD.Line($"Add {nameof(LCore.LDoc)} as a nuget package:");
             MD.Code(new[] { $"Install-Package {nameof(LCore.LDoc)}" });
@@ -26,13 +26,13 @@ namespace Test_LDoc
         /// <summary>
         /// Override this value to display a large image on top ofthe main document
         /// </summary>
-        protected override string BannerImage_Large(GitHubMarkdown MD) =>
+        public override string BannerImage_Large(GitHubMarkdown MD) =>
             MD.GetRelativePath($"{typeof(LDoc).GetAssembly().GetRootPath()}\\Content\\{nameof(LDoc)}-banner-large.png");
 
         /// <summary>
         /// Override this value to display a small banner image on top of sub-documents
         /// </summary>
-        protected override string BannerImage_Small(GitHubMarkdown MD) =>
+        public override string BannerImage_Small(GitHubMarkdown MD) =>
             MD.GetRelativePath($"{typeof(LDoc).GetAssembly().GetRootPath()}\\Content\\{nameof(LDoc)}-banner-small.png");
 
         /*

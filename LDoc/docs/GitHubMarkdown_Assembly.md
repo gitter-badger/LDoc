@@ -7,6 +7,7 @@
 
             Generates markdown for an Assembly.
             
+ - [Assembly](GitHubMarkdown_Assembly_Assembly.md)
  - [Comments](GitHubMarkdown_Assembly_Comments.md)
  - [Coverage](GitHubMarkdown_Assembly_Coverage.md)
 ---
