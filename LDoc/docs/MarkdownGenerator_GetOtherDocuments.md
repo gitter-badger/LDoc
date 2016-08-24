@@ -3,11 +3,12 @@
 ###MarkdownGenerator
 [View Source](MarkdownGenerator.md)
 #GetOtherDocuments
-
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md) [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
-
 ####InstanceMethod
 ######public [Dictionary<String, GitHubMarkdown>] GetOtherDocuments();
+
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md)
+
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
 ######Summary
 ####Returns
 ######[Dictionary<String, GitHubMarkdown>]

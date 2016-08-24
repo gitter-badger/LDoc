@@ -2,18 +2,23 @@
 [Home](../README.md)
 ##LDoc
 ![Framework Version v4.0.30319](http://b.repl.ca/v1/Framework-Version%20v4.0.30319-blue.png "")
- - [LDoc](docs/LDoc.md)
- - [ExcludeFromMarkdownAttribute](docs/ExcludeFromMarkdownAttribute.md)
- - [GitHubMarkdown](docs/GitHubMarkdown.md)
- - [IExcludeFromMarkdownAttribute](docs/IExcludeFromMarkdownAttribute.md)
- - [GitHubMarkdown_Assembly](docs/GitHubMarkdown_Assembly.md)
- - [GitHubMarkdown_MemberGroup](docs/GitHubMarkdown_MemberGroup.md)
- - [GitHubMarkdown_Type](docs/GitHubMarkdown_Type.md)
- - [MarkdownGenerator](docs/MarkdownGenerator.md)
- - [ProjectInfo](docs/ProjectInfo.md)
- - [Urls](docs/Urls.md)
- - [BadgeColor](docs/BadgeColor.md)
- - [Text](docs/Text.md)
+
+LCore.LDoc
+------
+#[LDoc](docs/LDoc.md)
+#[Urls](docs/Urls.md)
+LCore.LDoc.Markdown
+------
+#[BadgeColor](docs/BadgeColor.md)
+#[ExcludeFromMarkdownAttribute](docs/ExcludeFromMarkdownAttribute.md)
+#[GitHubMarkdown](docs/GitHubMarkdown.md)
+#[GitHubMarkdown_Assembly](docs/GitHubMarkdown_Assembly.md)
+#[GitHubMarkdown_MemberGroup](docs/GitHubMarkdown_MemberGroup.md)
+#[GitHubMarkdown_Type](docs/GitHubMarkdown_Type.md)
+#[IExcludeFromMarkdownAttribute](docs/IExcludeFromMarkdownAttribute.md)
+#[MarkdownGenerator](docs/MarkdownGenerator.md)
+#[ProjectInfo](docs/ProjectInfo.md)
+#[Text](docs/Text.md)
 ---
 
 [Home](../README.md) | [Table of Contents](../TableOfContents.md) | 

@@ -5,6 +5,7 @@ using System.Reflection;
 using LCore.Extensions;
 using LCore.Interfaces;
 using LCore.LUnit;
+// ReSharper disable ExpressionIsAlwaysNull
 
 namespace LCore.LDoc.Markdown
     {
@@ -55,13 +56,42 @@ namespace LCore.LDoc.Markdown
 
                 this.Header($"{this.Assembly.GetName().Name}", Size: 2);
 
-                // ReSharper disable once ExpressionIsAlwaysNull
-                this.Line(MarkdownGenerator.GetBadges(this, Coverage, Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Info(this, Coverage, Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
 
-                // TODO sort by class namespace
+                List<KeyValuePair<Type, GitHubMarkdown_Type>> Types = MarkdownGenerator.GetAssemblyTypeMarkdown(this.Assembly);
 
-                MarkdownGenerator.GetAssemblyTypeMarkdown(this.Assembly).Each(
-                    MD2 => this.Line($" - {this.Link(this.GetRelativePath(MarkdownGenerator.MarkdownPath_Type(MD2.Key)), MD2.Key.Name)}"));
+                Dictionary<string, List<KeyValuePair<Type, GitHubMarkdown_Type>>> NamespaceTypes = Types.Group(Type => Type.Key.Namespace);
+
+                List<string> Namespaces = NamespaceTypes.Keys.List();
+
+                Namespaces.Sort();
+
+                MarkdownGenerator.GetBadges_Info(this, Coverage, Comments);
+                MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments);
+
+                Namespaces.Each(Namespace =>
+                {
+                    this.HeaderUnderline(Namespace, Size: 2);
+
+                    List<KeyValuePair<Type, GitHubMarkdown_Type>> NamespaceTypeMarkdown = NamespaceTypes[Namespace];
+
+                    NamespaceTypeMarkdown.Sort(Type => Type.Key.Name);
+
+                    // TODO namespace badges
+
+                    NamespaceTypeMarkdown.Each(Type =>
+                    {
+                        this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()));
+
+                        var TypeComments = Type.Value.Comments;
+                        var TypeCoverage = Type.Value.Coverage;
+
+                        MarkdownGenerator.GetBadges_Info(this, TypeCoverage, TypeComments);
+                        MarkdownGenerator.GetBadges_Coverage(this, TypeCoverage, TypeComments);
+
+                    });
+                });
 
                 MarkdownGenerator.WriteFooter(this);
                 }

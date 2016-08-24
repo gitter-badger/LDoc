@@ -2,7 +2,7 @@
 #Coverage Summary
 #Assemblies
 ##LDoc
-![Framework Version v4.0.30319](http://b.repl.ca/v1/Framework-Version%20v4.0.30319-blue.png "")
+
 ---
 
 [Home](README.md) | [Table of Contents](TableOfContents.md) | 

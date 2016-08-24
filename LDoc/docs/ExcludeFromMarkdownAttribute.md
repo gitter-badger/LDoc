@@ -2,6 +2,7 @@
 [Up](../LDoc.md)
 ###ExcludeFromMarkdownAttribute
 ![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
 [View Source](../Attributes/ExcludeFromMarkdownAttribute.cs)
 ######Summary
 

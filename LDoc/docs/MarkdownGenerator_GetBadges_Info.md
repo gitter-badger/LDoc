@@ -2,25 +2,27 @@
 [Up](MarkdownGenerator.md)
 ###MarkdownGenerator
 [View Source](MarkdownGenerator.md)
-#LogoImage_Large
+#GetBadges_Info
 ####InstanceMethod
-######public [String] LogoImage_Large([GitHubMarkdown] MD);
+######public [List<String>] GetBadges_Info([GitHubMarkdown] MD, [AssemblyCoverage] Coverage, [ICodeComment] Comments);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
 ######Summary
 
-            Override this value to display a large image in the upper right corner of the main document
+            Override this method to customize badges included in type generated markdown documents.
             
 ######Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | [GitHubMarkdown] | 
+Coverage | No | [AssemblyCoverage] | 
+Comments | No | [ICodeComment] | 
 
 ####Returns
-######[String]
+######[List<String>]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

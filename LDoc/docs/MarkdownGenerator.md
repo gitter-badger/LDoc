@@ -1,7 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ###MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 83%](http://b.repl.ca/v1/Documented-83%25-green.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 86%](http://b.repl.ca/v1/Documented-86%25-green.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 14%](http://b.repl.ca/v1/Covered-14%25-red.png "")
 [View Source]
 ######Summary
 
@@ -18,10 +19,11 @@
  - [TableOfContentsLink](MarkdownGenerator_TableOfContentsLink.md)
  - [HomeLink](MarkdownGenerator_HomeLink.md)
  - [GetOtherDocuments](MarkdownGenerator_GetOtherDocuments.md)
- - [GetBadges](MarkdownGenerator_GetBadges.md)
  - [GetTypeLink](MarkdownGenerator_GetTypeLink.md)
  - [GetTypeMemberMarkdown](MarkdownGenerator_GetTypeMemberMarkdown.md)
  - [GetAssemblyTypeMarkdown](MarkdownGenerator_GetAssemblyTypeMarkdown.md)
+ - [GetBadges_Info](MarkdownGenerator_GetBadges_Info.md)
+ - [GetBadges_Coverage](MarkdownGenerator_GetBadges_Coverage.md)
  - [BannerImage_Large](MarkdownGenerator_BannerImage_Large.md)
  - [BannerImage_Small](MarkdownGenerator_BannerImage_Small.md)
  - [LogoImage_Large](MarkdownGenerator_LogoImage_Large.md)

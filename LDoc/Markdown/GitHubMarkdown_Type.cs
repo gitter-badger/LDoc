@@ -53,8 +53,8 @@ namespace LCore.LDoc.Markdown
                 this.Line(this.Link(this.GetRelativePath(MarkdownGenerator.MarkdownPath_Assembly(this.Type.GetAssembly())), MarkdownGenerator.Language.LinkText_Up));
 
                 this.Header($"{this.Type.Name}", Size: 3);
-                this.Line(MarkdownGenerator.GetBadges(this, Coverage, Comments).JoinLines(" "));
-
+                this.Line(MarkdownGenerator.GetBadges_Info(this, Coverage, Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
                 string TypePath = this.Type.FindClassFile();
 
                 if (!string.IsNullOrEmpty(TypePath))

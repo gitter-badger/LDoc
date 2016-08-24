@@ -78,16 +78,17 @@ namespace LCore.LDoc.Markdown
                         .Convert(Param => $"{this.Link(MarkdownGenerator.GetTypeLink(this, Param.ParameterType), $"{Param.ParameterType.GetGenericName()}")} {Param.Name}")
                         .Combine(", ");
 
-                    List<string> Badges = MarkdownGenerator.GetBadges(this, Coverage, Comments);
 
-                    this.Line("");
-                    this.Line(Badges.JoinLines(" "));
-                    this.Line("");
 
                     this.Header($"{Static}Method", Size: 4);
 
 
                     this.Header($"public{StaticLower} {ReturnType} {Member.Name}({Parameters});", Size: 6);
+
+                    this.Line("");
+                    this.Line(MarkdownGenerator.GetBadges_Info(this, Coverage, Comments).JoinLines(" "));
+                    this.Line("");
+                    this.Line(MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
 
                     this.Header(MarkdownGenerator.Language.Header_Summary, Size: 6);
                     this.Line(Comments?.Summary);

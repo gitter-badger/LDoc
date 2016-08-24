@@ -3,11 +3,12 @@
 ###GitHubMarkdown
 [View Source](GitHubMarkdown.md)
 #Gravatar
-
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md) [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
-
 ####InstanceMethod
 ######public [String] Gravatar([String] ID, [Int32] Size);
+
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md)
+
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
 ######Summary
 
             Returns an image link to a Gravatar avatar based on the MD5 of the supplied 

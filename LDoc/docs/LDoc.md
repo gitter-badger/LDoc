@@ -2,6 +2,7 @@
 [Up](../LDoc.md)
 ###LDoc
 ![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-lightgrey.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-lightgrey.png "")
 [View Source](../LDoc.cs)
 ######Summary
 

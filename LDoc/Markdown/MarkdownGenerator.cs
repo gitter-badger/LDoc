@@ -12,6 +12,7 @@ using LCore.LUnit;
 // ReSharper disable UnusedParameter.Global
 // ReSharper disable MemberCanBeProtected.Global
 // ReSharper disable UnusedVariable
+// ReSharper disable VirtualMemberNeverOverridden.Global
 
 // ReSharper disable VirtualMemberNeverOverriden.Global
 
@@ -114,7 +115,8 @@ namespace LCore.LDoc.Markdown
                 ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
                 MD.Header(Document.Value.Title, Size: 2);
-                MD.Line(this.GetBadges(MD, Coverage, Comments).JoinLines(" "));
+                //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
+                MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
 
                 MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
             });
@@ -173,7 +175,8 @@ namespace LCore.LDoc.Markdown
                     ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
                     MD.Header(AssemblyMD.Value.Title, Size: 2);
-                    MD.Line(this.GetBadges(MD, Coverage, Comments).JoinLines(" "));
+                    //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
+                    MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
 
                 });
 
@@ -287,159 +290,6 @@ namespace LCore.LDoc.Markdown
             return new Dictionary<string, GitHubMarkdown>();
             }
 
-        /// <summary>
-        /// Override this method to customize badges included in type generated markdown documents.
-        /// </summary>
-        public virtual List<string> GetBadges([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Assembly = Coverage?.CoveringAssembly;
-
-            // ReSharper disable once UseObjectOrCollectionInitializer
-            var Out = new List<string>();
-
-            Out.Add(MD.Badge(this.Language.Badge_Framework,
-                $"Version {this.GetFrameworkVersion()}",
-                GitHubMarkdown.BadgeColor.Blue));
-
-            // TODO: add output file badge
-            // TODO: add file size badge
-
-            // TODO: add total classes
-            // TODO: add total lines of code (non 'empty')
-            // TODO: add total extension methods
-
-            return Out;
-            }
-
-
-        /// <summary>
-        /// Override this method to customize badges included in type generated markdown documents.
-        /// </summary>
-        [CanBeNull]
-        public virtual List<string> GetBadges([NotNull] GitHubMarkdown MD, [CanBeNull] TypeCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Type = Coverage?.CoveringType;
-
-            if (Type != null)
-                {
-                var Out = new List<string>();
-
-                string TypeDescription =
-                    Type.IsStatic() ? "Static Class" :
-                    Type.IsAbstract ? "Abstract Class" :
-                    Type.IsEnum ? "Enum " :
-                    Type.IsInterface ? "Interface" :
-                    "Object Class";
-
-                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
-
-                List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> Members = this.GetTypeMemberMarkdown(Type);
-
-                uint TotalCoverable = 0;
-                uint Covered = 0;
-                uint TotalDocumentable = 0;
-                uint Documented = 0;
-
-                // TODO: add total lines of code (non 'empty')
-
-                Members.Each(MemberGroup =>
-                    {
-                        MemberGroup.Key.Each(Member =>
-                            {
-                                TotalDocumentable++;
-
-                                var MemberComments = Member.GetComments();
-
-                                if (MemberComments != null)
-                                    Documented++;
-
-                                if (Member is MethodInfo)
-                                    {
-                                    TotalCoverable++;
-
-                                    var MemberCoverage = new MethodCoverage((MethodInfo)Member);
-
-                                    if (MemberCoverage.IsCovered)
-                                        Covered++;
-                                    }
-                            });
-                    });
-
-
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
-
-                if (TotalDocumentable > 0)
-                    {
-                    int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
-                    Out.Add(MD.Badge(this.Language.Badge_Documented, $"{DocumentedPercent}%", this.GetColorByPercentage(DocumentedPercent)));
-                    }
-
-                if (TotalCoverable > 0)
-                    {
-                    int CoveredPercent = Covered.PercentageOf(TotalCoverable);
-                    Out.Add(MD.Badge(this.Language.Badge_Covered, $"{CoveredPercent}%", this.GetColorByPercentage(CoveredPercent)));
-                    }
-
-                return Out;
-                }
-
-            return null;
-            }
-
-        /// <summary>
-        /// Override this method to customize badges included in member generated markdown documents.
-        /// </summary>
-        public virtual List<string> GetBadges([NotNull] GitHubMarkdown MD, [CanBeNull] MethodCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Member = Coverage?.CoveringMember;
-
-            var Out = new List<string>();
-
-            if (Member != null)
-                {
-                string SourcePath = Member.DeclaringType?.FindClassFile();
-
-                string MethodScope = Member.IsPublic ? "Public" : "Protected";
-
-                if (Member.IsAbstract)
-                    MethodScope = $"Abstract {MethodScope}";
-
-                string TypeDescription = Member.IsStatic ? "Static Method" : $"{MethodScope} Method";
-                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
-
-
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
-                Out.Add(MD.Badge(this.Language.Badge_Documented, Comments != null ? "Yes" : "No",
-                    Comments != null ? GitHubMarkdown.BadgeColor.BrightGreen : GitHubMarkdown.BadgeColor.Red));
-                if (this.DocumentUnitCoverage)
-                    Out.Add(MD.Badge(this.Language.Badge_UnitTested, Coverage.MemberTraitFound ? "Yes" : "No",
-                        Coverage.MemberTraitFound
-                            ? GitHubMarkdown.BadgeColor.BrightGreen
-                            : GitHubMarkdown.BadgeColor.LightGrey));
-                if (this.DocumentAttributeCoverage)
-                    Out.Add(MD.Badge(this.Language.Badge_AttributeTests, $"{Coverage.AttributeCoverage}",
-                        Coverage.AttributeCoverage > 0u
-                            ? GitHubMarkdown.BadgeColor.BrightGreen
-                            : GitHubMarkdown.BadgeColor.LightGrey));
-
-                if (SourcePath == null)
-                    Out.Add(MD.Badge(this.Language.Badge_SourceCode, this.Language.Badge_SourceCodeUnavailable, GitHubMarkdown.BadgeColor.Red));
-                else
-                    Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
-                        MD.Badge(this.Language.Badge_SourceCode, this.Language.Badge_SourceCodeAvailable, GitHubMarkdown.BadgeColor.BrightGreen)));
-
-                // TODO: add total lines of code (non 'empty')
-
-                Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
-                    MD.Badge(this.Language.Badge_Assertions, $"{Coverage.AssertionsMade}", GitHubMarkdown.BadgeColor.BrightGreen)));
-
-                // TODO: Add Test Status: Passing / Failing / Untested
-                }
-            return Out;
-            }
 
         /// <summary>
         /// Gets a link to a type, whether it is public to this project, a type on GitHub,
@@ -469,11 +319,303 @@ namespace LCore.LDoc.Markdown
             return this.Markdown_Member.Select(Member => Member.Key.First()?.DeclaringType?.Name == Type.Name);
             }
 
+        /// <summary>
+        /// Get all Type markdown for a given <paramref name="Assembly"/>
+        /// </summary>
         public virtual List<KeyValuePair<Type, GitHubMarkdown_Type>> GetAssemblyTypeMarkdown(Assembly Assembly)
             {
             return this.Markdown_Type.Select(Type => Type.Key.GetAssembly()?.GetName().Name == Assembly.GetName().Name);
             }
         #endregion
+
+        #region Badges +
+
+        #region Assembly Badges
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            var Assembly = Coverage?.CoveringAssembly;
+
+            // ReSharper disable once UseObjectOrCollectionInitializer
+            var Out = new List<string>();
+
+            Out.Add(MD.Badge(this.Language.Badge_Framework,
+                $"Version {this.GetFrameworkVersion()}",
+                GitHubMarkdown.BadgeColor.Blue));
+
+            // TODO: add output file badge
+            // TODO: add file size badge
+
+            // TODO: add total classes
+            // TODO: add total members
+            // TODO: add total lines of code (non 'empty')
+            // TODO: add total extension methods
+            // TODO: add total todo count
+            // TODO: add total bug count
+            // TODO: add total not implemented count
+
+            return Out;
+            }
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            var Assembly = Coverage?.CoveringAssembly;
+
+            // ReSharper disable once UseObjectOrCollectionInitializer
+            var Out = new List<string>();
+
+
+            return Out;
+            }
+
+        #endregion
+
+        // TODO: namespace info badges
+        // TODO: namespace coverage badges
+
+        #region Type Badges
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        [CanBeNull]
+        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] TypeCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            var Type = Coverage?.CoveringType;
+
+            if (Type != null)
+                {
+                var Out = new List<string>();
+
+                string TypeDescription =
+                    Type.IsStatic() ? "Static Class" :
+                        Type.IsAbstract ? "Abstract Class" :
+                            Type.IsEnum ? "Enum " :
+                                Type.IsInterface ? "Interface" :
+                                    "Object Class";
+
+                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
+
+                List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> Members = this.GetTypeMemberMarkdown(Type);
+
+                uint TotalDocumentable = 0;
+                uint Documented = 0;
+
+                // TODO: add total members
+                // TODO: add total lines of code (non 'empty')
+                // TODO: add total extension methods
+                // TODO: add total todo count
+                // TODO: add total bug count
+                // TODO: add total not implemented count
+
+                Members.Each(MemberGroup =>
+                    {
+                        MemberGroup.Key.Each(Member =>
+                            {
+                                TotalDocumentable++;
+
+                                var MemberComments = Member.GetComments();
+
+                                if (MemberComments != null)
+                                    Documented++;
+                            });
+                    });
+
+
+                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
+
+                if (TotalDocumentable > 0)
+                    {
+                    int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
+                    Out.Add(MD.Badge(this.Language.Badge_Documented, $"{DocumentedPercent}%", this.GetColorByPercentage(DocumentedPercent)));
+                    }
+
+                return Out;
+                }
+
+            return null;
+            }
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        [CanBeNull]
+        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] TypeCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            var Type = Coverage?.CoveringType;
+
+            if (Type != null)
+                {
+                var Out = new List<string>();
+
+                string TypeDescription =
+                    Type.IsStatic() ? "Static Class" :
+                        Type.IsAbstract ? "Abstract Class" :
+                            Type.IsEnum ? "Enum " :
+                                Type.IsInterface ? "Interface" :
+                                    "Object Class";
+
+                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
+
+                List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> Members = this.GetTypeMemberMarkdown(Type);
+
+                uint TotalCoverable = 0;
+                uint Covered = 0;
+
+                // TODO: add total lines of code (non 'empty')
+
+                Members.Each(MemberGroup =>
+                    {
+                        MemberGroup.Key.Each(Member =>
+                            {
+
+                                var MemberComments = Member.GetComments();
+
+                                if (Member is MethodInfo)
+                                    {
+                                    TotalCoverable++;
+
+                                    var MemberCoverage = new MethodCoverage((MethodInfo)Member);
+
+                                    if (MemberCoverage.IsCovered)
+                                        Covered++;
+                                    }
+                            });
+                    });
+
+
+                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
+
+                if (TotalCoverable > 0)
+                    {
+                    int CoveredPercent = Covered.PercentageOf(TotalCoverable);
+                    Out.Add(MD.Badge(this.Language.Badge_Covered, $"{CoveredPercent}%", this.GetColorByPercentage(CoveredPercent)));
+                    }
+
+                return Out;
+                }
+
+            return null;
+            }
+
+        #endregion
+
+        // TODO: member group info badges
+        // TODO: member group coverage badges
+
+        #region Member Badges
+
+
+        /// <summary>
+        /// Override this method to customize badges included in member generated markdown documents.
+        /// </summary>
+        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] MethodCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            var Member = Coverage?.CoveringMember;
+
+            var Out = new List<string>();
+
+            if (Member != null)
+                {
+                string SourcePath = Member.DeclaringType?.FindClassFile();
+
+                string MethodScope = Member.IsPublic ? "Public" : "Protected";
+
+                if (Member.IsAbstract)
+                    MethodScope = $"Abstract {MethodScope}";
+
+                string TypeDescription = Member.IsStatic ? "Static Method" : $"{MethodScope} Method";
+                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
+
+
+                // Member Type
+                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
+
+                // Documented
+                Out.Add(MD.Badge(this.Language.Badge_Documented, Comments != null
+                        ? "Yes" : "No",
+                    Comments != null
+                        ? GitHubMarkdown.BadgeColor.BrightGreen
+                        : GitHubMarkdown.BadgeColor.Red));
+
+                // Source code
+                if (SourcePath == null)
+                    Out.Add(MD.Badge(this.Language.Badge_SourceCode,
+                        this.Language.Badge_SourceCodeUnavailable,
+                        GitHubMarkdown.BadgeColor.Red));
+                else
+                    Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
+                        MD.Badge(this.Language.Badge_SourceCode,
+                            this.Language.Badge_SourceCodeAvailable,
+                            GitHubMarkdown.BadgeColor.BrightGreen)));
+
+                // TODO: add total lines of code (non 'empty')
+                // TODO: add total todo count
+                // TODO: add total bug count
+                // TODO: add total not implemented count
+                }
+            return Out;
+            }
+
+        /// <summary>
+        /// Override this method to customize badges included in member generated markdown documents.
+        /// </summary>
+        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] MethodCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            var Member = Coverage?.CoveringMember;
+
+            var Out = new List<string>();
+
+            if (Member != null)
+                {
+                string SourcePath = Member.DeclaringType?.FindClassFile();
+
+                string MethodScope = Member.IsPublic ? "Public" : "Protected";
+
+                if (Member.IsAbstract)
+                    MethodScope = $"Abstract {MethodScope}";
+
+                string TypeDescription = Member.IsStatic ? "Static Method" : $"{MethodScope} Method";
+                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
+
+
+                if (this.DocumentUnitCoverage)
+                    Out.Add(MD.Badge(this.Language.Badge_UnitTested, Coverage.MemberTraitFound ? "Yes" : "No",
+                        Coverage.MemberTraitFound
+                            ? GitHubMarkdown.BadgeColor.BrightGreen
+                            : GitHubMarkdown.BadgeColor.LightGrey));
+                if (this.DocumentAttributeCoverage)
+                    Out.Add(MD.Badge(this.Language.Badge_AttributeTests, $"{Coverage.AttributeCoverage}",
+                        Coverage.AttributeCoverage > 0u
+                            ? GitHubMarkdown.BadgeColor.BrightGreen
+                            : GitHubMarkdown.BadgeColor.LightGrey));
+
+                Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
+                    MD.Badge(this.Language.Badge_Assertions, $"{Coverage.AssertionsMade}", GitHubMarkdown.BadgeColor.BrightGreen)));
+
+                // TODO: Add Test Status: Passing / Failing / Untested
+                }
+            return Out;
+            }
+
+
+        #endregion
+
+        #endregion
+
+        // TODO custom flag tracking!!!
 
         #region Options +
 
