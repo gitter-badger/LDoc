@@ -1,8 +1,12 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ###LDoc
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-lightgrey.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
+![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-lightgrey.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 [View Source](../LDoc.cs)
+######Summary
+
+            Static class to store LDoc constants
+            
  - [Urls](LDoc_Urls.md)
 ---
 
