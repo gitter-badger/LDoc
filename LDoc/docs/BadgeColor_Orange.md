@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](BadgeColor.md)
-###BadgeColor
+### BadgeColor
 [View Source](BadgeColor.md)
-#Orange
+# Orange
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown_MemberGroup.md)
-###GitHubMarkdown_MemberGroup
+### GitHubMarkdown_MemberGroup
 [View Source](GitHubMarkdown_MemberGroup.md)
-#Members
+# Members
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

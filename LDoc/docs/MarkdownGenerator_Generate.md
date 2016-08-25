@@ -1,26 +1,26 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
-###MarkdownGenerator
+### MarkdownGenerator
 [View Source](MarkdownGenerator.md)
-#Generate
-####InstanceMethod
-######public [void] Generate([Boolean] WriteToDisk);
+# Generate
+#### InstanceMethod
+###### public [void] Generate([Boolean] WriteToDisk);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md)
 
-![UnitTested Yes](http://b.repl.ca/v1/UnitTested-Yes-brightgreen.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
-######Summary
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
+###### Summary
 
             Generates all markdown documentation, optionally writing all files to disk using . 
             
-######Parameters
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 WriteToDisk | Yes | [Boolean] | 
 
-####Returns
-######[void]
+#### Returns
+###### [void]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -1,17 +1,17 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
-###MarkdownGenerator
+### MarkdownGenerator
 [View Source](MarkdownGenerator.md)
-#GenerateRootMarkdown
-####InstanceMethod
-######public [GitHubMarkdown] GenerateRootMarkdown();
+# GenerateRootMarkdown
+#### InstanceMethod
+###### public [GitHubMarkdown] GenerateRootMarkdown();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
-######Summary
-####Returns
-######[GitHubMarkdown]
+###### Summary
+#### Returns
+###### [GitHubMarkdown]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

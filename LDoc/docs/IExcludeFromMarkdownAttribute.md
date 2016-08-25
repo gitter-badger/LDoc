@@ -1,10 +1,10 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
-###IExcludeFromMarkdownAttribute
+### IExcludeFromMarkdownAttribute
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "")
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "")
 [View Source](../Attributes/Interfaces/IExcludeFromMarkdownAttribute.cs)
-######Summary
+###### Summary
 
             Excludes a class or member from being included in GitHub Markdown autogeneration.
             

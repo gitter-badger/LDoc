@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
-###MarkdownGenerator
+### MarkdownGenerator
 [View Source](MarkdownGenerator.md)
-#ColorThresholds
+# ColorThresholds
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

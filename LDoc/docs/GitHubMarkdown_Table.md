@@ -1,16 +1,16 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown.md)
-###GitHubMarkdown
+### GitHubMarkdown
 [View Source](GitHubMarkdown.md)
-#Table
-####InstanceMethod
-######public [void] Table([String[,]] Rows, [Boolean] IncludeHeader, [Align[]] Alignment);
+# Table
+#### InstanceMethod
+###### public [void] Table([String[,]] Rows, [Boolean] IncludeHeader, [Align[]] Alignment);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
-######Summary
-######Parameters
+###### Summary
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
@@ -18,8 +18,8 @@ Rows | No | [String[,]] |
 IncludeHeader | Yes | [Boolean] | 
 Alignment | Yes | [Align[]] | 
 
-####Returns
-######[void]
+#### Returns
+###### [void]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

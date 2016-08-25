@@ -100,7 +100,7 @@ namespace LCore.LDoc.Markdown
             if (Size > 6)
                 Size = 6;
 
-            this.Line($"{"#".Times(Size)}{Line}");
+            this.Line($"{"#".Times(Size)} {Line}");
             }
 
         /// <summary>
@@ -523,5 +523,4 @@ namespace LCore.LDoc.Markdown
             return this.Image(URL, ID);
             }
         }
-
     }

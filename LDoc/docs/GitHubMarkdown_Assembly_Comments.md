@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown_Assembly.md)
-###GitHubMarkdown_Assembly
+### GitHubMarkdown_Assembly
 [View Source](GitHubMarkdown_Assembly.md)
-#Comments
+# Comments
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](Text.md)
-###Text
+### Text
 [View Source](Text.md)
-#Header_RelatedProjects
+# Header_RelatedProjects
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

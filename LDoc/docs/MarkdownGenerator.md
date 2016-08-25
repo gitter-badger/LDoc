@@ -1,10 +1,10 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
-###MarkdownGenerator
+### MarkdownGenerator
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 86%](http://b.repl.ca/v1/Documented-86%25-green.png "")
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 14%](http://b.repl.ca/v1/Covered-14%25-red.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 [View Source]
-######Summary
+###### Summary
 
             Implement this class to generate code for your assemblies and projects
             

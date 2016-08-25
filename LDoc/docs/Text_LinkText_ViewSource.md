@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](Text.md)
-###Text
+### Text
 [View Source](Text.md)
-#LinkText_ViewSource
+# LinkText_ViewSource
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

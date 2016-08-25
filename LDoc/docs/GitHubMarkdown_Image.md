@@ -1,16 +1,16 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown.md)
-###GitHubMarkdown
+### GitHubMarkdown
 [View Source](GitHubMarkdown.md)
-#Image
-####InstanceMethod
-######public [String] Image([String] Url, [String] ReferenceText, [Nullable<Align>] Align);
+# Image
+#### InstanceMethod
+###### public [String] Image([String] Url, [String] ReferenceText, [Nullable<Align>] Align);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
-######Summary
-######Parameters
+###### Summary
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
@@ -18,8 +18,8 @@ Url | No | [String] |
 ReferenceText | Yes | [String] | 
 Align | Yes | [Nullable<Align>] | 
 
-####Returns
-######[String]
+#### Returns
+###### [String]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

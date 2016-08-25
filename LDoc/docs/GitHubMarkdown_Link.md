@@ -1,15 +1,15 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown.md)
-###GitHubMarkdown
+### GitHubMarkdown
 [View Source](GitHubMarkdown.md)
-#Link
-####InstanceMethod
-######public [String] Link([String] Url, [String] Text, [String] ReferenceText);
+# Link
+#### InstanceMethod
+###### public [String] Link([String] Url, [String] Text, [String] ReferenceText);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
-######Summary
+###### Summary
 
             Returns a link, all arguments are optional
             
@@ -19,7 +19,7 @@
             [Text](Url)"Reference Text"
             
             
-######Parameters
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
@@ -27,8 +27,8 @@ Url | Yes | [String] |
 Text | Yes | [String] | 
 ReferenceText | Yes | [String] | 
 
-####Returns
-######[String]
+#### Returns
+###### [String]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

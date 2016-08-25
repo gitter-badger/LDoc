@@ -1,25 +1,25 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
-###MarkdownGenerator
+### MarkdownGenerator
 [View Source](MarkdownGenerator.md)
-#GetTypeMemberMarkdown
-####InstanceMethod
-######public [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>] GetTypeMemberMarkdown([Type] Type);
+# GetTypeMemberMarkdown
+#### InstanceMethod
+###### public [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>] GetTypeMemberMarkdown([Type] Type);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
-######Summary
+###### Summary
 
             Get all Member group markdown owned by a given 
-######Parameters
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Type | No | [Type] | 
 
-####Returns
-######[List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>]
+#### Returns
+###### [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -1,5 +1,5 @@
 ![](LDoc/Content/LDoc-banner-small.png "")
-##Table of Contents
+## Table of Contents
  - [Home](README.md)
  - [Coverage Summary](CoverageSummary.md)
  - [LDoc](LDoc/LDoc.md)

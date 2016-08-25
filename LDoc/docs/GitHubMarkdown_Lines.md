@@ -1,25 +1,25 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown.md)
-###GitHubMarkdown
+### GitHubMarkdown
 [View Source](GitHubMarkdown.md)
-#Lines
-####InstanceMethod
-######public [void] Lines([String[]] Lines);
+# Lines
+#### InstanceMethod
+###### public [void] Lines([String[]] Lines);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](GitHubMarkdown.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](GitHubMarkdown.md)
-######Summary
+###### Summary
 
             Add a number of 
-######Parameters
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Lines | No | [String[]] | 
 
-####Returns
-######[void]
+#### Returns
+###### [void]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

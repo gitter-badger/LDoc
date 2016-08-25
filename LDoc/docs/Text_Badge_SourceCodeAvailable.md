@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](Text.md)
-###Text
+### Text
 [View Source](Text.md)
-#Badge_SourceCodeAvailable
+# Badge_SourceCodeAvailable
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

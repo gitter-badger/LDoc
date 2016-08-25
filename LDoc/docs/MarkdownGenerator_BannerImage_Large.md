@@ -1,26 +1,26 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
-###MarkdownGenerator
+### MarkdownGenerator
 [View Source](MarkdownGenerator.md)
-#BannerImage_Large
-####InstanceMethod
-######public [String] BannerImage_Large([GitHubMarkdown] MD);
+# BannerImage_Large
+#### InstanceMethod
+###### public [String] BannerImage_Large([GitHubMarkdown] MD);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](MarkdownGenerator.md)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](MarkdownGenerator.md)
-######Summary
+###### Summary
 
             Override this value to display a large image on top ofthe main document
             
-######Parameters
+###### Parameters
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | [GitHubMarkdown] | 
 
-####Returns
-######[String]
+#### Returns
+###### [String]
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
