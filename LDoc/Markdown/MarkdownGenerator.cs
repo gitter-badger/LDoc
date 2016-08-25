@@ -56,6 +56,13 @@ namespace LCore.LDoc.Markdown
 
             }
 
+        //https://codesingularity.visualstudio.com/_apis/public/build/definitions/ef4060d7-9700-4b9c-acc3-e2263d774197/3/badge
+        // TODO hook custom badge urls
+        /// <summary>
+        /// Override this to provide custom badge urls for the project.
+        /// </summary>
+        public virtual string[] CustomBadgeUrls => new string[] { };
+
         #region Variables + 
 
         /// <summary>
@@ -330,6 +337,8 @@ namespace LCore.LDoc.Markdown
 
         #region Badges +
 
+        // TODO: project badges
+
         #region Assembly Badges
 
         /// <summary>
@@ -564,6 +573,8 @@ namespace LCore.LDoc.Markdown
                 // TODO: add total todo count
                 // TODO: add total bug count
                 // TODO: add total not implemented count
+
+                // TODO custom flag tracking
                 }
             return Out;
             }
@@ -614,8 +625,6 @@ namespace LCore.LDoc.Markdown
         #endregion
 
         #endregion
-
-        // TODO custom flag tracking!!!
 
         #region Options +
 
@@ -906,6 +915,21 @@ namespace LCore.LDoc.Markdown
 
             AltText_Logo = "Logo"
             };
+
+        /// <summary>
+        /// Override this to specify custom comment tags to track. 
+        /// By default only todo and bug are tracked (upper case only)
+        /// for example, 
+        /// 
+        /// public override string[] CustomCommentTags => new string[] { "CustomTag" };
+        /// 
+        /// Will track all instances of:
+        /// 
+        ///  "// CustomTag ... "
+        ///  "//CustomTag ... " 
+        /// 
+        /// </summary>
+        public virtual string[] CustomCommentTags => new string[] { };
 
         /// <summary>
         /// Structure to customize text used in MarkdownGenerator

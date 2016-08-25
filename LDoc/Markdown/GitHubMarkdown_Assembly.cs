@@ -20,11 +20,6 @@ namespace LCore.LDoc.Markdown
         public Assembly Assembly { get; }
 
         /// <summary>
-        /// Assembly comments
-        /// </summary>
-        public ICodeComment Comments { get; }
-
-        /// <summary>
         /// Assembly coverage
         /// </summary>
         public AssemblyCoverage Coverage { get; }
@@ -36,7 +31,6 @@ namespace LCore.LDoc.Markdown
         public GitHubMarkdown_Assembly(Assembly Assembly, MarkdownGenerator Generator, string FilePath, string Title) : base(Generator, FilePath, Title)
             {
             this.Assembly = Assembly;
-            this.Comments = null; //Assembly.GetComments();
             this.Coverage = new AssemblyCoverage(Assembly);
 
             this.Generate();
@@ -49,15 +43,14 @@ namespace LCore.LDoc.Markdown
                 {
                 MarkdownGenerator.WriteHeader(this);
 
-                var Coverage = new AssemblyCoverage(this.Assembly);
                 ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
                 this.Line(this.Link(this.GetRelativePath(MarkdownGenerator.MarkdownPath_Root), MarkdownGenerator.Language.LinkText_Home));
 
                 this.Header($"{this.Assembly.GetName().Name}", Size: 2);
 
-                this.Line(MarkdownGenerator.GetBadges_Info(this, Coverage, Comments).JoinLines(" "));
-                this.Line(MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Info(this, this.Coverage, Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Coverage(this, this.Coverage, Comments).JoinLines(" "));
 
                 List<KeyValuePair<Type, GitHubMarkdown_Type>> Types = MarkdownGenerator.GetAssemblyTypeMarkdown(this.Assembly);
 
@@ -67,8 +60,8 @@ namespace LCore.LDoc.Markdown
 
                 Namespaces.Sort();
 
-                MarkdownGenerator.GetBadges_Info(this, Coverage, Comments);
-                MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments);
+                MarkdownGenerator.GetBadges_Info(this, this.Coverage, Comments);
+                MarkdownGenerator.GetBadges_Coverage(this, this.Coverage, Comments);
 
                 Namespaces.Each(Namespace =>
                 {
@@ -84,8 +77,8 @@ namespace LCore.LDoc.Markdown
                     {
                         this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()));
 
-                        var TypeComments = Type.Value.Comments;
-                        var TypeCoverage = Type.Value.Coverage;
+                        var TypeComments = Type.Value.TypeMeta.Comments;
+                        var TypeCoverage = Type.Value.TypeMeta.Coverage;
 
                         MarkdownGenerator.GetBadges_Info(this, TypeCoverage, TypeComments);
                         MarkdownGenerator.GetBadges_Coverage(this, TypeCoverage, TypeComments);
