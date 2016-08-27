@@ -8,7 +8,7 @@
     <owners>Code Singularity</owners>
     <licenseUrl>https://github.com/CodeSingularity/LUnit/LICENSE</licenseUrl>
     <projectUrl>https://github.com/CodeSingularity/LUnit</projectUrl>
-    <iconUrl>http://codesingularity.info/Content/Icon.ico</iconUrl>
+    <iconUrl>https://github.com/CodeSingularity/LDoc/LDoc/Content/Icon.ico</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Automatic MD documentation generation</description>
     <releaseNotes></releaseNotes>

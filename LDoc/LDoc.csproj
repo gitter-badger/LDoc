@@ -100,6 +100,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\LDoc small logo.pdn" />
     <None Include="docs\BadgeColor.md" />
     <None Include="docs\BadgeColor_Blue.md" />
     <None Include="docs\BadgeColor_BrightGreen.md" />
@@ -244,11 +245,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\L Banner original.png" />
     <Content Include="Content\L Logo.png" />
     <Content Include="Content\LDoc Banner Original.png" />
+    <Content Include="Content\LDoc small logo.png" />
     <Content Include="Content\LDoc-banner-large.png" />
     <Content Include="Content\LDoc-banner-small.png" />
+    <Content Include="Content\LDoc-small-logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
