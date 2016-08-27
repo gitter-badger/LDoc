@@ -246,8 +246,6 @@
   <ItemGroup>
     <Content Include="Content\L Banner original.png" />
     <Content Include="Content\L Logo.png" />
-    <Content Include="Content\LCore-banner-large.png" />
-    <Content Include="Content\LCore-banner-small.png" />
     <Content Include="Content\LDoc Banner Original.png" />
     <Content Include="Content\LDoc-banner-large.png" />
     <Content Include="Content\LDoc-banner-small.png" />
