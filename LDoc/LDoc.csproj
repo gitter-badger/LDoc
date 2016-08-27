@@ -45,15 +45,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="L Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.8.25101722.1\lib\net451\L Utilities.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.8.25103237.1\lib\net451\L Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="L, Version=0.9.0.11, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.8.25101722.1\lib\net451\L.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.8.25103237.1\lib\net451\L.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LUnit.2016.8.25.15\lib\net451\LUnit.dll</HintPath>
+      <HintPath>..\packages\LUnit.2016.8.25202213.1\lib\net451\LUnit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.UnitTestFramework.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5bf63060baa03a11, processorArchitecture=MSIL">
@@ -100,7 +100,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\LUnit-banner.pdn" />
     <None Include="docs\BadgeColor.md" />
     <None Include="docs\BadgeColor_Blue.md" />
     <None Include="docs\BadgeColor_BrightGreen.md" />
@@ -252,11 +251,6 @@
     <Content Include="Content\LDoc Banner Original.png" />
     <Content Include="Content\LDoc-banner-large.png" />
     <Content Include="Content\LDoc-banner-small.png" />
-    <Content Include="Content\LUnit banner original.png" />
-    <Content Include="Content\LUnit-banner-large.png" />
-    <Content Include="Content\LUnit-banner-small.png" />
-    <Content Include="Content\LUnit-logo-large.png" />
-    <Content Include="Content\LUnit-logo-small.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
