@@ -20,7 +20,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public GitHubMarkdown_Type(Type Type, MarkdownGenerator Generator, string FilePath, string Title) : base(Generator, FilePath, Title)
             {
-            this.TypeMeta = Type.GatherCodeCoverageMetaData(/*Generator.CustomCommentTags*/);
+            this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
 
             this.Generate();
             }
