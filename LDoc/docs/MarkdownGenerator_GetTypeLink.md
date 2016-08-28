@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetTypeLink
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) GetTypeLink([GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) MD, [Type](https://www.google.com/#q=C%23+System.Type) Type);
+###### public [String](https://www.google.com/#q=C%23+System.String) GetTypeLink([GitHubMarkdown](GitHubMarkdown.md) MD, [Type](https://www.google.com/#q=C%23+System.Type) Type);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L307)
 
@@ -21,7 +21,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | [GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) | 
+MD | No | [GitHubMarkdown](GitHubMarkdown.md) | 
 Type | No | [Type](https://www.google.com/#q=C%23+System.Type) | 
 
 #### Returns

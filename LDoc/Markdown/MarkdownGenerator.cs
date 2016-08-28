@@ -309,7 +309,7 @@ namespace LCore.LDoc.Markdown
             {
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Link(MD.GetRelativePath(TypeLink), Type.GetGenericName());
+                return MD.GetRelativePath(TypeLink);
 
             // TODO: resolve github types
 

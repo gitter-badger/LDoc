@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetBadges_Coverage
 #### InstanceMethod
-###### public [List<String>](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>) GetBadges_Coverage([GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) MD, [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) Coverage, [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) Comments);
+###### public [List<String>](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>) GetBadges_Coverage([GitHubMarkdown](GitHubMarkdown.md) MD, [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) Coverage, [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) Comments);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L377)
 
@@ -17,7 +17,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | [GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) | 
+MD | No | [GitHubMarkdown](GitHubMarkdown.md) | 
 Coverage | No | [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) | 
 Comments | No | [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) | 
 
