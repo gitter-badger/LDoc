@@ -2,7 +2,7 @@
 [Up](../LDoc.md)
 ### MarkdownGenerator
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 85%](http://b.repl.ca/v1/Documented-85%25-green.png "")
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 13%](http://b.repl.ca/v1/Covered-13%25-red.png "")
 ###### Summary
 
             Implement this class to generate code for your assemblies and projects

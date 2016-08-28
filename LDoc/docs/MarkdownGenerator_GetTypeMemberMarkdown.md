@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetTypeMemberMarkdown
 #### InstanceMethod
-###### public  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a> &lt;  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair<TKey, TValue>" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair`2</a> &lt; <a href="https://www.google.com/#q=C%23+System.Reflection.MemberInfo[]" alt="Search for 'System.Reflection.MemberInfo[]'" target="_blank">MemberInfo[]</a> , [GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md) &gt; &gt; GetTypeMemberMarkdown(<a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> Type);
+###### public  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List&lt;T&gt;" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List</a> &lt;  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair</a> &lt; <a href="https://www.google.com/#q=C%23+System.Reflection.MemberInfo[]" alt="Search for 'System.Reflection.MemberInfo[]'" target="_blank">MemberInfo[]</a> , [GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md) &gt; &gt; GetTypeMemberMarkdown(<a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> Type);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L348)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L350)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
@@ -19,7 +19,7 @@ Parameter | Optional | Type | Description
 Type | No | <a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> | 
 
 #### Returns
-######  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a> &lt;  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair<TKey, TValue>" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair`2</a> &lt; <a href="https://www.google.com/#q=C%23+System.Reflection.MemberInfo[]" alt="Search for 'System.Reflection.MemberInfo[]'" target="_blank">MemberInfo[]</a> , [GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md) &gt; &gt;
+######  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List&lt;T&gt;" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List</a> &lt;  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair</a> &lt; <a href="https://www.google.com/#q=C%23+System.Reflection.MemberInfo[]" alt="Search for 'System.Reflection.MemberInfo[]'" target="_blank">MemberInfo[]</a> , [GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md) &gt; &gt;
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

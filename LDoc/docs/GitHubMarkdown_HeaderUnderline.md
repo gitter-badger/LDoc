@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # HeaderUnderline
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a> HeaderUnderline(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Line, <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> Size);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a> HeaderUnderline(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Line, <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L116)
 
@@ -27,7 +27,7 @@ Line | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search f
 Size | Yes | <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a>
+###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

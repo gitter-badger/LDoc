@@ -4,11 +4,11 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # Generate
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a> Generate(<a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> WriteToDisk);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a> Generate(<a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> WriteToDisk);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L854)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L856)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
+![UnitTested Yes](http://b.repl.ca/v1/UnitTested-Yes-brightgreen.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
 
             Generates all markdown documentation, optionally writing all files to disk using . 
@@ -20,7 +20,7 @@ Parameter | Optional | Type | Description
 WriteToDisk | Yes | <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a>
+###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

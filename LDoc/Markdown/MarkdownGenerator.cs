@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using JetBrains.Annotations;
 using LCore.Extensions;
@@ -325,7 +326,8 @@ namespace LCore.LDoc.Markdown
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
 
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Link(MD.GetRelativePath(TypeLink), Type.Name);
+                return MD.Link(MD.GetRelativePath(TypeLink), Type.Name,
+                            TargetNewWindow: false, EscapeText: true);
 
             // TODO: resolve github types
 
@@ -336,10 +338,10 @@ namespace LCore.LDoc.Markdown
                 }
 
             return MD.Link("https://www.google.com/#q=C%23+" +
-                            $"{Type.FullyQualifiedName()}",
-                            Type.Name,
+                            $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
+                            Type.GetGenericName().Before("<"),
                             $"Search for '{Type.FullyQualifiedName()}'",
-                            TargetNewWindow: true);
+                            TargetNewWindow: true, EscapeText: true);
             }
 
         /// <summary>

@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Code
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a> Code(<a href="https://www.google.com/#q=C%23+System.String[]" alt="Search for 'System.String[]'" target="_blank">String[]</a> Lines, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Language);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a> Code(<a href="https://www.google.com/#q=C%23+System.String[]" alt="Search for 'System.String[]'" target="_blank">String[]</a> Lines, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Language);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L236)
 
@@ -21,7 +21,7 @@ Lines | Yes | <a href="https://www.google.com/#q=C%23+System.String[]" alt="Sear
 Language | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a>
+###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
