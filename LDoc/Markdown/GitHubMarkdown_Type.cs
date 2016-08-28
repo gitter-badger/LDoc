@@ -45,7 +45,7 @@ namespace LCore.LDoc.Markdown
 
                 if (!string.IsNullOrEmpty(TypePath))
                     {
-                    this.Line(this.Link(this.GetRelativePath(TypePath), MarkdownGenerator.Language.LinkText_ViewSource));
+                    this.Line(this.Link($"{this.GetRelativePath(TypePath)}#L{this.TypeMeta.CodeLineNumber}", MarkdownGenerator.Language.LinkText_ViewSource));
                     }
 
                 if (!string.IsNullOrEmpty(this.TypeMeta.Comments?.Summary))
