@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetBadges_Coverage
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List&lt;T&gt;" alt="Search for 'System.Collections.Generic.List&lt;T&gt;'" target="_blank">List</a>&lt;<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>&gt; GetBadges_Coverage(**[GitHubMarkdown](GitHubMarkdown.md)** MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> Comments);
+###### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>&gt; GetBadges_Coverage(**[GitHubMarkdown](GitHubMarkdown.md)** MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L402)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L421)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
@@ -18,11 +18,11 @@
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
-Coverage | No | <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> | 
-Comments | No | <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> | 
+Coverage | No | <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> | 
+Comments | No | <a href="" alt="" target="_blank">ICodeComment</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List&lt;T&gt;" alt="Search for 'System.Collections.Generic.List&lt;T&gt;'" target="_blank">List</a>&lt;<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>&gt;
+###### <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>&gt;
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

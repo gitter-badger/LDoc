@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetColorByPercentage
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor" alt="Search for 'LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor'" target="_blank">BadgeColor</a> GetColorByPercentage(<a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> Percentage);
+###### public <a href="" alt="" target="_blank">BadgeColor</a> GetColorByPercentage(<a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> Percentage);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L792)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L817)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
@@ -19,10 +19,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Percentage | No | <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> | 
+Percentage | No | <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor" alt="Search for 'LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor'" target="_blank">BadgeColor</a>
+###### <a href="" alt="" target="_blank">BadgeColor</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

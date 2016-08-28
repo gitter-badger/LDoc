@@ -64,6 +64,12 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string[] CustomBadgeUrls => new string[] { };
 
+        /// <summary>
+        /// Override this value to supply custom links to foreign types.
+        /// <see cref="RequireDirectLinksToAllForeignTypes"/>
+        /// </summary>
+        public virtual Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>();
+
         #region Variables + 
 
         /// <summary>
@@ -298,6 +304,9 @@ namespace LCore.LDoc.Markdown
             return new Dictionary<string, GitHubMarkdown>();
             }
 
+        /// <summary>
+        /// Formats comments, properly displaying comment tags.
+        /// </summary>
         public virtual string FormatComment(string CommentText)
             {
             // TODO add support for <see>
@@ -327,7 +336,17 @@ namespace LCore.LDoc.Markdown
 
             // bold local links
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Type.Name, TargetNewWindow: false, EscapeText: true));
+                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Type.Name));
+
+            if (this.CustomTypeLinks.ContainsKey(Type))
+                return MD.Link(this.CustomTypeLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
+
+            // Array types must be properly handled
+            if (Type.IsArray && this.CustomTypeLinks.ContainsKey(Type.GetElementType()))
+                return MD.Link(this.CustomTypeLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
+
+            if (this.RequireDirectLinksToAllForeignTypes)
+                throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetGenericName()}");
 
             // TODO: resolve github types
 
@@ -341,7 +360,7 @@ namespace LCore.LDoc.Markdown
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
                             Type.GetGenericName().Before("<"),
                             $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
-                            TargetNewWindow: true, EscapeText: true);
+                            TargetNewWindow: true);
             }
 
         /// <summary>
@@ -659,6 +678,12 @@ namespace LCore.LDoc.Markdown
         #endregion
 
         #region Options +
+
+        /// <summary>
+        /// Requires all foreign types to have a link supplied.
+        /// Override <see cref="CustomTypeLinks"/>
+        /// </summary>
+        public virtual bool RequireDirectLinksToAllForeignTypes => false;
 
         /// <summary>
         /// Override this value to display a large image on top ofthe main document
@@ -1069,7 +1094,14 @@ namespace LCore.LDoc.Markdown
             /// </summary>
             public string Header_MethodExamples { get; set; }
 
+            /// <summary>
+            /// Header for method permissions
+            /// </summary>
             public string Header_MethodPermissions { get; set; }
+
+            /// <summary>
+            /// Header for method exceptions
+            /// </summary>
             public string Header_MethodExceptions { get; set; }
 
 

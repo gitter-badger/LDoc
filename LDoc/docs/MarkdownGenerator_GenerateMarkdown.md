@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GenerateMarkdown
 #### InstanceMethod
-###### public **[GitHubMarkdown_Assembly](GitHubMarkdown_Assembly.md)** GenerateMarkdown(<a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> Assembly);
+###### public **[GitHubMarkdown_Assembly](GitHubMarkdown_Assembly.md)** GenerateMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="" target="_blank">Assembly</a> Assembly);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L199)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L205)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
@@ -17,7 +17,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Assembly | No | <a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> | 
+Assembly | No | <a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="" target="_blank">Assembly</a> | 
 
 #### Returns
 ###### **[GitHubMarkdown_Assembly](GitHubMarkdown_Assembly.md)**

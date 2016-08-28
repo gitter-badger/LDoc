@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Gravatar
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Gravatar(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> ID, <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> Size);
+###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Gravatar(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> ID, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L511)
 
@@ -16,11 +16,11 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-ID | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
-Size | Yes | <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for 'System.Int32'" target="_blank">Int32</a> | 
+ID | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
+Size | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>
+###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

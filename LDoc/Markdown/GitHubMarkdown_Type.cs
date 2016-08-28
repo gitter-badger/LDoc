@@ -12,6 +12,9 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public class GitHubMarkdown_Type : GitHubMarkdown
         {
+        /// <summary>
+        /// MetaData for the type
+        /// </summary>
         public CodeCoverageMetaData TypeMeta { get; }
 
         /// <summary>

@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 85%](http://b.repl.ca/v1/Documented-85%25-green.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 87%](http://b.repl.ca/v1/Documented-87%25-green.png "")
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 ###### Summary
 
@@ -40,10 +40,12 @@
  - [DocumentAssemblies](MarkdownGenerator_DocumentAssemblies.md)
  - [Home_RelatedProjects](MarkdownGenerator_Home_RelatedProjects.md)
  - [CustomBadgeUrls](MarkdownGenerator_CustomBadgeUrls.md)
+ - [CustomTypeLinks](MarkdownGenerator_CustomTypeLinks.md)
  - [Markdown_Other](MarkdownGenerator_Markdown_Other.md)
  - [Markdown_Assembly](MarkdownGenerator_Markdown_Assembly.md)
  - [Markdown_Type](MarkdownGenerator_Markdown_Type.md)
  - [Markdown_Member](MarkdownGenerator_Markdown_Member.md)
+ - [RequireDirectLinksToAllForeignTypes](MarkdownGenerator_RequireDirectLinksToAllForeignTypes.md)
  - [GeneratedMarkdownRoot](MarkdownGenerator_GeneratedMarkdownRoot.md)
  - [MarkdownPath_Root](MarkdownGenerator_MarkdownPath_Root.md)
  - [MarkdownPath_TableOfContents](MarkdownGenerator_MarkdownPath_TableOfContents.md)

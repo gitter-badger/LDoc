@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # IncludeMember
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> IncludeMember(<a href="https://www.google.com/#q=C%23+System.Reflection.MemberInfo" alt="Search for 'System.Reflection.MemberInfo'" target="_blank">MemberInfo</a> Member);
+###### public <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="" target="_blank">Boolean</a> IncludeMember(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="" target="_blank">MemberInfo</a> Member);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L765)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L790)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
@@ -17,10 +17,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Member | No | <a href="https://www.google.com/#q=C%23+System.Reflection.MemberInfo" alt="Search for 'System.Reflection.MemberInfo'" target="_blank">MemberInfo</a> | 
+Member | No | <a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="" target="_blank">MemberInfo</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a>
+###### <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="" target="_blank">Boolean</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
