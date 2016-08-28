@@ -80,7 +80,9 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public void HorizontalRule()
             {
+            this.Line("");
             this.Line("---");
+            this.Line("");
             }
 
         /// <summary>
@@ -101,6 +103,7 @@ namespace LCore.LDoc.Markdown
             if (Size > 6)
                 Size = 6;
 
+            this.Line("");
             this.Line($"{"#".Times(Size)} {Line}");
             }
 
@@ -120,6 +123,7 @@ namespace LCore.LDoc.Markdown
             if (Size > 2)
                 Size = 2;
 
+            this.Line("");
             this.Line($"{Line}");
             this.Line(Size == 1
                 ? "======"

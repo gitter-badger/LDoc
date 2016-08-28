@@ -27,8 +27,8 @@ namespace LCore.LDoc.Markdown
                 {
                 Name = "LDoc",
                 Description= "",
-                Url= LDoc.Urls.GitHubUrl,
-                },
+                Url= LDoc.Urls.GitHubUrl
+                }
             };
         }
     }
