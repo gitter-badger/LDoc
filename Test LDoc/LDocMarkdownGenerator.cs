@@ -43,18 +43,6 @@ namespace Test_LDoc
 
         public override Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>
             {
-            [typeof(List<>)] = "https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx",
-            [typeof(string)] = "https://msdn.microsoft.com/en-us/library/system.string.aspx",
-            [typeof(void)] = "https://msdn.microsoft.com/en-us/library/system.void.aspx",
-            [typeof(int)] = "https://msdn.microsoft.com/en-us/library/system.int32.aspx",
-            [typeof(bool)] = "https://msdn.microsoft.com/en-us/library/system.boolean.aspx",
-            [typeof(Nullable<>)] = "https://msdn.microsoft.com/en-us/library/system.nullable.aspx",
-            [typeof(Assembly)] = "https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx",
-            [typeof(Type)] = "https://msdn.microsoft.com/en-us/library/system.type.aspx",
-            [typeof(MemberInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx",
-            [typeof(Dictionary<,>)] = "https://msdn.microsoft.com/en-us/library/xfhwa508.aspx",
-            [typeof(KeyValuePair<,>)] = "https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx",
-
             [typeof(AssemblyCoverage)] = $"{RootLUnitGitHub}/LUnit/docs/AssemblyCoverage.md",
 
             [typeof(GitHubMarkdown.BadgeColor)] = "", // TODO link enums properly, fix in LCore find source file for enum types

@@ -34,6 +34,23 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public const string MarkdownPath_RootFile = "README.md";
 
+        /// <summary>
+        /// Standard types linked from within LDoc, for convenience.
+        /// </summary>
+        protected static Dictionary<Type, string> StandardTypeLinks => new Dictionary<Type, string>
+            {
+            [typeof(List<>)] = "https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx",
+            [typeof(string)] = "https://msdn.microsoft.com/en-us/library/system.string.aspx",
+            [typeof(void)] = "https://msdn.microsoft.com/en-us/library/system.void.aspx",
+            [typeof(int)] = "https://msdn.microsoft.com/en-us/library/system.int32.aspx",
+            [typeof(bool)] = "https://msdn.microsoft.com/en-us/library/system.boolean.aspx",
+            [typeof(Nullable<>)] = "https://msdn.microsoft.com/en-us/library/system.nullable.aspx",
+            [typeof(Assembly)] = "https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx",
+            [typeof(Type)] = "https://msdn.microsoft.com/en-us/library/system.type.aspx",
+            [typeof(MemberInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx",
+            [typeof(Dictionary<,>)] = "https://msdn.microsoft.com/en-us/library/xfhwa508.aspx",
+            [typeof(KeyValuePair<,>)] = "https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx"
+            };
 
         /// <summary>
         /// Override this member to specify the assemblies to generae documentation.
@@ -325,9 +342,16 @@ namespace LCore.LDoc.Markdown
             if (this.CustomTypeLinks.ContainsKey(Type))
                 return MD.Link(this.CustomTypeLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
 
+            if (StandardTypeLinks.ContainsKey(Type))
+                return MD.Link(StandardTypeLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
+
             // Array types must be properly handled
             if (Type.IsArray && this.CustomTypeLinks.ContainsKey(Type.GetElementType()))
                 return MD.Link(this.CustomTypeLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
+
+            if (Type.IsArray && StandardTypeLinks.ContainsKey(Type.GetElementType()))
+                return MD.Link(StandardTypeLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
+
 
             if (this.RequireDirectLinksToAllForeignTypes)
                 throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetGenericName()}");
@@ -441,8 +465,6 @@ namespace LCore.LDoc.Markdown
                                 Type.IsInterface ? "Interface" :
                                     "Object Class";
 
-                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
-
                 List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> Members = this.GetTypeMemberMarkdown(Type);
 
                 uint TotalDocumentable = 0;
@@ -502,8 +524,6 @@ namespace LCore.LDoc.Markdown
                             Type.IsEnum ? "Enum " :
                                 Type.IsInterface ? "Interface" :
                                     "Object Class";
-
-                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
 
                 List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>> Members = this.GetTypeMemberMarkdown(Type);
 
@@ -576,7 +596,6 @@ namespace LCore.LDoc.Markdown
                     MethodScope = $"Abstract {MethodScope}";
 
                 string TypeDescription = Member.IsStatic ? "Static Method" : $"{MethodScope} Method";
-                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
                 const GitHubMarkdown.BadgeColor InfoColor = GitHubMarkdown.BadgeColor.Blue;
 
 
@@ -599,7 +618,7 @@ namespace LCore.LDoc.Markdown
                     : GitHubMarkdown.BadgeColor.Green));
 
                 uint NotImplementedCount = MD.Members.Sum(SubMember => SubMember.Value.NotImplemented.Length);
-                Out.Add(MD.Badge(this.Language.Badge_BUGs, $"{NotImplementedCount}", NotImplementedCount > 0
+                Out.Add(MD.Badge(this.Language.Badge_NotImplemented, $"{NotImplementedCount}", NotImplementedCount > 0
                     ? GitHubMarkdown.BadgeColor.Orange
                     : GitHubMarkdown.BadgeColor.Green));
 
@@ -656,8 +675,6 @@ namespace LCore.LDoc.Markdown
                     MethodScope = $"Abstract {MethodScope}";
 
                 string TypeDescription = Member.IsStatic ? "Static Method" : $"{MethodScope} Method";
-                const GitHubMarkdown.BadgeColor TypeColor = GitHubMarkdown.BadgeColor.LightGrey;
-
 
                 if (this.DocumentUnitCoverage)
                     Out.Add(MD.Badge(this.Language.Badge_UnitTested, Coverage.MemberTraitFound ? "Yes" : "No",
@@ -726,16 +743,12 @@ namespace LCore.LDoc.Markdown
             // TODO: Add custom copyright
 
             this.WriteCustomFooter(MD);
-            MD.Table(new[]
-                {
-                new[]
+            MD.Line(new[]
                     {
                     $"This markdown was generated by {MD.Link(LDoc.Urls.GitHubUrl, nameof(LDoc))}, " +
                     $"powered by {MD.Link(LUnit.LUnit.Urls.GitHubRepository_LUnit, nameof(LUnit))}, " +
-                    $"{MD.Link(LUnit.LUnit.Urls.GitHubRepository_LCore, nameof(LCore))}",
-                    ""
-                    }
-                }, IncludeHeader: false);
+                    $"{MD.Link(LUnit.LUnit.Urls.GitHubRepository_LCore, nameof(LCore))}"
+                    }.JoinLines(" "));
             }
 
         /// <summary>
@@ -745,15 +758,11 @@ namespace LCore.LDoc.Markdown
             {
             // TODO: Add custom copyright
 
-            MD.Table(new[]
-                {
-                new[]
+            MD.Line(new[]
                     {
                     this.HomeLink(MD),
-                    this.TableOfContentsLink(MD),
-                    ""
-                    }
-                }, IncludeHeader: false);
+                    this.TableOfContentsLink(MD)
+                    }.JoinLines(" "));
             }
 
 
@@ -1003,6 +1012,7 @@ namespace LCore.LDoc.Markdown
             Badge_LinesOfCode = "Lines of Code",
             Badge_BUGs = "Bugs",
             Badge_TODOs = "TODOs",
+            Badge_NotImplemented = "Not Implemented",
 
             AltText_Logo = "Logo"
             };
@@ -1078,6 +1088,11 @@ namespace LCore.LDoc.Markdown
             /// Badge title for bugs
             /// </summary>
             public string Badge_BUGs { get; set; }
+            /// <summary>
+            /// Badge title for NotImplementedException
+            /// </summary>
+            public string Badge_NotImplemented { get; set; }
+
 
             /// <summary>
             /// Badge title for member Documented

@@ -1,8 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
-[Up](GitHubMarkdown.md)
-### GitHubMarkdown
-[View Source](../Markdown/GitHubMarkdown.cs)
-# FilePath
+[Up](Text.md)
+### Text
+# Badge_NotImplemented
 
 
 ---
