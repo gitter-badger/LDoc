@@ -340,7 +340,7 @@ namespace LCore.LDoc.Markdown
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
                             Type.GetGenericName().Before("<"),
-                            $"Search for '{Type.FullyQualifiedName()}'",
+                            $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
                             TargetNewWindow: true, EscapeText: true);
             }
 
