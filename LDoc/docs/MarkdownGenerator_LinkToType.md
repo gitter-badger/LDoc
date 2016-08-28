@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # LinkToType
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> LinkToType(_[GitHubMarkdown](GitHubMarkdown.md)_ MD, <a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> Type);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> LinkToType(**[GitHubMarkdown](GitHubMarkdown.md)** MD, <a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> Type);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L316)
 
@@ -21,7 +21,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | _[GitHubMarkdown](GitHubMarkdown.md)_ | 
+MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
 Type | No | <a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> | 
 
 #### Returns

@@ -4,13 +4,13 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetOtherDocuments
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" alt="Search for 'System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;'" target="_blank">Dictionary</a>&lt;<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>, _[GitHubMarkdown](GitHubMarkdown.md)_&gt; GetOtherDocuments();
+###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" alt="Search for 'System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;'" target="_blank">Dictionary</a>&lt;<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>, **[GitHubMarkdown](GitHubMarkdown.md)**&gt; GetOtherDocuments();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L296)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" alt="Search for 'System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;'" target="_blank">Dictionary</a>&lt;<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>, _[GitHubMarkdown](GitHubMarkdown.md)_&gt;
+###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" alt="Search for 'System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;'" target="_blank">Dictionary</a>&lt;<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>, **[GitHubMarkdown](GitHubMarkdown.md)**&gt;
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
