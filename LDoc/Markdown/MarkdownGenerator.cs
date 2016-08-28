@@ -49,7 +49,13 @@ namespace LCore.LDoc.Markdown
             [typeof(Type)] = "https://msdn.microsoft.com/en-us/library/system.type.aspx",
             [typeof(MemberInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx",
             [typeof(Dictionary<,>)] = "https://msdn.microsoft.com/en-us/library/xfhwa508.aspx",
-            [typeof(KeyValuePair<,>)] = "https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx"
+            [typeof(KeyValuePair<,>)] = "https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx",
+            [typeof(object)] = "https://msdn.microsoft.com/en-us/library/system.object.aspx",
+            [typeof(MethodInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx",
+            [typeof(Func<>)] = "https://msdn.microsoft.com/en-us/library/bb534960.aspx",
+            [typeof(Func<,>)] = "https://msdn.microsoft.com/en-us/library/bb549151.aspx",
+            [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150.aspx",
+            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx",
             };
 
         /// <summary>
@@ -330,10 +336,17 @@ namespace LCore.LDoc.Markdown
 
             if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
                 {
+                bool Array = false;
+                if (Type.IsArray)
+                    {
+                    Type = Type.GetElementType();
+                    Array = true;
+                    }
+
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
                 Type[] Parameters = Type.GenericTypeArguments;
 
-                return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;";
+                return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;{(Array ? "[]" : "")}";
                 }
 
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
