@@ -78,10 +78,9 @@ namespace LCore.LDoc.Markdown
                         this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()));
 
                         var TypeComments = Type.Value.TypeMeta.Comments;
-                        var TypeCoverage = Type.Value.TypeMeta.Coverage;
 
-                        MarkdownGenerator.GetBadges_Info(this, TypeCoverage, TypeComments);
-                        MarkdownGenerator.GetBadges_Coverage(this, TypeCoverage, TypeComments);
+                        MarkdownGenerator.GetBadges_Info(Type.Value, new TypeCoverage(Type.Key), TypeComments);
+                        MarkdownGenerator.GetBadges_Coverage(Type.Value, new TypeCoverage(Type.Key), TypeComments);
 
                     });
                 });

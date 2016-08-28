@@ -12,7 +12,7 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public class GitHubMarkdown_Type : GitHubMarkdown
         {
-        public CodeCoverageMetaData TypeMeta { get; set; }
+        public CodeCoverageMetaData TypeMeta { get; }
 
         /// <summary>
         /// Create a new Type Markdown file.
@@ -36,8 +36,8 @@ namespace LCore.LDoc.Markdown
                 this.Line(this.Link(this.GetRelativePath(MarkdownGenerator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())), MarkdownGenerator.Language.LinkText_Up));
 
                 this.Header($"{this.TypeMeta.Member.Name}", Size: 3);
-                this.Line(MarkdownGenerator.GetBadges_Info(this, this.TypeMeta.Coverage, this.TypeMeta.Comments).JoinLines(" "));
-                this.Line(MarkdownGenerator.GetBadges_Coverage(this, this.TypeMeta.Coverage, this.TypeMeta.Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Info(this, new TypeCoverage((Type)this.TypeMeta.Member), this.TypeMeta.Comments).JoinLines(" "));
+                this.Line(MarkdownGenerator.GetBadges_Coverage(this, new TypeCoverage((Type)this.TypeMeta.Member), this.TypeMeta.Comments).JoinLines(" "));
                 string TypePath = this.TypeMeta.CodeFilePath;
 
                 if (!string.IsNullOrEmpty(TypePath))

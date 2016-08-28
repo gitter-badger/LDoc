@@ -396,7 +396,7 @@ namespace LCore.LDoc.Markdown
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
         [CanBeNull]
-        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] TypeCoverage Coverage,
+        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown_Type MD, [CanBeNull] TypeCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Type = Coverage?.CoveringType;
@@ -458,7 +458,7 @@ namespace LCore.LDoc.Markdown
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
         [CanBeNull]
-        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] TypeCoverage Coverage,
+        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown_Type MD, [CanBeNull] TypeCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Type = Coverage?.CoveringType;
@@ -528,7 +528,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this method to customize badges included in member generated markdown documents.
         /// </summary>
-        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] MethodCoverage Coverage,
+        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown_MemberGroup MD, [CanBeNull] MethodCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Member = Coverage?.CoveringMember;
@@ -540,6 +540,8 @@ namespace LCore.LDoc.Markdown
                 string SourcePath = Member.DeclaringType?.FindClassFile();
 
                 string MethodScope = Member.IsPublic ? "Public" : "Protected";
+
+                var Meta = MD.Members[Member];
 
                 if (Member.IsAbstract)
                     MethodScope = $"Abstract {MethodScope}";
@@ -564,11 +566,12 @@ namespace LCore.LDoc.Markdown
                         this.Language.Badge_SourceCodeUnavailable,
                         GitHubMarkdown.BadgeColor.Red));
                 else
-                    Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
+                    {
+                    Out.Add(MD.Link($"{MD.GetRelativePath(SourcePath)}#L{Meta.CodeLineNumber}",
                         MD.Badge(this.Language.Badge_SourceCode,
                             this.Language.Badge_SourceCodeAvailable,
                             GitHubMarkdown.BadgeColor.BrightGreen)));
-
+                    }
                 // TODO: add total lines of code (non 'empty')
                 // TODO: add total todo count
                 // TODO: add total bug count
@@ -582,7 +585,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this method to customize badges included in member generated markdown documents.
         /// </summary>
-        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] MethodCoverage Coverage,
+        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown_MemberGroup MD, [CanBeNull] MethodCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Member = Coverage?.CoveringMember;
@@ -1039,7 +1042,7 @@ namespace LCore.LDoc.Markdown
 
             public string Header_MethodPermissions { get; set; }
             public string Header_MethodExceptions { get; set; }
-            
+
 
 
             /// <summary>

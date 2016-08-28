@@ -6,7 +6,7 @@
 #### InstanceMethod
 ###### public [void] Table([String[,]] Rows, [Boolean] IncludeHeader, [Align[]] Alignment);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L257)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
 ###### Summary

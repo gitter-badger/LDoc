@@ -1,8 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### Text
-
-
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Documented 93%](http://b.repl.ca/v1/Documented-93%25-green.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
 [View Source](../Markdown/MarkdownGenerator.cs)
 ###### Summary
 
