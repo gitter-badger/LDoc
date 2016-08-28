@@ -419,9 +419,11 @@ namespace LCore.LDoc.Markdown
             if (Type.IsGenericParameter)
                 return Type.Name;
 
+            // Ref types, link to actual type
             if (Type.IsByRef)
                 return this.LinkToType(MD, Type.GetElementType());
 
+            // Generic types, display in standard generic notation and link each type individually. Recursion is required.
             if ((Type.IsGenericType && !Type.IsGenericTypeDefinition) ||
                 (Type.IsArray && Type.GetElementType().IsGenericType && !Type.GetElementType().IsGenericTypeDefinition))
                 {
@@ -438,37 +440,49 @@ namespace LCore.LDoc.Markdown
                 return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;{(Array ? "[]" : "")}";
                 }
 
-            string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
 
+            // ---- From here on Type is known to not be generic ----
+
+
+            // Local links for known documented types
+            string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
             // bold local links
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Type.Name));
+                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Type.GetNestedNames()));
 
+
+            // Resolve custom type links from implementation
             if (this.CustomTypeLinks.ContainsKey(Type))
-                return MD.Link(this.CustomTypeLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
+                return MD.Link(this.CustomTypeLinks[Type], Type.GetNestedNames(), "", TargetNewWindow: true);
 
+            // Resolve default known type links
             if (ReferenceLinks.ContainsKey(Type))
-                return MD.Link(ReferenceLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
+                return MD.Link(ReferenceLinks[Type], Type.GetNestedNames(), "", TargetNewWindow: true);
 
-            // Array types must be properly handled
+            // Resolve custom type links from implementation for Array types 
             if (Type.IsArray && this.CustomTypeLinks.ContainsKey(Type.GetElementType()))
-                return MD.Link(this.CustomTypeLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
+                return MD.Link(this.CustomTypeLinks[Type.GetElementType()], Type.GetNestedNames(), "", TargetNewWindow: true);
 
+            // Resolve default known type links for Array types 
             if (Type.IsArray && ReferenceLinks.ContainsKey(Type.GetElementType()))
-                return MD.Link(ReferenceLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
+                return MD.Link(ReferenceLinks[Type.GetElementType()], Type.GetNestedNames(), "", TargetNewWindow: true);
 
             // TODO: resolve related project assemblies
 
+            // Resolve all non-generic System types
             if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
                 Type.FullyQualifiedName().ToLower().StartsWith("system."))
-                return MD.Link(MicrosoftSystemReferencePath(Type), Type.GetGenericName());
+                return MD.Link(MicrosoftSystemReferencePath(Type), Type.GetNestedNames());
+
+            if (this.DocumentAssemblies.Has(Type.GetAssembly()))
+                return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Type.GetNestedNames());
 
             if (this.RequireDirectLinksToAllForeignTypes)
-                throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetGenericName()}");
+                throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetNestedNames()}");
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
-                            Type.GetGenericName().Before("<"),
+                            Type.GetNestedNames(),
                             $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
                             TargetNewWindow: true);
             }
