@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) BlockQuote([String[]](https://msdn.microsoft.com/en-us/library/system.string[].aspx) Lines);
+###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) BlockQuote([String[]](https://msdn.microsoft.com/en-us/library/system.string.aspx) Lines);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L328)
 
@@ -22,7 +22,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Lines | No | [String[]](https://msdn.microsoft.com/en-us/library/system.string[].aspx) | 
+Lines | No | [String[]](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns

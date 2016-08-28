@@ -2,7 +2,7 @@
 [Up](../LDoc.md)
 
 ### MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 86%](http://b.repl.ca/v1/Documented-86%25-green.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 88%](http://b.repl.ca/v1/Documented-88%25-green.png "")
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
 ###### Summary

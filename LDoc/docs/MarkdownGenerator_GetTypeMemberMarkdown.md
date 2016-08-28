@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair&lt;TKey, TValue&gt;</a>&lt;[MemberInfo[]](https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo[].aspx), **[GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md)**&gt;&gt; GetTypeMemberMarkdown([Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) Type);
+###### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair&lt;TKey, TValue&gt;</a>&lt;[MemberInfo[]](https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx), **[GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md)**&gt;&gt; GetTypeMemberMarkdown([Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) Type);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L478)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L479)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 
@@ -27,7 +27,7 @@ Type | No | [Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) |
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair&lt;TKey, TValue&gt;</a>&lt;[MemberInfo[]](https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo[].aspx), **[GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md)**&gt;&gt;
+###### <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair&lt;TKey, TValue&gt;</a>&lt;[MemberInfo[]](https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx), **[GitHubMarkdown_MemberGroup](GitHubMarkdown_MemberGroup.md)**&gt;&gt;
 
 
 

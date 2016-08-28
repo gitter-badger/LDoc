@@ -34,9 +34,11 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public const string MarkdownPath_RootFile = "README.md";
 
-
-        public static string MicrosoftSystemReferencePath(Type SystemType) => $"https://msdn.microsoft.com/en-us/library/" +
-            $"{SystemType.FullyQualifiedName().ToLower()}.aspx";
+        /// <summary>
+        /// Returns a link to a non-generic system type to get a link to its documentation.
+        /// </summary>
+        public static string MicrosoftSystemReferencePath(Type SystemType) =>
+            "https://msdn.microsoft.com/en-us/library/" + $"{SystemType.FullyQualifiedName().ToLower().Before("[]")}.aspx";
 
 
         #region ReferenceLinks
@@ -97,7 +99,7 @@ namespace LCore.LDoc.Markdown
             [typeof(Tuple<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd387185(v=vs.110).aspx",
             [typeof(Tuple<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd383325(v=vs.110).aspx",
 
-            [typeof(Nullable<>)] = "",
+            [typeof(Nullable<>)] = ""
             /*
 
                         [typeof(object)] = "https://msdn.microsoft.com/en-us/library/system.object.aspx",
@@ -456,7 +458,6 @@ namespace LCore.LDoc.Markdown
                 return MD.Link(ReferenceLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
 
             // TODO: resolve related project assemblies
-
 
             if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
                 Type.FullyQualifiedName().ToLower().StartsWith("system."))
