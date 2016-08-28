@@ -439,37 +439,38 @@ namespace LCore.LDoc.Markdown
 
             // ---- From here on Type is known to not be generic, unknown generic parameter, ref, or array type ----
 
+            string Name = Type.GetNestedNames().Before("<");
 
             // Local links for known documented types
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
             // bold local links
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Type.GetNestedNames()));
+                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Name));
 
 
             // Resolve custom type links from implementation
             if (this.CustomTypeLinks.ContainsKey(Type))
-                return MD.Link(this.CustomTypeLinks[Type], Type.GetNestedNames(), "", TargetNewWindow: true);
+                return MD.Link(this.CustomTypeLinks[Type], Name, "", TargetNewWindow: true);
 
             // Resolve default known type links
             if (ReferenceLinks.ContainsKey(Type))
-                return MD.Link(ReferenceLinks[Type], Type.GetNestedNames(), "", TargetNewWindow: true);
+                return MD.Link(ReferenceLinks[Type], Name, "", TargetNewWindow: true);
 
             // TODO: resolve related project assemblies
 
             // Resolve all non-generic System types
             if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
                 Type.FullyQualifiedName().ToLower().StartsWith("system."))
-                return MD.Link(MicrosoftSystemReferencePath(Type), Type.GetNestedNames());
+                return MD.Link(MicrosoftSystemReferencePath(Type), Name);
 
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
-                return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Type.GetNestedNames());
+                return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name);
 
             this.TypeLinksNotFound.Add(Type);
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
-                            Type.GetNestedNames(),
+                            Name,
                             $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
                             TargetNewWindow: true);
             }
