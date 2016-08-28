@@ -55,7 +55,22 @@ namespace LCore.LDoc.Markdown
             [typeof(Func<>)] = "https://msdn.microsoft.com/en-us/library/bb534960.aspx",
             [typeof(Func<,>)] = "https://msdn.microsoft.com/en-us/library/bb549151.aspx",
             [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150.aspx",
-            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx"
+            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx",
+
+            [typeof(IComparable)] = "https://msdn.microsoft.com/en-us/library/system.icomparable.aspx",
+            [typeof(IEnumerable)] = "https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx",
+            [typeof(IConvertible)] = "https://msdn.microsoft.com/en-us/library/system.iconvertible.aspx",
+            [typeof(byte)] = "https://msdn.microsoft.com/en-us/library/system.byte.aspx",
+            [typeof(sbyte)] = "https://msdn.microsoft.com/en-us/library/system.sbyte.aspx",
+
+            [typeof(decimal)] = "https://msdn.microsoft.com/en-us/library/system.decimal.aspx",
+            [typeof(ulong)] = "https://msdn.microsoft.com/en-us/library/system.uint64.aspx",
+            [typeof(ushort)] = "https://msdn.microsoft.com/en-us/library/system.uint16.aspx",
+            [typeof(long)] = "https://msdn.microsoft.com/en-us/library/system.int64.aspx",
+            [typeof(short)] = "https://msdn.microsoft.com/en-us/library/system.int16.aspx",
+            [typeof(float)] = "https://msdn.microsoft.com/en-us/library/system.single.aspx",
+            [typeof(double)] = "https://msdn.microsoft.com/en-us/library/system.double.aspx",
+            [typeof(char)] = "https://msdn.microsoft.com/en-us/library/system.char.aspx"
             };
 
         /// <summary>
