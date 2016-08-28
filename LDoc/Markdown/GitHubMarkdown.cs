@@ -381,6 +381,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "", [CanBeNull] string ReferenceText = "")
             {
+            Text = Text.UriEncode();
+
             if (!string.IsNullOrEmpty(Url))
                 {
                 Url = $"({Url})";
