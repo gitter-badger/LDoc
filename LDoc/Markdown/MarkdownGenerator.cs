@@ -314,12 +314,18 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string LinkToType(GitHubMarkdown MD, Type Type)
             {
+            if (Type.ContainsGenericParameters && !Type.IsGenericTypeDefinition)
+                {
+                string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
+                Type[] Parameters = Type.GenericTypeArguments;
+
+                return $"{GenericTypeLink}<{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}>";
+                }
+
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
 
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Link(MD.GetRelativePath(TypeLink), Type.GetGenericName());
-
-            // TODO: Correctly link nested generic types
+                return MD.Link(MD.GetRelativePath(TypeLink), Type.Name);
 
             // TODO: resolve github types
 
@@ -331,8 +337,8 @@ namespace LCore.LDoc.Markdown
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{Type.FullyQualifiedName()}",
-                            Type.GetGenericName(),
-                            "Search for this type",
+                            Type.Name,
+                            $"Search for '{Type.FullyQualifiedName()}'",
                             TargetNewWindow: true);
             }
 
@@ -588,7 +594,7 @@ namespace LCore.LDoc.Markdown
                     Out.Add(MD.Link($"{MD.GetRelativePath(SourcePath)}#L{Meta.CodeLineNumber}",
                         MD.Badge(this.Language.Badge_SourceCode,
                             this.Language.Badge_SourceCodeAvailable,
-                            GitHubMarkdown.BadgeColor.BrightGreen)));
+                            GitHubMarkdown.BadgeColor.BrightGreen), EscapeText: false));
                     }
                 // TODO: add total lines of code (non 'empty')
                 // TODO: add total todo count
@@ -635,7 +641,7 @@ namespace LCore.LDoc.Markdown
                             : GitHubMarkdown.BadgeColor.LightGrey));
 
                 Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
-                    MD.Badge(this.Language.Badge_Assertions, $"{Coverage.AssertionsMade}", GitHubMarkdown.BadgeColor.BrightGreen)));
+                    MD.Badge(this.Language.Badge_Assertions, $"{Coverage.AssertionsMade}", GitHubMarkdown.BadgeColor.BrightGreen), EscapeText: false));
 
                 // TODO: Add Test Status: Passing / Failing / Untested
                 }

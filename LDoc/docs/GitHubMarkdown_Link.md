@@ -4,11 +4,11 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Link
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Link(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Url, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Text, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> ReferenceText, <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for this type" target="_blank">Boolean</a> TargetNewWindow);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Link(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Url, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Text, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> ReferenceText, <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> TargetNewWindow, <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> EscapeText);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L382)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L382)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
 ##### Summary
 
             Returns a link, all arguments are optional
@@ -23,13 +23,14 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Url | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
-Text | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
-ReferenceText | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
-TargetNewWindow | Yes | <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for this type" target="_blank">Boolean</a> | 
+Url | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
+Text | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
+ReferenceText | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
+TargetNewWindow | Yes | <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> | 
+EscapeText | Yes | <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for 'System.Boolean'" target="_blank">Boolean</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

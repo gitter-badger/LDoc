@@ -4,11 +4,11 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # InlineCode
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> InlineCode(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Code);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> InlineCode(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Code);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L418)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L419)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
 ##### Summary
 
             Returns a string formatted as inline code
@@ -17,10 +17,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Code | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+Code | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

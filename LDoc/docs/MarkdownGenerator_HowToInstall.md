@@ -4,11 +4,11 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # HowToInstall
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for this type" target="_blank">void</a> HowToInstall([GitHubMarkdown](GitHubMarkdown.md) MD);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a> HowToInstall([GitHubMarkdown](GitHubMarkdown.md) MD);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L53)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L53)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
 
             Override this value to indicate installation instructions.
@@ -20,7 +20,7 @@ Parameter | Optional | Type | Description
 MD | No | [GitHubMarkdown](GitHubMarkdown.md) | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for this type" target="_blank">void</a>
+###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

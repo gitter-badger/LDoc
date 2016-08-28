@@ -4,11 +4,11 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # MarkdownPath_Assembly
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> MarkdownPath_Assembly(<a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for this type" target="_blank">Assembly</a> Assembly);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> MarkdownPath_Assembly(<a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> Assembly);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L726)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L732)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs)
+![UnitTested Yes](http://b.repl.ca/v1/UnitTested-Yes-brightgreen.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
 
             Generates the document title for an Assembly
@@ -17,10 +17,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Assembly | No | <a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for this type" target="_blank">Assembly</a> | 
+Assembly | No | <a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

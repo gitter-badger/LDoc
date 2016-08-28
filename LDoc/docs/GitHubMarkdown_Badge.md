@@ -4,11 +4,11 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Badge
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Badge(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Left, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Right, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> HexColor);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Badge(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Left, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Right, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> HexColor);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L464)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L465)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
 ##### Summary
 
             Adds a Buckler badge, hosted on http://b.repl.ca/
@@ -17,12 +17,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Left | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
-Right | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
-HexColor | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+Left | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
+Right | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
+HexColor | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

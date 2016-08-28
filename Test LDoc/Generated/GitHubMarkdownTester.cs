@@ -151,7 +151,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Link) + "(String, String, String) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Link) + "(String, String, String, Boolean, Boolean) => String")]
         public void Link()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Link
