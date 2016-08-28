@@ -496,10 +496,14 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Retrieves the relative path from this markdown file to <paramref name="FullPath"/>
         /// </summary>
-        public string GetRelativePath(string FullPath)
+        public string GetRelativePath([CanBeNull]string FullPath)
             {
+            if (FullPath == null)
+                return "";
+
             if (string.IsNullOrEmpty(this.FilePath))
                 return FullPath;
+
 
             var Uri1 = new Uri(FullPath);
             var Uri2 = new Uri(this.FilePath);
