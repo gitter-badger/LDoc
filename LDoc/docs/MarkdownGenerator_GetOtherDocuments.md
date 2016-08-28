@@ -4,14 +4,14 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetOtherDocuments
 #### InstanceMethod
-###### public [Dictionary<String, GitHubMarkdown>] GetOtherDocuments();
+###### public [Dictionary<String, GitHubMarkdown>](https://www.google.com/#q=C%23+System.Collections.Generic.Dictionary<String, GitHubMarkdown>) GetOtherDocuments();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L294)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ###### Summary
 #### Returns
-###### [Dictionary<String, GitHubMarkdown>]
+###### [Dictionary<String, GitHubMarkdown>](https://www.google.com/#q=C%23+System.Collections.Generic.Dictionary<String, GitHubMarkdown>)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

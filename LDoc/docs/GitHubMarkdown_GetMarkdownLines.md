@@ -4,14 +4,14 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # GetMarkdownLines
 #### InstanceMethod
-###### public [List<String>] GetMarkdownLines();
+###### public [List<String>](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>) GetMarkdownLines();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L59)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
 ###### Summary
 #### Returns
-###### [List<String>]
+###### [List<String>](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

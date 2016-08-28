@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Gravatar
 #### InstanceMethod
-###### public [String] Gravatar([String] ID, [Int32] Size);
+###### public [String](https://www.google.com/#q=C%23+System.String) Gravatar([String](https://www.google.com/#q=C%23+System.String) ID, [Int32](https://www.google.com/#q=C%23+System.Int32) Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L503)
 
@@ -16,11 +16,11 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-ID | No | [String] | 
-Size | Yes | [Int32] | 
+ID | No | [String](https://www.google.com/#q=C%23+System.String) | 
+Size | Yes | [Int32](https://www.google.com/#q=C%23+System.Int32) | 
 
 #### Returns
-###### [String]
+###### [String](https://www.google.com/#q=C%23+System.String)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

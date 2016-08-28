@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Badge
 #### InstanceMethod
-###### public [String] Badge([String] Left, [String] Right, [String] HexColor);
+###### public [String](https://www.google.com/#q=C%23+System.String) Badge([String](https://www.google.com/#q=C%23+System.String) Left, [String](https://www.google.com/#q=C%23+System.String) Right, [String](https://www.google.com/#q=C%23+System.String) HexColor);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L458)
 
@@ -17,12 +17,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Left | No | [String] | 
-Right | No | [String] | 
-HexColor | No | [String] | 
+Left | No | [String](https://www.google.com/#q=C%23+System.String) | 
+Right | No | [String](https://www.google.com/#q=C%23+System.String) | 
+HexColor | No | [String](https://www.google.com/#q=C%23+System.String) | 
 
 #### Returns
-###### [String]
+###### [String](https://www.google.com/#q=C%23+System.String)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

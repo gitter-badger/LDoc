@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Image
 #### InstanceMethod
-###### public [String] Image([String] Url, [String] ReferenceText, [Nullable<Align>] Align);
+###### public [String](https://www.google.com/#q=C%23+System.String) Image([String](https://www.google.com/#q=C%23+System.String) Url, [String](https://www.google.com/#q=C%23+System.String) ReferenceText, [Nullable<Align>](https://www.google.com/#q=C%23+System.Nullable<Align>) Align);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L402)
 
@@ -14,12 +14,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Url | No | [String] | 
-ReferenceText | Yes | [String] | 
-Align | Yes | [Nullable<Align>] | 
+Url | No | [String](https://www.google.com/#q=C%23+System.String) | 
+ReferenceText | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
+Align | Yes | [Nullable<Align>](https://www.google.com/#q=C%23+System.Nullable<Align>) | 
 
 #### Returns
-###### [String]
+###### [String](https://www.google.com/#q=C%23+System.String)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

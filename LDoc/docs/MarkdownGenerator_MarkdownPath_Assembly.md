@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # MarkdownPath_Assembly
 #### InstanceMethod
-###### public [String] MarkdownPath_Assembly([Assembly] Assembly);
+###### public [String](https://www.google.com/#q=C%23+System.String) MarkdownPath_Assembly([Assembly](https://www.google.com/#q=C%23+System.Reflection.Assembly) Assembly);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L708)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L710)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ###### Summary
@@ -17,10 +17,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Assembly | No | [Assembly] | 
+Assembly | No | [Assembly](https://www.google.com/#q=C%23+System.Reflection.Assembly) | 
 
 #### Returns
-###### [String]
+###### [String](https://www.google.com/#q=C%23+System.String)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # TableOfContentsLink
 #### InstanceMethod
-###### public [String] TableOfContentsLink([GitHubMarkdown] MD);
+###### public [String](https://www.google.com/#q=C%23+System.String) TableOfContentsLink([GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) MD);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L278)
 
@@ -17,10 +17,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | [GitHubMarkdown] | 
+MD | No | [GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) | 
 
 #### Returns
-###### [String]
+###### [String](https://www.google.com/#q=C%23+System.String)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

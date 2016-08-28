@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # IncludeType
 #### InstanceMethod
-###### public [Boolean] IncludeType([Type] Type);
+###### public [Boolean](https://www.google.com/#q=C%23+System.Boolean) IncludeType([Type](https://www.google.com/#q=C%23+System.Type) Type);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L728)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L730)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ###### Summary
@@ -17,10 +17,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Type | No | [Type] | 
+Type | No | [Type](https://www.google.com/#q=C%23+System.Type) | 
 
 #### Returns
-###### [Boolean]
+###### [Boolean](https://www.google.com/#q=C%23+System.Boolean)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

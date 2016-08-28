@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetTypeMemberMarkdown
 #### InstanceMethod
-###### public [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>] GetTypeMemberMarkdown([Type] Type);
+###### public [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>](https://www.google.com/#q=C%23+System.Collections.Generic.List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>) GetTypeMemberMarkdown([Type](https://www.google.com/#q=C%23+System.Type) Type);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L323)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L325)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ###### Summary
@@ -16,10 +16,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Type | No | [Type] | 
+Type | No | [Type](https://www.google.com/#q=C%23+System.Type) | 
 
 #### Returns
-###### [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>]
+###### [List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>](https://www.google.com/#q=C%23+System.Collections.Generic.List<KeyValuePair<MemberInfo[], GitHubMarkdown_MemberGroup>>)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

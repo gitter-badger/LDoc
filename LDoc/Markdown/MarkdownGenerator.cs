@@ -307,15 +307,17 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string GetTypeLink(GitHubMarkdown MD, Type Type)
             {
-            // TODO: resolve local types
+            string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
+            if (!string.IsNullOrEmpty(TypeLink))
+                return MD.Link(MD.GetRelativePath(TypeLink), Type.GetGenericName());
 
             // TODO: resolve github types
 
-            // TODO: resolve microsoft-documented types
+            if (Type.FullyQualifiedName().StartsWith("System."))
+                ;// TODO: resolve microsoft-documented types
 
-            // TODO: google unknown types
-
-            return "";
+            return $"https://www.google.com/#q=C%23+" +
+                   $"{Type.FullyQualifiedName()}";
             }
 
         /// <summary>

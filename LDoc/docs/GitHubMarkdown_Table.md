@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Table
 #### InstanceMethod
-###### public [void] Table([String[,]] Rows, [Boolean] IncludeHeader, [Align[]] Alignment);
+###### public [void](https://www.google.com/#q=C%23+System.void) Table([String[,]](https://www.google.com/#q=C%23+System.String[,]) Rows, [Boolean](https://www.google.com/#q=C%23+System.Boolean) IncludeHeader, [Align[]](https://www.google.com/#q=C%23+LCore.Extensions.Align[]) Alignment);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L257)
 
@@ -14,12 +14,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Rows | No | [String[,]] | 
-IncludeHeader | Yes | [Boolean] | 
-Alignment | Yes | [Align[]] | 
+Rows | No | [String[,]](https://www.google.com/#q=C%23+System.String[,]) | 
+IncludeHeader | Yes | [Boolean](https://www.google.com/#q=C%23+System.Boolean) | 
+Alignment | Yes | [Align[]](https://www.google.com/#q=C%23+LCore.Extensions.Align[]) | 
 
 #### Returns
-###### [void]
+###### [void](https://www.google.com/#q=C%23+System.void)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

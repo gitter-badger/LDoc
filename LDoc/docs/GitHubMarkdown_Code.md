@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Code
 #### InstanceMethod
-###### public [void] Code([String[]] Lines, [String] Language);
+###### public [void](https://www.google.com/#q=C%23+System.void) Code([String[]](https://www.google.com/#q=C%23+System.String[]) Lines, [String](https://www.google.com/#q=C%23+System.String) Language);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L234)
 
@@ -17,11 +17,11 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Lines | Yes | [String[]] | 
-Language | Yes | [String] | 
+Lines | Yes | [String[]](https://www.google.com/#q=C%23+System.String[]) | 
+Language | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
 
 #### Returns
-###### [void]
+###### [void](https://www.google.com/#q=C%23+System.void)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

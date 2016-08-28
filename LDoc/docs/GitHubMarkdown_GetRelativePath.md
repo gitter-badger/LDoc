@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # GetRelativePath
 #### InstanceMethod
-###### public [String] GetRelativePath([String] FullPath);
+###### public [String](https://www.google.com/#q=C%23+System.String) GetRelativePath([String](https://www.google.com/#q=C%23+System.String) FullPath);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L487)
 
@@ -16,10 +16,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-FullPath | No | [String] | 
+FullPath | No | [String](https://www.google.com/#q=C%23+System.String) | 
 
 #### Returns
-###### [String]
+###### [String](https://www.google.com/#q=C%23+System.String)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

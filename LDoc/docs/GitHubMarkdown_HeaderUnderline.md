@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # HeaderUnderline
 #### InstanceMethod
-###### public [void] HeaderUnderline([String] Line, [Int32] Size);
+###### public [void](https://www.google.com/#q=C%23+System.void) HeaderUnderline([String](https://www.google.com/#q=C%23+System.String) Line, [Int32](https://www.google.com/#q=C%23+System.Int32) Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L114)
 
@@ -23,11 +23,11 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Line | No | [String] | 
-Size | Yes | [Int32] | 
+Line | No | [String](https://www.google.com/#q=C%23+System.String) | 
+Size | Yes | [Int32](https://www.google.com/#q=C%23+System.Int32) | 
 
 #### Returns
-###### [void]
+###### [void](https://www.google.com/#q=C%23+System.void)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetBadges_Coverage
 #### InstanceMethod
-###### public [List<String>] GetBadges_Coverage([GitHubMarkdown] MD, [AssemblyCoverage] Coverage, [ICodeComment] Comments);
+###### public [List<String>](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>) GetBadges_Coverage([GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) MD, [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) Coverage, [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) Comments);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L375)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L377)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
 ###### Summary
@@ -17,12 +17,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | [GitHubMarkdown] | 
-Coverage | No | [AssemblyCoverage] | 
-Comments | No | [ICodeComment] | 
+MD | No | [GitHubMarkdown]([GitHubMarkdown](GitHubMarkdown.md)) | 
+Coverage | No | [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) | 
+Comments | No | [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) | 
 
 #### Returns
-###### [List<String>]
+###### [List<String>](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
