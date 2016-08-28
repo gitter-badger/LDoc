@@ -47,8 +47,8 @@ namespace Test_LDoc
 
             [typeof(GitHubMarkdown.BadgeColor)] = "", // TODO link enums properly, fix in LCore find source file for enum types
 
-            [typeof(ICodeComment)] = "", // TODO link once LCode is documented
-            [typeof(L.Align)] = ""      // TODO link once LCode is documented
+            [typeof(ICodeComment)] = "", // TODO link once LCore is documented
+            [typeof(L.Align)] = ""      // TODO link once LCore is documented
             };
 
         /*

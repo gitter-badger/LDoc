@@ -55,7 +55,7 @@ namespace LCore.LDoc.Markdown
             [typeof(Func<>)] = "https://msdn.microsoft.com/en-us/library/bb534960.aspx",
             [typeof(Func<,>)] = "https://msdn.microsoft.com/en-us/library/bb549151.aspx",
             [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150.aspx",
-            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx",
+            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx"
             };
 
         /// <summary>
@@ -334,7 +334,8 @@ namespace LCore.LDoc.Markdown
             if (Type.IsByRef)
                 return this.LinkToType(MD, Type.GetElementType());
 
-            if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
+            if ((Type.IsGenericType && !Type.IsGenericTypeDefinition) ||
+                (Type.IsArray && Type.GetElementType().IsGenericType && !Type.GetElementType().IsGenericTypeDefinition))
                 {
                 bool Array = false;
                 if (Type.IsArray)
@@ -372,7 +373,7 @@ namespace LCore.LDoc.Markdown
             if (this.RequireDirectLinksToAllForeignTypes)
                 throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetGenericName()}");
 
-            // TODO: resolve github types
+            // TODO: resolve related project assemblies
 
 
             if (Type.FullyQualifiedName().StartsWith("System."))
