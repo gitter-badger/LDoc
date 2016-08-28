@@ -4,11 +4,11 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetBadges_Info
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<String>" alt="Search for 'System.Collections.Generic.List<String>'" target="_blank">List`1</a> GetBadges_Info([GitHubMarkdown](GitHubMarkdown.md) MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> Comments);
+###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a><<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>> GetBadges_Info([GitHubMarkdown](GitHubMarkdown.md) MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> Comments);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L370)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L371)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
 
             Override this method to customize badges included in type generated markdown documents.
@@ -22,7 +22,7 @@ Coverage | No | <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCove
 Comments | No | <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<String>" alt="Search for 'System.Collections.Generic.List<String>'" target="_blank">List`1</a>
+###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a><<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

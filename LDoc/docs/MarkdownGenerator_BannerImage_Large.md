@@ -6,9 +6,9 @@
 #### InstanceMethod
 ###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> BannerImage_Large([GitHubMarkdown](GitHubMarkdown.md) MD);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L660)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L664)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/MarkdownGenerator.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
 
             Override this value to display a large image on top ofthe main document

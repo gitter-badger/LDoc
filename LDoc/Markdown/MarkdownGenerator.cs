@@ -314,7 +314,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string LinkToType(GitHubMarkdown MD, Type Type)
             {
-            if (Type.ContainsGenericParameters && !Type.IsGenericTypeDefinition)
+            if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
                 {
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
                 Type[] Parameters = Type.GenericTypeArguments;
@@ -641,7 +641,10 @@ namespace LCore.LDoc.Markdown
                             : GitHubMarkdown.BadgeColor.LightGrey));
 
                 Out.Add(MD.Link(MD.GetRelativePath(SourcePath),
-                    MD.Badge(this.Language.Badge_Assertions, $"{Coverage.AssertionsMade}", GitHubMarkdown.BadgeColor.BrightGreen), EscapeText: false));
+                    MD.Badge(this.Language.Badge_Assertions, $"{Coverage.AssertionsMade}",
+                    Coverage.AssertionsMade > 0u
+                    ? GitHubMarkdown.BadgeColor.BrightGreen
+                    : GitHubMarkdown.BadgeColor.LightGrey), EscapeText: false));
 
                 // TODO: Add Test Status: Passing / Failing / Untested
                 }

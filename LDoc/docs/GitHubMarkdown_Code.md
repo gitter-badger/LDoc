@@ -6,9 +6,9 @@
 #### InstanceMethod
 ###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">Void</a> Code(<a href="https://www.google.com/#q=C%23+System.String[]" alt="Search for 'System.String[]'" target="_blank">String[]</a> Lines, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Language);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L235)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L236)
 
-![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png "")](../Markdown/GitHubMarkdown.cs)
+![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 ##### Summary
 
             Add a number of lines of code, optionally include a Language for 
