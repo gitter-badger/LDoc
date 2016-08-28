@@ -1,9 +1,9 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### Urls
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-lightgrey.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-lightgrey.png "")
-[View Source]
+
+
+[View Source](../LDoc.cs)
 ###### Summary
 
             Constant Urls

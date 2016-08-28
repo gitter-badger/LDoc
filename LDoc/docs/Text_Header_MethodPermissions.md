@@ -1,8 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
-[Up](MarkdownGenerator.md)
-### MarkdownGenerator
-[View Source](../Markdown/MarkdownGenerator.cs)
-# Markdown_Other
+[Up](Text.md)
+### Text
+# Header_MethodPermissions
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

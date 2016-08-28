@@ -1,9 +1,9 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### Text
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
-[View Source]
+
+
+[View Source](../Markdown/MarkdownGenerator.cs)
 ###### Summary
 
             Structure to customize text used in MarkdownGenerator
@@ -30,6 +30,8 @@
  - [Header_MethodReturns](Text_Header_MethodReturns.md)
  - [Header_Summary](Text_Header_Summary.md)
  - [Header_MethodExamples](Text_Header_MethodExamples.md)
+ - [Header_MethodPermissions](Text_Header_MethodPermissions.md)
+ - [Header_MethodExceptions](Text_Header_MethodExceptions.md)
  - [LinkText_ViewSource](Text_LinkText_ViewSource.md)
  - [LinkText_Home](Text_LinkText_Home.md)
  - [LinkText_Up](Text_LinkText_Up.md)

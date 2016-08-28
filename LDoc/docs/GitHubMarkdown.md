@@ -1,9 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### GitHubMarkdown
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Documented 64%](http://b.repl.ca/v1/Documented-64%25-yellowgreen.png "")
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
-[View Source]
+
+
 ###### Summary
 
             Helper class for generating GitHub markdown documents.

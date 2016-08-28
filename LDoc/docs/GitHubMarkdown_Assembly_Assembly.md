@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown_Assembly.md)
 ### GitHubMarkdown_Assembly
-[View Source](GitHubMarkdown_Assembly.md)
+[View Source](../Markdown/GitHubMarkdown_Assembly.cs)
 # Assembly
 ---
 

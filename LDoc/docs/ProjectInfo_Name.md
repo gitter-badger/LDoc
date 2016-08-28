@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](ProjectInfo.md)
 ### ProjectInfo
-[View Source](ProjectInfo.md)
+[View Source](../Markdown/ProjectInfo.cs)
 # Name
 ---
 

@@ -1,9 +1,9 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### BadgeColor
-![Type Enum ](http://b.repl.ca/v1/Type-Enum%20-lightgrey.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
-![Type Enum ](http://b.repl.ca/v1/Type-Enum%20-lightgrey.png "")
-[View Source]
+
+
+[View Source](../Markdown/GitHubMarkdown.cs)
 ###### Summary
 
             Pre-defined Buckler badge colors (http://b.repl.ca/)

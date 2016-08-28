@@ -1,7 +1,6 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](BadgeColor.md)
 ### BadgeColor
-[View Source](BadgeColor.md)
 # Red
 ---
 

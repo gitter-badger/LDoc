@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](GitHubMarkdown.md)
 ### GitHubMarkdown
-[View Source](GitHubMarkdown.md)
+[View Source](../Markdown/GitHubMarkdown.cs)
 # BadgeColor
 ---
 

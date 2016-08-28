@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](MarkdownGenerator.md)
 ### MarkdownGenerator
-[View Source](MarkdownGenerator.md)
+[View Source](../Markdown/MarkdownGenerator.cs)
 # DocumentAttributeCoverage
 ---
 

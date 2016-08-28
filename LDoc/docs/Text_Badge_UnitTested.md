@@ -1,7 +1,6 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](Text.md)
 ### Text
-[View Source](Text.md)
 # Badge_UnitTested
 ---
 

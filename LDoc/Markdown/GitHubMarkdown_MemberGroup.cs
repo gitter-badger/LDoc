@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using LCore.Extensions;
-using LCore.Interfaces;
 using LCore.LUnit;
 
 namespace LCore.LDoc.Markdown
@@ -16,8 +15,8 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Members and corresponding comments and coverage
         /// </summary>
-        public Dictionary<MemberInfo, Tuple<ICodeComment, MethodCoverage>> Members { get; }
-            = new Dictionary<MemberInfo, Tuple<ICodeComment, MethodCoverage>>();
+        public Dictionary<MemberInfo, CodeCoverageMetaData> Members { get; }
+            = new Dictionary<MemberInfo, CodeCoverageMetaData>();
 
         /// <summary>
         /// Create a new Member Markdown file.
@@ -26,10 +25,7 @@ namespace LCore.LDoc.Markdown
             {
             Members.Each(Member =>
                 {
-                    this.Members.Add(Member,
-                        new Tuple<ICodeComment, MethodCoverage>(
-                            Member.GetComments(),
-                            Member is MethodInfo ? new MethodCoverage((MethodInfo)Member) : null));
+                    this.Members.Add(Member, new CodeCoverageMetaData(Member, Generator.CustomCommentTags));
                 });
 
             this.Generate();
@@ -59,9 +55,9 @@ namespace LCore.LDoc.Markdown
 
                 if (Member is MethodInfo)
                     {
+                    var Meta = this.Members[Member];
+
                     var Method = (MethodInfo)Member;
-                    var Coverage = new MethodCoverage(Method);
-                    var Comments = Method.GetComments();
 
                     string Static = Method.IsStatic
                         ? "Static "
@@ -78,20 +74,20 @@ namespace LCore.LDoc.Markdown
                         .Convert(Param => $"{this.Link(MarkdownGenerator.GetTypeLink(this, Param.ParameterType), $"{Param.ParameterType.GetGenericName()}")} {Param.Name}")
                         .Combine(", ");
 
-
-
                     this.Header($"{Static}Method", Size: 4);
 
 
                     this.Header($"public{StaticLower} {ReturnType} {Member.Name}({Parameters});", Size: 6);
 
                     this.Line("");
-                    this.Line(MarkdownGenerator.GetBadges_Info(this, Coverage, Comments).JoinLines(" "));
+                    this.Line(MarkdownGenerator.GetBadges_Info(this, Meta.Coverage, Meta.Comments).JoinLines(" "));
                     this.Line("");
-                    this.Line(MarkdownGenerator.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
+                    this.Line(MarkdownGenerator.GetBadges_Coverage(this, Meta.Coverage, Meta.Comments).JoinLines(" "));
+
+                    // TODO: Add test coverage link
 
                     this.Header(MarkdownGenerator.Language.Header_Summary, Size: 6);
-                    this.Line(Comments?.Summary);
+                    this.Line(Meta.Comments?.Summary);
 
                     if (Method.GetParameters().Length > 0)
                         {
@@ -114,7 +110,7 @@ namespace LCore.LDoc.Markdown
                                     ? "Yes"
                                     : "No",
                                 this.Link(MarkdownGenerator.GetTypeLink(this, Param.ParameterType), Param.ParameterType.GetGenericName()),
-                                Comments?.Parameters.GetAt(ParamIndex)?.Obj2
+                                Meta.Comments?.Parameters.GetAt(ParamIndex)?.Obj2
                                 });
                             });
 
@@ -125,19 +121,25 @@ namespace LCore.LDoc.Markdown
 
                     this.Header(this.Link(MarkdownGenerator.GetTypeLink(this, Method.ReturnType), Method.ReturnType.GetGenericName()), Size: 6);
 
-                    this.Line(Comments?.Returns);
+                    this.Line(Meta.Comments?.Returns);
 
-                    if (Comments?.Examples.Length > 0)
+                    if (Meta.Comments?.Examples.Length > 0)
                         {
                         this.Header(MarkdownGenerator.Language.Header_MethodExamples, Size: 4);
-                        Comments.Examples.Each(Example => this.Code(new[] { Example }));
+                        Meta.Comments.Examples.Each(Example => this.Code(new[] { Example }));
                         }
 
-                    // TODO: Add test coverage link
+                    if (Meta.Comments?.Permissions.Length > 0)
+                        {
+                        this.Header(MarkdownGenerator.Language.Header_MethodPermissions, Size: 4);
+                        Meta.Comments.Permissions.Each(Permission => this.Line($"{Permission.Obj1} {Permission.Obj2}"));
+                        }
 
-                    // TODO: Add exception details
-
-                    // TODO: Add permission details
+                    if (Meta.Comments?.Exceptions.Length > 0)
+                        {
+                        this.Header(MarkdownGenerator.Language.Header_MethodExceptions, Size: 4);
+                        Meta.Comments.Exceptions.Each(Exception => this.Line($"{Exception.Obj1} {Exception.Obj2}"));
+                        }
                     }
 
                 MarkdownGenerator.WriteFooter(this);

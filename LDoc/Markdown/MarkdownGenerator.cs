@@ -892,6 +892,7 @@ namespace LCore.LDoc.Markdown
             Header_Summary = "Summary",
             Header_MethodParameters = "Parameters",
             Header_MethodReturns = "Returns",
+            Header_MethodPermissions = "Permissions",
 
             LinkText_ViewSource = "View Source",
             LinkText_Home = "Home",
@@ -1035,6 +1036,10 @@ namespace LCore.LDoc.Markdown
             /// Header for method examples
             /// </summary>
             public string Header_MethodExamples { get; set; }
+
+            public string Header_MethodPermissions { get; set; }
+            public string Header_MethodExceptions { get; set; }
+            
 
 
             /// <summary>

@@ -1,16 +1,13 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### GitHubMarkdown_Type
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
-[View Source]
+
+
 ###### Summary
 
             Generates markdown for a Type.
             
- - [Type](GitHubMarkdown_Type_Type.md)
- - [Comments](GitHubMarkdown_Type_Comments.md)
- - [Coverage](GitHubMarkdown_Type_Coverage.md)
+ - [TypeMeta](GitHubMarkdown_Type_TypeMeta.md)
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

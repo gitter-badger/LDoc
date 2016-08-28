@@ -2,7 +2,7 @@
 [Up](MarkdownGenerator.md)
 ### MarkdownGenerator
 [View Source](../Markdown/MarkdownGenerator.cs)
-# Markdown_Other
+# CustomBadgeUrls
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

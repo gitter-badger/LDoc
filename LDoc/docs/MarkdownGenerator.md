@@ -1,9 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 86%](http://b.repl.ca/v1/Documented-86%25-green.png "")
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
-[View Source]
+
+
 ###### Summary
 
             Implement this class to generate code for your assemblies and projects
@@ -39,6 +38,7 @@
  - [GetAllMarkdown](MarkdownGenerator_GetAllMarkdown.md)
  - [DocumentAssemblies](MarkdownGenerator_DocumentAssemblies.md)
  - [Home_RelatedProjects](MarkdownGenerator_Home_RelatedProjects.md)
+ - [CustomBadgeUrls](MarkdownGenerator_CustomBadgeUrls.md)
  - [Markdown_Other](MarkdownGenerator_Markdown_Other.md)
  - [Markdown_Assembly](MarkdownGenerator_Markdown_Assembly.md)
  - [Markdown_Type](MarkdownGenerator_Markdown_Type.md)
@@ -51,6 +51,7 @@
  - [DocumentUnitCoverage](MarkdownGenerator_DocumentUnitCoverage.md)
  - [DocumentAttributeCoverage](MarkdownGenerator_DocumentAttributeCoverage.md)
  - [Language](MarkdownGenerator_Language.md)
+ - [CustomCommentTags](MarkdownGenerator_CustomCommentTags.md)
  - [CSharpLanguage](MarkdownGenerator_CSharpLanguage.md)
  - [MarkdownPath_RootFile](MarkdownGenerator_MarkdownPath_RootFile.md)
  - [Text](MarkdownGenerator_Text.md)
