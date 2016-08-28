@@ -52,15 +52,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="L Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.8.25103237.1\lib\net451\L Utilities.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.241.3.4\lib\net451\L Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="L, Version=0.9.0.11, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.8.25103237.1\lib\net451\L.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.241.3.4\lib\net451\L.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LUnit.2016.8.27181852.1\lib\net451\LUnit.dll</HintPath>
+      <HintPath>..\packages\LUnit.2016.241.3.14\lib\net451\LUnit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.UnitTestFramework.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5bf63060baa03a11, processorArchitecture=MSIL">
@@ -116,10 +116,9 @@
     <Folder Include="Generated\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\L Banner original.png" />
-    <Content Include="Content\L Logo.png" />
-    <Content Include="Content\LCore-banner-large.png" />
-    <Content Include="Content\LCore-banner-small.png" />
+    <Content Include="Content\LUnit banner original.png" />
+    <Content Include="Content\LUnit-banner-large.png" />
+    <Content Include="Content\LUnit-small-logo.ico" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
