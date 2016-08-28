@@ -331,6 +331,10 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string LinkToType(GitHubMarkdown MD, Type Type)
             {
+            // Unassigned types, (T, etc), need no link
+            if (Type.IsGenericParameter)
+                return Type.Name;
+
             if (Type.IsByRef)
                 return this.LinkToType(MD, Type.GetElementType());
 
