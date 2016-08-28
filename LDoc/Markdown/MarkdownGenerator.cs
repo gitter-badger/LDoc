@@ -319,7 +319,7 @@ namespace LCore.LDoc.Markdown
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
                 Type[] Parameters = Type.GenericTypeArguments;
 
-                return $"{GenericTypeLink}<{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}>";
+                return $" {GenericTypeLink} < {Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(" , ")} >";
                 }
 
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;

@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Image
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Image(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Url, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> ReferenceText, <a href="https://www.google.com/#q=C%23+System.Nullable<T>" alt="Search for 'System.Nullable<T>'" target="_blank">Nullable`1</a><<a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">Align</a>> Align);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Image(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> Url, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> ReferenceText,  <a href="https://www.google.com/#q=C%23+System.Nullable<T>" alt="Search for 'System.Nullable<T>'" target="_blank">Nullable`1</a> < <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">Align</a> > Align);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L410)
 
@@ -15,7 +15,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Url | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
 ReferenceText | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a> | 
-Align | Yes | <a href="https://www.google.com/#q=C%23+System.Nullable<T>" alt="Search for 'System.Nullable<T>'" target="_blank">Nullable`1</a><<a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">Align</a>> | 
+Align | Yes |  <a href="https://www.google.com/#q=C%23+System.Nullable<T>" alt="Search for 'System.Nullable<T>'" target="_blank">Nullable`1</a> < <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">Align</a> > | 
 
 #### Returns
 ###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for 'System.String'" target="_blank">String</a>

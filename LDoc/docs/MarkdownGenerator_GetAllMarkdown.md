@@ -4,13 +4,13 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetAllMarkdown
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a><[GitHubMarkdown](GitHubMarkdown.md)> GetAllMarkdown();
+###### public  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a> < [GitHubMarkdown](GitHubMarkdown.md) > GetAllMarkdown();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L893)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a><[GitHubMarkdown](GitHubMarkdown.md)>
+######  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a> < [GitHubMarkdown](GitHubMarkdown.md) >
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

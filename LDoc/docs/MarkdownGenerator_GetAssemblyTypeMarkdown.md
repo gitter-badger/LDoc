@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetAssemblyTypeMarkdown
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a><<a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair<TKey, TValue>" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair`2</a><<a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a>, [GitHubMarkdown_Type](GitHubMarkdown_Type.md)>> GetAssemblyTypeMarkdown(<a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> Assembly);
+###### public  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a> <  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair<TKey, TValue>" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair`2</a> < <a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> , [GitHubMarkdown_Type](GitHubMarkdown_Type.md) > > GetAssemblyTypeMarkdown(<a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> Assembly);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L356)
 
@@ -19,7 +19,7 @@ Parameter | Optional | Type | Description
 Assembly | No | <a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for 'System.Reflection.Assembly'" target="_blank">Assembly</a> | 
 
 #### Returns
-###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a><<a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair<TKey, TValue>" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair`2</a><<a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a>, [GitHubMarkdown_Type](GitHubMarkdown_Type.md)>>
+######  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<T>" alt="Search for 'System.Collections.Generic.List<T>'" target="_blank">List`1</a> <  <a href="https://www.google.com/#q=C%23+System.Collections.Generic.KeyValuePair<TKey, TValue>" alt="Search for 'System.Collections.Generic.KeyValuePair<TKey, TValue>'" target="_blank">KeyValuePair`2</a> < <a href="https://www.google.com/#q=C%23+System.Type" alt="Search for 'System.Type'" target="_blank">Type</a> , [GitHubMarkdown_Type](GitHubMarkdown_Type.md) > >
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
