@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 ### MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 87%](http://b.repl.ca/v1/Documented-87%25-green.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 85%](http://b.repl.ca/v1/Documented-85%25-green.png "")
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 ###### Summary
 
@@ -18,6 +18,7 @@
  - [TableOfContentsLink](MarkdownGenerator_TableOfContentsLink.md)
  - [HomeLink](MarkdownGenerator_HomeLink.md)
  - [GetOtherDocuments](MarkdownGenerator_GetOtherDocuments.md)
+ - [FormatComment](MarkdownGenerator_FormatComment.md)
  - [LinkToType](MarkdownGenerator_LinkToType.md)
  - [GetTypeMemberMarkdown](MarkdownGenerator_GetTypeMemberMarkdown.md)
  - [GetAssemblyTypeMarkdown](MarkdownGenerator_GetAssemblyTypeMarkdown.md)

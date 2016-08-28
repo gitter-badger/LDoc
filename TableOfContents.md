@@ -56,6 +56,7 @@
  - [TableOfContentsLink](LDoc/docs/MarkdownGenerator_TableOfContentsLink.md)
  - [HomeLink](LDoc/docs/MarkdownGenerator_HomeLink.md)
  - [GetOtherDocuments](LDoc/docs/MarkdownGenerator_GetOtherDocuments.md)
+ - [FormatComment](LDoc/docs/MarkdownGenerator_FormatComment.md)
  - [LinkToType](LDoc/docs/MarkdownGenerator_LinkToType.md)
  - [GetTypeMemberMarkdown](LDoc/docs/MarkdownGenerator_GetTypeMemberMarkdown.md)
  - [GetAssemblyTypeMarkdown](LDoc/docs/MarkdownGenerator_GetAssemblyTypeMarkdown.md)

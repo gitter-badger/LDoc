@@ -67,9 +67,6 @@ namespace LCore.LDoc.Markdown
                         ? " static"
                         : "";
 
-
-
-
                     string Parameters = Method.GetParameters()
                         .Convert(Param => $"{MarkdownGenerator.LinkToType(this, Param.ParameterType)} {Param.Name}")
                         .Combine(", ");
@@ -86,8 +83,11 @@ namespace LCore.LDoc.Markdown
 
                     // TODO: Add test coverage link
 
-                    this.Header(MarkdownGenerator.Language.Header_Summary, Size: 6);
-                    this.Line(Meta.Comments?.Summary);
+                    if (Meta.Comments?.Summary != null)
+                        {
+                        this.Header(MarkdownGenerator.Language.Header_Summary, Size: 5);
+                        this.Line(this.Generator?.FormatComment(Meta.Comments?.Summary));
+                        }
 
                     if (Method.GetParameters().Length > 0)
                         {

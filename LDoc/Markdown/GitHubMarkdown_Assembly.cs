@@ -75,7 +75,7 @@ namespace LCore.LDoc.Markdown
 
                     NamespaceTypeMarkdown.Each(Type =>
                     {
-                        this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()));
+                        this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4);
 
                         var TypeComments = Type.Value.TypeMeta.Comments;
 

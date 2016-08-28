@@ -297,6 +297,13 @@ namespace LCore.LDoc.Markdown
             return new Dictionary<string, GitHubMarkdown>();
             }
 
+        public virtual string FormatComment(string CommentText)
+            {
+            // TODO add support for <see>
+            // TODO add support for <seealso>
+
+            return CommentText;
+            }
 
         /// <summary>
         /// Gets a link to a type, whether it is public to this project, a type on GitHub,
@@ -316,10 +323,13 @@ namespace LCore.LDoc.Markdown
 
             // TODO: resolve github types
 
-            if (Type.FullyQualifiedName().StartsWith("System."))
-                ;// TODO: resolve microsoft-documented types
 
-            return MD.Link($"https://www.google.com/#q=C%23+" +
+            if (Type.FullyQualifiedName().StartsWith("System."))
+                {
+                // TODO: resolve microsoft-documented types
+                }
+
+            return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{Type.FullyQualifiedName()}",
                             Type.GetGenericName(),
                             "Search for this type",
@@ -1092,5 +1102,6 @@ namespace LCore.LDoc.Markdown
             }
 
         #endregion
+
         }
     }
