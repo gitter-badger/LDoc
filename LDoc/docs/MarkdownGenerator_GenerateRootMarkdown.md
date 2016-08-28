@@ -6,11 +6,13 @@
 #### InstanceMethod
 ###### public **[GitHubMarkdown](GitHubMarkdown.md)** GenerateRootMarkdown();
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L109)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 21](http://b.repl.ca/v1/Lines%20of%20Code-21-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L110)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 #### Returns
 ###### **[GitHubMarkdown](GitHubMarkdown.md)**
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -6,7 +6,7 @@
 #### InstanceMethod
 ###### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a> Code(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String[]</a> Lines, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Language);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L236)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L236)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 ##### Summary
@@ -22,6 +22,8 @@ Language | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string
 
 #### Returns
 ###### <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a>
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

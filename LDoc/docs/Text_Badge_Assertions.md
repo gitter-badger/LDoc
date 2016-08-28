@@ -2,6 +2,8 @@
 [Up](Text.md)
 ### Text
 # Badge_Assertions
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

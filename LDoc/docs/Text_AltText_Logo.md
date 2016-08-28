@@ -2,6 +2,8 @@
 [Up](Text.md)
 ### Text
 # AltText_Logo
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

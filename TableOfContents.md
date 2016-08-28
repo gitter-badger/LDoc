@@ -52,7 +52,6 @@
  - [GenerateCoverageSummaryMarkdown](LDoc/docs/MarkdownGenerator_GenerateCoverageSummaryMarkdown.md)
  - [GenerateMarkdown](LDoc/docs/MarkdownGenerator_GenerateMarkdown.md)
  - [WriteHeader](LDoc/docs/MarkdownGenerator_WriteHeader.md)
- - [WriteCustomFooter](LDoc/docs/MarkdownGenerator_WriteCustomFooter.md)
  - [TableOfContentsLink](LDoc/docs/MarkdownGenerator_TableOfContentsLink.md)
  - [HomeLink](LDoc/docs/MarkdownGenerator_HomeLink.md)
  - [GetOtherDocuments](LDoc/docs/MarkdownGenerator_GetOtherDocuments.md)
@@ -67,6 +66,7 @@
  - [LogoImage_Large](LDoc/docs/MarkdownGenerator_LogoImage_Large.md)
  - [LogoImage_Small](LDoc/docs/MarkdownGenerator_LogoImage_Small.md)
  - [WriteFooter](LDoc/docs/MarkdownGenerator_WriteFooter.md)
+ - [WriteCustomFooter](LDoc/docs/MarkdownGenerator_WriteCustomFooter.md)
  - [MarkdownPath_Assembly](LDoc/docs/MarkdownGenerator_MarkdownPath_Assembly.md)
  - [MarkdownPath_Type](LDoc/docs/MarkdownGenerator_MarkdownPath_Type.md)
  - [MarkdownPath_Member](LDoc/docs/MarkdownGenerator_MarkdownPath_Member.md)
@@ -93,6 +93,7 @@
  - [DocumentAttributeCoverage](LDoc/docs/MarkdownGenerator_DocumentAttributeCoverage.md)
  - [Language](LDoc/docs/MarkdownGenerator_Language.md)
  - [CustomCommentTags](LDoc/docs/MarkdownGenerator_CustomCommentTags.md)
+ - [CustomCommentColor](LDoc/docs/MarkdownGenerator_CustomCommentColor.md)
  - [CSharpLanguage](LDoc/docs/MarkdownGenerator_CSharpLanguage.md)
  - [MarkdownPath_RootFile](LDoc/docs/MarkdownGenerator_MarkdownPath_RootFile.md)
  - [Text](LDoc/docs/MarkdownGenerator_Text.md)
@@ -117,6 +118,9 @@
  - [TableOfContentsFile](LDoc/docs/Text_TableOfContentsFile.md)
  - [Badge_Framework](LDoc/docs/Text_Badge_Framework.md)
  - [Badge_Type](LDoc/docs/Text_Badge_Type.md)
+ - [Badge_LinesOfCode](LDoc/docs/Text_Badge_LinesOfCode.md)
+ - [Badge_TODOs](LDoc/docs/Text_Badge_TODOs.md)
+ - [Badge_BUGs](LDoc/docs/Text_Badge_BUGs.md)
  - [Badge_Documented](LDoc/docs/Text_Badge_Documented.md)
  - [Badge_Assertions](LDoc/docs/Text_Badge_Assertions.md)
  - [Badge_UnitTested](LDoc/docs/Text_Badge_UnitTested.md)
@@ -142,6 +146,8 @@
  - [TableHeaderText_Optional](LDoc/docs/Text_TableHeaderText_Optional.md)
  - [TableHeaderText_Type](LDoc/docs/Text_TableHeaderText_Type.md)
  - [TableHeaderText_Description](LDoc/docs/Text_TableHeaderText_Description.md)
+
+
 ---
 
 [Home](README.md) | [Table of Contents] | 

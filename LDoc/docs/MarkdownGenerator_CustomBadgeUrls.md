@@ -3,6 +3,8 @@
 ### MarkdownGenerator
 [View Source](../Markdown/MarkdownGenerator.cs)
 # CustomBadgeUrls
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

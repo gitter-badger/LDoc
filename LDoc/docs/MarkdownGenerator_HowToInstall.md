@@ -6,7 +6,7 @@
 #### InstanceMethod
 ###### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a> HowToInstall(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L55)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L56)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 ##### Summary
@@ -21,6 +21,8 @@ MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** |
 
 #### Returns
 ###### <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a>
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -3,6 +3,8 @@
 ### MarkdownGenerator
 [View Source](../Markdown/MarkdownGenerator.cs)
 # MarkdownPath_CoverageSummary
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

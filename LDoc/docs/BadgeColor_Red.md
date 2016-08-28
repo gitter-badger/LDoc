@@ -2,6 +2,8 @@
 [Up](BadgeColor.md)
 ### BadgeColor
 # Red
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -1,7 +1,8 @@
 ![](../Content/LDoc-banner-small.png "")
-[Up](Text.md)
-### Text
-# Badge_Covered
+[Up](MarkdownGenerator.md)
+### MarkdownGenerator
+[View Source](../Markdown/MarkdownGenerator.cs)
+# CustomCommentColor
 
 
 ---

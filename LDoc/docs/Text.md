@@ -15,6 +15,9 @@
  - [TableOfContentsFile](Text_TableOfContentsFile.md)
  - [Badge_Framework](Text_Badge_Framework.md)
  - [Badge_Type](Text_Badge_Type.md)
+ - [Badge_LinesOfCode](Text_Badge_LinesOfCode.md)
+ - [Badge_TODOs](Text_Badge_TODOs.md)
+ - [Badge_BUGs](Text_Badge_BUGs.md)
  - [Badge_Documented](Text_Badge_Documented.md)
  - [Badge_Assertions](Text_Badge_Assertions.md)
  - [Badge_UnitTested](Text_Badge_UnitTested.md)
@@ -40,6 +43,8 @@
  - [TableHeaderText_Optional](Text_TableHeaderText_Optional.md)
  - [TableHeaderText_Type](Text_TableHeaderText_Type.md)
  - [TableHeaderText_Description](Text_TableHeaderText_Description.md)
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

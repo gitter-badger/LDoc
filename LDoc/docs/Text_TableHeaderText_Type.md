@@ -2,6 +2,8 @@
 [Up](Text.md)
 ### Text
 # TableHeaderText_Type
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -2,6 +2,8 @@
 [Up](Text.md)
 ### Text
 # CoverageSummary
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

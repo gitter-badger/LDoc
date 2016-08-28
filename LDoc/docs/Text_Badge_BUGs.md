@@ -1,7 +1,7 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](Text.md)
 ### Text
-# Badge_Covered
+# Badge_BUGs
 
 
 ---

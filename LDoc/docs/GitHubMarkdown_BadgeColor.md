@@ -3,6 +3,8 @@
 ### GitHubMarkdown
 [View Source](../Markdown/GitHubMarkdown.cs)
 # BadgeColor
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

@@ -6,7 +6,7 @@
 #### InstanceMethod
 ###### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a> BlockQuote(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String[]</a> Lines);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L324)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L324)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 ##### Summary
@@ -20,6 +20,8 @@ Lines | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.asp
 
 #### Returns
 ###### <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a>
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

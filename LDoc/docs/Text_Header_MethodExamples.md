@@ -2,6 +2,8 @@
 [Up](Text.md)
 ### Text
 # Header_MethodExamples
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

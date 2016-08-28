@@ -14,7 +14,6 @@
  - [GenerateCoverageSummaryMarkdown](MarkdownGenerator_GenerateCoverageSummaryMarkdown.md)
  - [GenerateMarkdown](MarkdownGenerator_GenerateMarkdown.md)
  - [WriteHeader](MarkdownGenerator_WriteHeader.md)
- - [WriteCustomFooter](MarkdownGenerator_WriteCustomFooter.md)
  - [TableOfContentsLink](MarkdownGenerator_TableOfContentsLink.md)
  - [HomeLink](MarkdownGenerator_HomeLink.md)
  - [GetOtherDocuments](MarkdownGenerator_GetOtherDocuments.md)
@@ -29,6 +28,7 @@
  - [LogoImage_Large](MarkdownGenerator_LogoImage_Large.md)
  - [LogoImage_Small](MarkdownGenerator_LogoImage_Small.md)
  - [WriteFooter](MarkdownGenerator_WriteFooter.md)
+ - [WriteCustomFooter](MarkdownGenerator_WriteCustomFooter.md)
  - [MarkdownPath_Assembly](MarkdownGenerator_MarkdownPath_Assembly.md)
  - [MarkdownPath_Type](MarkdownGenerator_MarkdownPath_Type.md)
  - [MarkdownPath_Member](MarkdownGenerator_MarkdownPath_Member.md)
@@ -55,9 +55,12 @@
  - [DocumentAttributeCoverage](MarkdownGenerator_DocumentAttributeCoverage.md)
  - [Language](MarkdownGenerator_Language.md)
  - [CustomCommentTags](MarkdownGenerator_CustomCommentTags.md)
+ - [CustomCommentColor](MarkdownGenerator_CustomCommentColor.md)
  - [CSharpLanguage](MarkdownGenerator_CSharpLanguage.md)
  - [MarkdownPath_RootFile](MarkdownGenerator_MarkdownPath_RootFile.md)
  - [Text](MarkdownGenerator_Text.md)
+
+
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
