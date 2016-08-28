@@ -128,7 +128,7 @@ namespace LCore.LDoc.Markdown
                         this.Header(MarkdownGenerator.Language.Header_MethodExamples, Size: 4);
                         Meta.Comments.Examples.Each(Example => this.Code(new[] { Example }));
                         }
-
+                    
                     if (Meta.Comments?.Permissions.Length > 0)
                         {
                         this.Header(MarkdownGenerator.Language.Header_MethodPermissions, Size: 4);

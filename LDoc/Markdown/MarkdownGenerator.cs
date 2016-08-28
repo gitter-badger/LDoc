@@ -325,6 +325,9 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string LinkToType(GitHubMarkdown MD, Type Type)
             {
+            if (Type.IsByRef)
+                return this.LinkToType(MD, Type.GetElementType());
+
             if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
                 {
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
