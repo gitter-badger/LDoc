@@ -2,6 +2,7 @@ using LCore.Extensions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Security.Cryptography;
 using JetBrains.Annotations;
 using LCore.Tools;
@@ -381,7 +382,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "", [CanBeNull] string ReferenceText = "")
             {
-            Text = Text.UriEncode();
+            Text = WebUtility.HtmlEncode(Text);
 
             if (!string.IsNullOrEmpty(Url))
                 {
