@@ -4,14 +4,14 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # GetMarkdownLines
 #### InstanceMethod
-###### public [List&lt;String&gt;](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>) GetMarkdownLines();
+###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<String>" alt="Search for this type" target="_blank">List&lt;String&gt;</a> GetMarkdownLines();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L60)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
 ###### Summary
 #### Returns
-###### [List&lt;String&gt;](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>)
+###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<String>" alt="Search for this type" target="_blank">List&lt;String&gt;</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

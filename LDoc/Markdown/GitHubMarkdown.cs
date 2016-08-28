@@ -380,9 +380,12 @@ namespace LCore.LDoc.Markdown
         /// [Text](Url)"Reference Text"
         /// 
         /// </summary>
-        public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "", [CanBeNull] string ReferenceText = "")
+        public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "", [CanBeNull] string ReferenceText = "", bool TargetNewWindow = false)
             {
             Text = WebUtility.HtmlEncode(Text);
+
+            if (TargetNewWindow)
+                return $"<a href=\"{Url}\" alt=\"{ReferenceText}\" target=\"_blank\">{Text}</a>";
 
             if (!string.IsNullOrEmpty(Url))
                 {

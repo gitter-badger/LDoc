@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Link
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) Link([String](https://www.google.com/#q=C%23+System.String) Url, [String](https://www.google.com/#q=C%23+System.String) Text, [String](https://www.google.com/#q=C%23+System.String) ReferenceText);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Link(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Url, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Text, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> ReferenceText, <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for this type" target="_blank">Boolean</a> TargetNewWindow);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L382)
 
@@ -23,12 +23,13 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Url | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
-Text | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
-ReferenceText | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
+Url | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+Text | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+ReferenceText | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+TargetNewWindow | Yes | <a href="https://www.google.com/#q=C%23+System.Boolean" alt="Search for this type" target="_blank">Boolean</a> | 
 
 #### Returns
-###### [String](https://www.google.com/#q=C%23+System.String)
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

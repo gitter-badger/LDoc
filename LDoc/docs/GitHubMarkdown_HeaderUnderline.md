@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # HeaderUnderline
 #### InstanceMethod
-###### public [void](https://www.google.com/#q=C%23+System.void) HeaderUnderline([String](https://www.google.com/#q=C%23+System.String) Line, [Int32](https://www.google.com/#q=C%23+System.Int32) Size);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for this type" target="_blank">void</a> HeaderUnderline(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Line, <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for this type" target="_blank">Int32</a> Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L115)
 
@@ -23,11 +23,11 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Line | No | [String](https://www.google.com/#q=C%23+System.String) | 
-Size | Yes | [Int32](https://www.google.com/#q=C%23+System.Int32) | 
+Line | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+Size | Yes | <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for this type" target="_blank">Int32</a> | 
 
 #### Returns
-###### [void](https://www.google.com/#q=C%23+System.void)
+###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for this type" target="_blank">void</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

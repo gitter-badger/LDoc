@@ -4,9 +4,9 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Image
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) Image([String](https://www.google.com/#q=C%23+System.String) Url, [String](https://www.google.com/#q=C%23+System.String) ReferenceText, [Nullable&lt;Align&gt;](https://www.google.com/#q=C%23+System.Nullable<Align>) Align);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Image(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Url, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> ReferenceText, <a href="https://www.google.com/#q=C%23+System.Nullable<Align>" alt="Search for this type" target="_blank">Nullable&lt;Align&gt;</a> Align);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L405)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L408)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
 ###### Summary
@@ -14,12 +14,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Url | No | [String](https://www.google.com/#q=C%23+System.String) | 
-ReferenceText | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
-Align | Yes | [Nullable&lt;Align&gt;](https://www.google.com/#q=C%23+System.Nullable<Align>) | 
+Url | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+ReferenceText | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+Align | Yes | <a href="https://www.google.com/#q=C%23+System.Nullable<Align>" alt="Search for this type" target="_blank">Nullable&lt;Align&gt;</a> | 
 
 #### Returns
-###### [String](https://www.google.com/#q=C%23+System.String)
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

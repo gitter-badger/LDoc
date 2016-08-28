@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Code
 #### InstanceMethod
-###### public [void](https://www.google.com/#q=C%23+System.void) Code([String[]](https://www.google.com/#q=C%23+System.String[]) Lines, [String](https://www.google.com/#q=C%23+System.String) Language);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for this type" target="_blank">void</a> Code(<a href="https://www.google.com/#q=C%23+System.String[]" alt="Search for this type" target="_blank">String[]</a> Lines, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Language);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L235)
 
@@ -17,11 +17,11 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Lines | Yes | [String[]](https://www.google.com/#q=C%23+System.String[]) | 
-Language | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
+Lines | Yes | <a href="https://www.google.com/#q=C%23+System.String[]" alt="Search for this type" target="_blank">String[]</a> | 
+Language | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
 
 #### Returns
-###### [void](https://www.google.com/#q=C%23+System.void)
+###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for this type" target="_blank">void</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

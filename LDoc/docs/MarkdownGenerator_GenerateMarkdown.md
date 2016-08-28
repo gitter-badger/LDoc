@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GenerateMarkdown
 #### InstanceMethod
-###### public [GitHubMarkdown_Assembly](GitHubMarkdown_Assembly.md) GenerateMarkdown([Assembly](https://www.google.com/#q=C%23+System.Reflection.Assembly) Assembly);
+###### public [GitHubMarkdown_Assembly](GitHubMarkdown_Assembly.md) GenerateMarkdown(<a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for this type" target="_blank">Assembly</a> Assembly);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L197)
 
@@ -17,7 +17,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Assembly | No | [Assembly](https://www.google.com/#q=C%23+System.Reflection.Assembly) | 
+Assembly | No | <a href="https://www.google.com/#q=C%23+System.Reflection.Assembly" alt="Search for this type" target="_blank">Assembly</a> | 
 
 #### Returns
 ###### [GitHubMarkdown_Assembly](GitHubMarkdown_Assembly.md)

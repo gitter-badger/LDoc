@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetBadges_Coverage
 #### InstanceMethod
-###### public [List&lt;String&gt;](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>) GetBadges_Coverage([GitHubMarkdown](GitHubMarkdown.md) MD, [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) Coverage, [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) Comments);
+###### public <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<String>" alt="Search for this type" target="_blank">List&lt;String&gt;</a> GetBadges_Coverage([GitHubMarkdown](GitHubMarkdown.md) MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for this type" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for this type" target="_blank">ICodeComment</a> Comments);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L377)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L383)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs)
 ###### Summary
@@ -18,11 +18,11 @@
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | [GitHubMarkdown](GitHubMarkdown.md) | 
-Coverage | No | [AssemblyCoverage](https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage) | 
-Comments | No | [ICodeComment](https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment) | 
+Coverage | No | <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for this type" target="_blank">AssemblyCoverage</a> | 
+Comments | No | <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for this type" target="_blank">ICodeComment</a> | 
 
 #### Returns
-###### [List&lt;String&gt;](https://www.google.com/#q=C%23+System.Collections.Generic.List<String>)
+###### <a href="https://www.google.com/#q=C%23+System.Collections.Generic.List<String>" alt="Search for this type" target="_blank">List&lt;String&gt;</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

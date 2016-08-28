@@ -4,9 +4,9 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Badge
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) Badge([String](https://www.google.com/#q=C%23+System.String) Left, [String](https://www.google.com/#q=C%23+System.String) Right, [String](https://www.google.com/#q=C%23+System.String) HexColor);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Badge(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Left, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Right, <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> HexColor);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L461)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L464)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
 ###### Summary
@@ -17,12 +17,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Left | No | [String](https://www.google.com/#q=C%23+System.String) | 
-Right | No | [String](https://www.google.com/#q=C%23+System.String) | 
-HexColor | No | [String](https://www.google.com/#q=C%23+System.String) | 
+Left | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+Right | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
+HexColor | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
 
 #### Returns
-###### [String](https://www.google.com/#q=C%23+System.String)
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

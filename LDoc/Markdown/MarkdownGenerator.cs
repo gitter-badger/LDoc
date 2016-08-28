@@ -305,19 +305,25 @@ namespace LCore.LDoc.Markdown
         /// 
         /// Otherwise, fall back on a google search.
         /// </summary>
-        public virtual string GetTypeLink(GitHubMarkdown MD, Type Type)
+        public virtual string LinkToType(GitHubMarkdown MD, Type Type)
             {
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
+
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.GetRelativePath(TypeLink);
+                return MD.Link(MD.GetRelativePath(TypeLink), Type.GetGenericName());
+
+            // TODO: Correctly link nested generic types
 
             // TODO: resolve github types
 
             if (Type.FullyQualifiedName().StartsWith("System."))
                 ;// TODO: resolve microsoft-documented types
 
-            return $"https://www.google.com/#q=C%23+" +
-                   $"{Type.FullyQualifiedName()}";
+            return MD.Link($"https://www.google.com/#q=C%23+" +
+                            $"{Type.FullyQualifiedName()}",
+                            Type.GetGenericName(),
+                            "Search for this type",
+                            TargetNewWindow: true);
             }
 
         /// <summary>

@@ -4,9 +4,9 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # GetColorByPercentage
 #### InstanceMethod
-###### public [BadgeColor](https://www.google.com/#q=C%23+LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor) GetColorByPercentage([Int32](https://www.google.com/#q=C%23+System.Int32) Percentage);
+###### public <a href="https://www.google.com/#q=C%23+LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor" alt="Search for this type" target="_blank">BadgeColor</a> GetColorByPercentage(<a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for this type" target="_blank">Int32</a> Percentage);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L764)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L770)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs)
 ###### Summary
@@ -19,10 +19,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Percentage | No | [Int32](https://www.google.com/#q=C%23+System.Int32) | 
+Percentage | No | <a href="https://www.google.com/#q=C%23+System.Int32" alt="Search for this type" target="_blank">Int32</a> | 
 
 #### Returns
-###### [BadgeColor](https://www.google.com/#q=C%23+LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor)
+###### <a href="https://www.google.com/#q=C%23+LCore.LDoc.Markdown.GitHubMarkdown.BadgeColor" alt="Search for this type" target="_blank">BadgeColor</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

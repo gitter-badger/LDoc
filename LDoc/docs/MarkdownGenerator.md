@@ -18,7 +18,7 @@
  - [TableOfContentsLink](MarkdownGenerator_TableOfContentsLink.md)
  - [HomeLink](MarkdownGenerator_HomeLink.md)
  - [GetOtherDocuments](MarkdownGenerator_GetOtherDocuments.md)
- - [GetTypeLink](MarkdownGenerator_GetTypeLink.md)
+ - [LinkToType](MarkdownGenerator_LinkToType.md)
  - [GetTypeMemberMarkdown](MarkdownGenerator_GetTypeMemberMarkdown.md)
  - [GetAssemblyTypeMarkdown](MarkdownGenerator_GetAssemblyTypeMarkdown.md)
  - [GetBadges_Info](MarkdownGenerator_GetBadges_Info.md)

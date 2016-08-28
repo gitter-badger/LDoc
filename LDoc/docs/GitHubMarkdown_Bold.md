@@ -4,9 +4,9 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Bold
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) Bold([String](https://www.google.com/#q=C%23+System.String) Text);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Bold(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Text);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L441)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L444)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs)
 ###### Summary
@@ -20,10 +20,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Text | Yes | [String](https://www.google.com/#q=C%23+System.String) | 
+Text | Yes | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
 
 #### Returns
-###### [String](https://www.google.com/#q=C%23+System.String)
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

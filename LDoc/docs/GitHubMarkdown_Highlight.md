@@ -4,7 +4,7 @@
 [View Source](../Markdown/GitHubMarkdown.cs)
 # Highlight
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) Highlight([String](https://www.google.com/#q=C%23+System.String) Text);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Highlight(<a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> Text);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/GitHubMarkdown.cs#L366)
 
@@ -20,10 +20,10 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Text | No | [String](https://www.google.com/#q=C%23+System.String) | 
+Text | No | <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> | 
 
 #### Returns
-###### [String](https://www.google.com/#q=C%23+System.String)
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 

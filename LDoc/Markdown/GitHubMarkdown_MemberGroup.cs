@@ -67,17 +67,17 @@ namespace LCore.LDoc.Markdown
                         ? " static"
                         : "";
 
-                    string ReturnType = this.Link(MarkdownGenerator.GetTypeLink(this, Method.ReturnType), $"{Method.ReturnType.GetGenericName()}");
+
 
 
                     string Parameters = Method.GetParameters()
-                        .Convert(Param => $"{this.Link(MarkdownGenerator.GetTypeLink(this, Param.ParameterType), $"{Param.ParameterType.GetGenericName()}")} {Param.Name}")
+                        .Convert(Param => $"{MarkdownGenerator.LinkToType(this, Param.ParameterType)} {Param.Name}")
                         .Combine(", ");
 
                     this.Header($"{Static}Method", Size: 4);
 
 
-                    this.Header($"public{StaticLower} {ReturnType} {Member.Name}({Parameters});", Size: 6);
+                    this.Header($"public{StaticLower} {MarkdownGenerator.LinkToType(this, Method.ReturnType)} {Member.Name}({Parameters});", Size: 6);
 
                     this.Line("");
                     this.Line(MarkdownGenerator.GetBadges_Info(this, Meta.Coverage, Meta.Comments).JoinLines(" "));
@@ -109,7 +109,7 @@ namespace LCore.LDoc.Markdown
                                 Param.IsOptional
                                     ? "Yes"
                                     : "No",
-                                this.Link(MarkdownGenerator.GetTypeLink(this, Param.ParameterType), Param.ParameterType.GetGenericName()),
+                                MarkdownGenerator.LinkToType(this, Param.ParameterType),
                                 Meta.Comments?.Parameters.GetAt(ParamIndex)?.Obj2
                                 });
                             });
@@ -119,7 +119,7 @@ namespace LCore.LDoc.Markdown
 
                     this.Header(MarkdownGenerator.Language.Header_MethodReturns, Size: 4);
 
-                    this.Header(this.Link(MarkdownGenerator.GetTypeLink(this, Method.ReturnType), Method.ReturnType.GetGenericName()), Size: 6);
+                    this.Header(MarkdownGenerator.LinkToType(this, Method.ReturnType), Size: 6);
 
                     this.Line(Meta.Comments?.Returns);
 

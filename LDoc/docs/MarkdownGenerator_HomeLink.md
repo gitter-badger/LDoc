@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # HomeLink
 #### InstanceMethod
-###### public [String](https://www.google.com/#q=C%23+System.String) HomeLink([GitHubMarkdown](GitHubMarkdown.md) MD);
+###### public <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a> HomeLink([GitHubMarkdown](GitHubMarkdown.md) MD);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png &quot;&quot;)](../Markdown/MarkdownGenerator.cs#L286)
 
@@ -20,7 +20,7 @@ Parameter | Optional | Type | Description
 MD | No | [GitHubMarkdown](GitHubMarkdown.md) | 
 
 #### Returns
-###### [String](https://www.google.com/#q=C%23+System.String)
+###### <a href="https://www.google.com/#q=C%23+System.String" alt="Search for this type" target="_blank">String</a>
 ---
 
 [Home](../../README.md) | [Table of Contents](../../TableOfContents.md) | 
