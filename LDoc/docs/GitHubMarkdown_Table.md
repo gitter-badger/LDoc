@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Table([String[,]](https://msdn.microsoft.com/en-us/library/system.string[,].aspx) Rows, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) IncludeHeader, <a href="" alt="" target="_blank">Align[]</a> Alignment);
+###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Table([String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[] Rows, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 36](http://b.repl.ca/v1/Lines%20of%20Code-36-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L263)
 
@@ -18,9 +18,9 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Rows | No | [String[,]](https://msdn.microsoft.com/en-us/library/system.string[,].aspx) | 
+Rows | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[] | 
 IncludeHeader | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
-Alignment | Yes | <a href="" alt="" target="_blank">Align[]</a> | 
+Alignment | Yes | <a href="" alt="" target="_blank">L.Align</a>[] | 
 
 
 #### Returns

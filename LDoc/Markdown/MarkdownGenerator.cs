@@ -421,27 +421,23 @@ namespace LCore.LDoc.Markdown
 
             // Ref types, link to actual type
             if (Type.IsByRef)
-                return this.LinkToType(MD, Type.GetElementType());
+                return $"ref {this.LinkToType(MD, Type.GetElementType())}";
+
+            // Array types, nest array symbols outside of the link
+            if (Type.IsArray)
+                return $"{this.LinkToType(MD, Type.GetElementType())}[]";
 
             // Generic types, display in standard generic notation and link each type individually. Recursion is required.
-            if ((Type.IsGenericType && !Type.IsGenericTypeDefinition) ||
-                (Type.IsArray && Type.GetElementType().IsGenericType && !Type.GetElementType().IsGenericTypeDefinition))
+            if ((Type.IsGenericType && !Type.IsGenericTypeDefinition))
                 {
-                bool Array = false;
-                if (Type.IsArray)
-                    {
-                    Type = Type.GetElementType();
-                    Array = true;
-                    }
-
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
                 Type[] Parameters = Type.GenericTypeArguments;
 
-                return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;{(Array ? "[]" : "")}";
+                return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;";
                 }
 
 
-            // ---- From here on Type is known to not be generic ----
+            // ---- From here on Type is known to not be generic, unknown generic parameter, ref, or array type ----
 
 
             // Local links for known documented types
@@ -458,14 +454,6 @@ namespace LCore.LDoc.Markdown
             // Resolve default known type links
             if (ReferenceLinks.ContainsKey(Type))
                 return MD.Link(ReferenceLinks[Type], Type.GetNestedNames(), "", TargetNewWindow: true);
-
-            // Resolve custom type links from implementation for Array types 
-            if (Type.IsArray && this.CustomTypeLinks.ContainsKey(Type.GetElementType()))
-                return MD.Link(this.CustomTypeLinks[Type.GetElementType()], Type.GetNestedNames(), "", TargetNewWindow: true);
-
-            // Resolve default known type links for Array types 
-            if (Type.IsArray && ReferenceLinks.ContainsKey(Type.GetElementType()))
-                return MD.Link(ReferenceLinks[Type.GetElementType()], Type.GetNestedNames(), "", TargetNewWindow: true);
 
             // TODO: resolve related project assemblies
 
