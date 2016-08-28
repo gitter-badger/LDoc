@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a> HeaderUnderline(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> Size);
+###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) HeaderUnderline([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Line, [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L119)
 
@@ -29,13 +29,13 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Line | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-Size | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> | 
+Line | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Size | Yes | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a>
+###### [void](https://msdn.microsoft.com/en-us/library/system.void.aspx)
 
 
 

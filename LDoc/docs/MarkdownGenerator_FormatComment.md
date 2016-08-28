@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> FormatComment(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> CommentText);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) FormatComment([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) CommentText);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "") ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L332)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "") ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L399)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 
@@ -23,12 +23,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-CommentText | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
+CommentText | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 

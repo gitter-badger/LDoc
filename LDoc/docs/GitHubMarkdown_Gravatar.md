@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Gravatar(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> ID, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> Size);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Gravatar([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ID, [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L519)
 
@@ -22,13 +22,13 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-ID | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-Size | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="" target="_blank">Int32</a> | 
+ID | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Size | Yes | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 

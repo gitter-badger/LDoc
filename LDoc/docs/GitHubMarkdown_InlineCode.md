@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> InlineCode(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Code);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) InlineCode([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Code);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L424)
 
@@ -23,12 +23,12 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Code | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
+Code | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 

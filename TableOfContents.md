@@ -47,6 +47,7 @@
  - [Coverage](LDoc/docs/GitHubMarkdown_Assembly_Coverage.md)
  - [Members](LDoc/docs/GitHubMarkdown_MemberGroup_Members.md)
  - [TypeMeta](LDoc/docs/GitHubMarkdown_Type_TypeMeta.md)
+ - [MicrosoftSystemReferencePath](LDoc/docs/MarkdownGenerator_MicrosoftSystemReferencePath.md)
  - [Home_Intro](LDoc/docs/MarkdownGenerator_Home_Intro.md)
  - [HowToInstall](LDoc/docs/MarkdownGenerator_HowToInstall.md)
  - [GenerateRootMarkdown](LDoc/docs/MarkdownGenerator_GenerateRootMarkdown.md)

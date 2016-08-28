@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a> Code(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String[]</a> Lines, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Language);
+###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Code([String[]](https://msdn.microsoft.com/en-us/library/system.string[].aspx) Lines, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Language);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L240)
 
@@ -23,13 +23,13 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Lines | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String[]</a> | 
-Language | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
+Lines | Yes | [String[]](https://msdn.microsoft.com/en-us/library/system.string[].aspx) | 
+Language | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="" target="_blank">void</a>
+###### [void](https://msdn.microsoft.com/en-us/library/system.void.aspx)
 
 
 

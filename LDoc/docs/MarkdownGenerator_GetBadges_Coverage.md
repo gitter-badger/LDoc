@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>&gt; GetBadges_Coverage(**[GitHubMarkdown](GitHubMarkdown.md)** MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
+###### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt; GetBadges_Coverage(**[GitHubMarkdown](GitHubMarkdown.md)** MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 57](http://b.repl.ca/v1/Lines%20of%20Code-57-blue.png "") ![TODOs 6](http://b.repl.ca/v1/TODOs-6-yellow.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L465)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 57](http://b.repl.ca/v1/Lines%20of%20Code-57-blue.png "") ![TODOs 6](http://b.repl.ca/v1/TODOs-6-yellow.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L530)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownGenerator.cs)
 
@@ -30,7 +30,7 @@ Comments | No | <a href="" alt="" target="_blank">ICodeComment</a> |
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>&gt;
+###### <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List&lt;T&gt;</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;
 
 
 

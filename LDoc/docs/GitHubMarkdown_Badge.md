@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Badge(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Left, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Right, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> HexColor);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Badge([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Left, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Right, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) HexColor);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 16](http://b.repl.ca/v1/Lines%20of%20Code-16-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L470)
 
@@ -23,14 +23,14 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Left | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-Right | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-HexColor | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
+Left | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Right | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+HexColor | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 

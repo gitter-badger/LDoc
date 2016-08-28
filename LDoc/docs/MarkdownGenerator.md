@@ -2,13 +2,14 @@
 [Up](../LDoc.md)
 
 ### MarkdownGenerator
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 87%](http://b.repl.ca/v1/Documented-87%25-green.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 86%](http://b.repl.ca/v1/Documented-86%25-green.png "")
 ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
 ###### Summary
 
             Implement this class to generate code for your assemblies and projects
             
+ - [MicrosoftSystemReferencePath](MarkdownGenerator_MicrosoftSystemReferencePath.md)
  - [Home_Intro](MarkdownGenerator_Home_Intro.md)
  - [HowToInstall](MarkdownGenerator_HowToInstall.md)
  - [GenerateRootMarkdown](MarkdownGenerator_GenerateRootMarkdown.md)

@@ -34,44 +34,111 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public const string MarkdownPath_RootFile = "README.md";
 
+
+        public static string MicrosoftSystemReferencePath(Type SystemType) => $"https://msdn.microsoft.com/en-us/library/" +
+            $"{SystemType.FullyQualifiedName().ToLower()}.aspx";
+
+
+        #region ReferenceLinks
         /// <summary>
         /// Standard types linked from within LDoc, for convenience.
         /// </summary>
-        protected static Dictionary<Type, string> StandardTypeLinks => new Dictionary<Type, string>
+        protected static Dictionary<Type, string> ReferenceLinks => new Dictionary<Type, string>
             {
+
+            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx",
             [typeof(List<>)] = "https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx",
-            [typeof(string)] = "https://msdn.microsoft.com/en-us/library/system.string.aspx",
-            [typeof(void)] = "https://msdn.microsoft.com/en-us/library/system.void.aspx",
-            [typeof(int)] = "https://msdn.microsoft.com/en-us/library/system.int32.aspx",
-            [typeof(bool)] = "https://msdn.microsoft.com/en-us/library/system.boolean.aspx",
-            [typeof(Nullable<>)] = "https://msdn.microsoft.com/en-us/library/system.nullable.aspx",
-            [typeof(Assembly)] = "https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx",
-            [typeof(Type)] = "https://msdn.microsoft.com/en-us/library/system.type.aspx",
-            [typeof(MemberInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx",
             [typeof(Dictionary<,>)] = "https://msdn.microsoft.com/en-us/library/xfhwa508.aspx",
             [typeof(KeyValuePair<,>)] = "https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx",
-            [typeof(object)] = "https://msdn.microsoft.com/en-us/library/system.object.aspx",
-            [typeof(MethodInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx",
+
+
+            [typeof(Action<>)] = "https://msdn.microsoft.com/en-us/library/018hxwa8.aspx",
+            [typeof(Action<,>)] = "https://msdn.microsoft.com/en-us/library/bb549311.aspx",
+            [typeof(Action<,,>)] = "https://msdn.microsoft.com/en-us/library/bb549392.aspx",
+            [typeof(Action<,,,>)] = "https://msdn.microsoft.com/en-us/library/bb548654.aspx",
+            [typeof(Action<,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd289012.aspx",
+            [typeof(Action<,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd269635.aspx",
+            [typeof(Action<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd268304.aspx",
+            [typeof(Action<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd235351.aspx",
+            [typeof(Action<,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd386922.aspx",
+            [typeof(Action<,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd387291.aspx",
+            [typeof(Action<,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402870.aspx",
+            [typeof(Action<,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402748.aspx",
+            [typeof(Action<,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402871.aspx",
+            [typeof(Action<,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402866.aspx",
+            [typeof(Action<,,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402873.aspx",
+            [typeof(Action<,,,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402872.aspx",
+
             [typeof(Func<>)] = "https://msdn.microsoft.com/en-us/library/bb534960.aspx",
             [typeof(Func<,>)] = "https://msdn.microsoft.com/en-us/library/bb549151.aspx",
-            [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150.aspx",
-            [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx",
+            [typeof(Func<,,>)] = "https://msdn.microsoft.com/en-us/library/bb534647.aspx",
+            [typeof(Func<,,,>)] = "https://msdn.microsoft.com/en-us/library/bb549430.aspx",
+            [typeof(Func<,,,,>)] = "https://msdn.microsoft.com/en-us/library/bb534303.aspx",
+            [typeof(Func<,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd268303.aspx",
+            [typeof(Func<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd269654.aspx",
+            [typeof(Func<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd289456.aspx",
+            [typeof(Func<,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd267613.aspx",
+            [typeof(Func<,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd386894.aspx",
+            [typeof(Func<,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd383294.aspx",
+            [typeof(Func<,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402864.aspx",
+            [typeof(Func<,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402863.aspx",
+            [typeof(Func<,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402867.aspx",
+            [typeof(Func<,,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402861.aspx",
+            [typeof(Func<,,,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402868.aspx",
+            [typeof(Func<,,,,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402862.aspx",
 
-            [typeof(IComparable)] = "https://msdn.microsoft.com/en-us/library/system.icomparable.aspx",
-            [typeof(IEnumerable)] = "https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx",
-            [typeof(IConvertible)] = "https://msdn.microsoft.com/en-us/library/system.iconvertible.aspx",
-            [typeof(byte)] = "https://msdn.microsoft.com/en-us/library/system.byte.aspx",
-            [typeof(sbyte)] = "https://msdn.microsoft.com/en-us/library/system.sbyte.aspx",
 
-            [typeof(decimal)] = "https://msdn.microsoft.com/en-us/library/system.decimal.aspx",
-            [typeof(ulong)] = "https://msdn.microsoft.com/en-us/library/system.uint64.aspx",
-            [typeof(ushort)] = "https://msdn.microsoft.com/en-us/library/system.uint16.aspx",
-            [typeof(long)] = "https://msdn.microsoft.com/en-us/library/system.int64.aspx",
-            [typeof(short)] = "https://msdn.microsoft.com/en-us/library/system.int16.aspx",
-            [typeof(float)] = "https://msdn.microsoft.com/en-us/library/system.single.aspx",
-            [typeof(double)] = "https://msdn.microsoft.com/en-us/library/system.double.aspx",
-            [typeof(char)] = "https://msdn.microsoft.com/en-us/library/system.char.aspx"
+            [typeof(Tuple<>)] = "https://msdn.microsoft.com/en-us/library/dd386941(v=vs.110).aspx",
+            [typeof(Tuple<,>)] = "https://msdn.microsoft.com/en-us/library/dd268536(v=vs.110).aspx",
+            [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150(v=vs.110).aspx",
+            [typeof(Tuple<,,,>)] = "https://msdn.microsoft.com/en-us/library/dd414846(v=vs.110).aspx",
+            [typeof(Tuple<,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd414892(v=vs.110).aspx",
+            [typeof(Tuple<,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd386877(v=vs.110).aspx",
+            [typeof(Tuple<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd387185(v=vs.110).aspx",
+            [typeof(Tuple<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd383325(v=vs.110).aspx",
+
+            [typeof(Nullable<>)] = "",
+            /*
+
+                        [typeof(object)] = "https://msdn.microsoft.com/en-us/library/system.object.aspx",
+
+                        [typeof(void)] = "https://msdn.microsoft.com/en-us/library/system.void.aspx",
+
+                        [typeof(bool)] = "https://msdn.microsoft.com/en-us/library/system.boolean.aspx",
+
+                        [typeof(string)] = "https://msdn.microsoft.com/en-us/library/system.string.aspx",
+
+                        [typeof(int)] = "https://msdn.microsoft.com/en-us/library/system.int32.aspx",
+                        [typeof(byte)] = "https://msdn.microsoft.com/en-us/library/system.byte.aspx",
+                        [typeof(sbyte)] = "https://msdn.microsoft.com/en-us/library/system.sbyte.aspx",
+                        [typeof(decimal)] = "https://msdn.microsoft.com/en-us/library/system.decimal.aspx",
+                        [typeof(ulong)] = "https://msdn.microsoft.com/en-us/library/system.uint64.aspx",
+                        [typeof(ushort)] = "https://msdn.microsoft.com/en-us/library/system.uint16.aspx",
+                        [typeof(long)] = "https://msdn.microsoft.com/en-us/library/system.int64.aspx",
+                        [typeof(short)] = "https://msdn.microsoft.com/en-us/library/system.int16.aspx",
+                        [typeof(float)] = "https://msdn.microsoft.com/en-us/library/system.single.aspx",
+                        [typeof(double)] = "https://msdn.microsoft.com/en-us/library/system.double.aspx",
+                        [typeof(char)] = "https://msdn.microsoft.com/en-us/library/system.char.aspx",
+
+                        [typeof(IComparable)] = "https://msdn.microsoft.com/en-us/library/system.icomparable.aspx",
+                        [typeof(IEnumerable)] = "https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx",
+                        [typeof(IConvertible)] = "https://msdn.microsoft.com/en-us/library/system.iconvertible.aspx",
+
+                        [typeof(Assembly)] = "https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx",
+                        [typeof(Type)] = "https://msdn.microsoft.com/en-us/library/system.type.aspx",
+                        [typeof(MemberInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx",
+                        [typeof(MethodInfo)] = "https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx",
+                        [typeof(DateTime)] = "https://msdn.microsoft.com/en-us/library/system.datetime.aspx",
+                        [typeof(TimeSpan)] = "https://msdn.microsoft.com/en-us/library/system.timespan.aspx",
+                        [typeof(Exception)] = "https://msdn.microsoft.com/en-us/library/system.exception.aspx",
+                        [typeof(Tuple)] = "https://msdn.microsoft.com/en-us/library/system.tuple.aspx",
+                        [typeof(Nullable)] = "https://msdn.microsoft.com/en-us/library/system.nullable.aspx",
+           
+                        [typeof(Action)] = "https://msdn.microsoft.com/en-us/library/system.action.aspx",
+            */
             };
+
+        #endregion
 
         /// <summary>
         /// Override this member to specify the assemblies to generae documentation.
@@ -378,27 +445,25 @@ namespace LCore.LDoc.Markdown
             if (this.CustomTypeLinks.ContainsKey(Type))
                 return MD.Link(this.CustomTypeLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
 
-            if (StandardTypeLinks.ContainsKey(Type))
-                return MD.Link(StandardTypeLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
+            if (ReferenceLinks.ContainsKey(Type))
+                return MD.Link(ReferenceLinks[Type], Type.GetGenericName(), "", TargetNewWindow: true);
 
             // Array types must be properly handled
             if (Type.IsArray && this.CustomTypeLinks.ContainsKey(Type.GetElementType()))
                 return MD.Link(this.CustomTypeLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
 
-            if (Type.IsArray && StandardTypeLinks.ContainsKey(Type.GetElementType()))
-                return MD.Link(StandardTypeLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
-
-
-            if (this.RequireDirectLinksToAllForeignTypes)
-                throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetGenericName()}");
+            if (Type.IsArray && ReferenceLinks.ContainsKey(Type.GetElementType()))
+                return MD.Link(ReferenceLinks[Type.GetElementType()], Type.GetGenericName(), "", TargetNewWindow: true);
 
             // TODO: resolve related project assemblies
 
 
-            if (Type.FullyQualifiedName().StartsWith("System."))
-                {
-                // TODO: resolve microsoft-documented types
-                }
+            if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
+                Type.FullyQualifiedName().ToLower().StartsWith("system."))
+                return MD.Link(MicrosoftSystemReferencePath(Type), Type.GetGenericName());
+
+            if (this.RequireDirectLinksToAllForeignTypes)
+                throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetGenericName()}");
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",

@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Link(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Text, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="" target="_blank">Boolean</a> TargetNewWindow, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="" target="_blank">Boolean</a> EscapeText);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Link([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Text, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) TargetNewWindow, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) EscapeText);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 21](http://b.repl.ca/v1/Lines%20of%20Code-21-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L387)
 
@@ -29,16 +29,16 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Url | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-Text | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-ReferenceText | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-TargetNewWindow | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="" target="_blank">Boolean</a> | 
-EscapeText | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="" target="_blank">Boolean</a> | 
+Url | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Text | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+ReferenceText | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+TargetNewWindow | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
+EscapeText | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 

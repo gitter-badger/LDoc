@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Image(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/system.nullable.aspx" alt="" target="_blank">Nullable&lt;T&gt;</a>&lt;<a href="" alt="" target="_blank">Align</a>&gt; Align);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Image([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, <a href="" alt="" target="_blank">Nullable&lt;T&gt;</a>&lt;<a href="" alt="" target="_blank">Align</a>&gt; Align);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L414)
 
@@ -18,14 +18,14 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-Url | No | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-ReferenceText | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a> | 
-Align | Yes | <a href="https://msdn.microsoft.com/en-us/library/system.nullable.aspx" alt="" target="_blank">Nullable&lt;T&gt;</a>&lt;<a href="" alt="" target="_blank">Align</a>&gt; | 
+Url | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+ReferenceText | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Align | Yes | <a href="" alt="" target="_blank">Nullable&lt;T&gt;</a>&lt;<a href="" alt="" target="_blank">Align</a>&gt; | 
 
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="" target="_blank">String</a>
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 
