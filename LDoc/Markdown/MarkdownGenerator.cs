@@ -465,8 +465,7 @@ namespace LCore.LDoc.Markdown
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
                 return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Type.GetNestedNames());
 
-            if (this.RequireDirectLinksToAllForeignTypes)
-                throw new InvalidOperationException($"Direct type link was required but not found: {Type.GetNestedNames()}");
+            this.TypeLinksNotFound.Add(Type);
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
@@ -474,6 +473,8 @@ namespace LCore.LDoc.Markdown
                             $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
                             TargetNewWindow: true);
             }
+
+        protected List<Type> TypeLinksNotFound { get; } = new List<Type>();
 
         /// <summary>
         /// Get all Member group markdown owned by a given <paramref name="Type"/>
@@ -1039,6 +1040,10 @@ namespace LCore.LDoc.Markdown
             this.Markdown_Other.Add(this.Language.TableOfContents, this.GenerateTableOfContentsMarkdown());
 
             List<GitHubMarkdown> AllMarkdown = this.GetAllMarkdown();
+
+            if (!this.TypeLinksNotFound.IsEmpty())
+                throw new InvalidOperationException(
+                    $"Type links not found: {this.TypeLinksNotFound.Convert(Type => Type.FullyQualifiedName()).JoinLines(", ")}");
 
             if (WriteToDisk)
                 {
