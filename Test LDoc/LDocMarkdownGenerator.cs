@@ -10,13 +10,12 @@ using LCore.LUnit;
 
 namespace Test_LDoc
     {
-    public class LDocMarkdownGenerator : MarkdownGenerator
+    public class LDocMarkdownGenerator : MarkdownGenerator_L
         {
         public override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
 
         public override void Home_Intro(GitHubMarkdown MD)
             {
-
             }
 
         public override void HowToInstall(GitHubMarkdown MD)
@@ -24,6 +23,9 @@ namespace Test_LDoc
             MD.Line($"Add {nameof(LCore.LDoc)} as a nuget package:");
             MD.Code(new[] { $"Install-Package {nameof(LCore.LDoc)}" });
             }
+
+        public override List<ProjectInfo> Home_RelatedProjects
+            => base.Home_RelatedProjects.Select(Project => Project.Name != nameof(LDoc));
 
         /// <summary>
         /// Override this value to display a large image on top ofthe main document

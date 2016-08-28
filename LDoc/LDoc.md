@@ -17,6 +17,7 @@ LCore.LDoc.Markdown
 #### [GitHubMarkdown_Type](docs/GitHubMarkdown_Type.md)
 #### [IExcludeFromMarkdownAttribute](docs/IExcludeFromMarkdownAttribute.md)
 #### [MarkdownGenerator](docs/MarkdownGenerator.md)
+#### [MarkdownGenerator_L](docs/MarkdownGenerator_L.md)
 #### [ProjectInfo](docs/ProjectInfo.md)
 #### [Text](docs/Text.md)
 
