@@ -324,10 +324,10 @@ namespace LCore.LDoc.Markdown
                 }
 
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
-
+            
+            // underline local links
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Link(MD.GetRelativePath(TypeLink), Type.Name,
-                            TargetNewWindow: false, EscapeText: true);
+                return $"_{MD.Link(MD.GetRelativePath(TypeLink), Type.Name, TargetNewWindow: false, EscapeText: true)}_";
 
             // TODO: resolve github types
 

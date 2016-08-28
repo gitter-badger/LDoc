@@ -4,7 +4,7 @@
 [View Source](../Markdown/MarkdownGenerator.cs)
 # Home_Intro
 #### InstanceMethod
-###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a> Home_Intro([GitHubMarkdown](GitHubMarkdown.md) MD);
+###### public <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a> Home_Intro(_[GitHubMarkdown](GitHubMarkdown.md)_ MD);
 
 ![Type Abstract Public Method](http://b.repl.ca/v1/Type-Abstract%20Public%20Method-lightgrey.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownGenerator.cs#L45)
 
@@ -17,7 +17,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | [GitHubMarkdown](GitHubMarkdown.md) | 
+MD | No | _[GitHubMarkdown](GitHubMarkdown.md)_ | 
 
 #### Returns
 ###### <a href="https://www.google.com/#q=C%23+System.void" alt="Search for 'System.void'" target="_blank">void</a>
