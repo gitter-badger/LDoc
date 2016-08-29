@@ -78,6 +78,10 @@ namespace LCore.LDoc.Markdown
                     this.Line(this.TypeMeta.Comments?.Summary);
                     }
 
+                // TODO track constructors 
+
+                // TODO track subtypes
+
                 Dictionary<string, List<KeyValuePair<MemberInfo, CodeCoverageMetaData>>> MemberGroups =
                     this.MemberMarkdown.Group(Member => Member.Key.GetMemberDetails().ToString());
 
@@ -106,7 +110,7 @@ namespace LCore.LDoc.Markdown
                                     {
                                 this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
 
-                                this.Link($"{this.GetRelativePath(Member.Value.CodeFilePath)}$L{Member.Value.CodeLineNumber}",
+                                this.Link($"{this.GetRelativePath(Member.Value.CodeFilePath)}#L{Member.Value.CodeLineNumber}",
                                     this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode,
                                     $"{Member.Value.CodeLineCount ?? 0u}",
                                     (Member.Value.CodeLineCount ?? 0u) == 0u ?BadgeColor.Red : BadgeColor.Blue), EscapeText:false),

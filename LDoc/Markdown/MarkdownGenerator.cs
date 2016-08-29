@@ -856,8 +856,6 @@ namespace LCore.LDoc.Markdown
             MD.Line("");
             MD.HorizontalRule();
 
-            // TODO: Add custom copyright
-
             this.WriteCustomFooter(MD);
             MD.Line("");
             MD.Line(new[]
@@ -873,10 +871,9 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual void WriteCustomFooter(GitHubMarkdown MD)
             {
-            // TODO: Add custom copyright
-
             MD.Line(new[]
                     {
+                    $"Copyright {DateTime.Now.Year} &copy;",
                     this.HomeLink(MD),
                     this.TableOfContentsLink(MD)
                     }.JoinLines(" "));
