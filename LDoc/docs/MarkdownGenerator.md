@@ -9,59 +9,95 @@
 
             Implement this class to generate code for your assemblies and projects
             
- - [MicrosoftSystemReferencePath](MarkdownGenerator_MicrosoftSystemReferencePath.md)
- - [Home_Intro](MarkdownGenerator_Home_Intro.md)
- - [HowToInstall](MarkdownGenerator_HowToInstall.md)
- - [GenerateRootMarkdown](MarkdownGenerator_GenerateRootMarkdown.md)
- - [GenerateTableOfContentsMarkdown](MarkdownGenerator_GenerateTableOfContentsMarkdown.md)
- - [GenerateCoverageSummaryMarkdown](MarkdownGenerator_GenerateCoverageSummaryMarkdown.md)
- - [GenerateMarkdown](MarkdownGenerator_GenerateMarkdown.md)
- - [WriteHeader](MarkdownGenerator_WriteHeader.md)
- - [TableOfContentsLink](MarkdownGenerator_TableOfContentsLink.md)
- - [HomeLink](MarkdownGenerator_HomeLink.md)
- - [GetOtherDocuments](MarkdownGenerator_GetOtherDocuments.md)
- - [FormatComment](MarkdownGenerator_FormatComment.md)
- - [LinkToType](MarkdownGenerator_LinkToType.md)
- - [GetTypeMemberMarkdown](MarkdownGenerator_GetTypeMemberMarkdown.md)
- - [GetAssemblyTypeMarkdown](MarkdownGenerator_GetAssemblyTypeMarkdown.md)
- - [GetBadges_Info](MarkdownGenerator_GetBadges_Info.md)
- - [GetBadges_Coverage](MarkdownGenerator_GetBadges_Coverage.md)
- - [BannerImage_Large](MarkdownGenerator_BannerImage_Large.md)
- - [BannerImage_Small](MarkdownGenerator_BannerImage_Small.md)
- - [LogoImage_Large](MarkdownGenerator_LogoImage_Large.md)
- - [LogoImage_Small](MarkdownGenerator_LogoImage_Small.md)
- - [WriteFooter](MarkdownGenerator_WriteFooter.md)
- - [WriteCustomFooter](MarkdownGenerator_WriteCustomFooter.md)
- - [MarkdownPath_Assembly](MarkdownGenerator_MarkdownPath_Assembly.md)
- - [MarkdownPath_Type](MarkdownGenerator_MarkdownPath_Type.md)
- - [MarkdownPath_Member](MarkdownGenerator_MarkdownPath_Member.md)
- - [IncludeType](MarkdownGenerator_IncludeType.md)
- - [IncludeMember](MarkdownGenerator_IncludeMember.md)
- - [GetColorByPercentage](MarkdownGenerator_GetColorByPercentage.md)
- - [Generate](MarkdownGenerator_Generate.md)
- - [GetAllMarkdown](MarkdownGenerator_GetAllMarkdown.md)
- - [DocumentAssemblies](MarkdownGenerator_DocumentAssemblies.md)
- - [Home_RelatedProjects](MarkdownGenerator_Home_RelatedProjects.md)
- - [CustomBadgeUrls](MarkdownGenerator_CustomBadgeUrls.md)
- - [CustomTypeLinks](MarkdownGenerator_CustomTypeLinks.md)
- - [Markdown_Other](MarkdownGenerator_Markdown_Other.md)
- - [Markdown_Assembly](MarkdownGenerator_Markdown_Assembly.md)
- - [Markdown_Type](MarkdownGenerator_Markdown_Type.md)
- - [Markdown_Member](MarkdownGenerator_Markdown_Member.md)
- - [RequireDirectLinksToAllForeignTypes](MarkdownGenerator_RequireDirectLinksToAllForeignTypes.md)
- - [GeneratedMarkdownRoot](MarkdownGenerator_GeneratedMarkdownRoot.md)
- - [MarkdownPath_Root](MarkdownGenerator_MarkdownPath_Root.md)
- - [MarkdownPath_TableOfContents](MarkdownGenerator_MarkdownPath_TableOfContents.md)
- - [MarkdownPath_CoverageSummary](MarkdownGenerator_MarkdownPath_CoverageSummary.md)
- - [ColorThresholds](MarkdownGenerator_ColorThresholds.md)
- - [DocumentUnitCoverage](MarkdownGenerator_DocumentUnitCoverage.md)
- - [DocumentAttributeCoverage](MarkdownGenerator_DocumentAttributeCoverage.md)
- - [Language](MarkdownGenerator_Language.md)
- - [CustomCommentTags](MarkdownGenerator_CustomCommentTags.md)
- - [CustomCommentColor](MarkdownGenerator_CustomCommentColor.md)
- - [CSharpLanguage](MarkdownGenerator_CSharpLanguage.md)
- - [MarkdownPath_RootFile](MarkdownGenerator_MarkdownPath_RootFile.md)
- - [Text](MarkdownGenerator_Text.md)
+
+##### Public Static Override Methods
+
+Public Static Override Methods (1) | ![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-lightgrey.png "") | ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[MicrosoftSystemReferencePath](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
+
+##### Public  Abstract Methods
+
+Public  Abstract Methods (1) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[Home_Intro](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
+
+##### Public  Virtual Methods
+
+Public  Virtual Methods (31) | ![Lines of Code 349](http://b.repl.ca/v1/Lines%20of%20Code-349-lightgrey.png "") | ![Documented 87%](http://b.repl.ca/v1/Documented-87%25-green.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[HowToInstall](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GenerateRootMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 21](http://b.repl.ca/v1/Lines%20of%20Code-21-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GenerateTableOfContentsMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GenerateCoverageSummaryMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GenerateMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GenerateMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GenerateMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[WriteHeader](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[TableOfContentsLink](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[HomeLink](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetOtherDocuments](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[FormatComment](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[LinkToType](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 49](http://b.repl.ca/v1/Lines%20of%20Code-49-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetAssemblyTypeMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetBadges_Info](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 26](http://b.repl.ca/v1/Lines%20of%20Code-26-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetBadges_Info](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 26](http://b.repl.ca/v1/Lines%20of%20Code-26-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetBadges_Info](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 26](http://b.repl.ca/v1/Lines%20of%20Code-26-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetBadges_Coverage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetBadges_Coverage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetBadges_Coverage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[BannerImage_Large](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[BannerImage_Small](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[LogoImage_Large](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[LogoImage_Small](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[WriteCustomFooter](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_Assembly](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_Type](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_Member](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[IncludeType](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[IncludeMember](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetColorByPercentage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 20](http://b.repl.ca/v1/Lines%20of%20Code-20-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
+
+##### Public  Override Methods
+
+Public  Override Methods (4) | ![Lines of Code 56](http://b.repl.ca/v1/Lines%20of%20Code-56-lightgrey.png "") | ![Documented 75%](http://b.repl.ca/v1/Documented-75%25-green.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[GetTypeMemberMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[WriteFooter](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 15](http://b.repl.ca/v1/Lines%20of%20Code-15-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Generate](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 26](http://b.repl.ca/v1/Lines%20of%20Code-26-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GetAllMarkdown](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
+
+##### Public   Fields
+
+Public   Fields (22) | ![Lines of Code 141](http://b.repl.ca/v1/Lines%20of%20Code-141-lightgrey.png "") | ![Documented 90%](http://b.repl.ca/v1/Documented-90%25-green.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[DocumentAssemblies](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Home_RelatedProjects](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[CustomBadgeUrls](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[CustomTypeLinks](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Markdown_Other](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Markdown_Assembly](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Markdown_Type](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Markdown_Member](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[RequireDirectLinksToAllForeignTypes](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[GeneratedMarkdownRoot](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_Root](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_TableOfContents](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_CoverageSummary](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[ColorThresholds](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[DocumentUnitCoverage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[DocumentAttributeCoverage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Language](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[CustomCommentTags](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[CustomCommentColor](../Markdown/MarkdownGenerator.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[CSharpLanguage](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MarkdownPath_RootFile](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Text](../Markdown/MarkdownGenerator.cs) | ![Lines of Code 44](http://b.repl.ca/v1/Lines%20of%20Code-44-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 

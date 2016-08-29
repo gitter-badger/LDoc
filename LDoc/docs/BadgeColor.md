@@ -10,16 +10,22 @@
 
             Pre-defined Buckler badge colors (http://b.repl.ca/)
             
- - [value__](BadgeColor_value__.md)
- - [BrightGreen](BadgeColor_BrightGreen.md)
- - [Green](BadgeColor_Green.md)
- - [YellowGreen](BadgeColor_YellowGreen.md)
- - [Yellow](BadgeColor_Yellow.md)
- - [Orange](BadgeColor_Orange.md)
- - [Red](BadgeColor_Red.md)
- - [Blue](BadgeColor_Blue.md)
- - [LightGrey](BadgeColor_LightGrey.md)
- - [Grey](BadgeColor_Grey.md)
+
+##### Public   Fields
+
+Public   Fields (10) | ![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-lightgrey.png "") | ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[value__] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[BrightGreen] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Green] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[YellowGreen] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Yellow] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Orange] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Red] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Blue] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[LightGrey] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[Grey] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 

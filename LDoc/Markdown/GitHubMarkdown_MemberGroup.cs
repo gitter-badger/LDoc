@@ -33,13 +33,22 @@ namespace LCore.LDoc.Markdown
 
         private void Generate()
             {
+            if (this.Members.Keys.Count == 1)
+                this.Generate_Single();
+            else
+                this.Generate_Multi();
+            }
+
+        private void Generate_Single()
+            {
             var MarkdownGenerator = this.Generator;
 
             var Member = this.Members.Keys.First();
             if (MarkdownGenerator != null && Member != null)
                 {
                 MarkdownGenerator.WriteHeader(this);
-                this.Line(this.Link(this.GetRelativePath(MarkdownGenerator.MarkdownPath_Type(Member.DeclaringType)), MarkdownGenerator.Language.LinkText_Up));
+                this.Line(this.Link(this.GetRelativePath(MarkdownGenerator.MarkdownPath_Type(Member.DeclaringType)),
+                    MarkdownGenerator.Language.LinkText_Up));
 
                 this.Header($"{Member.DeclaringType?.Name}", Size: 3);
 
@@ -74,7 +83,9 @@ namespace LCore.LDoc.Markdown
                     this.Header($"{Static}Method", Size: 4);
 
 
-                    this.Header($"public{StaticLower} {MarkdownGenerator.LinkToType(this, Method.ReturnType)} {Member.Name}({Parameters});", Size: 6);
+                    this.Header(
+                        $"public{StaticLower} {MarkdownGenerator.LinkToType(this, Method.ReturnType)} {Member.Name}({Parameters});",
+                        Size: 6);
 
                     this.Line("");
                     this.Line(MarkdownGenerator.GetBadges_Info(this, Meta.Coverage, Meta.Comments).JoinLines(" "));
@@ -95,16 +106,19 @@ namespace LCore.LDoc.Markdown
 
                         var Table = new List<string[]>
                             {
-                            new[] {MarkdownGenerator.Language.TableHeaderText_MethodParameter,
-                            MarkdownGenerator.Language.TableHeaderText_Optional,
-                            MarkdownGenerator.Language.TableHeaderText_Type,
-                            MarkdownGenerator.Language.TableHeaderText_Description}
+                            new[]
+                                {
+                                MarkdownGenerator.Language.TableHeaderText_MethodParameter,
+                                MarkdownGenerator.Language.TableHeaderText_Optional,
+                                MarkdownGenerator.Language.TableHeaderText_Type,
+                                MarkdownGenerator.Language.TableHeaderText_Description
+                                }
                             };
 
                         Method.GetParameters().Each((ParamIndex, Param) =>
                             {
                                 Table.Add(new[]
-                                {
+                                    {
                                 Param.Name,
                                 Param.IsOptional
                                     ? "Yes"
@@ -128,7 +142,7 @@ namespace LCore.LDoc.Markdown
                         this.Header(MarkdownGenerator.Language.Header_MethodExamples, Size: 4);
                         Meta.Comments.Examples.Each(Example => this.Code(new[] { Example }));
                         }
-                    
+
                     if (Meta.Comments?.Permissions.Length > 0)
                         {
                         this.Header(MarkdownGenerator.Language.Header_MethodPermissions, Size: 4);
@@ -143,7 +157,14 @@ namespace LCore.LDoc.Markdown
                     }
 
                 MarkdownGenerator.WriteFooter(this);
+
                 }
+            }
+
+        private void Generate_Multi()
+            {
+
+
             }
         }
     }

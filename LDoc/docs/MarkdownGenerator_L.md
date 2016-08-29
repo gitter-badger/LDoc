@@ -9,7 +9,13 @@
 
             Markdown generator for projects in the L family.
             
- - [Home_RelatedProjects](MarkdownGenerator_L_Home_RelatedProjects.md)
+
+##### Public   Fields
+
+Public   Fields (1) | ![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-lightgrey.png "") | ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[Home_RelatedProjects](../Markdown/MarkdownGenerator_L.cs) | ![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 

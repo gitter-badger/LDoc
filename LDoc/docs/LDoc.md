@@ -9,7 +9,13 @@
 
             Static class to store LDoc constants
             
- - [Urls](LDoc_Urls.md)
+
+##### Public   Fields
+
+Public   Fields (1) | ![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-lightgrey.png "") | ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[Urls](../LDoc.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 

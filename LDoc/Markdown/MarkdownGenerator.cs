@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Linq.Expressions;
 using System.Net;
 using System.Reflection;
 using JetBrains.Annotations;
@@ -47,6 +48,12 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected static Dictionary<Type, string> ReferenceLinks => new Dictionary<Type, string>
             {
+            [typeof(IDictionary<,>)] = "https://msdn.microsoft.com/en-us/library/s4ys34ea.aspx",
+            [typeof(ICollection<>)] = "https://msdn.microsoft.com/en-us/library/92t2ye13.aspx",
+            [typeof(IEquatable<>)] = "https://msdn.microsoft.com/en-us/library/ms131187.aspx",
+            [typeof(IComparable<>)] = "https://msdn.microsoft.com/en-us/library/4d7sx9hd.aspx",
+            [typeof(Expression<>)] = "https://msdn.microsoft.com/en-us/library/bb335710.aspx",
+            [typeof(Nullable<>)] = "https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx",
 
             [typeof(IEnumerable<>)] = "https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx",
             [typeof(List<>)] = "https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx",
@@ -90,16 +97,15 @@ namespace LCore.LDoc.Markdown
             [typeof(Func<,,,,,,,,,,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd402862.aspx",
 
 
-            [typeof(Tuple<>)] = "https://msdn.microsoft.com/en-us/library/dd386941(v=vs.110).aspx",
-            [typeof(Tuple<,>)] = "https://msdn.microsoft.com/en-us/library/dd268536(v=vs.110).aspx",
-            [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150(v=vs.110).aspx",
-            [typeof(Tuple<,,,>)] = "https://msdn.microsoft.com/en-us/library/dd414846(v=vs.110).aspx",
-            [typeof(Tuple<,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd414892(v=vs.110).aspx",
-            [typeof(Tuple<,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd386877(v=vs.110).aspx",
-            [typeof(Tuple<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd387185(v=vs.110).aspx",
-            [typeof(Tuple<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd383325(v=vs.110).aspx",
+            [typeof(Tuple<>)] = "https://msdn.microsoft.com/en-us/library/dd386941.aspx",
+            [typeof(Tuple<,>)] = "https://msdn.microsoft.com/en-us/library/dd268536.aspx",
+            [typeof(Tuple<,,>)] = "https://msdn.microsoft.com/en-us/library/dd387150.aspx",
+            [typeof(Tuple<,,,>)] = "https://msdn.microsoft.com/en-us/library/dd414846.aspx",
+            [typeof(Tuple<,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd414892.aspx",
+            [typeof(Tuple<,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd386877.aspx",
+            [typeof(Tuple<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd387185.aspx",
+            [typeof(Tuple<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd383325.aspx"
 
-            [typeof(Nullable<>)] = ""
             /*
 
                         [typeof(object)] = "https://msdn.microsoft.com/en-us/library/system.object.aspx",
@@ -428,7 +434,7 @@ namespace LCore.LDoc.Markdown
                 return $"{this.LinkToType(MD, Type.GetElementType())}[]";
 
             // Generic types, display in standard generic notation and link each type individually. Recursion is required.
-            if ((Type.IsGenericType && !Type.IsGenericTypeDefinition))
+            if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
                 {
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
                 Type[] Parameters = Type.GenericTypeArguments;
@@ -466,7 +472,8 @@ namespace LCore.LDoc.Markdown
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
                 return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name);
 
-            this.TypeLinksNotFound.Add(Type);
+            if (!this.TypeLinksNotFound.Has(Type))
+                this.TypeLinksNotFound.Add(Type);
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                             $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
@@ -475,6 +482,9 @@ namespace LCore.LDoc.Markdown
                             TargetNewWindow: true);
             }
 
+        /// <summary>
+        /// Stores types where documentation wasn't successfully located
+        /// </summary>
         protected List<Type> TypeLinksNotFound { get; } = new List<Type>();
 
         /// <summary>
@@ -694,19 +704,16 @@ namespace LCore.LDoc.Markdown
                 {
                 string SourcePath = Member.DeclaringType?.FindClassFile();
 
-                string MethodScope = Member.IsPublic ? "Public" : "Protected";
 
                 var Meta = MD.Members[Member];
 
-                if (Member.IsAbstract)
-                    MethodScope = $"Abstract {MethodScope}";
+                var TypeDescription = Member.GetMemberDetails();
 
-                string TypeDescription = Member.IsStatic ? "Static Method" : $"{MethodScope} Method";
                 const GitHubMarkdown.BadgeColor InfoColor = GitHubMarkdown.BadgeColor.Blue;
 
 
                 // Member Type
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription, InfoColor));
+                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription.ToString(), InfoColor));
 
                 // Lines of code
                 Out.Add(MD.Badge(this.Language.Badge_LinesOfCode, $"{MD.Members.Sum(SubMember => SubMember.Value.CodeLineCount ?? 0u)}", InfoColor));
@@ -749,17 +756,18 @@ namespace LCore.LDoc.Markdown
                     }
 
                 this.CustomCommentTags.Each(Tag =>
-                    {
-                        Func<uint, GitHubMarkdown.BadgeColor> CommentColor = this.CustomCommentColor.SafeGet(Tag);
-                        uint TagCount = MD.Members.Sum(SubMember => SubMember.Value.CommentTags[Tag].Length);
+                {
+                    Func<uint, GitHubMarkdown.BadgeColor> CommentColor = this.CustomCommentColor.SafeGet(Tag);
+                    uint TagCount = MD.Members.Sum(SubMember => SubMember.Value.CommentTags[Tag].Length);
 
-                        var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
+                    var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
 
-                        Out.Add(MD.Badge(Tag, $"{TagCount}", Color));
-                    });
+                    Out.Add(MD.Badge(Tag, $"{TagCount}", Color));
+                });
                 }
             return Out;
             }
+
 
         /// <summary>
         /// Override this method to customize badges included in member generated markdown documents.
@@ -1020,6 +1028,8 @@ namespace LCore.LDoc.Markdown
 
         #endregion
 
+        #region Public Methods +
+
         /// <summary>
         /// Generates all markdown documentation, optionally writing all files to disk using <paramref name="WriteToDisk"/>. 
         /// </summary>
@@ -1049,17 +1059,17 @@ namespace LCore.LDoc.Markdown
             if (WriteToDisk)
                 {
                 AllMarkdown.Each(MD =>
-                {
-                    string Path = MD.FilePath;
+                    {
+                        string Path = MD.FilePath;
 
-                    // just to be safe
-                    if (Path.EndsWith(".md"))
-                        {
-                        Path.EnsurePathExists();
+                        // just to be safe
+                        if (Path.EndsWith(".md"))
+                            {
+                            Path.EnsurePathExists();
 
-                        File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
-                        }
-                });
+                            File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
+                            }
+                    });
                 }
             }
 
@@ -1077,6 +1087,8 @@ namespace LCore.LDoc.Markdown
 
             return AllMarkdown;
             }
+
+        #endregion
 
         #region Language +
 
@@ -1100,6 +1112,10 @@ namespace LCore.LDoc.Markdown
             Header_MethodReturns = "Returns",
             Header_MethodPermissions = "Permissions",
             Header_MethodExceptions = "Exceptions",
+            Header_CodeLines = "Lines of Code",
+            Header_Coverage = "Coverage",
+            Header_Documentation = "Documented",
+
 
             LinkText_ViewSource = "View Source",
             LinkText_Home = "Home",
@@ -1282,6 +1298,18 @@ namespace LCore.LDoc.Markdown
             /// </summary>
             public string Header_MethodExceptions { get; set; }
 
+            /// <summary>
+            /// Header for code lines
+            /// </summary>
+            public string Header_CodeLines { get; set; }
+            /// <summary>
+            /// Header for documentation
+            /// </summary>
+            public string Header_Documentation { get; set; }
+            /// <summary>
+            /// Header for coverage
+            /// </summary>
+            public string Header_Coverage { get; set; }
 
 
             /// <summary>

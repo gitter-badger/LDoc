@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Image([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, <a href="" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Image([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") ![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L414)
+![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") ![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "") ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L414)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
@@ -20,7 +20,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Url | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 ReferenceText | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
-Align | Yes | <a href="" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; | 
+Align | Yes | <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; | 
 
 
 #### Returns

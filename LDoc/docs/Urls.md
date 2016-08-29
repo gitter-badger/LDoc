@@ -10,7 +10,13 @@
 
             Constant Urls
             
- - [GitHubUrl](Urls_GitHubUrl.md)
+
+##### Public   Fields
+
+Public   Fields (1) | ![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-lightgrey.png "") | ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[GitHubUrl] | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 

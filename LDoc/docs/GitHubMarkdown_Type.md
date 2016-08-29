@@ -9,7 +9,14 @@
 
             Generates markdown for a Type.
             
- - [TypeMeta](GitHubMarkdown_Type_TypeMeta.md)
+
+##### Public   Fields
+
+Public   Fields (2) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+:---  | :---  | :---  | :--- 
+[TypeMeta](../Markdown/GitHubMarkdown_Type.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+[MemberMarkdown](../Markdown/GitHubMarkdown_Type.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 
