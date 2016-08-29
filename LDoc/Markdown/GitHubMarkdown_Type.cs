@@ -120,17 +120,17 @@ namespace LCore.LDoc.Markdown
                                 this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
 
                                 (Member.Value.CommentTODO.Length > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{Member.Value.CommentTODO.Length}")
+                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{Member.Value.CommentTODO.Length}", BadgeColor.Orange)
                                     : "") +
                                 (Member.Value.CommentBUG.Length > 0
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{Member.Value.CommentBUG.Length}")
+                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{Member.Value.CommentBUG.Length}", BadgeColor.Red)
                                     : "") +
                                 (Member.Value.NotImplemented.Length > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{Member.Value.NotImplemented.Length}")
+                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{Member.Value.NotImplemented.Length}", BadgeColor.Orange)
                                     : "") +
-                                (Member.Value.CommentTags.Keys
+                                Member.Value.CommentTags.Keys
                                     .Collect(Tag=>this.Badge(Tag.Pluralize(), $"{(uint)((uint?)Member.Value.CommentTags.SafeGet(Tag)?.Length ?? (uint?)0u)}"))
-                                    .JoinLines(" ")),
+                                    .JoinLines(" "),
 
                                 this.Link($"{this.GetRelativePath(Member.Value.CodeFilePath)}#L{Member.Value.CodeLineNumber}",
                                     this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode,
@@ -156,13 +156,13 @@ namespace LCore.LDoc.Markdown
                                 $"{Group.Key.Pluralize()} ({ Group.Value.Count})",
 
                                 (TotalTODOs > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{TotalTODOs}")
+                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{TotalTODOs}", BadgeColor.Orange)
                                     : "") +
                                 (TotalBUGs> 0
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{TotalBUGs}")
+                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{TotalBUGs}", BadgeColor.Red)
                                     : "") +
                                 (TotalNIEs > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{TotalNIEs}")
+                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{TotalNIEs}", BadgeColor.Orange)
                                     : "")
                                 // TODO total for custom tags
                                 ,
