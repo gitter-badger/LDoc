@@ -41,6 +41,9 @@ namespace LCore.LDoc.Markdown
         public static string MicrosoftSystemReferencePath(Type SystemType) =>
             "https://msdn.microsoft.com/en-us/library/" + $"{SystemType.FullyQualifiedName().ToLower().Before("[]")}.aspx";
 
+        /// <summary>
+        /// Locates a markdown document for a particular <paramref name="Member"/>
+        /// </summary>
         public GitHubMarkdown_MemberGroup FindMarkdown(MemberInfo Member)
             {
             return this.Markdown_Member.First(MD => MD.Key.Has(Member)).Value;
@@ -156,6 +159,11 @@ namespace LCore.LDoc.Markdown
         /// Override this member to specify the assemblies to generae documentation.
         /// </summary>
         public abstract Assembly[] DocumentAssemblies { get; }
+
+        /// <summary>
+        /// Override this member to specify any test assemblies
+        /// </summary>
+        public virtual Assembly[] TestAssemblies => new Assembly[] { };
 
         /// <summary>
         /// Write the markdown intro to your project, in the front page README.

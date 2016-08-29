@@ -95,9 +95,9 @@ namespace LCore.LDoc.Markdown
 
                         uint LinesTotal = 0;
 
-                        uint TotalTODOs = 0;
-                        uint TotalBUGs = 0;
-                        uint TotalNIEs = 0;
+                        uint TotalTodos = 0;
+                        uint TotalBugs = 0;
+                        uint TotalNotImplemented = 0;
 
                         string[][] Body = Group.Value.Convert(Member =>
                             {
@@ -110,9 +110,9 @@ namespace LCore.LDoc.Markdown
                                 Documented += Member.Value.Comments == null ? 0u : 1u;
                                 DocumentedTotal += 1u;
 
-                                TotalTODOs += (uint)Member.Value.CommentTODO.Length;
-                                TotalBUGs += (uint)Member.Value.CommentBUG.Length;
-                                TotalNIEs += (uint)Member.Value.NotImplemented.Length;
+                                TotalTodos += (uint)Member.Value.CommentTODO.Length;
+                                TotalBugs += (uint)Member.Value.CommentBUG.Length;
+                                TotalNotImplemented += (uint)Member.Value.NotImplemented.Length;
                                 // TODO total for custom tags
 
                                 return new[]
@@ -155,14 +155,14 @@ namespace LCore.LDoc.Markdown
                                 {
                                 $"{Group.Key.Pluralize()} ({ Group.Value.Count})",
 
-                                (TotalTODOs > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{TotalTODOs}", BadgeColor.Orange)
+                                (TotalTodos > 0 ?
+                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{TotalTodos}", BadgeColor.Orange)
                                     : "") +
-                                (TotalBUGs> 0
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{TotalBUGs}", BadgeColor.Red)
+                                (TotalBugs> 0
+                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{TotalBugs}", BadgeColor.Red)
                                     : "") +
-                                (TotalNIEs > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{TotalNIEs}", BadgeColor.Orange)
+                                (TotalNotImplemented > 0 ?
+                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{TotalNotImplemented}", BadgeColor.Orange)
                                     : "")
                                 // TODO total for custom tags
                                 ,
