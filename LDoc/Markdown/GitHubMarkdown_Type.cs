@@ -55,12 +55,15 @@ namespace LCore.LDoc.Markdown
                         MarkdownGenerator.Language.LinkText_Up));
 
                 this.Header($"{((Type)this.TypeMeta.Member).GetGenericName()}", Size: 3);
+                this.Line("");
                 this.Line(
                     MarkdownGenerator.GetBadges_Info(this, new TypeCoverage((Type)this.TypeMeta.Member),
                         this.TypeMeta.Comments).JoinLines(" "));
+                this.Line("");
                 this.Line(
                     MarkdownGenerator.GetBadges_Coverage(this, new TypeCoverage((Type)this.TypeMeta.Member),
                         this.TypeMeta.Comments).JoinLines(" "));
+                this.Line("");
                 string TypePath = this.TypeMeta.CodeFilePath;
 
                 if (!string.IsNullOrEmpty(TypePath))
@@ -80,8 +83,6 @@ namespace LCore.LDoc.Markdown
 
                 MemberGroups.Each(Group =>
                     {
-                        this.Header(Group.Key.Pluralize(), Size: 5);
-
                         uint Documented = 0;
                         uint DocumentedTotal = 0;
 
@@ -95,7 +96,7 @@ namespace LCore.LDoc.Markdown
 
                                 LinesTotal += Member.Value.CodeLineCount ?? 0u;
 
-                                Covered += Member.Value.Coverage?.IsCovered == true ? 0u : 1u;
+                                Covered += Member.Value.Coverage?.IsCovered == true ? 1u : 0u;
                                 CoveredTotal += 1u;
 
                                 Documented += Member.Value.Comments == null ? 0u : 1u;
@@ -103,18 +104,18 @@ namespace LCore.LDoc.Markdown
 
                                 return new[]
                                     {
-                                this.Link(this.GetRelativePath(Member.Value.CodeFilePath), Member.Key.Name),
+                                this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
 
-                                this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode, $"{Member.Value.CodeLineCount}"),
+                                this.Link(this.GetRelativePath(Member.Value.CodeFilePath),
+                                    this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode, $"{Member.Value.CodeLineCount}", BadgeColor.Blue)),
 
-                                Member.Value.Comments == null
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_Documented, "Yes",
-                                        BadgeColor.BrightGreen)
+                                Member.Value.Comments != null
+                                    ? this.Badge(MarkdownGenerator.Language.Badge_Documented, "Yes", BadgeColor.BrightGreen)
                                     : this.Badge(MarkdownGenerator.Language.Badge_Documented, "No", BadgeColor.Red),
+
                                 Member.Value.Coverage?.IsCovered == true
                                     ? this.Badge(MarkdownGenerator.Language.Badge_Covered, "Yes", BadgeColor.BrightGreen)
                                     : this.Badge(MarkdownGenerator.Language.Badge_Covered, "No", BadgeColor.Red)
-
                                 };
                             }).Array();
 
@@ -126,9 +127,9 @@ namespace LCore.LDoc.Markdown
                             new[]
                                 {
                                 $"{Group.Key.Pluralize()} ({ Group.Value.Count})",
-                                this.Badge(MarkdownGenerator.Language.Header_CodeLines, $"{LinesTotal}"),
-                                this.Badge(MarkdownGenerator.Language.Header_Documentation,$"{DocumentedPercent}%", MarkdownGenerator.GetColorByPercentage(DocumentedPercent)),
-                                this.Badge(MarkdownGenerator.Language.Header_Coverage,$"{CoveredPercent}%", MarkdownGenerator.GetColorByPercentage(CoveredPercent))
+                                this.Badge($"Total {MarkdownGenerator.Language.Header_CodeLines}", $"{LinesTotal}", BadgeColor.Blue),
+                                this.Badge($"Total {MarkdownGenerator.Language.Header_Documentation}",$"{DocumentedPercent}%", MarkdownGenerator.GetColorByPercentage(DocumentedPercent)),
+                                this.Badge($"Total {MarkdownGenerator.Language.Header_Coverage}",$"{CoveredPercent}%", MarkdownGenerator.GetColorByPercentage(CoveredPercent))
                                 }
                             };
 

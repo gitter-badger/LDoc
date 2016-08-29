@@ -2,19 +2,20 @@
 [Up](../LDoc.md)
 
 ### GitHubMarkdown_MemberGroup
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
+
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+
+
+
 
 ###### Summary
 
             Generates markdown for a Member.
             
 
-##### Public   Fields
-
-Public   Fields (1) | ![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-lightgrey.png "") | ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+Public   Fields (1) | ![Total Lines of Code 0](http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :--- 
-[Members](../Markdown/GitHubMarkdown_MemberGroup.cs) | ![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Members](GitHubMarkdown_MemberGroup_Members.md)** | [![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--blue.png &quot;&quot;)](../Markdown/GitHubMarkdown_MemberGroup.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

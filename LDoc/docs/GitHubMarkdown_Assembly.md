@@ -2,20 +2,21 @@
 [Up](../LDoc.md)
 
 ### GitHubMarkdown_Assembly
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-lightgrey.png "")
+
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+
+
+
 
 ###### Summary
 
             Generates markdown for an Assembly.
             
 
-##### Public   Fields
-
-Public   Fields (2) | ![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-lightgrey.png "") | ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+Public   Fields (2) | ![Total Lines of Code 11](http://b.repl.ca/v1/Total%20Lines%20of%20Code-11-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :--- 
-[Assembly](../Markdown/GitHubMarkdown_Assembly.cs) | ![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-[Coverage](../Markdown/GitHubMarkdown_Assembly.cs) | ![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-lightgrey.png "") | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Assembly](GitHubMarkdown_Assembly_Assembly.md)** | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png &quot;&quot;)](../Markdown/GitHubMarkdown_Assembly.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Coverage](GitHubMarkdown_Assembly_Coverage.md)** | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png &quot;&quot;)](../Markdown/GitHubMarkdown_Assembly.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

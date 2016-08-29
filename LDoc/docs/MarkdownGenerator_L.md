@@ -2,19 +2,20 @@
 [Up](../LDoc.md)
 
 ### MarkdownGenerator_L
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-lightgrey.png "")
+
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
+
+
+
 
 ###### Summary
 
             Markdown generator for projects in the L family.
             
 
-##### Public   Fields
-
-Public   Fields (1) | ![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-lightgrey.png "") | ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "") | ![Coverage 100%](http://b.repl.ca/v1/Coverage-100%25-brightgreen.png "")
+Public   Fields (1) | ![Total Lines of Code 1](http://b.repl.ca/v1/Total%20Lines%20of%20Code-1-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :--- 
-[Home_RelatedProjects](../Markdown/MarkdownGenerator_L.cs) | ![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-lightgrey.png "") | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Home_RelatedProjects](MarkdownGenerator_L_Home_RelatedProjects.md)** | [![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-blue.png &quot;&quot;)](../Markdown/MarkdownGenerator_L.cs) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

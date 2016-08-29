@@ -41,6 +41,10 @@ namespace LCore.LDoc.Markdown
         public static string MicrosoftSystemReferencePath(Type SystemType) =>
             "https://msdn.microsoft.com/en-us/library/" + $"{SystemType.FullyQualifiedName().ToLower().Before("[]")}.aspx";
 
+        public GitHubMarkdown_MemberGroup FindMarkdown(MemberInfo Member)
+            {
+            return this.Markdown_Member.First(MD => MD.Key.Has(Member)).Value;
+            }
 
         #region ReferenceLinks
         /// <summary>
@@ -607,7 +611,7 @@ namespace LCore.LDoc.Markdown
                     });
 
 
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
+                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription, GitHubMarkdown.BadgeColor.Blue));
 
                 if (TotalDocumentable > 0)
                     {
@@ -667,8 +671,6 @@ namespace LCore.LDoc.Markdown
                             });
                     });
 
-
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription));
 
                 if (TotalCoverable > 0)
                     {
