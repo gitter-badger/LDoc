@@ -95,6 +95,10 @@ namespace LCore.LDoc.Markdown
 
                         uint LinesTotal = 0;
 
+                        uint TotalTODOs = 0;
+                        uint TotalBUGs = 0;
+                        uint TotalNIEs = 0;
+
                         string[][] Body = Group.Value.Convert(Member =>
                             {
 
@@ -106,9 +110,27 @@ namespace LCore.LDoc.Markdown
                                 Documented += Member.Value.Comments == null ? 0u : 1u;
                                 DocumentedTotal += 1u;
 
+                                TotalTODOs += (uint)Member.Value.CommentTODO.Length;
+                                TotalBUGs += (uint)Member.Value.CommentBUG.Length;
+                                TotalNIEs += (uint)Member.Value.NotImplemented.Length;
+                                // TODO total for custom tags
+
                                 return new[]
                                     {
                                 this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
+
+                                (Member.Value.CommentTODO.Length > 0 ?
+                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{Member.Value.CommentTODO.Length}")
+                                    : "") +
+                                (Member.Value.CommentBUG.Length > 0
+                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{Member.Value.CommentBUG.Length}")
+                                    : "") +
+                                (Member.Value.NotImplemented.Length > 0 ?
+                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{Member.Value.NotImplemented.Length}")
+                                    : "") +
+                                (Member.Value.CommentTags.Keys
+                                    .Collect(Tag=>this.Badge(Tag.Pluralize(), $"{(uint)((uint?)Member.Value.CommentTags.SafeGet(Tag)?.Length ?? (uint?)0u)}"))
+                                    .JoinLines(" ")),
 
                                 this.Link($"{this.GetRelativePath(Member.Value.CodeFilePath)}#L{Member.Value.CodeLineNumber}",
                                     this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode,
@@ -128,11 +150,23 @@ namespace LCore.LDoc.Markdown
                         int CoveredPercent = Covered.PercentageOf(CoveredTotal);
                         int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
 
-                        var Header = new[]
-                                {
+                        var Header = new[] {
                             new[]
                                 {
                                 $"{Group.Key.Pluralize()} ({ Group.Value.Count})",
+
+                                (TotalTODOs > 0 ?
+                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{TotalTODOs}")
+                                    : "") +
+                                (TotalBUGs> 0
+                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{TotalBUGs}")
+                                    : "") +
+                                (TotalNIEs > 0 ?
+                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{TotalNIEs}")
+                                    : "")
+                                // TODO total for custom tags
+                                ,
+
                                 this.Badge($"Total {MarkdownGenerator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0 ? BadgeColor.Red : BadgeColor.Blue),
                                 this.Badge($"Total {MarkdownGenerator.Language.Header_Documentation}",$"{DocumentedPercent}%", MarkdownGenerator.GetColorByPercentage(DocumentedPercent)),
                                 this.Badge($"Total {MarkdownGenerator.Language.Header_Coverage}",$"{CoveredPercent}%", MarkdownGenerator.GetColorByPercentage(CoveredPercent))
