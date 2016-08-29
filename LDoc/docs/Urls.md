@@ -16,7 +16,7 @@
 
 Public   Fields (1) | ![Total Lines of Code 0](http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :--- 
-**[GitHubUrl](Urls_GitHubUrl.md)** | [![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--blue.png &quot;&quot;)] | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[GitHubUrl](Urls_GitHubUrl.md)** | [![Lines of Code ](http://b.repl.ca/v1/Lines%20of%20Code--blue.png "")] | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

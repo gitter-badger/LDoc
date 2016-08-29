@@ -15,8 +15,8 @@
 
 Public   Fields (2) | ![Total Lines of Code 11](http://b.repl.ca/v1/Total%20Lines%20of%20Code-11-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :--- 
-**[Assembly](GitHubMarkdown_Assembly_Assembly.md)** | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png &quot;&quot;)](../Markdown/GitHubMarkdown_Assembly.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Coverage](GitHubMarkdown_Assembly_Coverage.md)** | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png &quot;&quot;)](../Markdown/GitHubMarkdown_Assembly.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Assembly](GitHubMarkdown_Assembly_Assembly.md)** | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/GitHubMarkdown_Assembly.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Coverage](GitHubMarkdown_Assembly_Coverage.md)** | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown_Assembly.cs) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

@@ -52,7 +52,7 @@ namespace LCore.LDoc.Markdown
                 this.Line(
                     this.Link(
                         this.GetRelativePath(MarkdownGenerator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
-                        MarkdownGenerator.Language.LinkText_Up));
+                        MarkdownGenerator.Language.LinkText_Up, EscapeText: false));
 
                 this.Header($"{((Type)this.TypeMeta.Member).GetGenericName()}", Size: 3);
                 this.Line("");
@@ -69,7 +69,7 @@ namespace LCore.LDoc.Markdown
                 if (!string.IsNullOrEmpty(TypePath))
                     {
                     this.Line(this.Link($"{this.GetRelativePath(TypePath)}#L{this.TypeMeta.CodeLineNumber}",
-                        MarkdownGenerator.Language.LinkText_ViewSource));
+                        MarkdownGenerator.Language.LinkText_ViewSource, EscapeText: false));
                     }
 
                 if (!string.IsNullOrEmpty(this.TypeMeta.Comments?.Summary))
@@ -107,7 +107,7 @@ namespace LCore.LDoc.Markdown
                                 this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
 
                                 this.Link(this.GetRelativePath(Member.Value.CodeFilePath),
-                                    this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode, $"{Member.Value.CodeLineCount}", BadgeColor.Blue)),
+                                    this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode, $"{Member.Value.CodeLineCount}", BadgeColor.Blue), EscapeText:false),
 
                                 Member.Value.Comments != null
                                     ? this.Badge(MarkdownGenerator.Language.Badge_Documented, "Yes", BadgeColor.BrightGreen)
