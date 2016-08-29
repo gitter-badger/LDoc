@@ -106,8 +106,10 @@ namespace LCore.LDoc.Markdown
                                     {
                                 this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
 
-                                this.Link(this.GetRelativePath(Member.Value.CodeFilePath),
-                                    this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode, $"{Member.Value.CodeLineCount}", BadgeColor.Blue), EscapeText:false),
+                                this.Link($"{this.GetRelativePath(Member.Value.CodeFilePath)}$L{Member.Value.CodeLineNumber}",
+                                    this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode,
+                                    $"{Member.Value.CodeLineCount ?? 0u}",
+                                    (Member.Value.CodeLineCount ?? 0u) == 0u ?BadgeColor.Red : BadgeColor.Blue), EscapeText:false),
 
                                 Member.Value.Comments != null
                                     ? this.Badge(MarkdownGenerator.Language.Badge_Documented, "Yes", BadgeColor.BrightGreen)
@@ -127,7 +129,7 @@ namespace LCore.LDoc.Markdown
                             new[]
                                 {
                                 $"{Group.Key.Pluralize()} ({ Group.Value.Count})",
-                                this.Badge($"Total {MarkdownGenerator.Language.Header_CodeLines}", $"{LinesTotal}", BadgeColor.Blue),
+                                this.Badge($"Total {MarkdownGenerator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0 ? BadgeColor.Red : BadgeColor.Blue),
                                 this.Badge($"Total {MarkdownGenerator.Language.Header_Documentation}",$"{DocumentedPercent}%", MarkdownGenerator.GetColorByPercentage(DocumentedPercent)),
                                 this.Badge($"Total {MarkdownGenerator.Language.Header_Coverage}",$"{CoveredPercent}%", MarkdownGenerator.GetColorByPercentage(CoveredPercent))
                                 }
