@@ -23,16 +23,9 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Percentage</td>
-<td>No</td>
-<td>[Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Percentage | No | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
 
 
 #### Returns

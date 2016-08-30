@@ -325,7 +325,7 @@ namespace LCore.LDoc.Markdown
         /// Data | Data | Data
         /// 
         /// </summary>
-        public void Table([CanBeNull] string[,] Rows, bool IncludeHeader = true, L.Align[] Alignment = null, bool AsHtml = true)
+        public void Table([CanBeNull] string[,] Rows, bool IncludeHeader = true, L.Align[] Alignment = null, bool AsHtml = false)
             {
             this.Table(Rows.ToNestedArrays(), IncludeHeader, Alignment, AsHtml);
             }
@@ -349,9 +349,9 @@ namespace LCore.LDoc.Markdown
         /// <param name="IncludeHeader">By default, the first row will be used as the header row, and separator will be added.</param>
         /// <param name="Alignment">Optionally, set alignment for each cell.</param>
         /// <param name="AsHtml">Optionally, render the table as Html.</param>
-        /// <param name="HtmlTableStyle">Optionally, set the Html table CSS style.</param>
+        /// <param name="HtmlElementStyle">Optionally, set the Html table CSS style.</param>
         public void Table([CanBeNull] IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true,
-            L.Align[] Alignment = null, bool AsHtml = true, string HtmlTableStyle = "")
+            L.Align[] Alignment = null, bool AsHtml = false, string HtmlElementStyle = "")
             {
             if (Rows == null)
                 return;
@@ -420,7 +420,7 @@ namespace LCore.LDoc.Markdown
 
             if (AsHtml)
                 {
-                this.Line($"<table style=\"{HtmlTableStyle}\">");
+                this.Line($"<table style=\"{HtmlElementStyle}\">");
                 Table.Each(Row => this.Line($"<tr>{Row}</tr>"));
                 this.Line("</table>");
                 }

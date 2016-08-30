@@ -16,16 +16,9 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>DepthLine</td>
-<td>No</td>
-<td><a href="" alt="" target="_blank">Set</a>&lt;[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32.aspx), [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;[]</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+DepthLine | No | <a href="" alt="" target="_blank">Set</a>&lt;[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32.aspx), [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;[] | 
 
 
 #### Returns

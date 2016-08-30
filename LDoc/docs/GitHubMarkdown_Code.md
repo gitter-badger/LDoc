@@ -21,20 +21,10 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Lines</td>
-<td>Yes</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[]</td>
-<td></td></tr>
-<tr><td>Language</td>
-<td>Yes</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Lines | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[] | 
+Language | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns

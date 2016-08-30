@@ -21,16 +21,9 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>WriteToDisk</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+WriteToDisk | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

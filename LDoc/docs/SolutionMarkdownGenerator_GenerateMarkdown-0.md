@@ -21,16 +21,9 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Assembly</td>
-<td>No</td>
-<td>[Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Assembly | No | [Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx) | 
 
 
 #### Returns

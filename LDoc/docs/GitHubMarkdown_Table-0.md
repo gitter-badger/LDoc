@@ -16,28 +16,12 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Rows</td>
-<td>No</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[]</td>
-<td></td></tr>
-<tr><td>IncludeHeader</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-<tr><td>Alignment</td>
-<td>Yes</td>
-<td><a href="" alt="" target="_blank">L.Align</a>[]</td>
-<td></td></tr>
-<tr><td>AsHtml</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Rows | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[] | 
+IncludeHeader | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
+Alignment | Yes | <a href="" alt="" target="_blank">L.Align</a>[] | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

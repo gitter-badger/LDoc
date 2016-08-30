@@ -8,7 +8,7 @@
 
 #### InstanceMethod
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Table(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt; Rows, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) HtmlTableStyle);
+###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Table(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt; Rows, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) HtmlElementStyle);
 
 ![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L328) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L328)
 
@@ -16,32 +16,13 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Rows</td>
-<td>No</td>
-<td><a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt;</td>
-<td></td></tr>
-<tr><td>IncludeHeader</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-<tr><td>Alignment</td>
-<td>Yes</td>
-<td><a href="" alt="" target="_blank">L.Align</a>[]</td>
-<td></td></tr>
-<tr><td>AsHtml</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-<tr><td>HtmlTableStyle</td>
-<td>Yes</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Rows | No | <a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt; | 
+IncludeHeader | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
+Alignment | Yes | <a href="" alt="" target="_blank">L.Align</a>[] | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
+HtmlElementStyle | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns

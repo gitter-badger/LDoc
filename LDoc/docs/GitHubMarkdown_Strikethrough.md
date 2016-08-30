@@ -24,16 +24,9 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Text</td>
-<td>No</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Text | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns

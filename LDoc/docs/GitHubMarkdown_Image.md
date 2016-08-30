@@ -16,28 +16,12 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Url</td>
-<td>No</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-<tr><td>ReferenceText</td>
-<td>Yes</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-<tr><td>Align</td>
-<td>Yes</td>
-<td><a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt;</td>
-<td></td></tr>
-<tr><td>AsHtml</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Url | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+ReferenceText | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Align | Yes | <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

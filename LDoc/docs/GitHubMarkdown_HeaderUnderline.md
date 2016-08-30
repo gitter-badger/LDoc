@@ -27,20 +27,10 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Line</td>
-<td>No</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-<tr><td>Size</td>
-<td>Yes</td>
-<td>[Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Line | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+Size | Yes | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
 
 
 #### Returns

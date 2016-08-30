@@ -24,20 +24,10 @@
 
 ###### Parameters
 
-<table style="">
-<tr><td>Parameter</td>
-<td>Optional</td>
-<td>Type</td>
-<td>Description</td></tr>
-<tr><td>Text</td>
-<td>Yes</td>
-<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
-<td></td></tr>
-<tr><td>AsHtml</td>
-<td>Yes</td>
-<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
-<td></td></tr>
-</table>
+Parameter | Optional | Type | Description
+:---  | :---  | :---  | :--- 
+Text | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns
