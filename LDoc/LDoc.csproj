@@ -93,6 +93,7 @@
     <Compile Include="Markdown\GitHubMarkdown.cs" />
     <Compile Include="Attributes\Interfaces\IExcludeFromMarkdownAttribute.cs" />
     <Compile Include="Markdown\MarkdownDocument_Assembly.cs" />
+    <Compile Include="Markdown\MarkdownDocument_Member.cs" />
     <Compile Include="Markdown\MarkdownDocument_MethodGroup.cs" />
     <Compile Include="Markdown\MarkdownDocument_Type.cs" />
     <Compile Include="Markdown\SolutionMarkdownGenerator.cs" />
