@@ -21,9 +21,16 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-CommentText | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>CommentText</td>
+<td>No</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

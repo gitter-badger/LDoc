@@ -10,7 +10,7 @@
 
 ###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) InlineCode([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Code);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")](../Markdown/GitHubMarkdown.cs#L424) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L424)
+![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")](../Markdown/GitHubMarkdown.cs#L304) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L304)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
@@ -21,9 +21,16 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-Code | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>Code</td>
+<td>Yes</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Gravatar([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ID, [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) Size);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Gravatar([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ID, [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) Size, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/GitHubMarkdown.cs#L519) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L519)
+![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/GitHubMarkdown.cs#L591) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L591)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
@@ -20,10 +20,24 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-ID | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
-Size | Yes | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>ID</td>
+<td>No</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+<tr><td>Size</td>
+<td>Yes</td>
+<td>[Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx)</td>
+<td></td></tr>
+<tr><td>AsHtml</td>
+<td>Yes</td>
+<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

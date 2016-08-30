@@ -8,19 +8,36 @@
 
 #### InstanceMethod
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Image([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Image([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/GitHubMarkdown.cs#L414) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L414)
+![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GitHubMarkdown.cs#L475) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L475)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-Url | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
-ReferenceText | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
-Align | Yes | <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>Url</td>
+<td>No</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+<tr><td>ReferenceText</td>
+<td>Yes</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+<tr><td>Align</td>
+<td>Yes</td>
+<td><a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt;</td>
+<td></td></tr>
+<tr><td>AsHtml</td>
+<td>Yes</td>
+<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

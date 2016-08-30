@@ -21,9 +21,16 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-Member | No | [MemberInfo](https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx) | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>Member</td>
+<td>No</td>
+<td>[MemberInfo](https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

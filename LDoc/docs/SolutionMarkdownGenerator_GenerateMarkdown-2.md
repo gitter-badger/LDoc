@@ -21,9 +21,16 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-MethodGroup | No | [MethodInfo](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx)[] | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>MethodGroup</td>
+<td>No</td>
+<td>[MethodInfo](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx)[]</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

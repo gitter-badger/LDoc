@@ -21,9 +21,16 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>MD</td>
+<td>No</td>
+<td>**[GitHubMarkdown](GitHubMarkdown.md)**</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

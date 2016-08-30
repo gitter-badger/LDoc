@@ -21,11 +21,24 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
-Coverage | No | <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> | 
-Comments | No | <a href="" alt="" target="_blank">ICodeComment</a> | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>MD</td>
+<td>No</td>
+<td>**[GitHubMarkdown](GitHubMarkdown.md)**</td>
+<td></td></tr>
+<tr><td>Coverage</td>
+<td>No</td>
+<td><a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a></td>
+<td></td></tr>
+<tr><td>Comments</td>
+<td>No</td>
+<td><a href="" alt="" target="_blank">ICodeComment</a></td>
+<td></td></tr>
+</table>
 
 
 #### Returns

@@ -21,11 +21,24 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-MD | No | **[MarkdownDocument_Type](MarkdownDocument_Type.md)** | 
-Coverage | No | <a href="" alt="" target="_blank">TypeCoverage</a> | 
-Comments | No | <a href="" alt="" target="_blank">ICodeComment</a> | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>MD</td>
+<td>No</td>
+<td>**[MarkdownDocument_Type](MarkdownDocument_Type.md)**</td>
+<td></td></tr>
+<tr><td>Coverage</td>
+<td>No</td>
+<td><a href="" alt="" target="_blank">TypeCoverage</a></td>
+<td></td></tr>
+<tr><td>Comments</td>
+<td>No</td>
+<td><a href="" alt="" target="_blank">ICodeComment</a></td>
+<td></td></tr>
+</table>
 
 
 #### Returns

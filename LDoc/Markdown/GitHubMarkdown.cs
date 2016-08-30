@@ -38,12 +38,14 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new GitHumMarkdown document without specifying a file title or location
         /// </summary>
-        public GitHubMarkdown() { }
+        public GitHubMarkdown()
+            {
+            }
 
         /// <summary>
         /// Create a new GitHumMarkdown document specifying a file title and location
         /// </summary>
-        public GitHubMarkdown([CanBeNull]SolutionMarkdownGenerator Generator, [CanBeNull] string FilePath, [CanBeNull] string Title)
+        public GitHubMarkdown([CanBeNull] SolutionMarkdownGenerator Generator, [CanBeNull] string FilePath, [CanBeNull] string Title)
             {
             this.Generator = Generator;
             this.FilePath = FilePath ?? "";
@@ -156,7 +158,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public void OrderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
-            DepthLine.Each(Line => this.OrderedList((Set<uint, string>)Line));
+            DepthLine.Each(Line => this.OrderedList((Set<uint, string>) Line));
             }
 
         /// <summary>
@@ -177,13 +179,13 @@ namespace LCore.LDoc.Markdown
 
             DepthLine.Each(Line =>
                 {
-                    if (LastLevel == null || Line.Obj1 != LastLevel)
-                        CurrentNumber = 1;
+                if (LastLevel == null || Line.Obj1 != LastLevel)
+                    CurrentNumber = 1;
 
-                    this.Line($"{"  ".Times(Line.Obj1)}{CurrentNumber}{Line.Obj2}");
+                this.Line($"{"  ".Times(Line.Obj1)}{CurrentNumber}{Line.Obj2}");
 
-                    LastLevel = Line.Obj1;
-                    CurrentNumber++;
+                LastLevel = Line.Obj1;
+                CurrentNumber++;
                 });
             }
 
@@ -213,7 +215,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public void UnorderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
-            DepthLine.Each(Line => this.UnorderedList((Set<uint, string>)Line));
+            DepthLine.Each(Line => this.UnorderedList((Set<uint, string>) Line));
             }
 
         /// <summary>
@@ -245,84 +247,6 @@ namespace LCore.LDoc.Markdown
             }
 
         /// <summary>
-        /// Add a table of data.
-        /// By default, the first row will be used as the header row, and separator will be added
-        /// 
-        /// Header |  Header | Header
-        /// -------------------------
-        /// Data | Data | Data
-        /// Data | Data | Data
-        /// 
-        /// //////////////////////////////////////////
-        /// 
-        /// Data | Data | Data
-        /// Data | Data | Data
-        /// Data | Data | Data
-        /// 
-        /// </summary>
-        public void Table([CanBeNull] string[,] Rows, bool IncludeHeader = true, L.Align[] Alignment = null)
-            {
-            this.Table(Rows.ToNestedArrays(), IncludeHeader, Alignment);
-            }
-
-        /// <summary>
-        /// Add a table of data.
-        /// By default, the first row will be used as the header row, and separator will be added
-        /// 
-        /// Header |  Header | Header
-        /// -------------------------
-        /// Data | Data | Data
-        /// Data | Data | Data
-        /// 
-        /// //////////////////////////////////////////
-        /// 
-        /// Data | Data | Data
-        /// Data | Data | Data
-        /// Data | Data | Data
-        /// 
-        /// </summary>
-        public void Table([CanBeNull] IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true, L.Align[] Alignment = null)
-            {
-            if (Rows == null)
-                return;
-
-            var Table = new List<string>();
-            var Divider = new List<string>();
-
-            Rows.Each((i, Row) =>
-                {
-                    var Cells = new List<string>();
-
-                    Row.Each((j, Column) =>
-                        {
-                            Cells.Add(Column);
-
-                            if (IncludeHeader && i == 0)
-                                {
-                                L.Align? Align = Alignment.GetAt(j);
-
-                                if (Align == L.Align.Left)
-                                    Divider.Add(":--- ");
-                                else if (Align == L.Align.Right)
-                                    Divider.Add(" ---:");
-                                else if (Align == L.Align.Center)
-                                    Divider.Add(":---:");
-                                else
-                                    Divider.Add(" --- ");
-                                }
-                        });
-
-                    Table.Add(Cells.JoinLines(" | "));
-                    if (IncludeHeader && i == 0)
-                        Table.Add(Divider.JoinLines(" | "));
-                });
-
-            this.Line("");
-            Table.Each(this.Line);
-            this.Line("");
-            }
-
-        /// <summary>
         /// Adds a blockquoted series of <paramref name="Lines"/>
         /// </summary>
         public void BlockQuote([CanBeNull] params string[] Lines)
@@ -346,7 +270,6 @@ namespace LCore.LDoc.Markdown
             if (Line != null)
                 this.MarkdownLines.Add(Line);
             }
-
 
 
         /// <summary>
@@ -376,6 +299,138 @@ namespace LCore.LDoc.Markdown
             }
 
         /// <summary>
+        /// Returns a string formatted as inline code
+        /// </summary>
+        public string InlineCode([CanBeNull] string Code = "")
+            {
+            return Code == null
+                ? ""
+                : $"`{Code}`";
+            }
+
+
+        /// <summary>
+        /// Add a table of data.
+        /// By default, the first row will be used as the header row, and separator will be added
+        /// 
+        /// Header |  Header | Header
+        /// -------------------------
+        /// Data | Data | Data
+        /// Data | Data | Data
+        /// 
+        /// //////////////////////////////////////////
+        /// 
+        /// Data | Data | Data
+        /// Data | Data | Data
+        /// Data | Data | Data
+        /// 
+        /// </summary>
+        public void Table([CanBeNull] string[,] Rows, bool IncludeHeader = true, L.Align[] Alignment = null, bool AsHtml = true)
+            {
+            this.Table(Rows.ToNestedArrays(), IncludeHeader, Alignment, AsHtml);
+            }
+
+        /// <summary>
+        /// Add a table of data.
+        /// 
+        /// Header |  Header | Header
+        /// --- | --- | ---
+        /// Data | Data | Data
+        /// Data | Data | Data
+        /// 
+        /// //////////////////////////////////////////
+        /// 
+        /// Data | Data | Data
+        /// Data | Data | Data
+        /// Data | Data | Data
+        /// 
+        /// </summary>
+        /// <param name="Rows"></param>
+        /// <param name="IncludeHeader">By default, the first row will be used as the header row, and separator will be added.</param>
+        /// <param name="Alignment">Optionally, set alignment for each cell.</param>
+        /// <param name="AsHtml">Optionally, render the table as Html.</param>
+        /// <param name="HtmlTableStyle">Optionally, set the Html table CSS style.</param>
+        public void Table([CanBeNull] IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true,
+            L.Align[] Alignment = null, bool AsHtml = true, string HtmlTableStyle = "")
+            {
+            if (Rows == null)
+                return;
+
+            var Table = new List<string>();
+            var Divider = new List<string>();
+
+            uint Cols = Rows.GetAt(Index: 0)?.Count() ?? 0;
+
+            Rows.Each((i, Row) =>
+                {
+                var Cells = new List<string>();
+
+                Row.Each((j, Column) =>
+                    {
+                    Cells.Add(Column);
+
+                    if (IncludeHeader && i == 0)
+                        {
+                        if (AsHtml)
+                            {
+                            // TODO set alignment here
+                            }
+                        else
+                            {
+                            L.Align? Align = Alignment.GetAt(j);
+
+                            if (Align == L.Align.Left)
+                                Divider.Add(":--- ");
+                            else if (Align == L.Align.Right)
+                                Divider.Add(" ---:");
+                            else if (Align == L.Align.Center)
+                                Divider.Add(":---:");
+                            else
+                                Divider.Add(" --- ");
+                            }
+                        }
+                    });
+
+                if (AsHtml)
+                    {
+                    if (Cells.Count < Cols)
+                        {
+                        string TableRow = "";
+                        for (int j = 0; j < Cells.Count; j++)
+                            {
+                            if (j == Cells.Count - Cols)
+                                TableRow += $"<td colspan=\"{Cells.Count - j}\">{Cells[j]}</td>\r\n";
+                            else
+                                TableRow += $"<td>{Cells[j]}</td>\r\n";
+                            }
+                        Table.Add(TableRow);
+                        }
+                    else
+                        Table.Add(Cells.Collect(Cell => $"<td>{Cell}</td>").JoinLines());
+                    }
+                else
+                    {
+                    Table.Add(Cells.JoinLines(" | "));
+                    if (IncludeHeader && i == 0)
+                        Table.Add(Divider.JoinLines(" | "));
+                    }
+                });
+
+            this.Line("");
+
+            if (AsHtml)
+                {
+                this.Line($"<table style=\"{HtmlTableStyle}\">");
+                Table.Each(Row => this.Line($"<tr>{Row}</tr>"));
+                this.Line("</table>");
+                }
+            else
+                Table.Each(this.Line);
+
+            this.Line("");
+            }
+
+        /// <summary>
         /// Returns a link, all arguments are optional
         /// 
         /// (Url)
@@ -384,13 +439,18 @@ namespace LCore.LDoc.Markdown
         /// [Text](Url)"Reference Text"
         /// 
         /// </summary>
-        public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "", [CanBeNull] string ReferenceText = "", bool TargetNewWindow = false, bool EscapeText = true)
+        public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "",
+            [CanBeNull] string ReferenceText = "", bool TargetNewWindow = false,
+            bool EscapeText = true, bool AsHtml = false)
             {
             if (EscapeText)
                 Text = WebUtility.HtmlEncode(Text);
 
             if (TargetNewWindow)
                 return $"<a href=\"{Url}\" alt=\"{ReferenceText}\" target=\"_blank\">{Text}</a>";
+
+            if (AsHtml)
+                return $"<a href=\"{Url}\" alt=\"{ReferenceText}\">{Text}</a>";
 
             if (!string.IsNullOrEmpty(Url))
                 {
@@ -404,6 +464,7 @@ namespace LCore.LDoc.Markdown
             return $"[{Text}]{Url}{ReferenceText}";
             }
 
+
         /// <summary>
         /// Returns an image link, optionally with Reference Text
         /// 
@@ -411,22 +472,17 @@ namespace LCore.LDoc.Markdown
         /// ![Reference Text](Image Url)
         /// 
         /// </summary>
-        public string Image([CanBeNull] string Url, [CanBeNull] string ReferenceText = "", L.Align? Align = null)
+        public string Image([CanBeNull] string Url, [CanBeNull] string ReferenceText = "",
+            L.Align? Align = null, bool AsHtml = false)
             {
-            return Align == null
-                ? $"![{ReferenceText}]({Url} \"\")"
-                : $"<img align=\"{Align.ToString().ToLower()}\" src=\"{Url}\">";
+            if (AsHtml || Align != null)
+                return Align == null
+                    ? $"<img src=\"{Url}\" alt=\"{ReferenceText}\" />"
+                    : $"<img align=\"{Align.ToString().ToLower()}\" src=\"{Url}\" alt=\"{ReferenceText}\" />";
+
+            return $"![{ReferenceText}]({Url} \"\")";
             }
 
-        /// <summary>
-        /// Returns a string formatted as inline code
-        /// </summary>
-        public string InlineCode([CanBeNull] string Code = "")
-            {
-            return Code == null
-                ? ""
-                : $"`{Code}`";
-            }
 
         /// <summary>
         /// Returns a string formatted in italics
@@ -434,8 +490,11 @@ namespace LCore.LDoc.Markdown
         /// *Text*
         /// 
         /// </summary>
-        public string Italic([CanBeNull] string Text = "")
+        public string Italic([CanBeNull] string Text = "", bool AsHtml = false)
             {
+            if (AsHtml)
+                return $"<emphasis>{Text}</emphasis>";
+
             return Text == null
                 ? ""
                 : $"*{Text}*";
@@ -447,40 +506,44 @@ namespace LCore.LDoc.Markdown
         /// **Text**
         /// 
         /// </summary>
-        public string Bold([CanBeNull] string Text = "")
+        public string Bold([CanBeNull] string Text = "", bool AsHtml = false)
             {
+            if (AsHtml)
+                return $"<strong>{Text}</strong>";
+
             return Text == null
                 ? ""
                 : $"**{Text}**";
             }
+
         /*
 
-                /// <summary>
-                /// Formats a glyphicon for display in a markdown document
-                /// </summary>
-                public string Glyph(GlyphIcon Glyph)
-                    {
-                    return $"<span class=\"glyphicon glyphicon-{Glyph.ToString().ToLower().Trim('_').ReplaceAll("_", "-")}\"></span>";
-                    }
-        */
+                                                                                                                                                                                /// <summary>
+                                                                                                                                                                                /// Formats a glyphicon for display in a markdown document
+                                                                                                                                                                                /// </summary>
+                                                                                                                                                                                public string Glyph(GlyphIcon Glyph)
+                                                                                                                                                                                    {
+                                                                                                                                                                                    return $"<span class=\"glyphicon glyphicon-{Glyph.ToString().ToLower().Trim('_').ReplaceAll("_", "-")}\"></span>";
+                                                                                                                                                                                    }
+                                                                                                                                                                        */
 
         /// <summary>
         /// Adds a Buckler badge, hosted on http://b.repl.ca/
         /// </summary>
-        public string Badge(string Left, string Right, string HexColor)
+        public string Badge(string Left, string Right, string HexColor, bool AsHtml = false)
             {
             return this.Image(
-                    "http://b.repl.ca/v1/" +
-                    $"{Left.UriEncode()}-{Right.UriEncode()}-{HexColor}.png",
-                    $"{Left} {Right}");
+                "http://b.repl.ca/v1/" +
+                $"{Left.UriEncode()}-{Right.UriEncode()}-{HexColor}.png",
+                $"{Left} {Right}", Align: null, AsHtml: AsHtml);
             }
 
         /// <summary>
         /// Adds a Buckler badge, hosted on http://b.repl.ca/
         /// </summary>
-        public string Badge(string Left, string Right, BadgeColor Color = BadgeColor.LightGrey)
+        public string Badge(string Left, string Right, BadgeColor Color = BadgeColor.LightGrey, bool AsHtml = false)
             {
-            return this.Badge(Left, Right, Color.ToString().ToLower());
+            return this.Badge(Left, Right, Color.ToString().ToLower(), AsHtml);
             }
 
         /// <summary>
@@ -489,14 +552,22 @@ namespace LCore.LDoc.Markdown
         public enum BadgeColor
             {
 #pragma warning disable 1591
-            BrightGreen, Green, YellowGreen, Yellow, Orange, Red, Blue, LightGrey, Grey
-#pragma warning restore 1591
+            BrightGreen,
+            Green,
+            YellowGreen,
+            Yellow,
+            Orange,
+            Red,
+            Blue,
+            LightGrey,
+            Grey
+#pragma warning restore 1591|
             }
 
         /// <summary>
         /// Retrieves the relative path from this markdown file to <paramref name="FullPath"/>
         /// </summary>
-        public string GetRelativePath([CanBeNull]string FullPath)
+        public string GetRelativePath([CanBeNull] string FullPath)
             {
             if (FullPath == null)
                 return "";
@@ -513,10 +584,11 @@ namespace LCore.LDoc.Markdown
             return Out.ToString();
             }
 
+
         /// <summary>
         /// Returns an image link to a Gravatar avatar based on the MD5 of the supplied <paramref name="ID"/>
         /// </summary>
-        public string Gravatar(string ID, int Size = 64)
+        public string Gravatar(string ID, int Size = 64, bool AsHtml = false)
             {
             string URL = "https://www.gravatar.com/avatar/";
 
@@ -535,7 +607,7 @@ namespace LCore.LDoc.Markdown
             URL += "&d;=identicon";
             URL += "&r;=PG;";
 
-            return this.Image(URL, ID);
+            return this.Image(URL, ID, Align: null, AsHtml: AsHtml);
             }
         }
     }

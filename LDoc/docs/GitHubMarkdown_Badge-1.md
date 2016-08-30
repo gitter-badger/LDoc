@@ -8,19 +8,36 @@
 
 #### InstanceMethod
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Badge([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Left, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Right, **[GitHubMarkdown.BadgeColor](BadgeColor.md)** Color);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Badge([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Left, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Right, **[GitHubMarkdown.BadgeColor](BadgeColor.md)** Color, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/GitHubMarkdown.cs#L470) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L470)
+![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/GitHubMarkdown.cs#L533) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L533)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-Left | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
-Right | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
-Color | Yes | **[GitHubMarkdown.BadgeColor](BadgeColor.md)** | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>Left</td>
+<td>No</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+<tr><td>Right</td>
+<td>No</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+<tr><td>Color</td>
+<td>Yes</td>
+<td>**[GitHubMarkdown.BadgeColor](BadgeColor.md)**</td>
+<td></td></tr>
+<tr><td>AsHtml</td>
+<td>Yes</td>
+<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

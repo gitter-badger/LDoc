@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Italic([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Text);
+###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Italic([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Text, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L437) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L437)
+![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L493) ![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L493)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
@@ -24,9 +24,20 @@
 
 ###### Parameters
 
-Parameter | Optional | Type | Description
-:---  | :---  | :---  | :--- 
-Text | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+<table style="">
+<tr><td>Parameter</td>
+<td>Optional</td>
+<td>Type</td>
+<td>Description</td></tr>
+<tr><td>Text</td>
+<td>Yes</td>
+<td>[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)</td>
+<td></td></tr>
+<tr><td>AsHtml</td>
+<td>Yes</td>
+<td>[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx)</td>
+<td></td></tr>
+</table>
 
 
 #### Returns

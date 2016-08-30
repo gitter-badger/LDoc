@@ -13,30 +13,101 @@
               Generates markdown for a Member.
             
 
-Public  Virtual Methods (3) | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "") | ![Total Lines of Code 41](http://b.repl.ca/v1/Total%20Lines%20of%20Code-41-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 15](http://b.repl.ca/v1/Lines%20of%20Code-15-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L32) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L39) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L143) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="">
+<tr><td>Public  Virtual Methods (3)</td>
+<td>![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "")</td>
+<td>![Total Lines of Code 41](http://b.repl.ca/v1/Total%20Lines%20of%20Code-41-blue.png "")</td>
+<td>![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "")</td>
+<td>![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")</td></tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 15](http://b.repl.ca/v1/Lines%20of%20Code-15-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L32)</td>
+<td>![Documented No](http://b.repl.ca/v1/Documented-No-red.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L39)</td>
+<td>![Documented No](http://b.repl.ca/v1/Documented-No-red.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L143)</td>
+<td>![Documented No](http://b.repl.ca/v1/Documented-No-red.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+</table>
 
 
-Public  Override Methods (10) | ![TODOs 2](http://b.repl.ca/v1/TODOs-2-orange.png "") | ![Total Lines of Code 86](http://b.repl.ca/v1/Total%20Lines%20of%20Code-86-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L60) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L75) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L84) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L111) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L122) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L133) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L164) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L177) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L191) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="">
+<tr><td>Public  Override Methods (10)</td>
+<td>![TODOs 2](http://b.repl.ca/v1/TODOs-2-orange.png "")</td>
+<td>![Total Lines of Code 86](http://b.repl.ca/v1/Total%20Lines%20of%20Code-86-blue.png "")</td>
+<td>![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "")</td>
+<td>![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")</td></tr>
+<tr><td>![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L60)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L75)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L84)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L111)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L122)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L133)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L164)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L177)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L191)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+</table>
 
 
-Public   Fields (1) |  | ![Total Lines of Code 0](http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L29) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="">
+<tr><td>Public   Fields (1)</td>
+<td></td>
+<td>![Total Lines of Code 0](http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png "")</td>
+<td>![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "")</td>
+<td>![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")</td></tr>
+<tr><td>![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[]</td>
+<td>[![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L29)</td>
+<td>![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "")</td>
+<td>![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")</td>
+</tr>
+</table>
 
 
 
