@@ -7,7 +7,7 @@ namespace LCore.LDoc.Markdown
     /// <summary>
     /// Markdown generator for projects in the L family.
     /// </summary>
-    public abstract class MarkdownGenerator_L : MarkdownGenerator
+    public abstract class SolutionMarkdownGenerator_L : SolutionMarkdownGenerator
         {
         public override List<ProjectInfo> Home_RelatedProjects => new List<ProjectInfo>
             {

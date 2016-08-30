@@ -1,16 +1,16 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
-### LDoc
+### SolutionMarkdownGenerator_L
 
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "")
 
 
 
 
 ###### Summary
 
-            Static class to store LDoc constants
+            Markdown generator for projects in the L family.
             
 
 

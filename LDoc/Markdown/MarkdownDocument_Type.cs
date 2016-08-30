@@ -11,7 +11,7 @@ namespace LCore.LDoc.Markdown
     /// <summary>
     /// Generates markdown for a Type.
     /// </summary>
-    public class GitHubMarkdown_Type : GitHubMarkdown
+    public class MarkdownDocument_Type : GitHubMarkdown
         {
         /// <summary>
         /// MetaData for the type
@@ -28,14 +28,13 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new Type Markdown file.
         /// </summary>
-        public GitHubMarkdown_Type(Type Type, MarkdownGenerator Generator, string FilePath, string Title)
+        public MarkdownDocument_Type(Type Type, SolutionMarkdownGenerator Generator, string FilePath, string Title)
             : base(Generator, FilePath, Title)
             {
             this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
 
             Generator.GetTypeMemberMarkdown((Type)this.TypeMeta?.Member).Each(
-                MD => MD.Value.Members.Each(
-                    Member => this.MemberMarkdown.Add(Member.Key, Member.Value)));
+                MD => this.MemberMarkdown.Add(MD.Key, MD.Value.Meta));
 
             this.Generate();
             }

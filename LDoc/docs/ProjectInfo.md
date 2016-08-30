@@ -3,7 +3,7 @@
 
 ### ProjectInfo
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "")
 
 
 
@@ -12,13 +12,6 @@
 
             Class to describe projects within markdown documents
             
-
-Public   Fields (3) |  | ![Total Lines of Code 12](http://b.repl.ca/v1/Total%20Lines%20of%20Code-12-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[Name](ProjectInfo_Name.md)** |  | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/ProjectInfo.cs#L16) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Description](ProjectInfo_Description.md)** |  | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/ProjectInfo.cs#L21) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Url](ProjectInfo_Url.md)** |  | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/ProjectInfo.cs#L26) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-
 
 
 

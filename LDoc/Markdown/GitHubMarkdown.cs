@@ -33,7 +33,7 @@ namespace LCore.LDoc.Markdown
         /// The generator that created this Markdown, if applicable.
         /// </summary>
         [CanBeNull]
-        protected MarkdownGenerator Generator { get; }
+        protected SolutionMarkdownGenerator Generator { get; }
 
         /// <summary>
         /// Create a new GitHumMarkdown document without specifying a file title or location
@@ -43,7 +43,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new GitHumMarkdown document specifying a file title and location
         /// </summary>
-        public GitHubMarkdown([CanBeNull]MarkdownGenerator Generator, [CanBeNull] string FilePath, [CanBeNull] string Title)
+        public GitHubMarkdown([CanBeNull]SolutionMarkdownGenerator Generator, [CanBeNull] string FilePath, [CanBeNull] string Title)
             {
             this.Generator = Generator;
             this.FilePath = FilePath ?? "";
@@ -237,7 +237,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         /// <param name="Lines"></param>
         /// <param name="Language"></param>
-        public void Code([CanBeNull] string[] Lines = null, [CanBeNull] string Language = MarkdownGenerator.CSharpLanguage)
+        public void Code([CanBeNull] string[] Lines = null, [CanBeNull] string Language = SolutionMarkdownGenerator.CSharpLanguage)
             {
             this.Line($"```{Language}");
             Lines.Each(this.Line);

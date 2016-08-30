@@ -10,7 +10,7 @@ using LCore.LUnit;
 
 namespace Test_LDoc
     {
-    public class LDocMarkdownGenerator : MarkdownGenerator_L
+    public class LDocSolutionMarkdownGenerator : SolutionMarkdownGenerator_L
         {
         public override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
 

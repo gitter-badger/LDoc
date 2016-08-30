@@ -1,17 +1,12 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
-### LDoc
+### MarkdownDocument_Member
 
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "")
-
-
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "")
 
 
-###### Summary
 
-            Static class to store LDoc constants
-            
 
 
 

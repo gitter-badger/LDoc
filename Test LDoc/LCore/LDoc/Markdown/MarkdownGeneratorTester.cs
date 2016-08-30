@@ -21,14 +21,14 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
 
         [Fact]
-        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(MarkdownGenerator) + "." + nameof(MarkdownGenerator.MarkdownPath_Assembly) + "(Assembly) => String")]
-        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(MarkdownGenerator) + "." + nameof(MarkdownGenerator.MarkdownPath_Type) + "(Type) => String")]
-        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(MarkdownGenerator) + "." + nameof(MarkdownGenerator.MarkdownPath_Member) + "(MemberInfo) => String")]
-        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(MarkdownGenerator) + "." + nameof(MarkdownGenerator.Generate) + "(Boolean)")]
-        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(MarkdownGenerator) + "." + nameof(MarkdownGenerator.GetAllMarkdown) + "() => List<GitHubMarkdown>")]
+        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.MarkdownPath_Assembly) + "(Assembly) => String")]
+        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.MarkdownPath_Type) + "(Type) => String")]
+        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.MarkdownPath_Member) + "(MemberInfo) => String")]
+        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.Generate) + "(Boolean)")]
+        [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.GetAllMarkdown) + "() => List<GitHubMarkdown>")]
         public void Generate()
             {
-            var Gen = new LDocMarkdownGenerator();
+            var Gen = new LDocSolutionMarkdownGenerator();
 
             Gen.Generate(WriteToDisk: true);
 

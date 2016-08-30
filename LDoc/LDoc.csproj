@@ -92,11 +92,11 @@
     <Compile Include="Attributes\ExcludeFromMarkdownAttribute.cs" />
     <Compile Include="Markdown\GitHubMarkdown.cs" />
     <Compile Include="Attributes\Interfaces\IExcludeFromMarkdownAttribute.cs" />
-    <Compile Include="Markdown\GitHubMarkdown_Assembly.cs" />
-    <Compile Include="Markdown\GitHubMarkdown_MemberGroup.cs" />
-    <Compile Include="Markdown\GitHubMarkdown_Type.cs" />
-    <Compile Include="Markdown\MarkdownGenerator.cs" />
-    <Compile Include="Markdown\MarkdownGenerator_L.cs" />
+    <Compile Include="Markdown\MarkdownDocument_Assembly.cs" />
+    <Compile Include="Markdown\MarkdownDocument_MethodGroup.cs" />
+    <Compile Include="Markdown\MarkdownDocument_Type.cs" />
+    <Compile Include="Markdown\SolutionMarkdownGenerator.cs" />
+    <Compile Include="Markdown\SolutionMarkdownGenerator_L.cs" />
     <Compile Include="Markdown\ProjectInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

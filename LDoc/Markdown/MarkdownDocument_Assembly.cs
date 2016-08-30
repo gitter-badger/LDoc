@@ -12,7 +12,7 @@ namespace LCore.LDoc.Markdown
     /// <summary>
     /// Generates markdown for an Assembly.
     /// </summary>
-    public class GitHubMarkdown_Assembly : GitHubMarkdown
+    public class MarkdownDocument_Assembly : GitHubMarkdown
         {
         /// <summary>
         /// Assembly
@@ -28,7 +28,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new Assembly Markdown file.
         /// </summary>
-        public GitHubMarkdown_Assembly(Assembly Assembly, MarkdownGenerator Generator, string FilePath, string Title) : base(Generator, FilePath, Title)
+        public MarkdownDocument_Assembly(Assembly Assembly, SolutionMarkdownGenerator Generator, string FilePath, string Title) : base(Generator, FilePath, Title)
             {
             this.Assembly = Assembly;
             this.Coverage = new AssemblyCoverage(Assembly);
@@ -52,9 +52,9 @@ namespace LCore.LDoc.Markdown
                 this.Line(MarkdownGenerator.GetBadges_Info(this, this.Coverage, Comments).JoinLines(" "));
                 this.Line(MarkdownGenerator.GetBadges_Coverage(this, this.Coverage, Comments).JoinLines(" "));
 
-                List<KeyValuePair<Type, GitHubMarkdown_Type>> Types = MarkdownGenerator.GetAssemblyTypeMarkdown(this.Assembly);
+                List<KeyValuePair<Type, MarkdownDocument_Type>> Types = MarkdownGenerator.GetAssemblyTypeMarkdown(this.Assembly);
 
-                Dictionary<string, List<KeyValuePair<Type, GitHubMarkdown_Type>>> NamespaceTypes = Types.Group(Type => Type.Key.Namespace);
+                Dictionary<string, List<KeyValuePair<Type, MarkdownDocument_Type>>> NamespaceTypes = Types.Group(Type => Type.Key.Namespace);
 
                 List<string> Namespaces = NamespaceTypes.Keys.List();
 
@@ -67,7 +67,7 @@ namespace LCore.LDoc.Markdown
                 {
                     this.HeaderUnderline(Namespace, Size: 2);
 
-                    List<KeyValuePair<Type, GitHubMarkdown_Type>> NamespaceTypeMarkdown = NamespaceTypes[Namespace];
+                    List<KeyValuePair<Type, MarkdownDocument_Type>> NamespaceTypeMarkdown = NamespaceTypes[Namespace];
 
                     NamespaceTypeMarkdown.Sort(Type => Type.Key.Name);
 

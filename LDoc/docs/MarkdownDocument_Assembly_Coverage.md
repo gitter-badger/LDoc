@@ -1,17 +1,10 @@
 ![](../Content/LDoc-banner-small.png "")
-[Up](../LDoc.md)
+[Up](MarkdownDocument_Assembly.md)
 
-### LDoc
+### MarkdownDocument_Assembly
+[View Source](../Markdown/MarkdownDocument_Assembly.cs)
 
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "")
-
-
-
-
-###### Summary
-
-            Static class to store LDoc constants
-            
+# Coverage
 
 
 

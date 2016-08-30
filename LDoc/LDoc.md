@@ -21,19 +21,21 @@ LCore.LDoc.Markdown
 
 #### [GitHubMarkdown](docs/GitHubMarkdown.md)
 
-#### [GitHubMarkdown_Assembly](docs/GitHubMarkdown_Assembly.md)
-
-#### [GitHubMarkdown_MemberGroup](docs/GitHubMarkdown_MemberGroup.md)
-
-#### [GitHubMarkdown_Type](docs/GitHubMarkdown_Type.md)
-
 #### [IExcludeFromMarkdownAttribute](docs/IExcludeFromMarkdownAttribute.md)
 
-#### [MarkdownGenerator](docs/MarkdownGenerator.md)
+#### [MarkdownDocument_Assembly](docs/MarkdownDocument_Assembly.md)
 
-#### [MarkdownGenerator_L](docs/MarkdownGenerator_L.md)
+#### [MarkdownDocument_Member](docs/MarkdownDocument_Member.md)
+
+#### [MarkdownDocument_MethodGroup](docs/MarkdownDocument_MethodGroup.md)
+
+#### [MarkdownDocument_Type](docs/MarkdownDocument_Type.md)
 
 #### [ProjectInfo](docs/ProjectInfo.md)
+
+#### [SolutionMarkdownGenerator](docs/SolutionMarkdownGenerator.md)
+
+#### [SolutionMarkdownGenerator_L](docs/SolutionMarkdownGenerator_L.md)
 
 #### [Text](docs/Text.md)
 

@@ -1,16 +1,16 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
-### LDoc
+### SolutionMarkdownGenerator
 
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "")
 
 
 
 
 ###### Summary
 
-            Static class to store LDoc constants
+            Implement this class to generate code for your assemblies and projects
             
 
 
