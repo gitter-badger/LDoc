@@ -119,9 +119,9 @@ namespace LCore.LDoc.Markdown
                     return new[]
                         {
                         this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
-                        MD.GetBadge_Todos(this) +
-                            MD.GetBadge_Bugs(this) +
-                            MD.GetBadge_NotImplemented(this) +
+                        MD.GetBadge_Todos(this) + " " +
+                            MD.GetBadge_Bugs(this) + " " +
+                            MD.GetBadge_NotImplemented(this) + " " +
                             MD.GetBadge_CustomTags(this).JoinLines(" "),
                         MD.GetBadge_CodeLines(this),
                         MD.GetBadge_Documented(this),

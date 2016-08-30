@@ -208,6 +208,10 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_NotImplemented(GitHubMarkdown MD)
             {
             uint NotImplementedCount = (uint) this.Meta.NotImplemented.Length;
+
+            if (NotImplementedCount == 0)
+                return "";
+
             return MD.Badge(this.Generator.Language.Badge_NotImplemented, $"{NotImplementedCount}", NotImplementedCount > 0
                 ? BadgeColor.Orange
                 : BadgeColor.Green);
@@ -232,6 +236,10 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_Todos(GitHubMarkdown MD)
             {
             uint TodoCount = (uint) this.Meta.CommentTODO.Length;
+
+            if (TodoCount == 0)
+                return "";
+
             return MD.Badge(this.Generator.Language.Badge_TODOs, $"{TodoCount}", TodoCount > 0
                 ? BadgeColor.Yellow
                 : BadgeColor.Green);
@@ -243,6 +251,9 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_Bugs(GitHubMarkdown MD)
             {
             uint BugCount = (uint) this.Meta.CommentBUG.Length;
+            if (BugCount == 0)
+                return "";
+
             return MD.Badge(this.Generator.Language.Badge_BUGs, $"{BugCount}", BugCount > 0
                 ? BadgeColor.Red
                 : BadgeColor.Green);
