@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using LCore.Extensions;
 using LCore.LUnit;
+
 // ReSharper disable SuggestBaseTypeForParameter
 
 namespace LCore.LDoc.Markdown
@@ -11,7 +12,7 @@ namespace LCore.LDoc.Markdown
     /// <summary>
     /// Generates markdown for a Type.
     /// </summary>
-    public class MarkdownDocument_Type : GitHubMarkdown
+    public class MarkdownDocument_Type : GeneratedDocument
         {
         /// <summary>
         /// MetaData for the type
@@ -21,9 +22,8 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// All member markdown defined under the current Type
         /// </summary>
-        public Dictionary<MemberInfo, CodeCoverageMetaData> MemberMarkdown { get; } =
-            new Dictionary<MemberInfo, CodeCoverageMetaData>();
-
+        public Dictionary<MemberInfo, MarkdownDocument_Member> MemberMarkdown { get; } =
+            new Dictionary<MemberInfo, MarkdownDocument_Member>();
 
         /// <summary>
         /// Create a new Type Markdown file.
@@ -33,150 +33,137 @@ namespace LCore.LDoc.Markdown
             {
             this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
 
-            Generator.GetTypeMemberMarkdown((Type)this.TypeMeta?.Member).Each(
-                MD => this.MemberMarkdown.Add(MD.Key, MD.Value.Meta));
-
-            this.Generate();
+            Generator.GetTypeMemberMarkdown((Type) this.TypeMeta?.Member).Each(
+                MD => this.MemberMarkdown.Add(MD.Key, MD.Value));
             }
 
-
-        private void Generate()
+        /// <summary>
+        /// Generate the document.
+        /// </summary>
+        public override void Generate()
             {
-            var MarkdownGenerator = this.Generator;
+            this.Generator.WriteHeader(this);
 
-            if (MarkdownGenerator != null)
+            this.Line(
+                this.Link(
+                    this.GetRelativePath(this.Generator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
+                    this.Generator.Language.LinkText_Up, EscapeText: false));
+
+            this.Header($"{((Type) this.TypeMeta.Member).GetGenericName()}", Size: 3);
+            this.Line("");
+            this.Line(
+                this.Generator.GetBadges_Info(this, new TypeCoverage((Type) this.TypeMeta.Member),
+                    this.TypeMeta.Comments).JoinLines(" "));
+            this.Line("");
+            this.Line(
+                this.Generator.GetBadges_Coverage(this, new TypeCoverage((Type) this.TypeMeta.Member),
+                    this.TypeMeta.Comments).JoinLines(" "));
+            this.Line("");
+            string TypePath = this.TypeMeta.CodeFilePath;
+
+            if (!string.IsNullOrEmpty(TypePath))
                 {
-                MarkdownGenerator.WriteHeader(this);
-
-                this.Line(
-                    this.Link(
-                        this.GetRelativePath(MarkdownGenerator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
-                        MarkdownGenerator.Language.LinkText_Up, EscapeText: false));
-
-                this.Header($"{((Type)this.TypeMeta.Member).GetGenericName()}", Size: 3);
-                this.Line("");
-                this.Line(
-                    MarkdownGenerator.GetBadges_Info(this, new TypeCoverage((Type)this.TypeMeta.Member),
-                        this.TypeMeta.Comments).JoinLines(" "));
-                this.Line("");
-                this.Line(
-                    MarkdownGenerator.GetBadges_Coverage(this, new TypeCoverage((Type)this.TypeMeta.Member),
-                        this.TypeMeta.Comments).JoinLines(" "));
-                this.Line("");
-                string TypePath = this.TypeMeta.CodeFilePath;
-
-                if (!string.IsNullOrEmpty(TypePath))
-                    {
-                    this.Line(this.Link($"{this.GetRelativePath(TypePath)}#L{this.TypeMeta.CodeLineNumber}",
-                        MarkdownGenerator.Language.LinkText_ViewSource, EscapeText: false));
-                    }
-
-                if (!string.IsNullOrEmpty(this.TypeMeta.Comments?.Summary))
-                    {
-                    this.Header(MarkdownGenerator.Language.Header_Summary, Size: 6);
-                    this.Line(this.TypeMeta.Comments?.Summary);
-                    }
-
-                // TODO track constructors 
-
-                // TODO track subtypes
-
-                Dictionary<string, List<KeyValuePair<MemberInfo, CodeCoverageMetaData>>> MemberGroups =
-                    this.MemberMarkdown.Group(Member => Member.Key.GetMemberDetails().ToString());
-
-                MemberGroups.Each(Group =>
-                    {
-                        uint Documented = 0;
-                        uint DocumentedTotal = 0;
-
-                        uint Covered = 0;
-                        uint CoveredTotal = 0;
-
-                        uint LinesTotal = 0;
-
-                        uint TotalTodos = 0;
-                        uint TotalBugs = 0;
-                        uint TotalNotImplemented = 0;
-
-                        string[][] Body = Group.Value.Convert(Member =>
-                            {
-
-                                LinesTotal += Member.Value.CodeLineCount ?? 0u;
-
-                                Covered += Member.Value.Coverage?.IsCovered == true ? 1u : 0u;
-                                CoveredTotal += 1u;
-
-                                Documented += Member.Value.Comments == null ? 0u : 1u;
-                                DocumentedTotal += 1u;
-
-                                TotalTodos += (uint)Member.Value.CommentTODO.Length;
-                                TotalBugs += (uint)Member.Value.CommentBUG.Length;
-                                TotalNotImplemented += (uint)Member.Value.NotImplemented.Length;
-                                // TODO total for custom tags
-
-                                return new[]
-                                    {
-                                this.Bold(this.Link(this.GetRelativePath(MarkdownGenerator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
-
-                                (Member.Value.CommentTODO.Length > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{Member.Value.CommentTODO.Length}", BadgeColor.Orange)
-                                    : "") +
-                                (Member.Value.CommentBUG.Length > 0
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{Member.Value.CommentBUG.Length}", BadgeColor.Red)
-                                    : "") +
-                                (Member.Value.NotImplemented.Length > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{Member.Value.NotImplemented.Length}", BadgeColor.Orange)
-                                    : "") +
-                                Member.Value.CommentTags.Keys
-                                    .Collect(Tag=>this.Badge(Tag.Pluralize(), $"{(uint)((uint?)Member.Value.CommentTags.SafeGet(Tag)?.Length ?? (uint?)0u)}"))
-                                    .JoinLines(" "),
-
-                                this.Link($"{this.GetRelativePath(Member.Value.CodeFilePath)}#L{Member.Value.CodeLineNumber}",
-                                    this.Badge(MarkdownGenerator.Language.Badge_LinesOfCode,
-                                    $"{Member.Value.CodeLineCount ?? 0u}",
-                                    (Member.Value.CodeLineCount ?? 0u) == 0u ?BadgeColor.Red : BadgeColor.Blue), EscapeText:false),
-
-                                Member.Value.Comments != null
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_Documented, "Yes", BadgeColor.BrightGreen)
-                                    : this.Badge(MarkdownGenerator.Language.Badge_Documented, "No", BadgeColor.Red),
-
-                                Member.Value.Coverage?.IsCovered == true
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_Covered, "Yes", BadgeColor.BrightGreen)
-                                    : this.Badge(MarkdownGenerator.Language.Badge_Covered, "No", BadgeColor.Red)
-                                };
-                            }).Array();
-
-                        int CoveredPercent = Covered.PercentageOf(CoveredTotal);
-                        int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
-
-                        var Header = new[] {
-                            new[]
-                                {
-                                $"{Group.Key.Pluralize()} ({ Group.Value.Count})",
-
-                                (TotalTodos > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_TODOs, $"{TotalTodos}", BadgeColor.Orange)
-                                    : "") +
-                                (TotalBugs> 0
-                                    ? this.Badge(MarkdownGenerator.Language.Badge_BUGs, $"{TotalBugs}", BadgeColor.Red)
-                                    : "") +
-                                (TotalNotImplemented > 0 ?
-                                    this.Badge(MarkdownGenerator.Language.Badge_NotImplemented, $"{TotalNotImplemented}", BadgeColor.Orange)
-                                    : "")
-                                // TODO total for custom tags
-                                ,
-
-                                this.Badge($"Total {MarkdownGenerator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0 ? BadgeColor.Red : BadgeColor.Blue),
-                                this.Badge($"Total {MarkdownGenerator.Language.Header_Documentation}",$"{DocumentedPercent}%", MarkdownGenerator.GetColorByPercentage(DocumentedPercent)),
-                                this.Badge($"Total {MarkdownGenerator.Language.Header_Coverage}",$"{CoveredPercent}%", MarkdownGenerator.GetColorByPercentage(CoveredPercent))
-                                }
-                            };
-
-                        this.Table(Header.Add(Body));
-                    });
-
-                MarkdownGenerator.WriteFooter(this);
+                this.Line(this.Link($"{this.GetRelativePath(TypePath)}#L{this.TypeMeta.CodeLineNumber}",
+                    this.Generator.Language.LinkText_ViewSource, EscapeText: false));
                 }
+
+            if (!string.IsNullOrEmpty(this.TypeMeta.Comments?.Summary))
+                {
+                this.Header(this.Generator.Language.Header_Summary, Size: 6);
+                this.Line(this.TypeMeta.Comments?.Summary);
+                }
+
+            // TODO track constructors 
+
+            // TODO track subtypes
+
+            Dictionary<string, List<KeyValuePair<MemberInfo, MarkdownDocument_Member>>> MemberGroups =
+                this.MemberMarkdown.Group(Member => Member.Key.GetMemberDetails().ToString());
+
+            MemberGroups.Each(Group =>
+                {
+                uint Documented = 0;
+                uint DocumentedTotal = 0;
+
+                uint Covered = 0;
+                uint CoveredTotal = 0;
+
+                uint LinesTotal = 0;
+
+                uint TotalTodos = 0;
+                uint TotalBugs = 0;
+                uint TotalNotImplemented = 0;
+
+                string[][] Body = Group.Value.Convert(Member =>
+                    {
+                    var MD = Member.Value;
+                    var Meta = MD.Meta;
+
+                    LinesTotal += Meta.CodeLineCount ?? 0u;
+
+                    Covered += Meta.Coverage?.IsCovered == true
+                        ? 1u
+                        : 0u;
+                    CoveredTotal += 1u;
+
+                    Documented += Meta.Comments == null
+                        ? 0u
+                        : 1u;
+                    DocumentedTotal += 1u;
+
+                    TotalTodos += (uint) Meta.CommentTODO.Length;
+                    TotalBugs += (uint) Meta.CommentBUG.Length;
+                    TotalNotImplemented += (uint) Meta.NotImplemented.Length;
+                    // TODO total for custom tags
+
+                    return new[]
+                        {
+                        MD.GetBadge_Todos(this) +
+                        MD.GetBadge_Bugs(this) +
+                        MD.GetBadge_NotImplemented(this) +
+                        MD.GetBadge_CustomTags(this),
+                        MD.GetBadge_CodeLines(this),
+                        MD.GetBadge_Documented(this),
+                        MD.GetBadge_Covered(this)
+                        };
+                    }).Array();
+
+                int CoveredPercent = Covered.PercentageOf(CoveredTotal);
+                int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
+
+                var Header = new[]
+                    {
+                    new[]
+                        {
+                        $"{Group.Key.Pluralize()} ({Group.Value.Count})",
+                        this.GetBadge_TotalTodos(TotalTodos) +
+                        (TotalBugs > 0
+                            ? this.Badge(this.Generator.Language.Badge_BUGs, $"{TotalBugs}", BadgeColor.Red)
+                            : "") +
+                        (TotalNotImplemented > 0
+                            ? this.Badge(this.Generator.Language.Badge_NotImplemented, $"{TotalNotImplemented}", BadgeColor.Orange)
+                            : "")
+                        // TODO total for custom tags
+                        ,
+                        this.Badge($"Total {this.Generator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0
+                            ? BadgeColor.Red
+                            : BadgeColor.Blue),
+                        this.Badge($"Total {this.Generator.Language.Header_Documentation}", $"{DocumentedPercent}%", this.Generator.GetColorByPercentage(DocumentedPercent)),
+                        this.Badge($"Total {this.Generator.Language.Header_Coverage}", $"{CoveredPercent}%", this.Generator.GetColorByPercentage(CoveredPercent))
+                        }
+                    };
+
+                this.Table(Header.Add(Body));
+                });
+
+            this.Generator.WriteFooter(this);
+            }
+
+        private string GetBadge_TotalTodos(uint TotalTodos)
+            {
+            return TotalTodos > 0
+                ? this.Badge(this.Generator.Language.Badge_TODOs, $"{TotalTodos}", BadgeColor.Orange)
+                : "";
             }
         }
     }

@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="LDoc.cs" />
     <Compile Include="Attributes\ExcludeFromMarkdownAttribute.cs" />
+    <Compile Include="Markdown\GeneratedDocument.cs" />
     <Compile Include="Markdown\GitHubMarkdown.cs" />
     <Compile Include="Attributes\Interfaces\IExcludeFromMarkdownAttribute.cs" />
     <Compile Include="Markdown\MarkdownDocument_Assembly.cs" />

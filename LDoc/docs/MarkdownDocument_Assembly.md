@@ -3,9 +3,9 @@
 
 ### MarkdownDocument_Assembly
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 66%](http://b.repl.ca/v1/Documented-66%25-yellowgreen.png "")
 
-
+![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
 
 ###### Summary
@@ -13,10 +13,15 @@
             Generates markdown for an Assembly.
             
 
+Public  Virtual Methods (1) | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "") | ![Total Lines of Code 29](http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
+:---  | :---  | :---  | :---  | :--- 
+![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L41) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
+
 Public   Fields (2) |  | ![Total Lines of Code 11](http://b.repl.ca/v1/Total%20Lines%20of%20Code-11-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :---  | :--- 
-**[Assembly](MarkdownDocument_Assembly_Assembly.md)** |  | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L20) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Coverage](MarkdownDocument_Assembly_Coverage.md)** |  | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L25) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L21) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+![TODOs 0](http://b.repl.ca/v1/TODOs-0-green.png "")![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "")![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "")System.String[] | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L26) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

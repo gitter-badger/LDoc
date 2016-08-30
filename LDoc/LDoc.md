@@ -19,6 +19,8 @@ LCore.LDoc.Markdown
 
 #### [ExcludeFromMarkdownAttribute](docs/ExcludeFromMarkdownAttribute.md)
 
+#### [GeneratedDocument](docs/GeneratedDocument.md)
+
 #### [GitHubMarkdown](docs/GitHubMarkdown.md)
 
 #### [IExcludeFromMarkdownAttribute](docs/IExcludeFromMarkdownAttribute.md)

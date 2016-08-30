@@ -21,12 +21,12 @@ using LCore.LUnit;
 // ReSharper disable VirtualMemberNeverOverriden.Global
 
 namespace LCore.LDoc.Markdown
-{
+    {
     /// <summary>
     /// Implement this class to generate code for your assemblies and projects
     /// </summary>
     public abstract class SolutionMarkdownGenerator
-    {
+        {
         /// <summary>
         /// Default string to tag for language, (C#)
         /// </summary>
@@ -47,9 +47,9 @@ namespace LCore.LDoc.Markdown
         /// Locates a markdown document for a particular <paramref name="Member"/>
         /// </summary>
         public MarkdownDocument_Member FindMarkdown(MemberInfo Member)
-        {
+            {
             return this.Markdown_Member.First(MD => MD.Key == Member).Value;
-        }
+            }
 
         #region ReferenceLinks
 
@@ -57,7 +57,7 @@ namespace LCore.LDoc.Markdown
         /// Standard types linked from within LDoc, for convenience.
         /// </summary>
         protected static Dictionary<Type, string> ReferenceLinks => new Dictionary<Type, string>
-        {
+            {
             [typeof(IDictionary<,>)] = "https://msdn.microsoft.com/en-us/library/s4ys34ea.aspx",
             [typeof(ICollection<>)] = "https://msdn.microsoft.com/en-us/library/92t2ye13.aspx",
             [typeof(IEquatable<>)] = "https://msdn.microsoft.com/en-us/library/ms131187.aspx",
@@ -109,7 +109,7 @@ namespace LCore.LDoc.Markdown
             [typeof(Tuple<,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd386877.aspx",
             [typeof(Tuple<,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd387185.aspx",
             [typeof(Tuple<,,,,,,,>)] = "https://msdn.microsoft.com/en-us/library/dd383325.aspx"
-        };
+            };
 
         #endregion
 
@@ -137,8 +137,8 @@ namespace LCore.LDoc.Markdown
         /// Override this value to indicate installation instructions.
         /// </summary>
         public virtual void HowToInstall([NotNull] GitHubMarkdown MD)
-        {
-        }
+            {
+            }
 
         //https://codesingularity.visualstudio.com/_apis/public/build/definitions/ef4060d7-9700-4b9c-acc3-e2263d774197/3/badge
         // TODO hook custom badge urls
@@ -193,7 +193,7 @@ namespace LCore.LDoc.Markdown
         /// Generates root markdown document (front page)
         /// </summary>
         public virtual GitHubMarkdown GenerateRootMarkdown()
-        {
+            {
             var MD = new GitHubMarkdown(this, this.MarkdownPath_Root, this.Language.MainReadme);
             this.WriteHeader(MD);
             MD.Header(this.Language.MainReadme, Size: 2);
@@ -203,14 +203,14 @@ namespace LCore.LDoc.Markdown
             if (!this.GetType().GetMembers().Has(
                 Member => Member.IsDeclaredMember() &&
                           (Member.Name == nameof(this.HowToInstall))))
-            {
+                {
                 MD.Header(this.Language.Header_InstallationInstructions, Size: 3);
 
                 this.HowToInstall(MD);
-            }
+                }
 
             this.Markdown_Assembly.Each(Document =>
-            {
+                {
                 var Coverage = new AssemblyCoverage(Document.Key);
                 ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
@@ -219,7 +219,7 @@ namespace LCore.LDoc.Markdown
                 MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
 
                 MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
-            });
+                });
 
             if (!this.Home_RelatedProjects.IsEmpty())
                 MD.Header(this.Language.Header_RelatedProjects, Size: 3);
@@ -232,13 +232,13 @@ namespace LCore.LDoc.Markdown
             this.WriteFooter(MD);
 
             return MD;
-        }
+            }
 
         /// <summary>
         /// Generates table of contents document
         /// </summary>
         public virtual GitHubMarkdown GenerateTableOfContentsMarkdown()
-        {
+            {
             var MD = new GitHubMarkdown(this, this.MarkdownPath_TableOfContents, this.Language.TableOfContents);
 
             this.WriteHeader(MD);
@@ -250,13 +250,13 @@ namespace LCore.LDoc.Markdown
             this.WriteFooter(MD);
 
             return MD;
-        }
+            }
 
         /// <summary>
         /// Generates coverage summary document
         /// </summary>
         public virtual GitHubMarkdown GenerateCoverageSummaryMarkdown()
-        {
+            {
             var MD = new GitHubMarkdown(this, this.MarkdownPath_CoverageSummary, this.Language.CoverageSummary);
 
             this.WriteHeader(MD);
@@ -267,124 +267,124 @@ namespace LCore.LDoc.Markdown
 
             MD.Header(this.Language.Header_Assemblies);
             this.Markdown_Assembly.Each(AssemblyMD =>
-            {
+                {
                 var Coverage = new AssemblyCoverage(AssemblyMD.Key);
                 ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
                 MD.Header(AssemblyMD.Value.Title, Size: 2);
                 //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
                 MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
-            });
+                });
 
             this.WriteFooter(MD);
 
             return MD;
-        }
+            }
 
         /// <summary>
         /// Generates markdown for an Assembly
         /// </summary>
         public virtual MarkdownDocument_Assembly GenerateMarkdown(Assembly Assembly)
-        {
+            {
             return new MarkdownDocument_Assembly(Assembly, this, this.MarkdownPath_Assembly(Assembly), Assembly.GetName().Name);
-        }
+            }
 
         /// <summary>
         /// Generates markdown for a Type
         /// </summary>
         public virtual MarkdownDocument_Type GenerateMarkdown(Type Type)
-        {
+            {
             return new MarkdownDocument_Type(Type, this, this.MarkdownPath_Type(Type), Type.Name);
-        }
+            }
 
         /// <summary>
         /// Generates markdown for a group of methods
         /// </summary>
         public virtual MarkdownDocument_MethodGroup GenerateMarkdown(MethodInfo[] MethodGroup)
-        {
+            {
             return new MarkdownDocument_MethodGroup(MethodGroup, this, this.MarkdownPath_MethodGroup(MethodGroup), $"{MethodGroup.First()?.Name} + {MethodGroup.Length - 1} Overloads");
-        }
+            }
 
         /// <summary>
         /// Generates markdown for a Member
         /// </summary>
         public virtual MarkdownDocument_Member GenerateMarkdown(MemberInfo Member)
-        {
+            {
             return new MarkdownDocument_Member(Member, this, this.MarkdownPath_Member(Member), Member.Name);
-        }
+            }
 
         #endregion
 
         #region Helpers +
 
         private string GetFrameworkVersion()
-        {
+            {
             return this.GetType().Assembly.ImageRuntimeVersion;
-        }
+            }
 
         /// <summary>
         /// Writes the default header, including the large or small
         /// banner and logo
         /// </summary>
         public virtual void WriteHeader(GitHubMarkdown MD)
-        {
+            {
             bool IsMain = MD.FilePath == this.MarkdownPath_Root;
 
 
             if (IsMain && !string.IsNullOrEmpty(this.BannerImage_Large(MD)))
-            {
+                {
                 MD.Line(MD.Image(this.BannerImage_Large(MD)));
-            }
+                }
             else if (!string.IsNullOrEmpty(this.BannerImage_Small(MD)))
-            {
+                {
                 MD.Line(MD.Image(this.BannerImage_Small(MD)));
-            }
+                }
 
             if (IsMain && !string.IsNullOrEmpty(this.LogoImage_Large(MD)))
-            {
+                {
                 MD.Line(MD.Image(this.LogoImage_Large(MD), this.Language.AltText_Logo, L.Align.Right));
-            }
+                }
             else if (!string.IsNullOrEmpty(this.LogoImage_Small(MD)))
-            {
+                {
                 MD.Line(MD.Link(MD.GetRelativePath(this.MarkdownPath_Root), MD.Image(this.LogoImage_Small(MD), this.Language.AltText_Logo, L.Align.Right)));
+                }
             }
-        }
 
 
         /// <summary>
         /// Retrieves a formatted link to the table of contents
         /// </summary>
         public virtual string TableOfContentsLink(GitHubMarkdown MD)
-        {
+            {
             return MD.Link(MD.GetRelativePath(this.MarkdownPath_TableOfContents), this.Language.TableOfContents);
-        }
+            }
 
         /// <summary>
         /// Retrieves a formatted link to the home readme
         /// </summary>
         public virtual string HomeLink(GitHubMarkdown MD)
-        {
+            {
             return MD.Link(MD.GetRelativePath(this.MarkdownPath_Root), this.Language.MainReadme);
-        }
+            }
 
         /// <summary>
         /// Override this method to generate custom documents for your project.
         /// </summary>
         public virtual Dictionary<string, GitHubMarkdown> GetOtherDocuments()
-        {
+            {
             return new Dictionary<string, GitHubMarkdown>();
-        }
+            }
 
         /// <summary>
         /// Formats comments, properly displaying comment tags.
         /// </summary>
         public virtual string FormatComment(string CommentText)
-        {
+            {
             // TODO add support for <see>
             // TODO add support for <seealso>
 
             return CommentText;
-        }
+            }
 
         /// <summary>
         /// Gets a link to a type, whether it is public to this project, a type on GitHub,
@@ -394,7 +394,7 @@ namespace LCore.LDoc.Markdown
         /// Otherwise, fall back on a google search.
         /// </summary>
         public virtual string LinkToType(GitHubMarkdown MD, Type Type)
-        {
+            {
             // Unassigned types, (T, etc), need no link
             if (Type.IsGenericParameter)
                 return Type.Name;
@@ -409,12 +409,12 @@ namespace LCore.LDoc.Markdown
 
             // Generic types, display in standard generic notation and link each type individually. Recursion is required.
             if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
-            {
+                {
                 string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
                 Type[] Parameters = Type.GenericTypeArguments;
 
                 return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;";
-            }
+                }
 
 
             // ---- From here on Type is known to not be generic, unknown generic parameter, ref, or array type ----
@@ -454,7 +454,7 @@ namespace LCore.LDoc.Markdown
                 Name,
                 $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
                 TargetNewWindow: true);
-        }
+            }
 
         /// <summary>
         /// Stores types where documentation wasn't successfully located
@@ -465,17 +465,17 @@ namespace LCore.LDoc.Markdown
         /// Get all Member group markdown owned by a given <paramref name="Type"/>
         /// </summary>
         public List<KeyValuePair<MemberInfo, MarkdownDocument_Member>> GetTypeMemberMarkdown(Type Type)
-        {
+            {
             return this.Markdown_Member.Select(Member => Member.Key.DeclaringType == Type);
-        }
+            }
 
         /// <summary>
         /// Get all Type markdown for a given <paramref name="Assembly"/>
         /// </summary>
         public virtual List<KeyValuePair<Type, MarkdownDocument_Type>> GetAssemblyTypeMarkdown(Assembly Assembly)
-        {
+            {
             return this.Markdown_Type.Select(Type => Type.Key.GetAssembly()?.GetName().Name == Assembly.GetName().Name);
-        }
+            }
 
         #endregion
 
@@ -490,7 +490,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
-        {
+            {
             var Assembly = Coverage?.CoveringAssembly;
 
             // ReSharper disable once UseObjectOrCollectionInitializer
@@ -512,14 +512,14 @@ namespace LCore.LDoc.Markdown
             // TODO: add total not implemented count
 
             return Out;
-        }
+            }
 
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
         public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
-        {
+            {
             var Assembly = Coverage?.CoveringAssembly;
 
             // ReSharper disable once UseObjectOrCollectionInitializer
@@ -527,7 +527,7 @@ namespace LCore.LDoc.Markdown
 
 
             return Out;
-        }
+            }
 
         #endregion
 
@@ -542,11 +542,11 @@ namespace LCore.LDoc.Markdown
         [CanBeNull]
         public virtual List<string> GetBadges_Info([NotNull] MarkdownDocument_Type MD, [CanBeNull] TypeCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
-        {
+            {
             var Type = Coverage?.CoveringType;
 
             if (Type != null)
-            {
+                {
                 var Out = new List<string>();
 
                 string TypeDescription =
@@ -573,29 +573,29 @@ namespace LCore.LDoc.Markdown
                 // TODO: add total not implemented count
 
                 Members.Each(Member =>
-                {
+                    {
                     TotalDocumentable++;
 
                     var MemberComments = Member.Key.GetComments();
 
                     if (MemberComments != null)
                         Documented++;
-                });
+                    });
 
 
                 Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription, GitHubMarkdown.BadgeColor.Blue));
 
                 if (TotalDocumentable > 0)
-                {
+                    {
                     int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
                     Out.Add(MD.Badge(this.Language.Badge_Documented, $"{DocumentedPercent}%", this.GetColorByPercentage(DocumentedPercent)));
-                }
+                    }
 
                 return Out;
-            }
+                }
 
             return null;
-        }
+            }
 
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
@@ -603,11 +603,11 @@ namespace LCore.LDoc.Markdown
         [CanBeNull]
         public virtual List<string> GetBadges_Coverage([NotNull] MarkdownDocument_Type MD, [CanBeNull] TypeCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
-        {
+            {
             var Type = Coverage?.CoveringType;
 
             if (Type != null)
-            {
+                {
                 var Out = new List<string>();
 
                 string TypeDescription =
@@ -629,32 +629,32 @@ namespace LCore.LDoc.Markdown
                 // TODO: add total lines of code (non 'empty')
 
                 Members.Each(Member =>
-                {
+                    {
                     var MemberComments = Member.Key.GetComments();
 
                     if (Member.Key is MethodInfo)
-                    {
+                        {
                         TotalCoverable++;
 
                         var MemberCoverage = new MethodCoverage((MethodInfo) Member.Key);
 
                         if (MemberCoverage.IsCovered)
                             Covered++;
-                    }
-                });
+                        }
+                    });
 
 
                 if (TotalCoverable > 0)
-                {
+                    {
                     int CoveredPercent = Covered.PercentageOf(TotalCoverable);
                     Out.Add(MD.Badge(this.Language.Badge_Covered, $"{CoveredPercent}%", this.GetColorByPercentage(CoveredPercent)));
-                }
+                    }
 
                 return Out;
-            }
+                }
 
             return null;
-        }
+            }
 
         #endregion
 
@@ -695,7 +695,7 @@ namespace LCore.LDoc.Markdown
         /// Writes the footer to a markdown document.
         /// </summary>
         public void WriteFooter([NotNull] GitHubMarkdown MD)
-        {
+            {
             MD.Line("");
             MD.Line("");
             MD.HorizontalRule();
@@ -703,25 +703,25 @@ namespace LCore.LDoc.Markdown
             this.WriteCustomFooter(MD);
             MD.Line("");
             MD.Line(new[]
-            {
+                {
                 $"This markdown was generated by {MD.Link(LDoc.Urls.GitHubUrl, nameof(LDoc))}, " +
                 $"powered by {MD.Link(LUnit.LUnit.Urls.GitHubRepository_LUnit, nameof(LUnit))}, " +
                 $"{MD.Link(LUnit.LUnit.Urls.GitHubRepository_LCore, nameof(LCore))}"
-            }.JoinLines(" "));
-        }
+                }.JoinLines(" "));
+            }
 
         /// <summary>
         /// Writes the footer for your markdown document
         /// </summary>
         public virtual void WriteCustomFooter(GitHubMarkdown MD)
-        {
-            MD.Line(new[]
             {
+            MD.Line(new[]
+                {
                 $"Copyright {DateTime.Now.Year} &copy;",
                 this.HomeLink(MD),
                 this.TableOfContentsLink(MD)
-            }.JoinLines(" "));
-        }
+                }.JoinLines(" "));
+            }
 
 
         /// <summary>
@@ -774,12 +774,12 @@ namespace LCore.LDoc.Markdown
             $"{Member.DeclaringType?.Name.CleanFileName()}_{Member.Name.CleanFileName()}{this.GetMethodIndex(Member)}.md";
 
         private string GetMethodIndex(MemberInfo Member)
-        {
+            {
             if (Member is MethodInfo && Member.DeclaringType?.GetMember(Member.Name).Length > 1)
                 return $"-{Member.DeclaringType?.GetMember(Member.Name).IndexOf(o => o == Member)}";
 
             return "";
-        }
+            }
 
         /// <summary>
         /// Generates the document title for a Method Group
@@ -827,7 +827,7 @@ namespace LCore.LDoc.Markdown
         /// Override this method to customize the deciding of BadgeColor by Percentage.
         /// </summary>
         public virtual GitHubMarkdown.BadgeColor GetColorByPercentage(int Percentage)
-        {
+            {
             if (Percentage < this.ColorThresholds[0])
                 return GitHubMarkdown.BadgeColor.Red;
             if (Percentage < this.ColorThresholds[1])
@@ -843,7 +843,7 @@ namespace LCore.LDoc.Markdown
                 return GitHubMarkdown.BadgeColor.Blue;
 
             return GitHubMarkdown.BadgeColor.LightGrey;
-        }
+            }
 
 
         /// <summary>
@@ -863,14 +863,14 @@ namespace LCore.LDoc.Markdown
         #region Private Methods +
 
         private void Load(Assembly Assembly)
-        {
+            {
             Assembly.GetExportedTypes().Select(this.IncludeType).Each(this.Load);
 
             this.Markdown_Assembly.Add(Assembly, this.GenerateMarkdown(Assembly));
-        }
+            }
 
         private void Load(Type Type)
-        {
+            {
             MemberInfo[] AllMembers = Type.GetMembers().Select(this.IncludeMember);
 
             Dictionary<string, List<MethodInfo>> Methods = AllMembers
@@ -883,17 +883,17 @@ namespace LCore.LDoc.Markdown
             AllMembers.Each(this.Load);
 
             this.Markdown_Type.Add(Type, this.GenerateMarkdown(Type));
-        }
+            }
 
         private void Load(MemberInfo Member)
-        {
+            {
             this.Markdown_Member.Add(Member, this.GenerateMarkdown(Member));
-        }
+            }
 
         private void Load(MethodInfo[] MethodGroup)
-        {
+            {
             this.Markdown_MethodGroups.Add(MethodGroup, this.GenerateMarkdown(MethodGroup));
-        }
+            }
 
         #endregion
 
@@ -903,7 +903,7 @@ namespace LCore.LDoc.Markdown
         /// Generates all markdown documentation, optionally writing all files to disk using <paramref name="WriteToDisk"/>. 
         /// </summary>
         public void Generate(bool WriteToDisk = false)
-        {
+            {
             // Generates all assembly, type, and member Markdown
             this.DocumentAssemblies.Each(this.Load);
 
@@ -919,34 +919,39 @@ namespace LCore.LDoc.Markdown
             // Lastly, generate table of contents
             this.Markdown_Other.Add(this.Language.TableOfContents, this.GenerateTableOfContentsMarkdown());
 
-            List<GitHubMarkdown> AllMarkdown = this.GetAllMarkdown();
+            List<GeneratedDocument> AllMarkdown = this.GetAllMarkdown().List<GeneratedDocument>();
 
-            if (!this.TypeLinksNotFound.IsEmpty())
+            // Report missing types 
+            if (this.RequireDirectLinksToAllForeignTypes && !this.TypeLinksNotFound.IsEmpty())
                 throw new InvalidOperationException(
                     $"Type links not found: {this.TypeLinksNotFound.Convert(Type => Type.FullyQualifiedName()).JoinLines(", ")}");
 
             if (WriteToDisk)
-            {
-                AllMarkdown.Each(MD =>
                 {
+                AllMarkdown.Each(MD =>
+                    {
+                    MD.Generate();
+
                     string Path = MD.FilePath;
 
                     // just to be safe
                     if (Path.EndsWith(".md"))
-                    {
+                        {
                         Path.EnsurePathExists();
 
                         File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
-                    }
-                });
+                        }
+                    });
+
+                // TODO generate JSON manifest
+                }
             }
-        }
 
         /// <summary>
         /// Gets all markdown generated by the generator.
         /// </summary>
         public List<GitHubMarkdown> GetAllMarkdown()
-        {
+            {
             var AllMarkdown = new List<GitHubMarkdown>();
 
             AllMarkdown.AddRange(this.Markdown_Other.Values);
@@ -955,7 +960,7 @@ namespace LCore.LDoc.Markdown
             AllMarkdown.AddRange(this.Markdown_Member.Values);
 
             return AllMarkdown;
-        }
+            }
 
         #endregion
 
@@ -965,7 +970,7 @@ namespace LCore.LDoc.Markdown
         /// Override this value to customize the text used for markdown generation.
         /// </summary>
         public virtual Text Language => new Text
-        {
+            {
             MainReadme = "Home",
             TableOfContents = "Table of Contents",
             CoverageSummary = "Coverage Summary",
@@ -1005,7 +1010,7 @@ namespace LCore.LDoc.Markdown
             Badge_TODOs = "TODOs",
             Badge_NotImplemented = "Not Implemented",
             AltText_Logo = "Logo"
-        };
+            };
 
         /// <summary>
         /// Override this to specify custom comment tags to track. 
@@ -1032,7 +1037,7 @@ namespace LCore.LDoc.Markdown
         /// Structure to customize text used in MarkdownGenerator
         /// </summary>
         public struct Text
-        {
+            {
             /// <summary>
             /// Main readme title, default is "Home"
             /// </summary>
@@ -1229,8 +1234,8 @@ namespace LCore.LDoc.Markdown
             /// Table header text description
             /// </summary>
             public string TableHeaderText_Description { get; set; }
-        }
+            }
 
         #endregion
+        }
     }
-}
