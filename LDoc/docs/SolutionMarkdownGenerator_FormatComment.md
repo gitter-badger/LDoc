@@ -10,7 +10,7 @@
 
 ###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) FormatComment([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) CommentText);
 
-![Type Public  Virtual Method](http://b.repl.ca/v1/Type-Public%20%20Virtual%20Method-blue.png "") ![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "") ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L419)
+![Type Public  Virtual Method](http://b.repl.ca/v1/Type-Public%20%20Virtual%20Method-blue.png "") ![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-lightgrey.png "") ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "") ![Bugs 0](http://b.repl.ca/v1/Bugs-0-green.png "") ![Not Implemented 0](http://b.repl.ca/v1/Not%20Implemented-0-green.png "") ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L389)
 
 ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
 

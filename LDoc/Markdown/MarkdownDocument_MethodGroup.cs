@@ -166,7 +166,7 @@ namespace LCore.LDoc.Markdown
 
         public string GetBadge_Documented(GitHubMarkdown MD)
             {
-            return this.Badge(this.SolutionMarkdownGenerator.Language.Badge_Documented,
+            return MD.Badge(this.SolutionMarkdownGenerator.Language.Badge_Documented,
                 this.Meta.Comments != null ? "Yes" : "No",
                 this.Meta.Comments != null ? BadgeColor.BrightGreen
                                  : BadgeColor.Red);
@@ -308,7 +308,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this method to customize badges included in member generated markdown documents.
         /// </summary>
-        protected List<string> GetBadges_Info([CanBeNull] MethodCoverage Coverage)
+        protected List<string> GetBadges_Info()
             {
             var Out = new List<string>
                 {
@@ -330,7 +330,7 @@ namespace LCore.LDoc.Markdown
             // TODO replace with simpler Percent function
             int PercentageCommented = (int)(this.Methods.Convert(Method => Method.Value.Comments == null ? 0 : 1).Average() * 100).Round();
 
-            return this.Badge(this.SolutionMarkdownGenerator.Language.Badge_Documented,
+            return MD.Badge(this.SolutionMarkdownGenerator.Language.Badge_Documented,
                $"{PercentageCommented}%",
                this.SolutionMarkdownGenerator.GetColorByPercentage(PercentageCommented));
             }
@@ -380,7 +380,7 @@ namespace LCore.LDoc.Markdown
 
 
 
-        protected List<string> GetBadges_Coverage([CanBeNull] MethodCoverage Coverage)
+        protected List<string> GetBadges_Coverage()
             {
             var Out = new List<string>();
 

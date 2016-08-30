@@ -7,6 +7,7 @@ using LCore.Interfaces;
 using LCore.LDoc;
 using LCore.LDoc.Markdown;
 using LCore.LUnit;
+using LCore.Tools;
 
 namespace Test_LDoc
     {
@@ -50,7 +51,10 @@ namespace Test_LDoc
             [typeof(GitHubMarkdown.BadgeColor)] = "", // TODO link enums properly, fix in LCore find source file for enum types
 
             [typeof(ICodeComment)] = "", // TODO link once LCore is documented
-            [typeof(L.Align)] = ""      // TODO link once LCore is documented
+            [typeof(L.Align)] = "",      // TODO link once LCore is documented
+
+            [typeof(Set<,>)] ="",
+            [typeof(TypeCoverage)] = ""
             };
 
         /*

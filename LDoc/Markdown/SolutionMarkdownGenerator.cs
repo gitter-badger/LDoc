@@ -474,7 +474,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public List<KeyValuePair<MemberInfo, MarkdownDocument_Member>> GetTypeMemberMarkdown(Type Type)
             {
-            return this.Markdown_Member.Select(Member => Member.Key.DeclaringType?.Name == Type.Name);
+            return this.Markdown_Member.Select(Member => Member.Key.DeclaringType == Type);
             }
 
         /// <summary>
@@ -879,6 +879,7 @@ namespace LCore.LDoc.Markdown
             List<KeyValuePair<string, List<MethodInfo>>> MethodGroups = Methods.Select(Method => Method.Value.Count > 1);
 
             MethodGroups.Convert(Group => Group.Value.Array()).Each(this.Load);
+            AllMembers.Each(this.Load);
 
             this.Markdown_Type.Add(Type, this.GenerateMarkdown(Type));
             }

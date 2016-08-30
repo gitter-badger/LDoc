@@ -3,7 +3,7 @@
 
 ### MarkdownDocument_Type
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 
 
@@ -12,6 +12,12 @@
 
             Generates markdown for a Type.
             
+
+Public   Fields (2) |  | ![Total Lines of Code 6](http://b.repl.ca/v1/Total%20Lines%20of%20Code-6-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
+:---  | :---  | :---  | :---  | :--- 
+**[TypeMeta](MarkdownDocument_Type_TypeMeta.md)** |  | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_Type.cs#L19) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[MemberMarkdown](MarkdownDocument_Type_MemberMarkdown.md)** |  | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/MarkdownDocument_Type.cs#L24) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 

@@ -3,7 +3,7 @@
 
 ### MarkdownDocument_Assembly
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 
 
@@ -12,6 +12,12 @@
 
             Generates markdown for an Assembly.
             
+
+Public   Fields (2) |  | ![Total Lines of Code 11](http://b.repl.ca/v1/Total%20Lines%20of%20Code-11-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
+:---  | :---  | :---  | :---  | :--- 
+**[Assembly](MarkdownDocument_Assembly_Assembly.md)** |  | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L20) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+**[Coverage](MarkdownDocument_Assembly_Coverage.md)** |  | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L25) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+
 
 
 
