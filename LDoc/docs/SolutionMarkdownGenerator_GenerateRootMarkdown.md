@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### method <strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> GenerateRootMarkdown();
+##### public <strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> GenerateRootMarkdown();
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 28](http://b.repl.ca/v1/Lines%20of%20Code-28-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)
 

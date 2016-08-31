@@ -8,7 +8,7 @@
 
 #### Public Method
 
-##### method <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong>&gt; GetAllMarkdown();
+##### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong>&gt; GetAllMarkdown();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L953)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L953)
 

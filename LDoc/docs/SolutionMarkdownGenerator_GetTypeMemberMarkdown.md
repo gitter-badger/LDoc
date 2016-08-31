@@ -8,7 +8,7 @@
 
 #### Public Method
 
-##### method <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a>, <strong><a href="MarkdownDocument_Member.md" alt="">MarkdownDocument_Member</a></strong>&gt;&gt; GetTypeMemberMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
+##### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a>, <strong><a href="MarkdownDocument_Member.md" alt="">MarkdownDocument_Member</a></strong>&gt;&gt; GetTypeMemberMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L467)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L467)
 

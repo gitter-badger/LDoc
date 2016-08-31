@@ -167,10 +167,10 @@ namespace LCore.LDoc.Markdown
                     .Combine(", ");
 
                 string Name = Remote
-                    ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name)
+                    ? MD.Link(this.GetRelativePath(MD.FilePath), this.Member.Name)
                     : this.Member.Name;
 
-                return $"{Details.Type.ToString().ToLower()} {(Method.IsStatic ? "static " : "")}{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {Name}({Parameters});";
+                return $"{Details.Scope.ToString().ToLower()} {(Method.IsStatic ? "static " : "")}{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {Name}({Parameters});";
                 }
             return "";
             }

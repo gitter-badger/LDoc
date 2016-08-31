@@ -8,7 +8,7 @@
 
 #### Public Method
 
-##### method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Header(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Header(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L103)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L103)
 

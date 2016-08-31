@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### method <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a>, <strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong>&gt;&gt; GetAssemblyTypeMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);
+##### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a>, <strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong>&gt;&gt; GetAssemblyTypeMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L475)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L475)
 

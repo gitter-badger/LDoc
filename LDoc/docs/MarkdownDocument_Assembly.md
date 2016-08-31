@@ -24,7 +24,7 @@
 <td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png" alt="Lines of Code 29" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5">method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> [Generate](MarkdownDocument_Assembly_Generate.md)();</td>
+<tr><td colspan="5">public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> [Generate](MarkdownDocument_Assembly.md)();</td>
 </tr>
 <tr><td width="850px" colspan="424"></td></tr>
 </table>

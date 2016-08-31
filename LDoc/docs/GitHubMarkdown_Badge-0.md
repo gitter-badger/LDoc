@@ -8,7 +8,7 @@
 
 #### Public Method
 
-##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Badge(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Left, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Right, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> HexColor, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Badge(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Left, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Right, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> HexColor, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/GitHubMarkdown.cs#L542)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L542)
 

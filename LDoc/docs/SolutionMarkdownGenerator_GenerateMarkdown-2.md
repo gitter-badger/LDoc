@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### method <strong><a href="MarkdownDocument_MethodGroup.md" alt="">MarkdownDocument_MethodGroup</a></strong> GenerateMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx" alt="">MethodInfo</a>[] MethodGroup);
+##### public <strong><a href="MarkdownDocument_MethodGroup.md" alt="">MarkdownDocument_MethodGroup</a></strong> GenerateMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx" alt="">MethodInfo</a>[] MethodGroup);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L303)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L303)
 
