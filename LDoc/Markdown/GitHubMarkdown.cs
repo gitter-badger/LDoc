@@ -425,7 +425,7 @@ namespace LCore.LDoc.Markdown
                 this.Line("<table>");
                 Table.Each(Row => this.Line($"<tr>{Row}</tr>"));
                 if (!string.IsNullOrEmpty(TableWidth))
-                    this.Line($"<tr><td width=\"{TableWidth}\" colspan=\"{Table[index: 0].Length}\">&nbsp;</td></tr>");
+                    this.Line($"<tr><td width=\"{TableWidth}\" colspan=\"{Table[index: 0].Length}\"></td></tr>");
                 this.Line("</table>");
                 }
             else

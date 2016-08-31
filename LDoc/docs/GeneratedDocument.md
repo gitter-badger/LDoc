@@ -26,7 +26,7 @@
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"></td>
 </tr>
-<tr><td width="850px" colspan="355">&nbsp;</td></tr>
+<tr><td width="850px" colspan="355"></td></tr>
 </table>
 
 

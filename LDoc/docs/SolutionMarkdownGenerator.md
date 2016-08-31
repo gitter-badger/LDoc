@@ -26,7 +26,7 @@
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"></td>
 </tr>
-<tr><td width="850px" colspan="365">&nbsp;</td></tr>
+<tr><td width="850px" colspan="365"></td></tr>
 </table>
 
 
@@ -71,7 +71,7 @@
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"></td>
 </tr>
-<tr><td width="850px" colspan="419">&nbsp;</td></tr>
+<tr><td width="850px" colspan="419"></td></tr>
 </table>
 
 
@@ -88,7 +88,7 @@
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"></td>
 </tr>
-<tr><td width="850px" colspan="368">&nbsp;</td></tr>
+<tr><td width="850px" colspan="368"></td></tr>
 </table>
 
 
@@ -315,7 +315,7 @@
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"></td>
 </tr>
-<tr><td width="850px" colspan="432">&nbsp;</td></tr>
+<tr><td width="850px" colspan="432"></td></tr>
 </table>
 
 
@@ -332,7 +332,7 @@
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"></td>
 </tr>
-<tr><td width="850px" colspan="371">&nbsp;</td></tr>
+<tr><td width="850px" colspan="371"></td></tr>
 </table>
 
 
