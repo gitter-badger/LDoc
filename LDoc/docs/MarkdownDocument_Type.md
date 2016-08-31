@@ -24,7 +24,7 @@
 <td><a href="../Markdown/MarkdownDocument_Type.cs#L43" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-96-blue.png" alt="Lines of Code 96" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td></td>
+<tr><td colspan="1"></td>
 </tr>
 <tr><td width="850px" colspan="424">&nbsp;</td></tr>
 </table>
