@@ -24,7 +24,7 @@
 <td><a href="../Markdown/GeneratedDocument.cs#L30" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5">public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> [Generate](GeneratedDocument.md)();</td>
+<tr><td colspan="5">public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="GeneratedDocument_Generate.md" alt="">Generate</a>();</td>
 </tr>
 <tr><td width="850px" colspan="355"></td></tr>
 </table>
