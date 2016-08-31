@@ -179,7 +179,7 @@ namespace LCore.LDoc.Markdown
                         ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name, AsHtml: AsHtml)
                         : this.Member.Name;
 
-                    return $"{Details.Scope.ToString().ToLower()} {(ShowInheritance ? $"{Details.Inheritance}" : "")}" +
+                    return $"{Details.Scope.ToString().ToLower()} {(ShowInheritance ? $"{Details.Inheritance} " : "")}" +
                            $"{(Method.IsStatic ? "static " : "")}" +
                            $"{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} " +
                            $"{Name}({Parameters});";

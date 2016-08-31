@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public Virtual<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> GenerateCoverageSummaryMarkdown();
+##### public Virtual <strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> GenerateCoverageSummaryMarkdown();
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L258) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L258)
 

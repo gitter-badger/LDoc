@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public Virtual<strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong> GenerateMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
+##### public Virtual <strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong> GenerateMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L295)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L295)
 

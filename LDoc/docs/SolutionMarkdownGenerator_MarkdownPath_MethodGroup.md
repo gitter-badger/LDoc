@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public Virtual<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> MarkdownPath_MethodGroup(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx" alt="">MethodInfo</a>[] Methods);
+##### public Virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> MarkdownPath_MethodGroup(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx" alt="">MethodInfo</a>[] Methods);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/SolutionMarkdownGenerator.cs#L787)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L787)
 

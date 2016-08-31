@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public Virtual<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> FormatComment(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> CommentText);
+##### public Virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> FormatComment(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> CommentText);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L381) ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L381)
 

@@ -8,7 +8,7 @@
 
 #### Public Override Method
 
-##### public Override<a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate();
+##### public Override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate();
 
 ![Type Public Override Method](http://b.repl.ca/v1/Type-Public%20Override%20Method-blue.png "") [![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L32)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L32)
 
