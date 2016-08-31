@@ -24,7 +24,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L32" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-1-blue.png" alt="Lines of Code 1" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="MarkdownDocument_MethodGroup_Generate.md" alt="">Generate</a>();</h6>
+<tr><td colspan="5"><h6>public Override<a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="MarkdownDocument_MethodGroup_Generate.md" alt="">Generate</a>();</h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="356"></td></tr>
@@ -42,7 +42,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L39" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_MethodGroup_GetBadges_Info.md" alt="">GetBadges_Info</a>();</h6>
+<tr><td colspan="5"><h6>public Virtual<a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_MethodGroup_GetBadges_Info.md" alt="">GetBadges_Info</a>();</h6>
 </td>
 </tr>
 <tr><td><h4><a href="MarkdownDocument_MethodGroup_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></h4></td>
@@ -50,7 +50,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L143" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png" alt="Lines of Code 12" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_MethodGroup_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>();</h6>
+<tr><td colspan="5"><h6>public Virtual<a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_MethodGroup_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>();</h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="423"></td></tr>

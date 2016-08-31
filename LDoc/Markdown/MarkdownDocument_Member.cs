@@ -169,6 +169,7 @@ namespace LCore.LDoc.Markdown
                     {
                     var Method = (MethodInfo)this.Member;
 
+                    bool ShowInheritance = Details.Inheritance != MemberInheritance.None;
 
                     string Parameters = Method.GetParameters()
                         .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType, AsHtml)} {Param.Name}")
@@ -178,12 +179,16 @@ namespace LCore.LDoc.Markdown
                         ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name, AsHtml: AsHtml)
                         : this.Member.Name;
 
-                    return $"{Details.Scope.ToString().ToLower()} {(Method.IsStatic ? "static " : "")}{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {Name}({Parameters});";
+                    return $"{Details.Scope.ToString().ToLower()} {(ShowInheritance ? $"{Details.Inheritance}" : "")}" +
+                           $"{(Method.IsStatic ? "static " : "")}" +
+                           $"{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} " +
+                           $"{Name}({Parameters});";
                     }
                 }
 
             return "";
             }
+
 
         /// <summary>
         /// Get the Documented badge

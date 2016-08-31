@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; GetBadges_Info(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
+##### public Virtual<a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; GetBadges_Info(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 26](http://b.repl.ca/v1/Lines%20of%20Code-26-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L491) ![TODOs 9](http://b.repl.ca/v1/TODOs-9-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L491)
 

@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> WriteCustomFooter(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);
+##### public Virtual<a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> WriteCustomFooter(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L716)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L716)
 

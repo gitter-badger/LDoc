@@ -8,7 +8,7 @@
 
 #### Public Virtual Method
 
-##### public <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeType(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
+##### public Virtual<a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeType(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/SolutionMarkdownGenerator.cs#L795)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L795)
 
