@@ -21,7 +21,7 @@
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
 <tr><td><strong><a href="GeneratedDocument_Generate.md" alt="">Generate</a></strong></td>
 <td>   </td>
-<td><a href="../Markdown/GeneratedDocument.cs#L30" alt="">![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")</a></td>
+<td><a href="../Markdown/GeneratedDocument.cs#L30" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 </table>

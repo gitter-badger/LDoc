@@ -21,7 +21,7 @@
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
 <tr><td><strong><a href="MarkdownDocument_Assembly_Generate.md" alt="">Generate</a></strong></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt="">![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")</a></td>
+<td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png" alt="Lines of Code 29" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 </table>

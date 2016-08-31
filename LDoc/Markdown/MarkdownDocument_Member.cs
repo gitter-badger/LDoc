@@ -227,7 +227,7 @@ namespace LCore.LDoc.Markdown
                     $"{this.Meta.CodeLineCount ?? 0u}",
                     (this.Meta.CodeLineCount ?? 0u) == 0u
                         ? BadgeColor.Red
-                        : BadgeColor.Blue), EscapeText: false, AsHtml: AsHtml);
+                        : BadgeColor.Blue, AsHtml), EscapeText: false, AsHtml: AsHtml);
             }
 
         /// <summary>
