@@ -10,7 +10,7 @@
 
 ###### public **[MarkdownDocument_Type](MarkdownDocument_Type.md)** GenerateMarkdown([Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) Type);
 
-![Type Public  Virtual Method](http://b.repl.ca/v1/Type-Public%20%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L295)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L295)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L295)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L295)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
 

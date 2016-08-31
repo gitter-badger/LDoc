@@ -10,7 +10,7 @@
 
 ###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Bold([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Text, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L509)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L509)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L509)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L509)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 

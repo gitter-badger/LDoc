@@ -10,7 +10,7 @@
 
 ###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Home_Intro(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
 
-![Type Public  Abstract Method](http://b.repl.ca/v1/Type-Public%20%20Abstract%20Method-blue.png "") [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L129)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L129)
+![Type Public Abstract Method](http://b.repl.ca/v1/Type-Public%20Abstract%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L129)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L129)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
 

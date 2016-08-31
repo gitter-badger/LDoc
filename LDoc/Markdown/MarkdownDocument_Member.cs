@@ -301,6 +301,7 @@ namespace LCore.LDoc.Markdown
             return Out;
             }
 
+
         /// <summary>
         /// Get the Covered badge
         /// </summary>

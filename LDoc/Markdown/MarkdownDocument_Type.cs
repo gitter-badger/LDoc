@@ -73,12 +73,14 @@ namespace LCore.LDoc.Markdown
                 this.Line(this.TypeMeta.Comments?.Summary);
                 }
 
-            // TODO track constructors 
-
-            // TODO track subtypes
+            // TODO display constructors 
+            // TODO display attributes
+            // TODO display interfaces 
+            // TODO display constructors
+            // TODO display subtypes
 
             Dictionary<string, List<KeyValuePair<MemberInfo, MarkdownDocument_Member>>> MemberGroups =
-                this.MemberMarkdown.Group(Member => Member.Key.GetMemberDetails().ToString());
+                this.MemberMarkdown.Group(Member => Member.Key.GetMemberDetails()?.ToString());
 
             MemberGroups.Each(Group =>
                 {

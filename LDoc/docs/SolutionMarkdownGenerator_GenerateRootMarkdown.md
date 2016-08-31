@@ -10,7 +10,7 @@
 
 ###### public **[GitHubMarkdown](GitHubMarkdown.md)** GenerateRootMarkdown();
 
-![Type Public  Virtual Method](http://b.repl.ca/v1/Type-Public%20%20Virtual%20Method-blue.png "") [![Lines of Code 28](http://b.repl.ca/v1/Lines%20of%20Code-28-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 28](http://b.repl.ca/v1/Lines%20of%20Code-28-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
 

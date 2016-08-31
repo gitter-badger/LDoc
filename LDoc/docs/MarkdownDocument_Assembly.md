@@ -13,15 +13,9 @@
             Generates markdown for an Assembly.
             
 
-Public  Virtual Methods (1) | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "") | ![Total Lines of Code 29](http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
+Public Override Methods (1) | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "") | ![Total Lines of Code 29](http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :---  | :--- 
 **[Generate](MarkdownDocument_Assembly_Generate.md)** | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")    | [![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L41) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-
-
-Public   Fields (2) |  | ![Total Lines of Code 11](http://b.repl.ca/v1/Total%20Lines%20of%20Code-11-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[Assembly](MarkdownDocument_Assembly_Assembly.md)** |     | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L21) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Coverage](MarkdownDocument_Assembly_Coverage.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L26) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
 

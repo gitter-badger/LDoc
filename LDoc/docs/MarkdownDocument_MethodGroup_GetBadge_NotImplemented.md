@@ -10,7 +10,7 @@
 
 ###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) GetBadge_NotImplemented(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
 
-![Type Public  Override Method](http://b.repl.ca/v1/Type-Public%20%20Override%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownDocument_MethodGroup.cs)
 

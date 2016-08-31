@@ -13,7 +13,7 @@
             Helper class for generating GitHub markdown documents.
             
 
-Public  Override Methods (28) |  | ![Total Lines of Code 272](http://b.repl.ca/v1/Total%20Lines%20of%20Code-272-blue.png "") | ![Total Documented 60%](http://b.repl.ca/v1/Total%20Documented-60%25-yellowgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
+Public Methods (28) |  | ![Total Lines of Code 272](http://b.repl.ca/v1/Total%20Lines%20of%20Code-272-blue.png "") | ![Total Documented 60%](http://b.repl.ca/v1/Total%20Documented-60%25-yellowgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :---  | :--- 
 **[GetMarkdownLines](GitHubMarkdown_GetMarkdownLines.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L63) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 **[BlankLine](GitHubMarkdown_BlankLine.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L71) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
@@ -45,10 +45,8 @@ Public  Override Methods (28) |  | ![Total Lines of Code 272](http://b.repl.ca/v
 **[Gravatar](GitHubMarkdown_Gravatar.md)** |     | [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/GitHubMarkdown.cs#L591) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
-Public   Fields (3) |  | ![Total Lines of Code 17](http://b.repl.ca/v1/Total%20Lines%20of%20Code-17-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
+Public Sealed Enums (1) |  | ![Total Lines of Code 5](http://b.repl.ca/v1/Total%20Lines%20of%20Code-5-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
 :---  | :---  | :---  | :---  | :--- 
-**[FilePath](GitHubMarkdown_FilePath.md)** |     | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/GitHubMarkdown.cs#L25) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Title](GitHubMarkdown_Title.md)** |     | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/GitHubMarkdown.cs#L30) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 **[BadgeColor](GitHubMarkdown_BadgeColor.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L544) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
 
 
