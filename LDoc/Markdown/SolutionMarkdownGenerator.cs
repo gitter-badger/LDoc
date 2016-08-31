@@ -121,7 +121,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this member to specify any test assemblies
         /// </summary>
-        public virtual Assembly[] TestAssemblies => new Assembly[] {};
+        public virtual Assembly[] TestAssemblies => new Assembly[] { };
 
         /// <summary>
         /// Write the markdown intro to your project, in the front page README.
@@ -145,7 +145,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this to provide custom badge urls for the project.
         /// </summary>
-        public virtual string[] CustomBadgeUrls => new string[] {};
+        public virtual string[] CustomBadgeUrls => new string[] { };
 
         /// <summary>
         /// Override this value to supply custom links to foreign types.
@@ -196,7 +196,7 @@ namespace LCore.LDoc.Markdown
             {
             var MD = new GitHubMarkdown(this, this.MarkdownPath_Root, this.Language.MainReadme);
             this.WriteHeader(MD);
-            MD.Header(this.Language.MainReadme, Size: 2);
+            MD.Line(MD.Header(this.Language.MainReadme, Size: 2));
 
             this.Home_Intro(MD);
 
@@ -204,25 +204,25 @@ namespace LCore.LDoc.Markdown
                 Member => Member.IsDeclaredMember() &&
                           (Member.Name == nameof(this.HowToInstall))))
                 {
-                MD.Header(this.Language.Header_InstallationInstructions, Size: 3);
+                MD.Line(MD.Header(this.Language.Header_InstallationInstructions, Size: 3));
 
                 this.HowToInstall(MD);
                 }
 
             this.Markdown_Assembly.Each(Document =>
                 {
-                var Coverage = new AssemblyCoverage(Document.Key);
-                ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
+                    var Coverage = new AssemblyCoverage(Document.Key);
+                    ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
-                MD.Header(Document.Value.Title, Size: 2);
-                //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
-                MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
+                    MD.Line(MD.Header(Document.Value.Title, Size: 2));
+                    //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
+                    MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
 
-                MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
+                    MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
                 });
 
             if (!this.Home_RelatedProjects.IsEmpty())
-                MD.Header(this.Language.Header_RelatedProjects, Size: 3);
+                MD.Line(MD.Header(this.Language.Header_RelatedProjects, Size: 3));
 
             MD.UnorderedList(
                 this.Home_RelatedProjects.Convert(
@@ -243,7 +243,7 @@ namespace LCore.LDoc.Markdown
 
             this.WriteHeader(MD);
 
-            MD.Header(this.Language.TableOfContents, Size: 2);
+            MD.Line(MD.Header(this.Language.TableOfContents, Size: 2));
 
             this.GetAllMarkdown().Each(Document => { MD.Line($" - {MD.Link(MD.GetRelativePath(Document.FilePath), Document.Title)}"); });
 
@@ -261,19 +261,19 @@ namespace LCore.LDoc.Markdown
 
             this.WriteHeader(MD);
 
-            MD.Header(this.Language.CoverageSummary);
+            MD.Line(MD.Header(this.Language.CoverageSummary));
 
             // TODO Generate summary markdown
 
-            MD.Header(this.Language.Header_Assemblies);
+            MD.Line(MD.Header(this.Language.Header_Assemblies));
             this.Markdown_Assembly.Each(AssemblyMD =>
                 {
-                var Coverage = new AssemblyCoverage(AssemblyMD.Key);
-                ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
+                    var Coverage = new AssemblyCoverage(AssemblyMD.Key);
+                    ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
-                MD.Header(AssemblyMD.Value.Title, Size: 2);
-                //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
-                MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
+                    MD.Line(MD.Header(AssemblyMD.Value.Title, Size: 2));
+                    //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
+                    MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
                 });
 
             this.WriteFooter(MD);
@@ -574,12 +574,12 @@ namespace LCore.LDoc.Markdown
 
                 Members.Each(Member =>
                     {
-                    TotalDocumentable++;
+                        TotalDocumentable++;
 
-                    var MemberComments = Member.Key.GetComments();
+                        var MemberComments = Member.Key.GetComments();
 
-                    if (MemberComments != null)
-                        Documented++;
+                        if (MemberComments != null)
+                            Documented++;
                     });
 
 
@@ -630,17 +630,17 @@ namespace LCore.LDoc.Markdown
 
                 Members.Each(Member =>
                     {
-                    var MemberComments = Member.Key.GetComments();
+                        var MemberComments = Member.Key.GetComments();
 
-                    if (Member.Key is MethodInfo)
-                        {
-                        TotalCoverable++;
+                        if (Member.Key is MethodInfo)
+                            {
+                            TotalCoverable++;
 
-                        var MemberCoverage = new MethodCoverage((MethodInfo) Member.Key);
+                            var MemberCoverage = new MethodCoverage((MethodInfo)Member.Key);
 
-                        if (MemberCoverage.IsCovered)
-                            Covered++;
-                        }
+                            if (MemberCoverage.IsCovered)
+                                Covered++;
+                            }
                     });
 
 
@@ -802,7 +802,7 @@ namespace LCore.LDoc.Markdown
         public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
             !Member.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
             !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
-            !(Member is MethodInfo && ((MethodInfo) Member).IsPropertyGetterOrSetter()) &&
+            !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
             Member.IsDeclaredMember() &&
             !(Member is ConstructorInfo);
 
@@ -819,7 +819,7 @@ namespace LCore.LDoc.Markdown
         /// 100         | GitHuBMarkdown.BadgeColor.BrightGreen
         /// 101+        | GitHuBMarkdown.BadgeColor.Blue
         /// </summary>
-        public virtual int[] ColorThresholds => new[] {30, 50, 70, 100};
+        public virtual int[] ColorThresholds => new[] { 30, 50, 70, 100 };
 
         /// <summary>
         /// Gets a BadgeColor for a given <paramref name="Percentage"/>
@@ -930,17 +930,17 @@ namespace LCore.LDoc.Markdown
                 {
                 AllMarkdown.Each(MD =>
                     {
-                    MD.Generate();
+                        MD.Generate();
 
-                    string Path = MD.FilePath;
+                        string Path = MD.FilePath;
 
-                    // just to be safe
-                    if (Path.EndsWith(".md"))
-                        {
-                        Path.EnsurePathExists();
+                        // just to be safe
+                        if (Path.EndsWith(".md"))
+                            {
+                            Path.EnsurePathExists();
 
-                        File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
-                        }
+                            File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
+                            }
                     });
 
                 // TODO generate JSON manifest
@@ -1025,7 +1025,7 @@ namespace LCore.LDoc.Markdown
         ///  "//CustomTag ... " 
         /// 
         /// </summary>
-        public virtual string[] CustomCommentTags => new string[] {};
+        public virtual string[] CustomCommentTags => new string[] { };
 
         /// <summary>
         /// Override this value to determine custom colors depending on the count

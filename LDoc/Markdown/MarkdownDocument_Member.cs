@@ -63,7 +63,7 @@ namespace LCore.LDoc.Markdown
             this.Generator.WriteHeader(this);
             this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Type(this.Member.DeclaringType)), this.Generator.Language.LinkText_Up));
 
-            this.Header($"{this.Member.DeclaringType?.Name}", Size: 3);
+            this.Line(this.Header($"{this.Member.DeclaringType?.Name}", Size: 3));
 
             string TypePath = this.Member.DeclaringType.FindClassFile();
 
@@ -73,7 +73,7 @@ namespace LCore.LDoc.Markdown
                 }
 
 
-            this.Header(this.Member.Name);
+            this.Line(this.Header(this.Member.Name));
 
             if (this.Member is MethodInfo)
                 {
@@ -81,8 +81,8 @@ namespace LCore.LDoc.Markdown
                 var Details = Method.GetMemberDetails();
 
                 string Signature = this.GetSignature(this, AsHtml: true);
-                this.Header($"{Details}", Size: 4);
-                this.Header(Signature, Size: 5);
+                this.Line(this.Header($"{Details}", Size: 4));
+                this.Line(this.Header(Signature, Size: 5));
 
                 this.Line("");
                 this.Line(this.GetBadges_Info().JoinLines(" "));
@@ -93,13 +93,13 @@ namespace LCore.LDoc.Markdown
 
                 if (this.Meta.Comments?.Summary != null)
                     {
-                    this.Header(this.Generator.Language.Header_Summary, Size: 5);
+                    this.Line(this.Header(this.Generator.Language.Header_Summary, Size: 5));
                     this.Line(this.Generator.FormatComment(this.Meta.Comments?.Summary));
                     }
 
                 if (Method.GetParameters().Length > 0)
                     {
-                    this.Header(this.Generator.Language.Header_MethodParameters, Size: 6);
+                    this.Line(this.Header(this.Generator.Language.Header_MethodParameters, Size: 6));
 
                     var Table = new List<string[]>
                         {
@@ -124,27 +124,27 @@ namespace LCore.LDoc.Markdown
                     this.Table(Table);
                     }
 
-                this.Header(this.Generator.Language.Header_MethodReturns, Size: 4);
+                this.Line(this.Header(this.Generator.Language.Header_MethodReturns, Size: 4));
 
-                this.Header(this.Generator.LinkToType(this, Method.ReturnType), Size: 6);
+                this.Line(this.Header(this.Generator.LinkToType(this, Method.ReturnType), Size: 6));
 
                 this.Line(this.Meta.Comments?.Returns);
 
                 if (this.Meta.Comments?.Examples.Length > 0)
                     {
-                    this.Header(this.Generator.Language.Header_MethodExamples, Size: 4);
+                    this.Line(this.Header(this.Generator.Language.Header_MethodExamples, Size: 4));
                     this.Meta.Comments?.Examples.Each(Example => this.Code(new[] { Example }));
                     }
 
                 if (this.Meta.Comments?.Permissions.Length > 0)
                     {
-                    this.Header(this.Generator.Language.Header_MethodPermissions, Size: 4);
+                    this.Line(this.Header(this.Generator.Language.Header_MethodPermissions, Size: 4));
                     this.Meta.Comments?.Permissions.Each(Permission => this.Line($"{Permission.Obj1} {Permission.Obj2}"));
                     }
 
                 if (this.Meta.Comments?.Exceptions.Length > 0)
                     {
-                    this.Header(this.Generator.Language.Header_MethodExceptions, Size: 4);
+                    this.Line(this.Header(this.Generator.Language.Header_MethodExceptions, Size: 4));
                     this.Meta.Comments?.Exceptions.Each(Exception => this.Line($"{Exception.Obj1} {Exception.Obj2}"));
                     }
                 }
@@ -152,26 +152,36 @@ namespace LCore.LDoc.Markdown
             this.Generator.WriteFooter(this);
             }
 
+        /// <summary>
+        /// Returns the markdown string representing a Member's signature.
+        /// Excluding links, appears like:
+        /// 
+        /// public string GetSignature(GitHubMarkdown MD, bool AsHtml)
+        /// 
+        /// </summary>
         public string GetSignature(GitHubMarkdown MD, bool AsHtml = false)
             {
             bool Remote = MD != this;
             var Details = this.Member.GetMemberDetails();
-
-            if (this.Member is MethodInfo)
+            if (Details != null)
                 {
-                var Method = (MethodInfo)this.Member;
+                if (this.Member is MethodInfo)
+                    {
+                    var Method = (MethodInfo)this.Member;
 
 
-                string Parameters = Method.GetParameters()
-                    .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType, AsHtml)} {Param.Name}")
-                    .Combine(", ");
+                    string Parameters = Method.GetParameters()
+                        .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType, AsHtml)} {Param.Name}")
+                        .Combine(", ");
 
-                string Name = Remote
-                    ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name, AsHtml: AsHtml)
-                    : this.Member.Name;
+                    string Name = Remote
+                        ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name, AsHtml: AsHtml)
+                        : this.Member.Name;
 
-                return $"{Details.Scope.ToString().ToLower()} {(Method.IsStatic ? "static " : "")}{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {Name}({Parameters});";
+                    return $"{Details.Scope.ToString().ToLower()} {(Method.IsStatic ? "static " : "")}{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {Name}({Parameters});";
+                    }
                 }
+
             return "";
             }
 

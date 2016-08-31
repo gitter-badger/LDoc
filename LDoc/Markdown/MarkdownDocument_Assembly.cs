@@ -46,7 +46,7 @@ namespace LCore.LDoc.Markdown
 
             this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Root), this.Generator.Language.LinkText_Home));
 
-            this.Header($"{this.Assembly.GetName().Name}", Size: 2);
+            this.Line(this.Header($"{this.Assembly.GetName().Name}", Size: 2));
 
             this.Line(this.Generator.GetBadges_Info(this, this.Coverage, Comments).JoinLines(" "));
             this.Line(this.Generator.GetBadges_Coverage(this, this.Coverage, Comments).JoinLines(" "));
@@ -74,7 +74,7 @@ namespace LCore.LDoc.Markdown
 
                 NamespaceTypeMarkdown.Each(Type =>
                     {
-                    this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4);
+                    this.Line(this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4));
 
                     var TypeComments = Type.Value.TypeMeta.Comments;
 

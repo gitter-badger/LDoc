@@ -33,7 +33,7 @@ namespace LCore.LDoc.Markdown
             {
             this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
 
-            Generator.GetTypeMemberMarkdown((Type) this.TypeMeta?.Member).Each(
+            Generator.GetTypeMemberMarkdown((Type)this.TypeMeta?.Member).Each(
                 MD => this.MemberMarkdown.Add(MD.Key, MD.Value));
             }
 
@@ -49,14 +49,14 @@ namespace LCore.LDoc.Markdown
                     this.GetRelativePath(this.Generator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
                     this.Generator.Language.LinkText_Up, EscapeText: false));
 
-            this.Header($"{((Type) this.TypeMeta.Member).GetGenericName()}", Size: 3);
+            this.Line(this.Header($"{((Type)this.TypeMeta.Member).GetGenericName()}", Size: 3));
             this.Line("");
             this.Line(
-                this.Generator.GetBadges_Info(this, new TypeCoverage((Type) this.TypeMeta.Member),
+                this.Generator.GetBadges_Info(this, new TypeCoverage((Type)this.TypeMeta.Member),
                     this.TypeMeta.Comments).JoinLines(" "));
             this.Line("");
             this.Line(
-                this.Generator.GetBadges_Coverage(this, new TypeCoverage((Type) this.TypeMeta.Member),
+                this.Generator.GetBadges_Coverage(this, new TypeCoverage((Type)this.TypeMeta.Member),
                     this.TypeMeta.Comments).JoinLines(" "));
             this.Line("");
             string TypePath = this.TypeMeta.CodeFilePath;
@@ -69,7 +69,7 @@ namespace LCore.LDoc.Markdown
 
             if (!string.IsNullOrEmpty(this.TypeMeta.Comments?.Summary))
                 {
-                this.Header(this.Generator.Language.Header_Summary, Size: 6);
+                this.Line(this.Header(this.Generator.Language.Header_Summary, Size: 6));
                 this.Line(this.TypeMeta.Comments?.Summary);
                 }
 
@@ -84,45 +84,45 @@ namespace LCore.LDoc.Markdown
 
             MemberGroups.Each(Group =>
                 {
-                uint Documented = 0;
-                uint DocumentedTotal = 0;
+                    uint Documented = 0;
+                    uint DocumentedTotal = 0;
 
-                uint Covered = 0;
-                uint CoveredTotal = 0;
+                    uint Covered = 0;
+                    uint CoveredTotal = 0;
 
-                uint LinesTotal = 0;
+                    uint LinesTotal = 0;
 
-                uint TotalTodos = 0;
-                uint TotalBugs = 0;
-                uint TotalNotImplemented = 0;
+                    uint TotalTodos = 0;
+                    uint TotalBugs = 0;
+                    uint TotalNotImplemented = 0;
 
-                var Body = new List<string[]>();
+                    var Body = new List<string[]>();
 
-                Group.Value.Each(Member =>
-                    {
-                    var MD = Member.Value;
-                    var Meta = MD.Meta;
-
-                    LinesTotal += Meta.CodeLineCount ?? 0u;
-
-                    Covered += Meta.Coverage?.IsCovered == true
-                        ? 1u
-                        : 0u;
-                    CoveredTotal += 1u;
-
-                    Documented += Meta.Comments == null
-                        ? 0u
-                        : 1u;
-                    DocumentedTotal += 1u;
-
-                    TotalTodos += (uint) Meta.CommentTODO.Length;
-                    TotalBugs += (uint) Meta.CommentBUG.Length;
-                    TotalNotImplemented += (uint) Meta.NotImplemented.Length;
-                    // TODO total for custom tags
-
-                    Body.Add(new[]
+                    Group.Value.Each(Member =>
                         {
-                        this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), AsHtml: true),
+                            var MD = Member.Value;
+                            var Meta = MD.Meta;
+
+                            LinesTotal += Meta.CodeLineCount ?? 0u;
+
+                            Covered += Meta.Coverage?.IsCovered == true
+                            ? 1u
+                            : 0u;
+                            CoveredTotal += 1u;
+
+                            Documented += Meta.Comments == null
+                            ? 0u
+                            : 1u;
+                            DocumentedTotal += 1u;
+
+                            TotalTodos += (uint)Meta.CommentTODO.Length;
+                            TotalBugs += (uint)Meta.CommentBUG.Length;
+                            TotalNotImplemented += (uint)Meta.NotImplemented.Length;
+                        // TODO total for custom tags
+
+                        Body.Add(new[]
+                            {
+                        this.Header(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), Size: 3, AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
                         MD.GetBadge_Bugs(this, AsHtml: true) + " " +
                         MD.GetBadge_NotImplemented(this, AsHtml: true) + " " +
@@ -130,18 +130,18 @@ namespace LCore.LDoc.Markdown
                         MD.GetBadge_CodeLines(this, AsHtml: true),
                         MD.GetBadge_Documented(this, AsHtml: true),
                         MD.GetBadge_Covered(this, AsHtml: true)
-                        });
-                    Body.Add(new[]
-                        {
+                            });
+                            Body.Add(new[]
+                            {
                         MD.GetSignature(this, AsHtml: true)
+                            });
                         });
-                    });
 
-                int CoveredPercent = Covered.PercentageOf(CoveredTotal);
-                int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
+                    int CoveredPercent = Covered.PercentageOf(CoveredTotal);
+                    int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
 
-                var Header = new[]
-                    {
+                    var Header = new[]
+                        {
                     new[]
                         {
                         $"{Group.Key.Pluralize()} ({Group.Value.Count})",
@@ -162,7 +162,7 @@ namespace LCore.LDoc.Markdown
                         }
                     };
 
-                this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
+                    this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
                 });
 
             this.Generator.WriteFooter(this);

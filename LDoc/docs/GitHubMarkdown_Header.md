@@ -8,9 +8,9 @@
 
 #### Public Method
 
-##### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Header(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Header(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L103)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L103)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "")](../Markdown/GitHubMarkdown.cs#L103)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L103)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
@@ -33,11 +33,12 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Line | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 Size | Yes | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns
 
-###### [void](https://msdn.microsoft.com/en-us/library/system.void.aspx)
+###### [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)
 
 
 

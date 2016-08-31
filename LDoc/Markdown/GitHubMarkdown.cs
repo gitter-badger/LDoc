@@ -100,15 +100,16 @@ namespace LCore.LDoc.Markdown
         /// ###### Header
         /// 
         /// </summary>
-        public void Header(string Line, int Size = 1)
+        public string Header(string Line, int Size = 1, bool AsHtml = false)
             {
             if (Size < 1)
                 Size = 1;
             if (Size > 6)
                 Size = 6;
 
-            this.Line("");
-            this.Line($"{"#".Times(Size)} {Line}");
+            return AsHtml
+                ? $"<h{Size}>{Line}</h{Size}>"
+                : $"\r\n{"#".Times(Size)} {Line}";
             }
 
         /// <summary>

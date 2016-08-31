@@ -19,7 +19,7 @@
 <td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png" alt="Total Lines of Code 0" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
-<tr><td><strong><a href="GeneratedDocument_Generate.md" alt="">Generate</a></strong></td>
+<tr><td><h3><a href="GeneratedDocument_Generate.md" alt="">Generate</a></h3></td>
 <td>   </td>
 <td><a href="../Markdown/GeneratedDocument.cs#L30" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
