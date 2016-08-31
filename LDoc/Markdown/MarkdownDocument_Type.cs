@@ -120,14 +120,14 @@ namespace LCore.LDoc.Markdown
 
                     return new[]
                         {
-                        this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name)),
-                        MD.GetBadge_Todos(this) + " " +
-                            MD.GetBadge_Bugs(this) + " " +
-                            MD.GetBadge_NotImplemented(this) + " " +
-                            MD.GetBadge_CustomTags(this).JoinLines(" "),
-                        MD.GetBadge_CodeLines(this),
-                        MD.GetBadge_Documented(this),
-                        MD.GetBadge_Covered(this)
+                        this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), AsHtml: true),
+                        MD.GetBadge_Todos(this, AsHtml: true) + " " +
+                        MD.GetBadge_Bugs(this, AsHtml: true) + " " +
+                        MD.GetBadge_NotImplemented(this, AsHtml: true) + " " +
+                        MD.GetBadge_CustomTags(this, AsHtml: true).JoinLines(" "),
+                        MD.GetBadge_CodeLines(this, AsHtml: true),
+                        MD.GetBadge_Documented(this, AsHtml: true),
+                        MD.GetBadge_Covered(this, AsHtml: true)
                         };
                     }).Array();
 
@@ -139,33 +139,33 @@ namespace LCore.LDoc.Markdown
                     new[]
                         {
                         $"{Group.Key.Pluralize()} ({Group.Value.Count})",
-                        this.GetBadge_TotalTodos(TotalTodos) +
+                        this.GetBadge_TotalTodos(TotalTodos, AsHtml: true) +
                         (TotalBugs > 0
-                            ? this.Badge(this.Generator.Language.Badge_BUGs, $"{TotalBugs}", BadgeColor.Red)
+                            ? this.Badge(this.Generator.Language.Badge_BUGs, $"{TotalBugs}", BadgeColor.Red, AsHtml: true)
                             : "") +
                         (TotalNotImplemented > 0
-                            ? this.Badge(this.Generator.Language.Badge_NotImplemented, $"{TotalNotImplemented}", BadgeColor.Orange)
+                            ? this.Badge(this.Generator.Language.Badge_NotImplemented, $"{TotalNotImplemented}", BadgeColor.Orange, AsHtml: true)
                             : "")
                         // TODO total for custom tags
                         ,
                         this.Badge($"Total {this.Generator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0
                             ? BadgeColor.Red
-                            : BadgeColor.Blue),
-                        this.Badge($"Total {this.Generator.Language.Header_Documentation}", $"{DocumentedPercent}%", this.Generator.GetColorByPercentage(DocumentedPercent)),
-                        this.Badge($"Total {this.Generator.Language.Header_Coverage}", $"{CoveredPercent}%", this.Generator.GetColorByPercentage(CoveredPercent))
+                            : BadgeColor.Blue, AsHtml: true),
+                        this.Badge($"Total {this.Generator.Language.Header_Documentation}", $"{DocumentedPercent}%", this.Generator.GetColorByPercentage(DocumentedPercent), AsHtml: true),
+                        this.Badge($"Total {this.Generator.Language.Header_Coverage}", $"{CoveredPercent}%", this.Generator.GetColorByPercentage(CoveredPercent), AsHtml: true)
                         }
                     };
 
-                this.Table(Header.Add(Body));
+                this.Table(Header.Add(Body), AsHtml: true, HtmlElementStyle: "width: 100%");
                 });
 
             this.Generator.WriteFooter(this);
             }
 
-        private string GetBadge_TotalTodos(uint TotalTodos)
+        private string GetBadge_TotalTodos(uint TotalTodos, bool AsHtml = false)
             {
             return TotalTodos > 0
-                ? this.Badge(this.Generator.Language.Badge_TODOs, $"{TotalTodos}", BadgeColor.Orange)
+                ? this.Badge(this.Generator.Language.Badge_TODOs, $"{TotalTodos}", BadgeColor.Orange, AsHtml)
                 : "";
             }
         }

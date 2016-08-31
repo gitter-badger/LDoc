@@ -13,9 +13,18 @@
             Static class to store LDoc constants
             
 
-Public Static Abstract Classes (1) |  | ![Total Lines of Code 0](http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[Urls](LDoc_Urls.md)** |     | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../LDoc.cs#L12) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Static Abstract Classes (1)</td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png" alt="Total Lines of Code 0" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png" alt="Total Documented 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="LDoc_Urls.md" alt="">Urls</a></strong></td>
+<td>   </td>
+<td><a href="../LDoc.cs#L12" alt="">![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
 

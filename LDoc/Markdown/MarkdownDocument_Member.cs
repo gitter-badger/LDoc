@@ -169,7 +169,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Documented badge
         /// </summary>
-        public string GetBadge_Documented(GitHubMarkdown MD)
+        public string GetBadge_Documented(GitHubMarkdown MD, bool AsHtml = false)
             {
             return MD.Badge(this.Generator.Language.Badge_Documented,
                 this.Meta.Comments != null
@@ -177,35 +177,35 @@ namespace LCore.LDoc.Markdown
                     : "No",
                 this.Meta.Comments != null
                     ? BadgeColor.BrightGreen
-                    : BadgeColor.Red);
+                    : BadgeColor.Red, AsHtml);
             }
 
         /// <summary>
         /// Get the Member Type badge
         /// </summary>
-        public string GetBadge_MemberType(GitHubMarkdown MD)
+        public string GetBadge_MemberType(GitHubMarkdown MD, bool AsHtml = false)
             {
             var TypeDescription = this.Member.GetMemberDetails();
-            return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription.ToString(), InfoColor);
+            return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription?.ToString(), InfoColor, AsHtml);
             }
 
         /// <summary>
         /// Get the Member Source Code badge
         /// </summary>
-        public string GetBadge_SourceCode(GitHubMarkdown MD)
+        public string GetBadge_SourceCode(GitHubMarkdown MD, bool AsHtml = false)
             {
             return string.IsNullOrEmpty(this.Meta.CodeFilePath)
                 ? MD.Badge(this.Generator.Language.Badge_SourceCode, this.Generator.Language.Badge_SourceCodeUnavailable,
                     BadgeColor.Red)
                 : MD.Link($"{MD.GetRelativePath(this.Meta.CodeFilePath)}#L{this.Meta.CodeLineNumber}",
                     MD.Badge(this.Generator.Language.Badge_SourceCode, this.Generator.Language.Badge_SourceCodeAvailable,
-                        BadgeColor.BrightGreen), EscapeText: false);
+                        BadgeColor.BrightGreen), EscapeText: false, AsHtml: AsHtml);
             }
 
         /// <summary>
         /// Get the Not Implemented badge
         /// </summary>
-        public string GetBadge_NotImplemented(GitHubMarkdown MD)
+        public string GetBadge_NotImplemented(GitHubMarkdown MD, bool AsHtml = false)
             {
             uint NotImplementedCount = (uint) this.Meta.NotImplemented.Length;
 
@@ -214,26 +214,26 @@ namespace LCore.LDoc.Markdown
 
             return MD.Badge(this.Generator.Language.Badge_NotImplemented, $"{NotImplementedCount}", NotImplementedCount > 0
                 ? BadgeColor.Orange
-                : BadgeColor.Green);
+                : BadgeColor.Green, AsHtml);
             }
 
         /// <summary>
         /// Get the Code Lines badge
         /// </summary>
-        public string GetBadge_CodeLines(GitHubMarkdown MD)
+        public string GetBadge_CodeLines(GitHubMarkdown MD, bool AsHtml = false)
             {
             return MD.Link($"{MD.GetRelativePath(this.Meta.CodeFilePath)}#L{this.Meta.CodeLineNumber}",
                 MD.Badge(this.Generator.Language.Badge_LinesOfCode,
                     $"{this.Meta.CodeLineCount ?? 0u}",
                     (this.Meta.CodeLineCount ?? 0u) == 0u
                         ? BadgeColor.Red
-                        : BadgeColor.Blue), EscapeText: false);
+                        : BadgeColor.Blue), EscapeText: false, AsHtml: AsHtml);
             }
 
         /// <summary>
         /// Get the Todos badge
         /// </summary>
-        public string GetBadge_Todos(GitHubMarkdown MD)
+        public string GetBadge_Todos(GitHubMarkdown MD, bool AsHtml = false)
             {
             uint TodoCount = (uint) this.Meta.CommentTODO.Length;
 
@@ -242,13 +242,13 @@ namespace LCore.LDoc.Markdown
 
             return MD.Badge(this.Generator.Language.Badge_TODOs, $"{TodoCount}", TodoCount > 0
                 ? BadgeColor.Yellow
-                : BadgeColor.Green);
+                : BadgeColor.Green, AsHtml);
             }
 
         /// <summary>
         /// Get the bugs badge
         /// </summary>
-        public string GetBadge_Bugs(GitHubMarkdown MD)
+        public string GetBadge_Bugs(GitHubMarkdown MD, bool AsHtml = false)
             {
             uint BugCount = (uint) this.Meta.CommentBUG.Length;
             if (BugCount == 0)
@@ -256,13 +256,13 @@ namespace LCore.LDoc.Markdown
 
             return MD.Badge(this.Generator.Language.Badge_BUGs, $"{BugCount}", BugCount > 0
                 ? BadgeColor.Red
-                : BadgeColor.Green);
+                : BadgeColor.Green, AsHtml);
             }
 
         /// <summary>
         /// Get badges for custom tracked tags
         /// </summary>
-        public string[] GetBadge_CustomTags(GitHubMarkdown MD)
+        public string[] GetBadge_CustomTags(GitHubMarkdown MD, bool AsHtml = false)
             {
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
@@ -271,7 +271,7 @@ namespace LCore.LDoc.Markdown
 
                 var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
 
-                return MD.Badge(Tag, $"{TagCount}", Color);
+                return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
                 });
             }
 
@@ -305,46 +305,46 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Covered badge
         /// </summary>
-        public string GetBadge_Covered(GitHubMarkdown MD)
+        public string GetBadge_Covered(GitHubMarkdown MD, bool AsHtml = false)
             {
             return this.Meta.Coverage?.IsCovered == true
-                ? MD.Badge(this.Generator.Language.Badge_Covered, "Yes", BadgeColor.BrightGreen)
-                : MD.Badge(this.Generator.Language.Badge_Covered, "No", BadgeColor.Red);
+                ? MD.Badge(this.Generator.Language.Badge_Covered, "Yes", BadgeColor.BrightGreen, AsHtml)
+                : MD.Badge(this.Generator.Language.Badge_Covered, "No", BadgeColor.Red, AsHtml);
             }
 
         /// <summary>
         /// Get the Coverage badge
         /// </summary>
-        public string GetBadge_AttributeCoverage(GitHubMarkdown MD)
+        public string GetBadge_AttributeCoverage(GitHubMarkdown MD, bool AsHtml = false)
             {
             return MD.Badge(this.Generator.Language.Badge_AttributeTests,
                 $"{this.Meta.Coverage.AttributeCoverage}",
                 this.Meta.Coverage.AttributeCoverage > 0u
                     ? BadgeColor.BrightGreen
-                    : BadgeColor.LightGrey);
+                    : BadgeColor.LightGrey, AsHtml);
             }
 
         /// <summary>
         /// Get the Unit Tests badge
         /// </summary>
-        public string GetBadge_UnitTests(GitHubMarkdown MD)
+        public string GetBadge_UnitTests(GitHubMarkdown MD, bool AsHtml = false)
             {
             return MD.Badge(this.Generator.Language.Badge_UnitTested, this.Meta.Coverage.MemberTraitFound
                 ? "Yes"
                 : "No", this.Meta.Coverage.MemberTraitFound
                 ? BadgeColor.BrightGreen
-                : BadgeColor.LightGrey);
+                : BadgeColor.LightGrey, AsHtml);
             }
 
         /// <summary>
         /// Get the Assertions badge
         /// </summary>
-        public string GetBadge_Assertions(GitHubMarkdown MD)
+        public string GetBadge_Assertions(GitHubMarkdown MD, bool AsHtml = false)
             {
             return MD.Link(MD.GetRelativePath(this.Meta.CodeFilePath),
                 MD.Badge(this.Generator.Language.Badge_Assertions, $"{this.Meta.Coverage.AssertionsMade}", this.Meta.Coverage.AssertionsMade > 0u
                     ? BadgeColor.BrightGreen
-                    : BadgeColor.LightGrey), EscapeText: false);
+                    : BadgeColor.LightGrey, AsHtml), EscapeText: false, AsHtml: AsHtml);
             }
         }
     }

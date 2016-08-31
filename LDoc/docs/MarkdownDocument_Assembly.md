@@ -13,9 +13,18 @@
             Generates markdown for an Assembly.
             
 
-Public Override Methods (1) | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "") | ![Total Lines of Code 29](http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[Generate](MarkdownDocument_Assembly_Generate.md)** | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")    | [![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L41) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Override Methods (1)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png" alt="Total Lines of Code 29" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_Assembly_Generate.md" alt="">Generate</a></strong></td>
+<td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
+<td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt="">![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
 

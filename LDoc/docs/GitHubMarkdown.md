@@ -13,41 +13,167 @@
             Helper class for generating GitHub markdown documents.
             
 
-Public Methods (28) |  | ![Total Lines of Code 272](http://b.repl.ca/v1/Total%20Lines%20of%20Code-272-blue.png "") | ![Total Documented 60%](http://b.repl.ca/v1/Total%20Documented-60%25-yellowgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[GetMarkdownLines](GitHubMarkdown_GetMarkdownLines.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L63) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[BlankLine](GitHubMarkdown_BlankLine.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L71) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[HorizontalRule](GitHubMarkdown_HorizontalRule.md)** |     | [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/GitHubMarkdown.cs#L83) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Header](GitHubMarkdown_Header.md)** |     | [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L101) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[HeaderUnderline](GitHubMarkdown_HeaderUnderline.md)** |     | [![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "")](../Markdown/GitHubMarkdown.cs#L121) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[OrderedList](GitHubMarkdown_OrderedList-0.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L143) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[OrderedList](GitHubMarkdown_OrderedList-1.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L143) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[OrderedList](GitHubMarkdown_OrderedList-2.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L143) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[UnorderedList](GitHubMarkdown_UnorderedList-0.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L200) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[UnorderedList](GitHubMarkdown_UnorderedList-1.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L200) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[UnorderedList](GitHubMarkdown_UnorderedList-2.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L200) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Code](GitHubMarkdown_Code.md)** |     | [![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")](../Markdown/GitHubMarkdown.cs#L242) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[BlockQuote](GitHubMarkdown_BlockQuote.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L252) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Lines](GitHubMarkdown_Lines.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L260) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Line](GitHubMarkdown_Line.md)** |     | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/GitHubMarkdown.cs#L260) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Strikethrough](GitHubMarkdown_Strikethrough.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L281) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Highlight](GitHubMarkdown_Highlight.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L294) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[InlineCode](GitHubMarkdown_InlineCode.md)** |     | [![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")](../Markdown/GitHubMarkdown.cs#L304) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Table](GitHubMarkdown_Table-0.md)** |     | [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L328) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Table](GitHubMarkdown_Table-1.md)** |     | [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L328) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Link](GitHubMarkdown_Link.md)** |     | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GitHubMarkdown.cs#L442) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Image](GitHubMarkdown_Image.md)** |     | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GitHubMarkdown.cs#L475) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Italic](GitHubMarkdown_Italic.md)** |     | [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L493) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Bold](GitHubMarkdown_Bold.md)** |     | [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L509) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Badge](GitHubMarkdown_Badge-0.md)** |     | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/GitHubMarkdown.cs#L533) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Badge](GitHubMarkdown_Badge-1.md)** |     | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/GitHubMarkdown.cs#L533) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetRelativePath](GitHubMarkdown_GetRelativePath.md)** |     | [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L570) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[Gravatar](GitHubMarkdown_Gravatar.md)** |     | [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/GitHubMarkdown.cs#L591) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Methods (28)</td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-272-blue.png" alt="Total Lines of Code 272" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-60%25-yellowgreen.png" alt="Total Documented 60%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_GetMarkdownLines.md" alt="">GetMarkdownLines</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L63" alt="">![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_BlankLine.md" alt="">BlankLine</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L71" alt="">![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_HorizontalRule.md" alt="">HorizontalRule</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L83" alt="">![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Header.md" alt="">Header</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L101" alt="">![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_HeaderUnderline.md" alt="">HeaderUnderline</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L121" alt="">![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_OrderedList-0.md" alt="">OrderedList</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L143" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_OrderedList-1.md" alt="">OrderedList</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L143" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_OrderedList-2.md" alt="">OrderedList</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L143" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_UnorderedList-0.md" alt="">UnorderedList</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L200" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_UnorderedList-1.md" alt="">UnorderedList</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L200" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_UnorderedList-2.md" alt="">UnorderedList</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L200" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Code.md" alt="">Code</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L242" alt="">![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_BlockQuote.md" alt="">BlockQuote</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L252" alt="">![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Lines.md" alt="">Lines</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L260" alt="">![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Line.md" alt="">Line</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L260" alt="">![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Strikethrough.md" alt="">Strikethrough</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L281" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Highlight.md" alt="">Highlight</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L294" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_InlineCode.md" alt="">InlineCode</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L304" alt="">![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Table-0.md" alt="">Table</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L328" alt="">![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Table-1.md" alt="">Table</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L328" alt="">![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Link.md" alt="">Link</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L442" alt="">![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Image.md" alt="">Image</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L475" alt="">![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Italic.md" alt="">Italic</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L493" alt="">![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Bold.md" alt="">Bold</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L509" alt="">![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Badge-0.md" alt="">Badge</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L533" alt="">![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Badge-1.md" alt="">Badge</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L533" alt="">![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_GetRelativePath.md" alt="">GetRelativePath</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L570" alt="">![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_Gravatar.md" alt="">Gravatar</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L591" alt="">![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
-Public Sealed Enums (1) |  | ![Total Lines of Code 5](http://b.repl.ca/v1/Total%20Lines%20of%20Code-5-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[BadgeColor](GitHubMarkdown_BadgeColor.md)** |     | [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/GitHubMarkdown.cs#L544) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Sealed Enums (1)</td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-5-blue.png" alt="Total Lines of Code 5" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png" alt="Total Documented 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="GitHubMarkdown_BadgeColor.md" alt="">BadgeColor</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GitHubMarkdown.cs#L544" alt="">![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
 

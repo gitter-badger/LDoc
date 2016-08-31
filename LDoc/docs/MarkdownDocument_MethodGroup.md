@@ -13,29 +13,96 @@
               Generates markdown for a Member.
             
 
-Public Override Methods (1) |  | ![Total Lines of Code 1](http://b.repl.ca/v1/Total%20Lines%20of%20Code-1-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[Generate](MarkdownDocument_MethodGroup_Generate.md)** |     | [![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L32) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Override Methods (1)</td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-1-blue.png" alt="Total Lines of Code 1" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_Generate.md" alt="">Generate</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L32" alt="">![Lines of Code 1](http://b.repl.ca/v1/Lines%20of%20Code-1-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
-Public Virtual Methods (2) | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-orange.png "") | ![Total Lines of Code 26](http://b.repl.ca/v1/Total%20Lines%20of%20Code-26-blue.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[GetBadges_Info](MarkdownDocument_MethodGroup_GetBadges_Info.md)** |     | [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L39) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadges_Coverage](MarkdownDocument_MethodGroup_GetBadges_Coverage.md)** | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")    | [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L143) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Virtual Methods (2)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-26-blue.png" alt="Total Lines of Code 26" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadges_Info.md" alt="">GetBadges_Info</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L39" alt="">![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></strong></td>
+<td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L143" alt="">![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
-Public Methods (10) | ![TODOs 2](http://b.repl.ca/v1/TODOs-2-orange.png "") | ![Total Lines of Code 86](http://b.repl.ca/v1/Total%20Lines%20of%20Code-86-blue.png "") | ![Total Documented 100%](http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[GetBadge_Documented](MarkdownDocument_MethodGroup_GetBadge_Documented.md)** | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")    | [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L60) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_MemberType](MarkdownDocument_MethodGroup_GetBadge_MemberType.md)** |     | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L75) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_CustomTags](MarkdownDocument_MethodGroup_GetBadge_CustomTags.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L84) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_NotImplemented](MarkdownDocument_MethodGroup_GetBadge_NotImplemented.md)** |     | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L100) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_Bugs](MarkdownDocument_MethodGroup_GetBadge_Bugs.md)** |     | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L111) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_Todos](MarkdownDocument_MethodGroup_GetBadge_Todos.md)** |     | [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L122) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_CodeLines](MarkdownDocument_MethodGroup_GetBadge_CodeLines.md)** |     | [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L133) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_AttributeCoverage](MarkdownDocument_MethodGroup_GetBadge_AttributeCoverage.md)** |     | [![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L164) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_UnitTests](MarkdownDocument_MethodGroup_GetBadge_UnitTests.md)** | ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")    | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L177) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
-**[GetBadge_Assertions](MarkdownDocument_MethodGroup_GetBadge_Assertions.md)** |     | [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L191) | ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Methods (10)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-2-orange.png" alt="TODOs 2" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-86-blue.png" alt="Total Lines of Code 86" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png" alt="Total Documented 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Documented.md" alt="">GetBadge_Documented</a></strong></td>
+<td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L60" alt="">![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_MemberType.md" alt="">GetBadge_MemberType</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L75" alt="">![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_CustomTags.md" alt="">GetBadge_CustomTags</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L84" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_NotImplemented.md" alt="">GetBadge_NotImplemented</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L100" alt="">![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Bugs.md" alt="">GetBadge_Bugs</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L111" alt="">![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Todos.md" alt="">GetBadge_Todos</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L122" alt="">![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_CodeLines.md" alt="">GetBadge_CodeLines</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L133" alt="">![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_AttributeCoverage.md" alt="">GetBadge_AttributeCoverage</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L164" alt="">![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_UnitTests.md" alt="">GetBadge_UnitTests</a></strong></td>
+<td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L177" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L191" alt="">![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
 

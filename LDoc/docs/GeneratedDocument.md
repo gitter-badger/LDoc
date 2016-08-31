@@ -13,9 +13,18 @@
             Abstract class for generating markdown documents
             
 
-Public Abstract Methods (1) |  | ![Total Lines of Code 0](http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png "") | ![Total Documented 0%](http://b.repl.ca/v1/Total%20Documented-0%25-red.png "") | ![Total Coverage 0%](http://b.repl.ca/v1/Total%20Coverage-0%25-red.png "")
-:---  | :---  | :---  | :---  | :--- 
-**[Generate](GeneratedDocument_Generate.md)** |     | [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GeneratedDocument.cs#L30) | ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") | ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "")
+<table style="width: 100%">
+<tr><td>Public Abstract Methods (1)</td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png" alt="Total Lines of Code 0" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
+<tr><td><strong><a href="GeneratedDocument_Generate.md" alt="">Generate</a></strong></td>
+<td>   </td>
+<td><a href="../Markdown/GeneratedDocument.cs#L30" alt="">![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")</a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+</table>
 
 
 
