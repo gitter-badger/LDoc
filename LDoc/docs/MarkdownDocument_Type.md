@@ -13,17 +13,20 @@
             Generates markdown for a Type.
             
 
-<table style="width: 100%">
+<table>
 <tr><td>Public Override Methods (1)</td>
 <td><img src="http://b.repl.ca/v1/TODOs-7-orange.png" alt="TODOs 7" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-92-blue.png" alt="Total Lines of Code 92" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-96-blue.png" alt="Total Lines of Code 96" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
 <tr><td><strong><a href="MarkdownDocument_Type_Generate.md" alt="">Generate</a></strong></td>
 <td><img src="http://b.repl.ca/v1/TODOs-7-yellow.png" alt="TODOs 7" />   </td>
-<td><a href="../Markdown/MarkdownDocument_Type.cs#L43" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-92-blue.png" alt="Lines of Code 92" /></a></td>
+<td><a href="../Markdown/MarkdownDocument_Type.cs#L43" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-96-blue.png" alt="Lines of Code 96" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td></td>
+</tr>
+<tr><td width="850px" colspan="424">&nbsp;</td></tr>
 </table>
 
 

@@ -8,9 +8,9 @@
 
 #### InstanceMethod
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Table(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt; Rows, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) HtmlElementStyle);
+###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Table(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt; Rows, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) TableWidth);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L328)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L328)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](../Markdown/GitHubMarkdown.cs#L330)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L330)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 
@@ -22,7 +22,7 @@ Rows | No | <a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt
 IncludeHeader | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 Alignment | Yes | <a href="" alt="" target="_blank">L.Align</a>[] | 
 AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
-HtmlElementStyle | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
+TableWidth | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 
 
 #### Returns

@@ -10,7 +10,7 @@
 
 ###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Generate();
 
-![Type Public Override Method](http://b.repl.ca/v1/Type-Public%20Override%20Method-blue.png "") [![Lines of Code 92](http://b.repl.ca/v1/Lines%20of%20Code-92-blue.png "")](../Markdown/MarkdownDocument_Type.cs#L43) ![TODOs 7](http://b.repl.ca/v1/TODOs-7-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_Type.cs#L43)
+![Type Public Override Method](http://b.repl.ca/v1/Type-Public%20Override%20Method-blue.png "") [![Lines of Code 96](http://b.repl.ca/v1/Lines%20of%20Code-96-blue.png "")](../Markdown/MarkdownDocument_Type.cs#L43) ![TODOs 7](http://b.repl.ca/v1/TODOs-7-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_Type.cs#L43)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownDocument_Type.cs)
 

@@ -13,7 +13,7 @@
             Generates markdown for an Assembly.
             
 
-<table style="width: 100%">
+<table>
 <tr><td>Public Override Methods (1)</td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png" alt="Total Lines of Code 29" /></td>
@@ -24,6 +24,9 @@
 <td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png" alt="Lines of Code 29" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td></td>
+</tr>
+<tr><td width="850px" colspan="424">&nbsp;</td></tr>
 </table>
 
 

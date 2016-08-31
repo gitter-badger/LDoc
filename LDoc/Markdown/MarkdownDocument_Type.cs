@@ -96,7 +96,9 @@ namespace LCore.LDoc.Markdown
                 uint TotalBugs = 0;
                 uint TotalNotImplemented = 0;
 
-                string[][] Body = Group.Value.Convert(Member =>
+                var Body = new List<string[]>();
+
+                Group.Value.Each(Member =>
                     {
                     var MD = Member.Value;
                     var Meta = MD.Meta;
@@ -118,7 +120,7 @@ namespace LCore.LDoc.Markdown
                     TotalNotImplemented += (uint) Meta.NotImplemented.Length;
                     // TODO total for custom tags
 
-                    return new[]
+                    Body.Add(new[]
                         {
                         this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
@@ -128,8 +130,12 @@ namespace LCore.LDoc.Markdown
                         MD.GetBadge_CodeLines(this, AsHtml: true),
                         MD.GetBadge_Documented(this, AsHtml: true),
                         MD.GetBadge_Covered(this, AsHtml: true)
-                        };
-                    }).Array();
+                        });
+                    Body.Add(new[]
+                        {
+                        ""
+                        });
+                    });
 
                 int CoveredPercent = Covered.PercentageOf(CoveredTotal);
                 int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
@@ -156,7 +162,7 @@ namespace LCore.LDoc.Markdown
                         }
                     };
 
-                this.Table(Header.Add(Body), AsHtml: true, HtmlElementStyle: "width: 100%");
+                this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
                 });
 
             this.Generator.WriteFooter(this);

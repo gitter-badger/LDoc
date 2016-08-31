@@ -7,6 +7,8 @@ using System.Security.Cryptography;
 using JetBrains.Annotations;
 using LCore.Tools;
 
+// ReSharper disable MemberCanBeProtected.Global
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable CollectionNeverQueried.Global
 // ReSharper disable ClassNeverInstantiated.Global
@@ -349,9 +351,9 @@ namespace LCore.LDoc.Markdown
         /// <param name="IncludeHeader">By default, the first row will be used as the header row, and separator will be added.</param>
         /// <param name="Alignment">Optionally, set alignment for each cell.</param>
         /// <param name="AsHtml">Optionally, render the table as Html.</param>
-        /// <param name="HtmlElementStyle">Optionally, set the Html table CSS style.</param>
+        /// <param name="TableWidth">Optionally, set the Html table CSS style.</param>
         public void Table([CanBeNull] IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true,
-            L.Align[] Alignment = null, bool AsHtml = false, string HtmlElementStyle = "")
+            L.Align[] Alignment = null, bool AsHtml = false, string TableWidth = "")
             {
             if (Rows == null)
                 return;
@@ -420,8 +422,10 @@ namespace LCore.LDoc.Markdown
 
             if (AsHtml)
                 {
-                this.Line($"<table style=\"{HtmlElementStyle}\">");
+                this.Line("<table>");
                 Table.Each(Row => this.Line($"<tr>{Row}</tr>"));
+                if (!string.IsNullOrEmpty(TableWidth))
+                    this.Line($"<tr><td width=\"{TableWidth}\" colspan=\"{Table[index: 0].Length}\">&nbsp;</td></tr>");
                 this.Line("</table>");
                 }
             else
