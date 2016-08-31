@@ -102,20 +102,6 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Table) + "(String[,], Boolean, Align[])")]
-        public void Table()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Table
-        }
-
-        [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Table) + "(IEnumerable<IEnumerable<String>>, Boolean, Align[])")]
-        public void Table()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Table
-        }
-
-        [Fact]
         [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.BlockQuote) + "(String[])")]
         public void BlockQuote()
         {
@@ -151,20 +137,6 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Link) + "(String, String, String, Boolean, Boolean) => String")]
-        public void Link()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Link
-        }
-
-        [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Image) + "(String, String, Nullable<Align>) => String")]
-        public void Image()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Image
-        }
-
-        [Fact]
         [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.InlineCode) + "(String) => String")]
         public void InlineCode()
         {
@@ -172,28 +144,56 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Italic) + "(String) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Table) + "(String[,], Boolean, Align[], Boolean)")]
+        public void Table()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Table
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Table) + "(IEnumerable<IEnumerable<String>>, Boolean, Align[], Boolean, String)")]
+        public void Table()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Table
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Link) + "(String, String, String, Boolean, Boolean, Boolean) => String")]
+        public void Link()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Link
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Image) + "(String, String, Nullable<Align>, Boolean) => String")]
+        public void Image()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Image
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Italic) + "(String, Boolean) => String")]
         public void Italic()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Italic
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Bold) + "(String) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Bold) + "(String, Boolean) => String")]
         public void Bold()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Bold
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Badge) + "(String, String, String) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Badge) + "(String, String, String, Boolean) => String")]
         public void Badge()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Badge
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Badge) + "(String, String, BadgeColor) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Badge) + "(String, String, BadgeColor, Boolean) => String")]
         public void Badge()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Badge
@@ -207,7 +207,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Gravatar) + "(String, Int32) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GitHubMarkdown)+ "." + nameof(GitHubMarkdown.Gravatar) + "(String, Int32, Boolean) => String")]
         public void Gravatar()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GitHubMarkdown.Gravatar

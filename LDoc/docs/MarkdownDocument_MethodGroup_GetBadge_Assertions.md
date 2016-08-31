@@ -6,9 +6,9 @@
 
 # GetBadge_Assertions
 
-#### InstanceMethod
+#### Public Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) GetBadge_Assertions(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetBadge_Assertions(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L191)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L191)
 

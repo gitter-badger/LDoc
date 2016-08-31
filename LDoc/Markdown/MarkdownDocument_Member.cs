@@ -77,10 +77,10 @@ namespace LCore.LDoc.Markdown
 
             if (this.Member is MethodInfo)
                 {
-                var Method = (MethodInfo) this.Member;
+                var Method = (MethodInfo)this.Member;
                 var Details = Method.GetMemberDetails();
 
-                string Signature = this.GetSignature(AsHtml: true);
+                string Signature = this.GetSignature(this, AsHtml: true);
                 this.Header($"{Details}", Size: 4);
                 this.Header(Signature, Size: 5);
 
@@ -111,8 +111,8 @@ namespace LCore.LDoc.Markdown
 
                     Method.GetParameters().Each((ParamIndex, Param) =>
                         {
-                        Table.Add(new[]
-                            {
+                            Table.Add(new[]
+                                {
                             Param.Name,
                             Param.IsOptional
                                 ? "Yes"
@@ -133,7 +133,7 @@ namespace LCore.LDoc.Markdown
                 if (this.Meta.Comments?.Examples.Length > 0)
                     {
                     this.Header(this.Generator.Language.Header_MethodExamples, Size: 4);
-                    this.Meta.Comments?.Examples.Each(Example => this.Code(new[] {Example}));
+                    this.Meta.Comments?.Examples.Each(Example => this.Code(new[] { Example }));
                     }
 
                 if (this.Meta.Comments?.Permissions.Length > 0)
@@ -152,26 +152,25 @@ namespace LCore.LDoc.Markdown
             this.Generator.WriteFooter(this);
             }
 
-        public string GetSignature(bool AsHtml = false)
+        public string GetSignature(GitHubMarkdown MD, bool AsHtml = false)
             {
+            bool Remote = MD != this;
+            var Details = this.Member.GetMemberDetails();
+
             if (this.Member is MethodInfo)
                 {
-                var Method = (MethodInfo) this.Member;
-                var Details = Method.GetMemberDetails();
+                var Method = (MethodInfo)this.Member;
 
-                string Static = Method.IsStatic
-                    ? "Static "
-                    : "Instance";
-
-                string StaticLower = Method.IsStatic
-                    ? " static"
-                    : "";
 
                 string Parameters = Method.GetParameters()
                     .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType, AsHtml)} {Param.Name}")
                     .Combine(", ");
 
-                return $"public{StaticLower} {this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {this.Member.Name}({Parameters});";
+                string Name = Remote
+                    ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name)
+                    : this.Member.Name;
+
+                return $"{Details.Type.ToString().ToLower()} {(Method.IsStatic ? "static " : "")}{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {Name}({Parameters});";
                 }
             return "";
             }
@@ -217,7 +216,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_NotImplemented(GitHubMarkdown MD, bool AsHtml = false)
             {
-            uint NotImplementedCount = (uint) this.Meta.NotImplemented.Length;
+            uint NotImplementedCount = (uint)this.Meta.NotImplemented.Length;
 
             if (NotImplementedCount == 0)
                 return "";
@@ -245,7 +244,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Todos(GitHubMarkdown MD, bool AsHtml = false)
             {
-            uint TodoCount = (uint) this.Meta.CommentTODO.Length;
+            uint TodoCount = (uint)this.Meta.CommentTODO.Length;
 
             if (TodoCount == 0)
                 return "";
@@ -260,7 +259,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Bugs(GitHubMarkdown MD, bool AsHtml = false)
             {
-            uint BugCount = (uint) this.Meta.CommentBUG.Length;
+            uint BugCount = (uint)this.Meta.CommentBUG.Length;
             if (BugCount == 0)
                 return "";
 
@@ -276,12 +275,12 @@ namespace LCore.LDoc.Markdown
             {
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
-                Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
-                uint TagCount = (uint) this.Meta.CommentTags[Tag].Length;
+                    Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
+                    uint TagCount = (uint)this.Meta.CommentTags[Tag].Length;
 
-                var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
+                    var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
 
-                return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
+                    return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
                 });
             }
 

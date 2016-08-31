@@ -6,9 +6,9 @@
 
 # WriteFooter
 
-#### InstanceMethod
+#### Public Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) WriteFooter(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> WriteFooter(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L697)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L697)
 

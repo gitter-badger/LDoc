@@ -6,9 +6,9 @@
 
 # Generate
 
-#### InstanceMethod
+#### Public Override Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Generate();
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate();
 
 ![Type Public Override Method](http://b.repl.ca/v1/Type-Public%20Override%20Method-blue.png "") [![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")](../Markdown/MarkdownDocument_Assembly.cs#L41) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_Assembly.cs#L41)
 

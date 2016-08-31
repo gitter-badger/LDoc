@@ -6,9 +6,9 @@
 
 # Generate
 
-#### InstanceMethod
+#### Public Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Generate([Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) WriteToDisk);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate(<a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> WriteToDisk);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L905) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L905)
 

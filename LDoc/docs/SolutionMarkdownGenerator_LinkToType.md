@@ -6,9 +6,9 @@
 
 # LinkToType
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) LinkToType(**[GitHubMarkdown](GitHubMarkdown.md)** MD, [Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) Type);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> LinkToType(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 49](http://b.repl.ca/v1/Lines%20of%20Code-49-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L396) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L396)
 
@@ -29,6 +29,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
 Type | No | [Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

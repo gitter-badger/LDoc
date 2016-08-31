@@ -6,9 +6,9 @@
 
 # MarkdownPath_Type
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) MarkdownPath_Type([Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) Type);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> MarkdownPath_Type(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/SolutionMarkdownGenerator.cs#L765)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L765)
 

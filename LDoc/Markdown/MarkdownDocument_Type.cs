@@ -133,7 +133,7 @@ namespace LCore.LDoc.Markdown
                         });
                     Body.Add(new[]
                         {
-                        MD.GetSignature(AsHtml: true)
+                        MD.GetSignature(this, AsHtml: true)
                         });
                     });
 

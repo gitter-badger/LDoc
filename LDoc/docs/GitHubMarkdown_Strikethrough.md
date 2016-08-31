@@ -6,9 +6,9 @@
 
 # Strikethrough
 
-#### InstanceMethod
+#### Public Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Strikethrough([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Text);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Strikethrough(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Text);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L283)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L283)
 

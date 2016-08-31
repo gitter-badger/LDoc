@@ -6,9 +6,9 @@
 
 # HorizontalRule
 
-#### InstanceMethod
+#### Public Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) HorizontalRule();
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> HorizontalRule();
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/GitHubMarkdown.cs#L85)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L85)
 

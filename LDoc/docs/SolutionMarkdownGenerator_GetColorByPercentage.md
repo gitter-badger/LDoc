@@ -6,9 +6,9 @@
 
 # GetColorByPercentage
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public **[GitHubMarkdown.BadgeColor](BadgeColor.md)** GetColorByPercentage([Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) Percentage);
+##### method <strong><a href="BadgeColor.md" alt="">GitHubMarkdown.BadgeColor</a></strong> GetColorByPercentage(<a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Percentage);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 20](http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L829)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L829)
 

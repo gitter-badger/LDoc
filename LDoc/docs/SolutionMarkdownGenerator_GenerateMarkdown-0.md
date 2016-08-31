@@ -6,9 +6,9 @@
 
 # GenerateMarkdown
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public **[MarkdownDocument_Assembly](MarkdownDocument_Assembly.md)** GenerateMarkdown([Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx) Assembly);
+##### method <strong><a href="MarkdownDocument_Assembly.md" alt="">MarkdownDocument_Assembly</a></strong> GenerateMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L287)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L287)
 

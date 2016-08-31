@@ -130,7 +130,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LinkToType) + "(GitHubMarkdown, Type) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LinkToType) + "(GitHubMarkdown, Type, Boolean) => String")]
         public void LinkToType()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.LinkToType

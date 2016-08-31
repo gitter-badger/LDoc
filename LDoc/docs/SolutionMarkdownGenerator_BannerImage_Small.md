@@ -6,9 +6,9 @@
 
 # BannerImage_Small
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) BannerImage_Small(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> BannerImage_Small(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L682)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L682)
 

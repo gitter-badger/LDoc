@@ -6,9 +6,9 @@
 
 # OrderedList
 
-#### InstanceMethod
+#### Public Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) OrderedList(<a href="https://msdn.microsoft.com/en-us/library/dd268536.aspx" alt="" target="_blank">Tuple</a>&lt;[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32.aspx), [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;[] DepthLine);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> OrderedList(<a href="https://msdn.microsoft.com/en-us/library/dd268536.aspx" alt="" target="_blank">Tuple</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L145)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L145)
 

@@ -6,11 +6,11 @@
 
 # GetBadge_Assertions
 
-#### InstanceMethod
+#### Public Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) GetBadge_Assertions(**[GitHubMarkdown](GitHubMarkdown.md)** MD, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetBadge_Assertions(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_Member.cs#L342)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_Member.cs#L342)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](../Markdown/MarkdownDocument_Member.cs#L351)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_Member.cs#L351)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 2](http://b.repl.ca/v1/Assertions-2-brightgreen.png "")](../Markdown/MarkdownDocument_Member.cs)
 

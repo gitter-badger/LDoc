@@ -6,11 +6,11 @@
 
 # Image
 
-#### InstanceMethod
+#### Public Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Image([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Url, [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
+##### method <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Image(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GitHubMarkdown.cs#L479)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L479)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GitHubMarkdown.cs#L484)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L484)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 

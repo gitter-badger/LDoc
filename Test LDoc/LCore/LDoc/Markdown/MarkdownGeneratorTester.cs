@@ -6,7 +6,6 @@ using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.LDoc.Markdown;
 using Test_LDoc;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace LDoc_Tests.LCore.LDoc.Markdown

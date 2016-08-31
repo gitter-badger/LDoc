@@ -6,9 +6,9 @@
 
 # GetBadges_Coverage
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt; GetBadges_Coverage(**[GitHubMarkdown](GitHubMarkdown.md)** MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
+##### method <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; GetBadges_Coverage(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L520) ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L520)
 
