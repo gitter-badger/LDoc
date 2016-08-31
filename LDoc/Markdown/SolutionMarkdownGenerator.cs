@@ -393,7 +393,7 @@ namespace LCore.LDoc.Markdown
         /// 
         /// Otherwise, fall back on a google search.
         /// </summary>
-        public virtual string LinkToType(GitHubMarkdown MD, Type Type)
+        public virtual string LinkToType(GitHubMarkdown MD, Type Type, bool AsHtml = false)
             {
             // Unassigned types, (T, etc), need no link
             if (Type.IsGenericParameter)
@@ -401,19 +401,19 @@ namespace LCore.LDoc.Markdown
 
             // Ref types, link to actual type
             if (Type.IsByRef)
-                return $"ref {this.LinkToType(MD, Type.GetElementType())}";
+                return $"ref {this.LinkToType(MD, Type.GetElementType(), AsHtml)}";
 
             // Array types, nest array symbols outside of the link
             if (Type.IsArray)
-                return $"{this.LinkToType(MD, Type.GetElementType())}[]";
+                return $"{this.LinkToType(MD, Type.GetElementType(), AsHtml)}[]";
 
             // Generic types, display in standard generic notation and link each type individually. Recursion is required.
             if (Type.IsGenericType && !Type.IsGenericTypeDefinition)
                 {
-                string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition());
+                string GenericTypeLink = this.LinkToType(MD, Type.GetGenericTypeDefinition(), AsHtml);
                 Type[] Parameters = Type.GenericTypeArguments;
 
-                return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param)).Combine(", ")}&gt;";
+                return $"{GenericTypeLink}&lt;{Parameters.Convert(Param => this.LinkToType(MD, Param, AsHtml)).Combine(", ")}&gt;";
                 }
 
 
@@ -425,26 +425,26 @@ namespace LCore.LDoc.Markdown
             string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
             // bold local links
             if (!string.IsNullOrEmpty(TypeLink))
-                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Name));
+                return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Name, AsHtml: AsHtml), AsHtml);
 
 
             // Resolve custom type links from implementation
             if (this.CustomTypeLinks.ContainsKey(Type))
-                return MD.Link(this.CustomTypeLinks[Type], Name, "", TargetNewWindow: true);
+                return MD.Link(this.CustomTypeLinks[Type], Name, "", TargetNewWindow: true, AsHtml: AsHtml);
 
             // Resolve default known type links
             if (ReferenceLinks.ContainsKey(Type))
-                return MD.Link(ReferenceLinks[Type], Name, "", TargetNewWindow: true);
+                return MD.Link(ReferenceLinks[Type], Name, "", TargetNewWindow: true, AsHtml: AsHtml);
 
             // TODO: resolve related project assemblies
 
             // Resolve all non-generic System types
             if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
                 Type.FullyQualifiedName().ToLower().StartsWith("system."))
-                return MD.Link(MicrosoftSystemReferencePath(Type), Name);
+                return MD.Link(MicrosoftSystemReferencePath(Type), Name, AsHtml: AsHtml);
 
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
-                return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name);
+                return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name, AsHtml: AsHtml);
 
             if (!this.TypeLinksNotFound.Has(Type))
                 this.TypeLinksNotFound.Add(Type);
@@ -453,7 +453,7 @@ namespace LCore.LDoc.Markdown
                            $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
                 Name,
                 $"Search for '{WebUtility.HtmlEncode(Type.FullyQualifiedName())}'",
-                TargetNewWindow: true);
+                TargetNewWindow: true, AsHtml: AsHtml);
             }
 
         /// <summary>

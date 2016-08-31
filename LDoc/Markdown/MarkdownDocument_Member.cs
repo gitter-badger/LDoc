@@ -78,25 +78,11 @@ namespace LCore.LDoc.Markdown
             if (this.Member is MethodInfo)
                 {
                 var Method = (MethodInfo) this.Member;
+                var Details = Method.GetMemberDetails();
 
-                string Static = Method.IsStatic
-                    ? "Static "
-                    : "Instance";
-
-                string StaticLower = Method.IsStatic
-                    ? " static"
-                    : "";
-
-                string Parameters = Method.GetParameters()
-                    .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType)} {Param.Name}")
-                    .Combine(", ");
-
-                this.Header($"{Static}Method", Size: 4);
-
-
-                this.Header(
-                    $"public{StaticLower} {this.Generator.LinkToType(this, Method.ReturnType)} {this.Member.Name}({Parameters});",
-                    Size: 6);
+                string Signature = this.GetSignature(AsHtml: true);
+                this.Header($"{Details}", Size: 4);
+                this.Header(Signature, Size: 5);
 
                 this.Line("");
                 this.Line(this.GetBadges_Info().JoinLines(" "));
@@ -164,6 +150,30 @@ namespace LCore.LDoc.Markdown
                 }
 
             this.Generator.WriteFooter(this);
+            }
+
+        public string GetSignature(bool AsHtml = false)
+            {
+            if (this.Member is MethodInfo)
+                {
+                var Method = (MethodInfo) this.Member;
+                var Details = Method.GetMemberDetails();
+
+                string Static = Method.IsStatic
+                    ? "Static "
+                    : "Instance";
+
+                string StaticLower = Method.IsStatic
+                    ? " static"
+                    : "";
+
+                string Parameters = Method.GetParameters()
+                    .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType, AsHtml)} {Param.Name}")
+                    .Combine(", ");
+
+                return $"public{StaticLower} {this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {this.Member.Name}({Parameters});";
+                }
+            return "";
             }
 
         /// <summary>
