@@ -118,11 +118,11 @@ namespace LCore.LDoc.Markdown
                             TotalTodos += (uint)Meta.CommentTODO.Length;
                             TotalBugs += (uint)Meta.CommentBUG.Length;
                             TotalNotImplemented += (uint)Meta.NotImplemented.Length;
-                        // TODO total for custom tags
+                            // TODO total for custom tags
 
-                        Body.Add(new[]
-                            {
-                        this.Header(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), Size: 3, AsHtml: true),
+                            Body.Add(new[]
+                                {
+                        this.Header(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), Size: 4, AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
                         MD.GetBadge_Bugs(this, AsHtml: true) + " " +
                         MD.GetBadge_NotImplemented(this, AsHtml: true) + " " +
@@ -133,7 +133,7 @@ namespace LCore.LDoc.Markdown
                             });
                             Body.Add(new[]
                             {
-                        MD.GetSignature(this, AsHtml: true)
+                            $"{this.Header(MD.GetSignature(this, AsHtml: true), Size: 6, AsHtml: true)}\r\n"
                             });
                         });
 
