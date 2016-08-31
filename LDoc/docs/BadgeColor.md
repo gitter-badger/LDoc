@@ -7,7 +7,6 @@
 
 
 
-[View Source](../Markdown/GitHubMarkdown.cs#L554)
 
 ###### Summary
 

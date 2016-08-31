@@ -19,38 +19,25 @@ namespace LCore.LDoc.Markdown
     /// <summary>
     /// Helper class for generating GitHub markdown documents.
     /// </summary>
-    public class GitHubMarkdown
+    public class Markdown
         {
-        /// <summary>
-        /// The path relative to the root repository folder that this markdown file will be saved
-        /// </summary>
-        public string FilePath { get; }
-
         /// <summary>
         /// The title of the markdown file
         /// </summary>
         public string Title { get; }
 
         /// <summary>
-        /// The generator that created this Markdown, if applicable.
-        /// </summary>
-        [CanBeNull]
-        protected SolutionMarkdownGenerator Generator { get; }
-
-        /// <summary>
         /// Create a new GitHumMarkdown document without specifying a file title or location
         /// </summary>
-        public GitHubMarkdown()
+        public Markdown()
             {
             }
 
         /// <summary>
         /// Create a new GitHumMarkdown document specifying a file title and location
         /// </summary>
-        public GitHubMarkdown([CanBeNull] SolutionMarkdownGenerator Generator, [CanBeNull] string FilePath, [CanBeNull] string Title)
+        public Markdown([CanBeNull] string Title)
             {
-            this.Generator = Generator;
-            this.FilePath = FilePath ?? "";
             this.Title = Title ?? "";
             }
 
@@ -70,7 +57,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Add a blank line:
         /// </summary>
-        public void BlankLine()
+        public virtual void BlankLine()
             {
             this.Line("");
             }
@@ -82,7 +69,7 @@ namespace LCore.LDoc.Markdown
         /// 
         /// 
         /// </summary>
-        public void HorizontalRule()
+        public virtual void HorizontalRule()
             {
             this.Line("");
             this.Line("---");
@@ -100,7 +87,7 @@ namespace LCore.LDoc.Markdown
         /// ###### Header
         /// 
         /// </summary>
-        public string Header(string Line, int Size = 1, bool AsHtml = false)
+        public virtual string Header(string Line, int Size = 1, bool AsHtml = false)
             {
             if (Size < 1)
                 Size = 1;
@@ -121,7 +108,7 @@ namespace LCore.LDoc.Markdown
         /// Line 
         /// ------
         /// </summary>
-        public void HeaderUnderline(string Line, int Size = 1)
+        public virtual void HeaderUnderline(string Line, int Size = 1)
             {
             if (Size < 1)
                 Size = 1;
@@ -143,7 +130,7 @@ namespace LCore.LDoc.Markdown
         /// 3. Line
         /// 
         /// </summary>
-        public void OrderedList([CanBeNull] params string[] Lines)
+        public virtual void OrderedList([CanBeNull] params string[] Lines)
             {
             Lines.Each((i, Line) => this.Line($"{i + 1}. {Line}"));
             }
@@ -159,7 +146,7 @@ namespace LCore.LDoc.Markdown
         /// 3. Item
         /// 
         /// </summary>
-        public void OrderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
+        public virtual void OrderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
             DepthLine.Each(Line => this.OrderedList((Set<uint, string>)Line));
             }
@@ -175,7 +162,7 @@ namespace LCore.LDoc.Markdown
         /// 3. Item
         /// 
         /// </summary>
-        public void OrderedList([CanBeNull] params Set<uint, string>[] DepthLine)
+        public virtual void OrderedList([CanBeNull] params Set<uint, string>[] DepthLine)
             {
             uint CurrentNumber = 0;
             uint? LastLevel = null;
@@ -200,7 +187,7 @@ namespace LCore.LDoc.Markdown
         /// - Line
         /// 
         /// </summary>
-        public void UnorderedList([CanBeNull] params string[] Lines)
+        public virtual void UnorderedList([CanBeNull] params string[] Lines)
             {
             Lines.Each(Line => this.Line($"- {Line}"));
             }
@@ -216,7 +203,7 @@ namespace LCore.LDoc.Markdown
         /// - Item
         /// 
         /// </summary>
-        public void UnorderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
+        public virtual void UnorderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
             DepthLine.Each(Line => this.UnorderedList((Set<uint, string>)Line));
             }
@@ -232,7 +219,7 @@ namespace LCore.LDoc.Markdown
         /// - Item
         /// 
         /// </summary>
-        public void UnorderedList([CanBeNull] params Set<uint, string>[] DepthLine)
+        public virtual void UnorderedList([CanBeNull] params Set<uint, string>[] DepthLine)
             {
             DepthLine.Each(Line => { this.Line($"{"  ".Times(Line.Obj1)}*{Line.Obj2}"); });
             }
@@ -242,7 +229,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         /// <param name="Lines"></param>
         /// <param name="Language"></param>
-        public void Code([CanBeNull] string[] Lines = null, [CanBeNull] string Language = SolutionMarkdownGenerator.CSharpLanguage)
+        public virtual void Code([CanBeNull] string[] Lines = null, [CanBeNull] string Language = SolutionMarkdownGenerator.CSharpLanguage)
             {
             this.Line($"```{Language}");
             Lines.Each(this.Line);
@@ -252,7 +239,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Adds a blockquoted series of <paramref name="Lines"/>
         /// </summary>
-        public void BlockQuote([CanBeNull] params string[] Lines)
+        public virtual void BlockQuote([CanBeNull] params string[] Lines)
             {
             Lines.Each(Line => this.Line($"> {Line}"));
             }
@@ -260,7 +247,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Add a number of <paramref name="Lines"/>
         /// </summary>
-        public void Lines([CanBeNull] params string[] Lines)
+        public virtual void Lines([CanBeNull] params string[] Lines)
             {
             Lines?.Each(this.Line);
             }
@@ -268,7 +255,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Add a single <paramref name="Line"/>
         /// </summary>
-        public void Line([CanBeNull] string Line)
+        public virtual void Line([CanBeNull] string Line)
             {
             if (Line != null)
                 this.MarkdownLines.Add(Line);
@@ -281,7 +268,7 @@ namespace LCore.LDoc.Markdown
         /// ~Line~
         /// 
         /// </summary>
-        public string Strikethrough([CanBeNull] string Text)
+        public virtual string Strikethrough([CanBeNull] string Text)
             {
             return !string.IsNullOrEmpty(Text)
                 ? $"~~{Text}~~"
@@ -294,7 +281,7 @@ namespace LCore.LDoc.Markdown
         /// =Line=
         /// 
         /// </summary>
-        public string Highlight([CanBeNull] string Text)
+        public virtual string Highlight([CanBeNull] string Text)
             {
             return !string.IsNullOrEmpty(Text)
                 ? $"=={Text}=="
@@ -304,7 +291,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Returns a string formatted as inline code
         /// </summary>
-        public string InlineCode([CanBeNull] string Code = "")
+        public virtual string InlineCode([CanBeNull] string Code = "")
             {
             return Code == null
                 ? ""
@@ -328,7 +315,7 @@ namespace LCore.LDoc.Markdown
         /// Data | Data | Data
         /// 
         /// </summary>
-        public void Table([CanBeNull] string[,] Rows, bool IncludeHeader = true, L.Align[] Alignment = null, bool AsHtml = false)
+        public virtual void Table([CanBeNull] string[,] Rows, bool IncludeHeader = true, L.Align[] Alignment = null, bool AsHtml = false)
             {
             this.Table(Rows.ToNestedArrays(), IncludeHeader, Alignment, AsHtml);
             }
@@ -353,7 +340,7 @@ namespace LCore.LDoc.Markdown
         /// <param name="Alignment">Optionally, set alignment for each cell.</param>
         /// <param name="AsHtml">Optionally, render the table as Html.</param>
         /// <param name="TableWidth">Optionally, set the Html table CSS style.</param>
-        public void Table([CanBeNull] IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true,
+        public virtual void Table([CanBeNull] IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true,
             L.Align[] Alignment = null, bool AsHtml = false, string TableWidth = "")
             {
             if (Rows == null)
@@ -449,7 +436,7 @@ namespace LCore.LDoc.Markdown
         /// [Text](Url)"Reference Text"
         /// 
         /// </summary>
-        public string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "",
+        public virtual string Link([CanBeNull] string Url = "", [CanBeNull] string Text = "",
             [CanBeNull] string ReferenceText = "", bool TargetNewWindow = false,
             bool EscapeText = true, bool AsHtml = false)
             {
@@ -482,7 +469,7 @@ namespace LCore.LDoc.Markdown
         /// ![Reference Text](Image Url)
         /// 
         /// </summary>
-        public string Image([CanBeNull] string Url, [CanBeNull] string ReferenceText = "",
+        public virtual string Image([CanBeNull] string Url, [CanBeNull] string ReferenceText = "",
             L.Align? Align = null, bool AsHtml = false)
             {
             if (AsHtml || Align != null)
@@ -500,7 +487,7 @@ namespace LCore.LDoc.Markdown
         /// *Text*
         /// 
         /// </summary>
-        public string Italic([CanBeNull] string Text = "", bool AsHtml = false)
+        public virtual string Italic([CanBeNull] string Text = "", bool AsHtml = false)
             {
             if (AsHtml)
                 return $"<emphasis>{Text}</emphasis>";
@@ -516,7 +503,7 @@ namespace LCore.LDoc.Markdown
         /// **Text**
         /// 
         /// </summary>
-        public string Bold([CanBeNull] string Text = "", bool AsHtml = false)
+        public virtual string Bold([CanBeNull] string Text = "", bool AsHtml = false)
             {
             if (AsHtml)
                 return $"<strong>{Text}</strong>";
@@ -540,7 +527,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Adds a Buckler badge, hosted on http://b.repl.ca/
         /// </summary>
-        public string Badge(string Left, string Right, string HexColor, bool AsHtml = false)
+        public virtual string Badge(string Left, string Right, string HexColor, bool AsHtml = false)
             {
             return this.Image(
                 "http://b.repl.ca/v1/" +
@@ -551,54 +538,17 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Adds a Buckler badge, hosted on http://b.repl.ca/
         /// </summary>
-        public string Badge(string Left, string Right, BadgeColor Color = BadgeColor.LightGrey, bool AsHtml = false)
+        public virtual string Badge(string Left, string Right, BadgeColor Color = BadgeColor.LightGrey, bool AsHtml = false)
             {
             return this.Badge(Left, Right, Color.ToString().ToLower(), AsHtml);
             }
 
-        /// <summary>
-        /// Pre-defined Buckler badge colors (http://b.repl.ca/)
-        /// </summary>
-        public enum BadgeColor
-            {
-#pragma warning disable 1591
-            BrightGreen,
-            Green,
-            YellowGreen,
-            Yellow,
-            Orange,
-            Red,
-            Blue,
-            LightGrey,
-            Grey
-#pragma warning restore 1591|
-            }
-
-        /// <summary>
-        /// Retrieves the relative path from this markdown file to <paramref name="FullPath"/>
-        /// </summary>
-        public string GetRelativePath([CanBeNull] string FullPath)
-            {
-            if (FullPath == null)
-                return "";
-
-            if (string.IsNullOrEmpty(this.FilePath))
-                return FullPath;
-
-
-            var Uri1 = new Uri(FullPath);
-            var Uri2 = new Uri(this.FilePath);
-
-            var Out = Uri2.MakeRelativeUri(Uri1);
-
-            return Out.ToString();
-            }
 
 
         /// <summary>
         /// Returns an image link to a Gravatar avatar based on the MD5 of the supplied <paramref name="ID"/>
         /// </summary>
-        public string Gravatar(string ID, int Size = 64, bool AsHtml = false)
+        public virtual string Gravatar(string ID, int Size = 64, bool AsHtml = false)
             {
             string URL = "https://www.gravatar.com/avatar/";
 

@@ -57,12 +57,12 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Documented badge
         /// </summary>
-        public string GetBadge_Documented(GitHubMarkdown MD)
+        public string GetBadge_Documented(GeneratedDocument MD)
             {
             // TODO replace with simpler Percent function
-            int PercentageCommented = (int) (this.Methods.Convert(Method => Method.Value.Comments == null
-                                                 ? 0
-                                                 : 1).Average()*100).Round();
+            int PercentageCommented = (int)(this.Methods.Convert(Method => Method.Value.Comments == null
+                                                ? 0
+                                                : 1).Average() * 100).Round();
 
             return MD.Badge(this.Generator.Language.Badge_Documented,
                 $"{PercentageCommented}%",
@@ -72,7 +72,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Member Type badge (always method)
         /// </summary>
-        public string GetBadge_MemberType(GitHubMarkdown MD)
+        public string GetBadge_MemberType(GeneratedDocument MD)
             {
             const MemberType TypeDescription = MemberType.Method;
             return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription.ToString().Pluralize(), InfoColor);
@@ -81,23 +81,23 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get badges for custom tracked tags
         /// </summary>
-        public string[] GetBadge_CustomTags(GitHubMarkdown MD)
+        public string[] GetBadge_CustomTags(GeneratedDocument MD)
             {
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
-                Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
-                uint TagCount = this.Methods.Sum(SubMember => SubMember.Value.CommentTags[Tag].Length);
+                    Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
+                    uint TagCount = this.Methods.Sum(SubMember => SubMember.Value.CommentTags[Tag].Length);
 
-                var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
+                    var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
 
-                return MD.Badge(Tag, $"{TagCount}", Color);
+                    return MD.Badge(Tag, $"{TagCount}", Color);
                 });
             }
 
         /// <summary>
         ///   Get the Not Implemented badge
         /// </summary>
-        public string GetBadge_NotImplemented(GitHubMarkdown MD)
+        public string GetBadge_NotImplemented(GeneratedDocument MD)
             {
             uint NotImplementedCount = this.Methods.Sum(SubMember => SubMember.Value.NotImplemented.Length);
             return MD.Badge(this.Generator.Language.Badge_NotImplemented, $"{NotImplementedCount}", NotImplementedCount > 0
@@ -108,7 +108,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the bugs badge
         /// </summary>
-        public string GetBadge_Bugs(GitHubMarkdown MD)
+        public string GetBadge_Bugs(GeneratedDocument MD)
             {
             uint BugCount = this.Methods.Sum(SubMember => SubMember.Value.CommentBUG.Length);
             return MD.Badge(this.Generator.Language.Badge_BUGs, $"{BugCount}", BugCount > 0
@@ -119,7 +119,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Todos badge
         /// </summary>
-        public string GetBadge_Todos(GitHubMarkdown MD)
+        public string GetBadge_Todos(GeneratedDocument MD)
             {
             uint TodoCount = this.Methods.Sum(SubMember => SubMember.Value.CommentTODO.Length);
             return MD.Badge(this.Generator.Language.Badge_TODOs, $"{TodoCount}", TodoCount > 0
@@ -130,7 +130,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Code Lines badge
         /// </summary>
-        public string GetBadge_CodeLines(GitHubMarkdown MD)
+        public string GetBadge_CodeLines(GeneratedDocument MD)
             {
             return MD.Badge(this.Generator.Language.Badge_LinesOfCode,
                 $"{this.Methods.Sum(SubMember => SubMember.Value.CodeLineCount ?? 0u)}", InfoColor);
@@ -161,7 +161,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Coverage badge
         /// </summary>
-        public string GetBadge_AttributeCoverage(GitHubMarkdown MD)
+        public string GetBadge_AttributeCoverage(GeneratedDocument MD)
             {
             uint AttributeTests = this.Methods.Sum(Method => Method.Value.Coverage.AttributeCoverage);
 
@@ -174,12 +174,12 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Unit Tests badge
         /// </summary>
-        public string GetBadge_UnitTests(GitHubMarkdown MD)
+        public string GetBadge_UnitTests(GeneratedDocument MD)
             {
             // TODO replace with simpler Percent function
-            int PercentageCovered = (int) (this.Methods.Convert(Method => Method.Value.Coverage.IsCovered
-                                               ? 0
-                                               : 1).Average()*100).Round();
+            int PercentageCovered = (int)(this.Methods.Convert(Method => Method.Value.Coverage.IsCovered
+                                              ? 0
+                                              : 1).Average() * 100).Round();
 
             return MD.Badge(this.Generator.Language.Badge_UnitTested,
                 $"{PercentageCovered}", this.Generator.GetColorByPercentage(PercentageCovered));
@@ -188,7 +188,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Get the Assertions badge
         /// </summary>
-        public string GetBadge_Assertions(GitHubMarkdown MD)
+        public string GetBadge_Assertions(GeneratedDocument MD)
             {
             uint TotalAssertions = this.Methods.Sum(Method => Method.Value.Coverage.AssertionsMade);
             return MD.Link(MD.GetRelativePath(this.Methods.First().Value.CodeFilePath),

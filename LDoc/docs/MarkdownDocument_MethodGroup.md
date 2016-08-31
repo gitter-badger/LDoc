@@ -3,7 +3,7 @@
 
 ### MarkdownDocument_MethodGroup
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 78%](http://b.repl.ca/v1/Documented-78%25-green.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 84%](http://b.repl.ca/v1/Documented-84%25-green.png "")
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
@@ -12,24 +12,6 @@
 
               Generates markdown for a Member.
             
-
-<table>
-<thead><tr><td>Public Override Methods (1)</td>
-<td></td>
-<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-1-blue.png" alt="Total Lines of Code 1" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
-<tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_Generate.md" alt="">Generate</a></strong></h4></td>
-<td>   </td>
-<td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L32" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-1-blue.png" alt="Lines of Code 1" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="MarkdownDocument_MethodGroup_Generate.md" alt="">Generate</a>();</h6>
-</td>
-</tr>
-<tr><td width="850px" colspan="356"></td></tr>
-</table>
-
 
 <table>
 <thead><tr><td>Public Virtual Methods (2)</td>
@@ -68,7 +50,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L60" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png" alt="Lines of Code 11" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Documented.md" alt="">GetBadge_Documented</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Documented.md" alt="">GetBadge_Documented</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_MemberType.md" alt="">GetBadge_MemberType</a></strong></h4></td>
@@ -76,7 +58,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L75" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_MemberType.md" alt="">GetBadge_MemberType</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_MemberType.md" alt="">GetBadge_MemberType</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_CustomTags.md" alt="">GetBadge_CustomTags</a></strong></h4></td>
@@ -84,7 +66,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L84" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] <a href="MarkdownDocument_MethodGroup_GetBadge_CustomTags.md" alt="">GetBadge_CustomTags</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] <a href="MarkdownDocument_MethodGroup_GetBadge_CustomTags.md" alt="">GetBadge_CustomTags</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_NotImplemented.md" alt="">GetBadge_NotImplemented</a></strong></h4></td>
@@ -92,7 +74,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L100" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_NotImplemented.md" alt="">GetBadge_NotImplemented</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_NotImplemented.md" alt="">GetBadge_NotImplemented</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Bugs.md" alt="">GetBadge_Bugs</a></strong></h4></td>
@@ -100,7 +82,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L111" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Bugs.md" alt="">GetBadge_Bugs</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Bugs.md" alt="">GetBadge_Bugs</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Todos.md" alt="">GetBadge_Todos</a></strong></h4></td>
@@ -108,7 +90,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L122" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Todos.md" alt="">GetBadge_Todos</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Todos.md" alt="">GetBadge_Todos</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_CodeLines.md" alt="">GetBadge_CodeLines</a></strong></h4></td>
@@ -116,7 +98,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L133" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_CodeLines.md" alt="">GetBadge_CodeLines</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_CodeLines.md" alt="">GetBadge_CodeLines</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_AttributeCoverage.md" alt="">GetBadge_AttributeCoverage</a></strong></h4></td>
@@ -124,7 +106,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L164" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_AttributeCoverage.md" alt="">GetBadge_AttributeCoverage</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_AttributeCoverage.md" alt="">GetBadge_AttributeCoverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_UnitTests.md" alt="">GetBadge_UnitTests</a></strong></h4></td>
@@ -132,7 +114,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L177" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_UnitTests.md" alt="">GetBadge_UnitTests</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_UnitTests.md" alt="">GetBadge_UnitTests</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_MethodGroup_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a></strong></h4></td>
@@ -140,7 +122,7 @@
 <td><a href="../Markdown/MarkdownDocument_MethodGroup.cs#L191" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a>(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="428"></td></tr>

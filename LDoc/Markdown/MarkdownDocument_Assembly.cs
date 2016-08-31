@@ -40,6 +40,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected override void GenerateDocument()
             {
+            this.Generator.Stats.AssemblyMarkdownDocuments++;
+
             this.Generator.WriteHeader(this);
 
             ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();

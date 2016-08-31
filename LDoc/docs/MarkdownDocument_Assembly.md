@@ -3,33 +3,15 @@
 
 ### MarkdownDocument_Assembly
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 66%](http://b.repl.ca/v1/Documented-66%25-yellowgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
-![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
+
 
 
 ###### Summary
 
             Generates markdown for an Assembly.
             
-
-<table>
-<thead><tr><td>Public Override Methods (1)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png" alt="Total Lines of Code 29" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
-<tr><td><h4><strong><a href="MarkdownDocument_Assembly_Generate.md" alt="">Generate</a></strong></h4></td>
-<td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png" alt="Lines of Code 29" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="MarkdownDocument_Assembly_Generate.md" alt="">Generate</a>();</h6>
-</td>
-</tr>
-<tr><td width="850px" colspan="424"></td></tr>
-</table>
-
 
 
 

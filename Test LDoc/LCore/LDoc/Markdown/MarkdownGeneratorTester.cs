@@ -37,7 +37,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
             Gen.Generate(WriteToDisk: true);
 
-            List<GitHubMarkdown> Markdown = Gen.GetAllMarkdown();
+            List<GeneratedDocument> Markdown = Gen.GetAllMarkdown();
 
             List<string> Paths = Markdown.Convert(MD => MD?.FilePath);
 

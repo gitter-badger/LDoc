@@ -8,15 +8,15 @@
 
 #### Public Virtual Method
 
-##### public virtual <strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> GenerateTableOfContentsMarkdown();
+##### public virtual <strong><a href="MarkdownDocument_TableOfContents.md" alt="">MarkdownDocument_TableOfContents</a></strong> GenerateTableOfContentsMarkdown();
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L240)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L240)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L212)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L212)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
 
 #### Returns
 
-###### **[GitHubMarkdown](GitHubMarkdown.md)**
+###### **[MarkdownDocument_TableOfContents](MarkdownDocument_TableOfContents.md)**
 
 
 

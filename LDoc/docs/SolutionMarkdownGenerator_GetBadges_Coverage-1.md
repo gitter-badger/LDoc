@@ -10,7 +10,7 @@
 
 ##### public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; GetBadges_Coverage(<strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong> MD, <a href="" alt="" target="_blank">TypeCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L520) ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L520)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 19](http://b.repl.ca/v1/Lines%20of%20Code-19-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L474) ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L474)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
 

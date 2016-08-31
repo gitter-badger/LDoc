@@ -12,7 +12,7 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public class MarkdownDocument_Member : GeneratedDocument
         {
-        private const BadgeColor InfoColor = BadgeColor.Blue;
+        #region Properties
 
         /// <summary>
         /// Members and corresponding comments and coverage
@@ -24,6 +24,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public CodeCoverageMetaData Meta { get; }
 
+
+        #endregion
         /// <summary>
         /// Creates a new markdown member document
         /// </summary>
@@ -35,31 +37,12 @@ namespace LCore.LDoc.Markdown
             }
 
         /// <summary>
-        /// Override this method to customize badges included in member generated markdown documents.
-        /// </summary>
-        protected List<string> GetBadges_Info()
-            {
-            var Out = new List<string>
-                {
-                this.GetBadge_MemberType(this),
-                this.GetBadge_CodeLines(this),
-                this.GetBadge_Todos(this),
-                this.GetBadge_Bugs(this),
-                this.GetBadge_NotImplemented(this),
-                this.GetBadge_Documented(this),
-                this.GetBadge_SourceCode(this)
-                };
-
-            Out.AddRange(this.GetBadge_CustomTags(this));
-
-            return Out;
-            }
-
-        /// <summary>
         /// Generate the document
         /// </summary>
         protected override void GenerateDocument()
             {
+            this.Generator.Stats.MemberMarkdownDocuments++;
+
             this.Generator.WriteHeader(this);
             this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Type(this.Member.DeclaringType)), this.Generator.Language.LinkText_Up));
 
@@ -159,7 +142,7 @@ namespace LCore.LDoc.Markdown
         /// public string GetSignature(GitHubMarkdown MD, bool AsHtml)
         /// 
         /// </summary>
-        public string GetSignature(GitHubMarkdown MD, bool AsHtml = false)
+        public virtual string GetSignature(GeneratedDocument MD, bool AsHtml = false)
             {
             bool Remote = MD != this;
             var Details = this.Member.GetMemberDetails();
@@ -189,11 +172,34 @@ namespace LCore.LDoc.Markdown
             return "";
             }
 
+        #region Info Badges
+
+        /// <summary>
+        /// Override this method to customize badges included in member generated markdown documents.
+        /// </summary>
+        protected List<string> GetBadges_Info()
+            {
+            var Out = new List<string>
+                {
+                this.GetBadge_MemberType(this),
+                this.GetBadge_CodeLines(this),
+                this.GetBadge_Todos(this),
+                this.GetBadge_Bugs(this),
+                this.GetBadge_NotImplemented(this),
+                this.GetBadge_Documented(this),
+                this.GetBadge_SourceCode(this)
+                };
+
+            Out.AddRange(this.GetBadge_CustomTags(this));
+
+            return Out;
+            }
+
 
         /// <summary>
         /// Get the Documented badge
         /// </summary>
-        public string GetBadge_Documented(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_Documented(GeneratedDocument MD, bool AsHtml = false)
             {
             return MD.Badge(this.Generator.Language.Badge_Documented,
                 this.Meta.Comments != null
@@ -207,16 +213,16 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Member Type badge
         /// </summary>
-        public string GetBadge_MemberType(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_MemberType(GeneratedDocument MD, bool AsHtml = false)
             {
             var TypeDescription = this.Member.GetMemberDetails();
-            return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription?.ToString(), InfoColor, AsHtml);
+            return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription?.ToString(), this.Generator.Colors.BadgeInfoColor, AsHtml);
             }
 
         /// <summary>
         /// Get the Member Source Code badge
         /// </summary>
-        public string GetBadge_SourceCode(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_SourceCode(GeneratedDocument MD, bool AsHtml = false)
             {
             return string.IsNullOrEmpty(this.Meta.CodeFilePath)
                 ? MD.Badge(this.Generator.Language.Badge_SourceCode, this.Generator.Language.Badge_SourceCodeUnavailable,
@@ -229,7 +235,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Not Implemented badge
         /// </summary>
-        public string GetBadge_NotImplemented(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_NotImplemented(GeneratedDocument MD, bool AsHtml = false)
             {
             uint NotImplementedCount = (uint)this.Meta.NotImplemented.Length;
 
@@ -244,7 +250,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Code Lines badge
         /// </summary>
-        public string GetBadge_CodeLines(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_CodeLines(GeneratedDocument MD, bool AsHtml = false)
             {
             return MD.Link($"{MD.GetRelativePath(this.Meta.CodeFilePath)}#L{this.Meta.CodeLineNumber}",
                 MD.Badge(this.Generator.Language.Badge_LinesOfCode,
@@ -257,7 +263,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Todos badge
         /// </summary>
-        public string GetBadge_Todos(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_Todos(GeneratedDocument MD, bool AsHtml = false)
             {
             uint TodoCount = (uint)this.Meta.CommentTODO.Length;
 
@@ -272,7 +278,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the bugs badge
         /// </summary>
-        public string GetBadge_Bugs(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_Bugs(GeneratedDocument MD, bool AsHtml = false)
             {
             uint BugCount = (uint)this.Meta.CommentBUG.Length;
             if (BugCount == 0)
@@ -286,18 +292,23 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get badges for custom tracked tags
         /// </summary>
-        public string[] GetBadge_CustomTags(GitHubMarkdown MD, bool AsHtml = false)
+        public string[] GetBadge_CustomTags(GeneratedDocument MD, bool AsHtml = false)
             {
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
                     Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
                     uint TagCount = (uint)this.Meta.CommentTags[Tag].Length;
 
-                    var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
+                    var Color = CommentColor?.Invoke(TagCount) ?? this.Generator.Colors.BadgeInfoColor;
 
                     return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
                 });
             }
+
+
+        #endregion
+
+        #region Coverage Badges
 
 
         /// <summary>
@@ -329,7 +340,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Covered badge
         /// </summary>
-        public string GetBadge_Covered(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_Covered(GeneratedDocument MD, bool AsHtml = false)
             {
             return this.Meta.Coverage?.IsCovered == true
                 ? MD.Badge(this.Generator.Language.Badge_Covered, "Yes", BadgeColor.BrightGreen, AsHtml)
@@ -339,7 +350,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Coverage badge
         /// </summary>
-        public string GetBadge_AttributeCoverage(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_AttributeCoverage(GeneratedDocument MD, bool AsHtml = false)
             {
             return MD.Badge(this.Generator.Language.Badge_AttributeTests,
                 $"{this.Meta.Coverage.AttributeCoverage}",
@@ -351,7 +362,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Unit Tests badge
         /// </summary>
-        public string GetBadge_UnitTests(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_UnitTests(GeneratedDocument MD, bool AsHtml = false)
             {
             return MD.Badge(this.Generator.Language.Badge_UnitTested, this.Meta.Coverage.MemberTraitFound
                 ? "Yes"
@@ -363,12 +374,14 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Get the Assertions badge
         /// </summary>
-        public string GetBadge_Assertions(GitHubMarkdown MD, bool AsHtml = false)
+        public string GetBadge_Assertions(GeneratedDocument MD, bool AsHtml = false)
             {
             return MD.Link(MD.GetRelativePath(this.Meta.CodeFilePath),
                 MD.Badge(this.Generator.Language.Badge_Assertions, $"{this.Meta.Coverage.AssertionsMade}", this.Meta.Coverage.AssertionsMade > 0u
                     ? BadgeColor.BrightGreen
                     : BadgeColor.LightGrey, AsHtml), EscapeText: false, AsHtml: AsHtml);
             }
+
+        #endregion
         }
     }

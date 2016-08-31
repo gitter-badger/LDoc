@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using LCore.Extensions;
 using LCore.Interfaces;
 using LCore.LUnit;
@@ -28,6 +27,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected override void GenerateDocument()
             {
+            this.Generator.Stats.ProjectMarkdownDocuments++;
+
             this.Generator.WriteHeader(this);
             this.Line(this.Header(this.Generator.Language.MainReadme, Size: 2));
 
@@ -50,6 +51,7 @@ namespace LCore.LDoc.Markdown
 
                 this.Line(this.Header(Document.Value.Title, Size: 2));
                 //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
+                // ReSharper disable once ExpressionIsAlwaysNull
                 this.Line(this.Generator.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
 
                 this.Line($" - {this.Link(this.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");

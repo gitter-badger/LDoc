@@ -2,6 +2,7 @@
 [Up](BadgeColor.md)
 
 ### BadgeColor
+[View Source](../Markdown/BadgeColor.cs)
 
 # Green
 

@@ -42,6 +42,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected override void GenerateDocument()
             {
+            this.Generator.Stats.TypeMarkdownDocuments++;
+
             this.Generator.WriteHeader(this);
 
             this.Line(

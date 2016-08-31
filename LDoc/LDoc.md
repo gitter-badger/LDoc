@@ -17,19 +17,29 @@ LCore.LDoc.Markdown
 
 #### [BadgeColor](docs/BadgeColor.md)
 
+#### [ColorSettings](docs/ColorSettings.md)
+
 #### [ExcludeFromMarkdownAttribute](docs/ExcludeFromMarkdownAttribute.md)
 
 #### [GeneratedDocument](docs/GeneratedDocument.md)
 
-#### [GitHubMarkdown](docs/GitHubMarkdown.md)
+#### [GeneratorStatistics](docs/GeneratorStatistics.md)
 
 #### [IExcludeFromMarkdownAttribute](docs/IExcludeFromMarkdownAttribute.md)
 
+#### [Markdown](docs/Markdown.md)
+
 #### [MarkdownDocument_Assembly](docs/MarkdownDocument_Assembly.md)
+
+#### [MarkdownDocument_CoverageSummary](docs/MarkdownDocument_CoverageSummary.md)
 
 #### [MarkdownDocument_Member](docs/MarkdownDocument_Member.md)
 
 #### [MarkdownDocument_MethodGroup](docs/MarkdownDocument_MethodGroup.md)
+
+#### [MarkdownDocument_Root](docs/MarkdownDocument_Root.md)
+
+#### [MarkdownDocument_TableOfContents](docs/MarkdownDocument_TableOfContents.md)
 
 #### [MarkdownDocument_Type](docs/MarkdownDocument_Type.md)
 

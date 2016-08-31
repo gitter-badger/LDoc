@@ -224,7 +224,7 @@
 <td><a href="../Markdown/GitHubMarkdown.cs#L543" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="GitHubMarkdown_Badge-1.md" alt="">Badge</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Left, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Right, <strong><a href="BadgeColor.md" alt="">GitHubMarkdown.BadgeColor</a></strong> Color, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="GitHubMarkdown_Badge-1.md" alt="">Badge</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Left, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Right, <strong><a href="BadgeColor.md" alt="">BadgeColor</a></strong> Color, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="GitHubMarkdown_GetRelativePath.md" alt="">GetRelativePath</a></strong></h4></td>

@@ -8,7 +8,7 @@
 
 #### Public Method
 
-##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetBadge_AttributeCoverage(<strong><a href="GitHubMarkdown.md" alt="">GitHubMarkdown</a></strong> MD);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetBadge_AttributeCoverage(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);
 
 ![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 9](http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L164)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L164)
 
@@ -23,7 +23,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
+MD | No | **[GeneratedDocument](GeneratedDocument.md)** | 
 
 
 #### Returns

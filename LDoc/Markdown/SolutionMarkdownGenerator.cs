@@ -27,6 +27,8 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public abstract class SolutionMarkdownGenerator
         {
+        #region Statics
+
         /// <summary>
         /// Default string to tag for language, (C#)
         /// </summary>
@@ -43,15 +45,22 @@ namespace LCore.LDoc.Markdown
         public static string MicrosoftSystemReferencePath(Type SystemType) =>
             "https://msdn.microsoft.com/en-us/library/" + $"{SystemType.FullyQualifiedName().ToLower().Before("[]")}.aspx";
 
-        /// <summary>
-        /// Locates a markdown document for a particular <paramref name="Member"/>
-        /// </summary>
-        public MarkdownDocument_Member FindMarkdown(MemberInfo Member)
-            {
-            return this.Markdown_Member.First(MD => MD.Key == Member).Value;
-            }
 
-        #region ReferenceLinks
+        #endregion
+
+
+        /// <summary>
+        /// Override this member to customize colors used for badges
+        /// </summary>
+        public virtual ColorSettings Colors { get; } = new ColorSettings();
+
+        /// <summary>
+        /// Keeps track of generation statistics
+        /// </summary>
+        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
+
+
+        #region Reference Links
 
         /// <summary>
         /// Standard types linked from within LDoc, for convenience.
@@ -126,7 +135,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Write the markdown intro to your project, in the front page README.
         /// </summary>
-        public abstract void Home_Intro(GitHubMarkdown MD);
+        public abstract void Home_Intro(GeneratedDocument MD);
 
         /// <summary>
         /// Override this value to link to related projects at the bottom of your home document
@@ -136,7 +145,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this value to indicate installation instructions.
         /// </summary>
-        public virtual void HowToInstall([NotNull] GitHubMarkdown MD)
+        public virtual void HowToInstall([NotNull] GeneratedDocument MD)
             {
             }
 
@@ -160,7 +169,7 @@ namespace LCore.LDoc.Markdown
         /// Root readme, table of contents, coverage summary, 
         /// custom documents, etc.
         /// </summary>
-        public Dictionary<string, GitHubMarkdown> Markdown_Other { get; } = new Dictionary<string, GitHubMarkdown>();
+        public Dictionary<string, GeneratedDocument> Markdown_Other { get; } = new Dictionary<string, GeneratedDocument>();
 
         /// <summary>
         /// Assembly-generated markdown documents.
@@ -200,48 +209,17 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates table of contents document
         /// </summary>
-        public virtual GitHubMarkdown GenerateTableOfContentsMarkdown()
+        public virtual MarkdownDocument_TableOfContents GenerateTableOfContentsMarkdown()
             {
-            var MD = new GitHubMarkdown(this, this.MarkdownPath_TableOfContents, this.Language.TableOfContents);
-
-            this.WriteHeader(MD);
-
-            MD.Line(MD.Header(this.Language.TableOfContents, Size: 2));
-
-            this.GetAllMarkdown().Each(Document => { MD.Line($" - {MD.Link(MD.GetRelativePath(Document.FilePath), Document.Title)}"); });
-
-            this.WriteFooter(MD);
-
-            return MD;
+            return new MarkdownDocument_TableOfContents(this, this.MarkdownPath_TableOfContents, this.Language.TableOfContents);
             }
 
         /// <summary>
         /// Generates coverage summary document
         /// </summary>
-        public virtual GitHubMarkdown GenerateCoverageSummaryMarkdown()
+        public virtual MarkdownDocument_TableOfContents GenerateCoverageSummaryMarkdown()
             {
-            var MD = new GitHubMarkdown(this, this.MarkdownPath_CoverageSummary, this.Language.CoverageSummary);
-
-            this.WriteHeader(MD);
-
-            MD.Line(MD.Header(this.Language.CoverageSummary));
-
-            // TODO Generate summary markdown
-
-            MD.Line(MD.Header(this.Language.Header_Assemblies));
-            this.Markdown_Assembly.Each(AssemblyMD =>
-                {
-                    var Coverage = new AssemblyCoverage(AssemblyMD.Key);
-                    ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
-
-                    MD.Line(MD.Header(AssemblyMD.Value.Title, Size: 2));
-                    //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
-                    MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
-                });
-
-            this.WriteFooter(MD);
-
-            return MD;
+            return new MarkdownDocument_TableOfContents(this, this.MarkdownPath_CoverageSummary, this.Language.CoverageSummary);
             }
 
         /// <summary>
@@ -280,6 +258,14 @@ namespace LCore.LDoc.Markdown
 
         #region Helpers +
 
+        /// <summary>
+        /// Locates a markdown document for a particular <paramref name="Member"/>
+        /// </summary>
+        public MarkdownDocument_Member FindMarkdown(MemberInfo Member)
+            {
+            return this.Markdown_Member.First(MD => MD.Key == Member).Value;
+            }
+
         private string GetFrameworkVersion()
             {
             return this.GetType().Assembly.ImageRuntimeVersion;
@@ -289,7 +275,7 @@ namespace LCore.LDoc.Markdown
         /// Writes the default header, including the large or small
         /// banner and logo
         /// </summary>
-        public virtual void WriteHeader(GitHubMarkdown MD)
+        public virtual void WriteHeader(GeneratedDocument MD)
             {
             bool IsMain = MD.FilePath == this.MarkdownPath_Root;
 
@@ -317,7 +303,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Retrieves a formatted link to the table of contents
         /// </summary>
-        public virtual string TableOfContentsLink(GitHubMarkdown MD)
+        public virtual string TableOfContentsLink(GeneratedDocument MD)
             {
             return MD.Link(MD.GetRelativePath(this.MarkdownPath_TableOfContents), this.Language.TableOfContents);
             }
@@ -325,7 +311,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Retrieves a formatted link to the home readme
         /// </summary>
-        public virtual string HomeLink(GitHubMarkdown MD)
+        public virtual string HomeLink(GeneratedDocument MD)
             {
             return MD.Link(MD.GetRelativePath(this.MarkdownPath_Root), this.Language.MainReadme);
             }
@@ -333,9 +319,9 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this method to generate custom documents for your project.
         /// </summary>
-        public virtual Dictionary<string, GitHubMarkdown> GetOtherDocuments()
+        public virtual Dictionary<string, GeneratedDocument> GetOtherDocuments()
             {
-            return new Dictionary<string, GitHubMarkdown>();
+            return new Dictionary<string, GeneratedDocument>();
             }
 
         /// <summary>
@@ -356,7 +342,7 @@ namespace LCore.LDoc.Markdown
         /// 
         /// Otherwise, fall back on a google search.
         /// </summary>
-        public virtual string LinkToType(GitHubMarkdown MD, Type Type, bool AsHtml = false)
+        public virtual string LinkToType(GeneratedDocument MD, Type Type, bool AsHtml = false)
             {
             // Unassigned types, (T, etc), need no link
             if (Type.IsGenericParameter)
@@ -404,13 +390,18 @@ namespace LCore.LDoc.Markdown
             // Resolve all non-generic System types
             if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
                 Type.FullyQualifiedName().ToLower().StartsWith("system."))
+                {
+                this.Stats.SystemLinks++;
                 return MD.Link(MicrosoftSystemReferencePath(Type), Name, AsHtml: AsHtml);
+                }
 
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
                 return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name, AsHtml: AsHtml);
 
             if (!this.TypeLinksNotFound.Has(Type))
                 this.TypeLinksNotFound.Add(Type);
+
+            this.Stats.ExternalLinks++;
 
             return MD.Link("https://www.google.com/#q=C%23+" +
                            $"{WebUtility.HtmlEncode(Type.FullyQualifiedName())}",
@@ -451,7 +442,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
-        public virtual List<string> GetBadges_Info([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
+        public virtual List<string> GetBadges_Info([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Assembly = Coverage?.CoveringAssembly;
@@ -461,7 +452,7 @@ namespace LCore.LDoc.Markdown
 
             Out.Add(MD.Badge(this.Language.Badge_Framework,
                 $"Version {this.GetFrameworkVersion()}",
-                GitHubMarkdown.BadgeColor.Blue));
+                BadgeColor.Blue));
 
             // TODO: add output file badge
             // TODO: add file size badge
@@ -480,7 +471,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
-        public virtual List<string> GetBadges_Coverage([NotNull] GitHubMarkdown MD, [CanBeNull] AssemblyCoverage Coverage,
+        public virtual List<string> GetBadges_Coverage([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
             var Assembly = Coverage?.CoveringAssembly;
@@ -546,7 +537,7 @@ namespace LCore.LDoc.Markdown
                     });
 
 
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription, GitHubMarkdown.BadgeColor.Blue));
+                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription, BadgeColor.Blue));
 
                 if (TotalDocumentable > 0)
                     {
@@ -637,27 +628,27 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this value to display a large image on top ofthe main document
         /// </summary>
-        public virtual string BannerImage_Large([NotNull] GitHubMarkdown MD) => "";
+        public virtual string BannerImage_Large([NotNull] GeneratedDocument MD) => "";
 
         /// <summary>
         /// Override this value to display a small banner image on top of sub-documents
         /// </summary>
-        public virtual string BannerImage_Small([NotNull] GitHubMarkdown MD) => "";
+        public virtual string BannerImage_Small([NotNull] GeneratedDocument MD) => "";
 
         /// <summary>
         /// Override this value to display a large image in the upper right corner of the main document
         /// </summary>
-        public virtual string LogoImage_Large([NotNull] GitHubMarkdown MD) => "";
+        public virtual string LogoImage_Large([NotNull] GeneratedDocument MD) => "";
 
         /// <summary>
         /// Override this value to display a small image in the upper right corner of sub-documents
         /// </summary>
-        public virtual string LogoImage_Small([NotNull] GitHubMarkdown MD) => "";
+        public virtual string LogoImage_Small([NotNull] GeneratedDocument MD) => "";
 
         /// <summary>
         /// Writes the footer to a markdown document.
         /// </summary>
-        public void WriteFooter([NotNull] GitHubMarkdown MD)
+        public void WriteFooter([NotNull] GeneratedDocument MD)
             {
             MD.Line("");
             MD.Line("");
@@ -676,7 +667,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Writes the footer for your markdown document
         /// </summary>
-        public virtual void WriteCustomFooter(GitHubMarkdown MD)
+        public virtual void WriteCustomFooter(GeneratedDocument MD)
             {
             MD.Line(new[]
                 {
@@ -775,12 +766,12 @@ namespace LCore.LDoc.Markdown
         /// 
         /// Percentage  | Color
         /// ---         | ---
-        /// 30-         | GitHuBMarkdown.BadgeColor.Red
-        /// 31-50       | GitHuBMarkdown.BadgeColor.Yellow
-        /// 51-70       | GitHuBMarkdown.BadgeColor.YellowGreen
-        /// 71-100      | GitHuBMarkdown.BadgeColor.Green
-        /// 100         | GitHuBMarkdown.BadgeColor.BrightGreen
-        /// 101+        | GitHuBMarkdown.BadgeColor.Blue
+        /// 30-         | BadgeColor.Red
+        /// 31-50       | BadgeColor.Yellow
+        /// 51-70       | BadgeColor.YellowGreen
+        /// 71-100      | BadgeColor.Green
+        /// 100         | BadgeColor.BrightGreen
+        /// 101+        | BadgeColor.Blue
         /// </summary>
         public virtual int[] ColorThresholds => new[] { 30, 50, 70, 100 };
 
@@ -789,23 +780,23 @@ namespace LCore.LDoc.Markdown
         /// 
         /// Override this method to customize the deciding of BadgeColor by Percentage.
         /// </summary>
-        public virtual GitHubMarkdown.BadgeColor GetColorByPercentage(int Percentage)
+        public virtual BadgeColor GetColorByPercentage(int Percentage)
             {
             if (Percentage < this.ColorThresholds[0])
-                return GitHubMarkdown.BadgeColor.Red;
+                return BadgeColor.Red;
             if (Percentage < this.ColorThresholds[1])
-                return GitHubMarkdown.BadgeColor.Yellow;
+                return BadgeColor.Yellow;
             if (Percentage < this.ColorThresholds[2])
-                return GitHubMarkdown.BadgeColor.YellowGreen;
+                return BadgeColor.YellowGreen;
             if (Percentage < this.ColorThresholds[3])
-                return GitHubMarkdown.BadgeColor.Green;
+                return BadgeColor.Green;
             if (Percentage == this.ColorThresholds[3])
-                return GitHubMarkdown.BadgeColor.BrightGreen;
+                return BadgeColor.BrightGreen;
             // ReSharper disable once ConvertIfStatementToReturnStatement
             if (Percentage > this.ColorThresholds[3])
-                return GitHubMarkdown.BadgeColor.Blue;
+                return BadgeColor.Blue;
 
-            return GitHubMarkdown.BadgeColor.LightGrey;
+            return BadgeColor.LightGrey;
             }
 
 
@@ -882,7 +873,7 @@ namespace LCore.LDoc.Markdown
             // Lastly, generate table of contents
             this.Markdown_Other.Add(this.Language.TableOfContents, this.GenerateTableOfContentsMarkdown());
 
-            List<GeneratedDocument> AllMarkdown = this.GetAllMarkdown().List<GeneratedDocument>();
+            List<GeneratedDocument> AllMarkdown = this.GetAllMarkdown();
 
             // Report missing types 
             if (this.RequireDirectLinksToAllForeignTypes && !this.TypeLinksNotFound.IsEmpty())
@@ -913,9 +904,9 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Gets all markdown generated by the generator.
         /// </summary>
-        public List<GitHubMarkdown> GetAllMarkdown()
+        public List<GeneratedDocument> GetAllMarkdown()
             {
-            var AllMarkdown = new List<GitHubMarkdown>();
+            var AllMarkdown = new List<GeneratedDocument>();
 
             AllMarkdown.AddRange(this.Markdown_Other.Values);
             AllMarkdown.AddRange(this.Markdown_Assembly.Values);
@@ -994,7 +985,7 @@ namespace LCore.LDoc.Markdown
         /// Override this value to determine custom colors depending on the count
         /// of the particular custom tag found.
         /// </summary>
-        public virtual Dictionary<string, Func<uint, GitHubMarkdown.BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, GitHubMarkdown.BadgeColor>>();
+        public virtual Dictionary<string, Func<uint, BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, BadgeColor>>();
 
         /// <summary>
         /// Structure to customize text used in MarkdownGenerator
@@ -1200,10 +1191,12 @@ namespace LCore.LDoc.Markdown
             }
 
         #endregion
-
-        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
         }
 
+    public class ColorSettings
+        {
+        public BadgeColor BadgeInfoColor { get; set; } = BadgeColor.Blue;
+        }
     public class GeneratorStatistics
         {
         public uint MarkdownDocuments { get; set; }
@@ -1213,9 +1206,10 @@ namespace LCore.LDoc.Markdown
         public uint TypeMarkdownDocuments { get; set; }
         public uint MemberMarkdownDocuments { get; set; }
 
+        public uint Headers { get; set; }
+        public uint Tables { get; set; }
         public uint Links { get; set; }
         public uint LocalLinks { get; set; }
-        public uint RelatedProjectLinks { get; set; }
         public uint SystemLinks { get; set; }
         public uint ExternalLinks { get; set; }
 

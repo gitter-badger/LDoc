@@ -2,6 +2,12 @@
 
 ## Home
 
+### Installation Instructions
+Add LDoc as a nuget package:
+```cs
+Install-Package LDoc
+```
+
 ## LDoc
 
  - [LDoc](LDoc/LDoc.md)

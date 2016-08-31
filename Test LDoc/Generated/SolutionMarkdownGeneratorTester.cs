@@ -25,42 +25,35 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.FindMarkdown) + "(MemberInfo) => MarkdownDocument_Member")]
-        public void FindMarkdown()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.FindMarkdown
-        }
-
-        [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.Home_Intro) + "(GitHubMarkdown)")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.Home_Intro) + "(GeneratedDocument)")]
         public void Home_Intro()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.Home_Intro
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.HowToInstall) + "(GitHubMarkdown)")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.HowToInstall) + "(GeneratedDocument)")]
         public void HowToInstall()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.HowToInstall
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GenerateRootMarkdown) + "() => GitHubMarkdown")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GenerateRootMarkdown) + "() => MarkdownDocument_Root")]
         public void GenerateRootMarkdown()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GenerateRootMarkdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GenerateTableOfContentsMarkdown) + "() => GitHubMarkdown")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GenerateTableOfContentsMarkdown) + "() => MarkdownDocument_TableOfContents")]
         public void GenerateTableOfContentsMarkdown()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GenerateTableOfContentsMarkdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GenerateCoverageSummaryMarkdown) + "() => GitHubMarkdown")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GenerateCoverageSummaryMarkdown) + "() => MarkdownDocument_TableOfContents")]
         public void GenerateCoverageSummaryMarkdown()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GenerateCoverageSummaryMarkdown
@@ -95,28 +88,35 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.WriteHeader) + "(GitHubMarkdown)")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.FindMarkdown) + "(MemberInfo) => MarkdownDocument_Member")]
+        public void FindMarkdown()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.FindMarkdown
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.WriteHeader) + "(GeneratedDocument)")]
         public void WriteHeader()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.WriteHeader
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.TableOfContentsLink) + "(GitHubMarkdown) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.TableOfContentsLink) + "(GeneratedDocument) => String")]
         public void TableOfContentsLink()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.TableOfContentsLink
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.HomeLink) + "(GitHubMarkdown) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.HomeLink) + "(GeneratedDocument) => String")]
         public void HomeLink()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.HomeLink
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetOtherDocuments) + "() => Dictionary<String, GitHubMarkdown>")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetOtherDocuments) + "() => Dictionary<String, GeneratedDocument>")]
         public void GetOtherDocuments()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetOtherDocuments
@@ -130,7 +130,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LinkToType) + "(GitHubMarkdown, Type, Boolean) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LinkToType) + "(GeneratedDocument, Type, Boolean) => String")]
         public void LinkToType()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.LinkToType
@@ -151,14 +151,14 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetBadges_Info) + "(GitHubMarkdown, AssemblyCoverage, ICodeComment) => List<String>")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetBadges_Info) + "(GeneratedDocument, AssemblyCoverage, ICodeComment) => List<String>")]
         public void GetBadges_Info()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetBadges_Info
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetBadges_Coverage) + "(GitHubMarkdown, AssemblyCoverage, ICodeComment) => List<String>")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetBadges_Coverage) + "(GeneratedDocument, AssemblyCoverage, ICodeComment) => List<String>")]
         public void GetBadges_Coverage()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetBadges_Coverage
@@ -179,42 +179,42 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.BannerImage_Large) + "(GitHubMarkdown) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.BannerImage_Large) + "(GeneratedDocument) => String")]
         public void BannerImage_Large()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.BannerImage_Large
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.BannerImage_Small) + "(GitHubMarkdown) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.BannerImage_Small) + "(GeneratedDocument) => String")]
         public void BannerImage_Small()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.BannerImage_Small
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LogoImage_Large) + "(GitHubMarkdown) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LogoImage_Large) + "(GeneratedDocument) => String")]
         public void LogoImage_Large()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.LogoImage_Large
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LogoImage_Small) + "(GitHubMarkdown) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.LogoImage_Small) + "(GeneratedDocument) => String")]
         public void LogoImage_Small()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.LogoImage_Small
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.WriteFooter) + "(GitHubMarkdown)")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.WriteFooter) + "(GeneratedDocument)")]
         public void WriteFooter()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.WriteFooter
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.WriteCustomFooter) + "(GitHubMarkdown)")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.WriteCustomFooter) + "(GeneratedDocument)")]
         public void WriteCustomFooter()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.WriteCustomFooter
@@ -277,7 +277,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetAllMarkdown) + "() => List<GitHubMarkdown>")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetAllMarkdown) + "() => List<GeneratedDocument>")]
         public void GetAllMarkdown()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetAllMarkdown
