@@ -27,6 +27,16 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generate the document
         /// </summary>
-        public abstract void Generate();
+        public void Generate()
+            {
+            this.Generator.Stats.MarkdownDocuments++;
+
+            this.GenerateDocument();
+            }
+
+        /// <summary>
+        /// Generate the document
+        /// </summary>
+        protected abstract void GenerateDocument();
         }
     }

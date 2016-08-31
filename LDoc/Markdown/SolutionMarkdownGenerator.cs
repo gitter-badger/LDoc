@@ -192,46 +192,9 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generates root markdown document (front page)
         /// </summary>
-        public virtual GitHubMarkdown GenerateRootMarkdown()
+        public virtual MarkdownDocument_Root GenerateRootMarkdown()
             {
-            var MD = new GitHubMarkdown(this, this.MarkdownPath_Root, this.Language.MainReadme);
-            this.WriteHeader(MD);
-            MD.Line(MD.Header(this.Language.MainReadme, Size: 2));
-
-            this.Home_Intro(MD);
-
-            if (!this.GetType().GetMembers().Has(
-                Member => Member.IsDeclaredMember() &&
-                          (Member.Name == nameof(this.HowToInstall))))
-                {
-                MD.Line(MD.Header(this.Language.Header_InstallationInstructions, Size: 3));
-
-                this.HowToInstall(MD);
-                }
-
-            this.Markdown_Assembly.Each(Document =>
-                {
-                    var Coverage = new AssemblyCoverage(Document.Key);
-                    ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
-
-                    MD.Line(MD.Header(Document.Value.Title, Size: 2));
-                    //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
-                    MD.Line(this.GetBadges_Coverage(MD, Coverage, Comments).JoinLines(" "));
-
-                    MD.Line($" - {MD.Link(MD.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
-                });
-
-            if (!this.Home_RelatedProjects.IsEmpty())
-                MD.Line(MD.Header(this.Language.Header_RelatedProjects, Size: 3));
-
-            MD.UnorderedList(
-                this.Home_RelatedProjects.Convert(
-                    Project => $"{MD.Link(Project.Url, Project.Name)} {Project.Description}").Array());
-
-
-            this.WriteFooter(MD);
-
-            return MD;
+            return new MarkdownDocument_Root(this, this.MarkdownPath_Root, this.Language.MainReadme);
             }
 
         /// <summary>
@@ -1237,5 +1200,26 @@ namespace LCore.LDoc.Markdown
             }
 
         #endregion
+
+        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
+        }
+
+    public class GeneratorStatistics
+        {
+        public uint MarkdownDocuments { get; set; }
+
+        public uint ProjectMarkdownDocuments { get; set; }
+        public uint AssemblyMarkdownDocuments { get; set; }
+        public uint TypeMarkdownDocuments { get; set; }
+        public uint MemberMarkdownDocuments { get; set; }
+
+        public uint Links { get; set; }
+        public uint LocalLinks { get; set; }
+        public uint RelatedProjectLinks { get; set; }
+        public uint SystemLinks { get; set; }
+        public uint ExternalLinks { get; set; }
+
+        public uint Badges { get; set; }
+
         }
     }

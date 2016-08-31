@@ -58,7 +58,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generate the document
         /// </summary>
-        public override void Generate()
+        protected override void GenerateDocument()
             {
             this.Generator.WriteHeader(this);
             this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Type(this.Member.DeclaringType)), this.Generator.Language.LinkText_Up));
@@ -179,7 +179,7 @@ namespace LCore.LDoc.Markdown
                         ? MD.Link(MD.GetRelativePath(this.FilePath), this.Member.Name, AsHtml: AsHtml)
                         : this.Member.Name;
 
-                    return $"{Details.Scope.ToString().ToLower()} {(ShowInheritance ? $"{Details.Inheritance} " : "")}" +
+                    return $"{Details.Scope.ToString().ToLower()} {(ShowInheritance ? $"{Details.Inheritance.ToString().ToLower()} " : "")}" +
                            $"{(Method.IsStatic ? "static " : "")}" +
                            $"{this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} " +
                            $"{Name}({Parameters});";

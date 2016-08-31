@@ -29,7 +29,7 @@ namespace LCore.LDoc.Markdown
         public Dictionary<MethodInfo, CodeCoverageMetaData> Methods { get; }
         = new Dictionary<MethodInfo, CodeCoverageMetaData>();
 
-        public override void Generate()
+        protected override void GenerateDocument()
             {
             }
 

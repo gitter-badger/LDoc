@@ -8,7 +8,7 @@
 
 #### Public Abstract Method
 
-##### public Abstract <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate();
+##### public abstract <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate();
 
 ![Type Public Abstract Method](http://b.repl.ca/v1/Type-Public%20Abstract%20Method-blue.png "") [![Lines of Code 0](http://b.repl.ca/v1/Lines%20of%20Code-0-red.png "")](../Markdown/GeneratedDocument.cs#L30)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GeneratedDocument.cs#L30)
 

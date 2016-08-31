@@ -38,7 +38,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generate the markdown document
         /// </summary>
-        public override void Generate()
+        protected override void GenerateDocument()
             {
             this.Generator.WriteHeader(this);
 
@@ -64,23 +64,23 @@ namespace LCore.LDoc.Markdown
 
             Namespaces.Each(Namespace =>
                 {
-                this.HeaderUnderline(Namespace, Size: 2);
+                    this.HeaderUnderline(Namespace, Size: 2);
 
-                List<KeyValuePair<Type, MarkdownDocument_Type>> NamespaceTypeMarkdown = NamespaceTypes[Namespace];
+                    List<KeyValuePair<Type, MarkdownDocument_Type>> NamespaceTypeMarkdown = NamespaceTypes[Namespace];
 
-                NamespaceTypeMarkdown.Sort(Type => Type.Key.Name);
+                    NamespaceTypeMarkdown.Sort(Type => Type.Key.Name);
 
-                // TODO namespace badges
+                    // TODO namespace badges
 
-                NamespaceTypeMarkdown.Each(Type =>
-                    {
-                    this.Line(this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4));
+                    NamespaceTypeMarkdown.Each(Type =>
+                        {
+                            this.Line(this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4));
 
-                    var TypeComments = Type.Value.TypeMeta.Comments;
+                            var TypeComments = Type.Value.TypeMeta.Comments;
 
-                    this.Generator.GetBadges_Info(Type.Value, new TypeCoverage(Type.Key), TypeComments);
-                    this.Generator.GetBadges_Coverage(Type.Value, new TypeCoverage(Type.Key), TypeComments);
-                    });
+                            this.Generator.GetBadges_Info(Type.Value, new TypeCoverage(Type.Key), TypeComments);
+                            this.Generator.GetBadges_Coverage(Type.Value, new TypeCoverage(Type.Key), TypeComments);
+                        });
                 });
 
             this.Generator.WriteFooter(this);

@@ -40,7 +40,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Generate the document.
         /// </summary>
-        public override void Generate()
+        protected override void GenerateDocument()
             {
             this.Generator.WriteHeader(this);
 
@@ -122,7 +122,9 @@ namespace LCore.LDoc.Markdown
 
                             Body.Add(new[]
                                 {
-                        this.Header(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath), Member.Key.Name, AsHtml: true), Size: 4, AsHtml: true),
+                        this.Header(this.Bold(this.Link(this.GetRelativePath(
+                            this.Generator.FindMarkdown(Member.Key).FilePath),
+                            Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
                         MD.GetBadge_Bugs(this, AsHtml: true) + " " +
                         MD.GetBadge_NotImplemented(this, AsHtml: true) + " " +
