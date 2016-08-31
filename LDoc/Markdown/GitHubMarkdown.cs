@@ -401,7 +401,7 @@ namespace LCore.LDoc.Markdown
                         for (int j = 0; j < Cells.Count; j++)
                             {
                             if (j == Cells.Count - 1)
-                                TableRow += $"<td colspan=\"{Cells.Count - j}\">{Cells[j]}</td>\r\n";
+                                TableRow += $"<td colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
                             else
                                 TableRow += $"<td>{Cells[j]}</td>\r\n";
                             }
