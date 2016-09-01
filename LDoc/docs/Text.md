@@ -7,7 +7,6 @@
 
 
 
-[View Source](../Markdown/SolutionMarkdownGenerator.cs#L926)
 
 ###### Summary
 

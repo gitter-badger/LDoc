@@ -2,6 +2,7 @@
 [Up](GeneratorStatistics.md)
 
 ### GeneratorStatistics
+[View Source](../Markdown/Statistics/GeneratorStatistics.cs)
 
 # Links
 

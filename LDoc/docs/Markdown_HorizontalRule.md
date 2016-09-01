@@ -2,7 +2,7 @@
 [Up](Markdown.md)
 
 ### Markdown
-[View Source](../Markdown/Markdown.cs)
+[View Source](../Markdown/Generators/Markdown.cs)
 
 # HorizontalRule
 
@@ -10,9 +10,9 @@
 
 ##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> HorizontalRule();
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/Markdown.cs#L72)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/Markdown.cs#L72)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-Blue.png "") [![Lines of Code 11](http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png "")](../Markdown/Generators/Markdown.cs#L72)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/Markdown.cs#L72)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Markdown.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/Markdown.cs)
 
 #### Returns
 

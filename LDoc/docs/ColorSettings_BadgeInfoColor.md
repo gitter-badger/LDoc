@@ -2,6 +2,7 @@
 [Up](ColorSettings.md)
 
 ### ColorSettings
+[View Source](../Markdown/Color/ColorSettings.cs)
 
 # BadgeInfoColor
 

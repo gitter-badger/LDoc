@@ -40,6 +40,8 @@ namespace Test_LDoc
         public override string BannerImage_Small(GeneratedDocument MD) =>
             MD.GetRelativePath($"{typeof(LDoc).GetAssembly().GetRootPath()}\\Content\\{nameof(LDoc)}-banner-small.png");
 
+        public override string RootUrl => LDoc.Urls.GitHubUrl;
+
         public override bool RequireDirectLinksToAllForeignTypes => true;
 
         private const string RootLUnitGitHub = "https://github.com/CodeSingularity/LUnit/blob/master";

@@ -52,15 +52,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="L Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.244.3.36\lib\net451\L Utilities.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.245.2.15\lib\net451\L Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="L, Version=0.9.0.11, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.244.3.36\lib\net451\L.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.245.2.15\lib\net451\L.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LUnit.2016.244.5.23\lib\net452\LUnit.dll</HintPath>
+      <HintPath>..\packages\LUnit.2016.244.21.35\lib\net452\LUnit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.UnitTestFramework.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5bf63060baa03a11, processorArchitecture=MSIL">

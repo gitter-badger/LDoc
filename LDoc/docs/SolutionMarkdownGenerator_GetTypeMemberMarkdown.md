@@ -2,7 +2,7 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # GetTypeMemberMarkdown
 
@@ -10,9 +10,9 @@
 
 ##### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a>, <strong><a href="MarkdownDocument_Member.md" alt="">MarkdownDocument_Member</a></strong>&gt;&gt; GetTypeMemberMarkdown(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L421)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L421)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-Blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L420)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L420)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 ##### Summary
 

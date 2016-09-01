@@ -51,6 +51,13 @@ LCore.LDoc.Markdown
 
 #### [Text](docs/Text.md)
 
+LCore.LDoc.Markdown.Manifest
+------
+
+#### [DocumentManifest](docs/DocumentManifest.md)
+
+#### [LDocManifest](docs/LDocManifest.md)
+
 
 
 ---

@@ -1,14 +1,13 @@
 ![](LDoc/Content/LDoc-banner-small.png "")
 
 ## Table of Contents
- - [Home](README.md)
- - [Coverage Summary]
- - [Table of Contents](TableOfContents.md)
  - [LDoc](LDoc/LDoc.md)
  - [LDoc](LDoc/docs/LDoc.md)
  - [ExcludeFromMarkdownAttribute](LDoc/docs/ExcludeFromMarkdownAttribute.md)
  - [BadgeColor](LDoc/docs/BadgeColor.md)
+ - [ColorSettings](LDoc/docs/ColorSettings.md)
  - [GeneratedDocument](LDoc/docs/GeneratedDocument.md)
+ - [GeneratorStatistics](LDoc/docs/GeneratorStatistics.md)
  - [Markdown](LDoc/docs/Markdown.md)
  - [IExcludeFromMarkdownAttribute](LDoc/docs/IExcludeFromMarkdownAttribute.md)
  - [MarkdownDocument_Assembly](LDoc/docs/MarkdownDocument_Assembly.md)
@@ -19,12 +18,12 @@
  - [MarkdownDocument_Root](LDoc/docs/MarkdownDocument_Root.md)
  - [MarkdownDocument_Type](LDoc/docs/MarkdownDocument_Type.md)
  - [SolutionMarkdownGenerator](LDoc/docs/SolutionMarkdownGenerator.md)
- - [ColorSettings](LDoc/docs/ColorSettings.md)
- - [GeneratorStatistics](LDoc/docs/GeneratorStatistics.md)
  - [SolutionMarkdownGenerator_L](LDoc/docs/SolutionMarkdownGenerator_L.md)
  - [ProjectInfo](LDoc/docs/ProjectInfo.md)
- - [Urls](LDoc/docs/Urls.md)
  - [Text](LDoc/docs/Text.md)
+ - [DocumentManifest](LDoc/docs/DocumentManifest.md)
+ - [LDocManifest](LDoc/docs/LDocManifest.md)
+ - [Urls](LDoc/docs/Urls.md)
  - [Urls](LDoc/docs/LDoc_Urls.md)
  - [value__](LDoc/docs/BadgeColor_value__.md)
  - [BrightGreen](LDoc/docs/BadgeColor_BrightGreen.md)
@@ -36,6 +35,8 @@
  - [Blue](LDoc/docs/BadgeColor_Blue.md)
  - [LightGrey](LDoc/docs/BadgeColor_LightGrey.md)
  - [Grey](LDoc/docs/BadgeColor_Grey.md)
+ - [BadgeInfoColor](LDoc/docs/ColorSettings_BadgeInfoColor.md)
+ - [Line](LDoc/docs/GeneratedDocument_Line.md)
  - [Table](LDoc/docs/GeneratedDocument_Table-0.md)
  - [Header](LDoc/docs/GeneratedDocument_Header.md)
  - [HeaderUnderline](LDoc/docs/GeneratedDocument_HeaderUnderline.md)
@@ -43,7 +44,25 @@
  - [Badge](LDoc/docs/GeneratedDocument_Badge-0.md)
  - [GetRelativePath](LDoc/docs/GeneratedDocument_GetRelativePath.md)
  - [Generate](LDoc/docs/GeneratedDocument_Generate.md)
+ - [GetLiveUrl](LDoc/docs/GeneratedDocument_GetLiveUrl.md)
  - [FilePath](LDoc/docs/GeneratedDocument_FilePath.md)
+ - [ToTables](LDoc/docs/GeneratorStatistics_ToTables.md)
+ - [MarkdownDocuments](LDoc/docs/GeneratorStatistics_MarkdownDocuments.md)
+ - [ProjectMarkdownDocuments](LDoc/docs/GeneratorStatistics_ProjectMarkdownDocuments.md)
+ - [AssemblyMarkdownDocuments](LDoc/docs/GeneratorStatistics_AssemblyMarkdownDocuments.md)
+ - [TypeMarkdownDocuments](LDoc/docs/GeneratorStatistics_TypeMarkdownDocuments.md)
+ - [MemberMarkdownDocuments](LDoc/docs/GeneratorStatistics_MemberMarkdownDocuments.md)
+ - [Lines](LDoc/docs/GeneratorStatistics_Lines.md)
+ - [Headers](LDoc/docs/GeneratorStatistics_Headers.md)
+ - [Tables](LDoc/docs/GeneratorStatistics_Tables.md)
+ - [Links](LDoc/docs/GeneratorStatistics_Links.md)
+ - [LocalLinks](LDoc/docs/GeneratorStatistics_LocalLinks.md)
+ - [SystemLinks](LDoc/docs/GeneratorStatistics_SystemLinks.md)
+ - [ExternalLinks](LDoc/docs/GeneratorStatistics_ExternalLinks.md)
+ - [Badges](LDoc/docs/GeneratorStatistics_Badges.md)
+ - [StartGenerationTime](LDoc/docs/GeneratorStatistics_StartGenerationTime.md)
+ - [EndGenerationTime](LDoc/docs/GeneratorStatistics_EndGenerationTime.md)
+ - [Duration](LDoc/docs/GeneratorStatistics_Duration.md)
  - [GetMarkdownLines](LDoc/docs/Markdown_GetMarkdownLines.md)
  - [BlankLine](LDoc/docs/Markdown_BlankLine.md)
  - [HorizontalRule](LDoc/docs/Markdown_HorizontalRule.md)
@@ -72,6 +91,8 @@
  - [Badge](LDoc/docs/Markdown_Badge-1.md)
  - [Gravatar](LDoc/docs/Markdown_Gravatar.md)
  - [Title](LDoc/docs/Markdown_Title.md)
+ - [GetBadges_Info](LDoc/docs/MarkdownDocument_Assembly_GetBadges_Info.md)
+ - [GetBadges_Coverage](LDoc/docs/MarkdownDocument_Assembly_GetBadges_Coverage.md)
  - [Assembly](LDoc/docs/MarkdownDocument_Assembly_Assembly.md)
  - [Coverage](LDoc/docs/MarkdownDocument_Assembly_Coverage.md)
  - [GetSignature](LDoc/docs/MarkdownDocument_Member_GetSignature.md)
@@ -102,6 +123,8 @@
  - [GetBadge_UnitTests](LDoc/docs/MarkdownDocument_MethodGroup_GetBadge_UnitTests.md)
  - [GetBadge_Assertions](LDoc/docs/MarkdownDocument_MethodGroup_GetBadge_Assertions.md)
  - [Methods](LDoc/docs/MarkdownDocument_MethodGroup_Methods.md)
+ - [GetBadges_Info](LDoc/docs/MarkdownDocument_Type_GetBadges_Info.md)
+ - [GetBadges_Coverage](LDoc/docs/MarkdownDocument_Type_GetBadges_Coverage.md)
  - [TypeMeta](LDoc/docs/MarkdownDocument_Type_TypeMeta.md)
  - [MemberMarkdown](LDoc/docs/MarkdownDocument_Type_MemberMarkdown.md)
  - [MicrosoftSystemReferencePath](LDoc/docs/SolutionMarkdownGenerator_MicrosoftSystemReferencePath.md)
@@ -123,10 +146,6 @@
  - [LinkToType](LDoc/docs/SolutionMarkdownGenerator_LinkToType.md)
  - [GetTypeMemberMarkdown](LDoc/docs/SolutionMarkdownGenerator_GetTypeMemberMarkdown.md)
  - [GetAssemblyTypeMarkdown](LDoc/docs/SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md)
- - [GetBadges_Info](LDoc/docs/SolutionMarkdownGenerator_GetBadges_Info-0.md)
- - [GetBadges_Coverage](LDoc/docs/SolutionMarkdownGenerator_GetBadges_Coverage-0.md)
- - [GetBadges_Info](LDoc/docs/SolutionMarkdownGenerator_GetBadges_Info-1.md)
- - [GetBadges_Coverage](LDoc/docs/SolutionMarkdownGenerator_GetBadges_Coverage-1.md)
  - [BannerImage_Large](LDoc/docs/SolutionMarkdownGenerator_BannerImage_Large.md)
  - [BannerImage_Small](LDoc/docs/SolutionMarkdownGenerator_BannerImage_Small.md)
  - [LogoImage_Large](LDoc/docs/SolutionMarkdownGenerator_LogoImage_Large.md)
@@ -147,6 +166,7 @@
  - [DocumentAssemblies](LDoc/docs/SolutionMarkdownGenerator_DocumentAssemblies.md)
  - [TestAssemblies](LDoc/docs/SolutionMarkdownGenerator_TestAssemblies.md)
  - [Home_RelatedProjects](LDoc/docs/SolutionMarkdownGenerator_Home_RelatedProjects.md)
+ - [RootUrl](LDoc/docs/SolutionMarkdownGenerator_RootUrl.md)
  - [CustomBadgeUrls](LDoc/docs/SolutionMarkdownGenerator_CustomBadgeUrls.md)
  - [CustomTypeLinks](LDoc/docs/SolutionMarkdownGenerator_CustomTypeLinks.md)
  - [Markdown_Other](LDoc/docs/SolutionMarkdownGenerator_Markdown_Other.md)
@@ -167,25 +187,11 @@
  - [CustomCommentColor](LDoc/docs/SolutionMarkdownGenerator_CustomCommentColor.md)
  - [CSharpLanguage](LDoc/docs/SolutionMarkdownGenerator_CSharpLanguage.md)
  - [MarkdownPath_RootFile](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_RootFile.md)
- - [Text](LDoc/docs/SolutionMarkdownGenerator_Text.md)
- - [BadgeInfoColor](LDoc/docs/ColorSettings_BadgeInfoColor.md)
- - [MarkdownDocuments](LDoc/docs/GeneratorStatistics_MarkdownDocuments.md)
- - [ProjectMarkdownDocuments](LDoc/docs/GeneratorStatistics_ProjectMarkdownDocuments.md)
- - [AssemblyMarkdownDocuments](LDoc/docs/GeneratorStatistics_AssemblyMarkdownDocuments.md)
- - [TypeMarkdownDocuments](LDoc/docs/GeneratorStatistics_TypeMarkdownDocuments.md)
- - [MemberMarkdownDocuments](LDoc/docs/GeneratorStatistics_MemberMarkdownDocuments.md)
- - [Headers](LDoc/docs/GeneratorStatistics_Headers.md)
- - [Tables](LDoc/docs/GeneratorStatistics_Tables.md)
- - [Links](LDoc/docs/GeneratorStatistics_Links.md)
- - [LocalLinks](LDoc/docs/GeneratorStatistics_LocalLinks.md)
- - [SystemLinks](LDoc/docs/GeneratorStatistics_SystemLinks.md)
- - [ExternalLinks](LDoc/docs/GeneratorStatistics_ExternalLinks.md)
- - [Badges](LDoc/docs/GeneratorStatistics_Badges.md)
  - [Home_RelatedProjects](LDoc/docs/SolutionMarkdownGenerator_L_Home_RelatedProjects.md)
  - [Name](LDoc/docs/ProjectInfo_Name.md)
  - [Description](LDoc/docs/ProjectInfo_Description.md)
  - [Url](LDoc/docs/ProjectInfo_Url.md)
- - [GitHubUrl](LDoc/docs/Urls_GitHubUrl.md)
+ - [LDocManifestUrls](LDoc/docs/ProjectInfo_LDocManifestUrls.md)
  - [MainReadme](LDoc/docs/Text_MainReadme.md)
  - [TableOfContents](LDoc/docs/Text_TableOfContents.md)
  - [CoverageSummary](LDoc/docs/Text_CoverageSummary.md)
@@ -225,6 +231,51 @@
  - [TableHeaderText_Optional](LDoc/docs/Text_TableHeaderText_Optional.md)
  - [TableHeaderText_Type](LDoc/docs/Text_TableHeaderText_Type.md)
  - [TableHeaderText_Description](LDoc/docs/Text_TableHeaderText_Description.md)
+ - [TableHeader_Statistics](LDoc/docs/Text_TableHeader_Statistics.md)
+ - [MemberName](LDoc/docs/DocumentManifest_MemberName.md)
+ - [FullUrl_Documentation](LDoc/docs/DocumentManifest_FullUrl_Documentation.md)
+ - [GetDocument](LDoc/docs/LDocManifest_GetDocument.md)
+ - [CreateManifestJSON](LDoc/docs/LDocManifest_CreateManifestJSON.md)
+ - [FromJSON](LDoc/docs/LDocManifest_FromJSON.md)
+ - [MemberDocuments](LDoc/docs/LDocManifest_MemberDocuments.md)
+ - [GitHubUrl](LDoc/docs/Urls_GitHubUrl.md)
+ - [Home](README.md)
+ - [Coverage Summary]
+ - [Table of Contents](TableOfContents.md)
+
+
+### Statistics
+
+
+Generation Time | Total
+:---  | :--- 
+Duration | 3 seconds
+
+
+Documents | Total
+:---  | :--- 
+Markdown Documents | 240
+Project Markdown Documents | 1
+Assembly Markdown Documents | 1
+Type Markdown Documents | 22
+Member Markdown Documents | 215
+
+
+Markdown | Total
+:---  | :--- 
+Lines | 5504
+Headers | 1296
+Tables | 107
+Badges | 1310
+
+
+Links | Total
+:---  | :--- 
+Links | 3389
+Local Links | 2460
+System Links | 597
+External Links | 0
+
 
 
 

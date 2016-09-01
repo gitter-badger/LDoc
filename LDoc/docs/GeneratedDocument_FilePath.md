@@ -2,7 +2,7 @@
 [Up](GeneratedDocument.md)
 
 ### GeneratedDocument
-[View Source](../Markdown/GeneratedDocument.cs)
+[View Source](../Markdown/Generators/GeneratedDocument.cs)
 
 # FilePath
 

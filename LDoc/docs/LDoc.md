@@ -16,8 +16,8 @@
 <table>
 <thead><tr><td>Public Static Abstract Classes (1)</td>
 <td></td>
-<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-0-red.png" alt="Total Lines of Code 0" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documented-100%25-brightgreen.png" alt="Total Documented 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-0-red.png" alt="Total Code Lines 0" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="LDoc_Urls.md" alt="">Urls</a></strong></h4></td>
 <td>   </td>
@@ -27,7 +27,7 @@
 <tr><td colspan="5"><h6></h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="374"></td></tr>
+<tr><td width="850px" colspan="372"></td></tr>
 </table>
 
 

@@ -3,10 +3,15 @@
 
 ### ColorSettings
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 
 
+
+###### Summary
+
+            Class to store color settings for markdown generation
+            
 
 
 

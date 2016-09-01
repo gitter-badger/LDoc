@@ -5,13 +5,39 @@
 
 ![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
-
+![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
 
 ###### Summary
 
             Generates markdown for an Assembly.
             
+
+<table>
+<thead><tr><td>Public Virtual Methods (2)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-9-orange.png" alt="TODOs 9" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-25-blue.png" alt="Total Code Lines 25" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="MarkdownDocument_Assembly_GetBadges_Info.md" alt="">GetBadges_Info</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-9-yellow.png" alt="TODOs 9" />   </td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Assembly.cs#L96" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-25-blue.png" alt="Lines of Code 25" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Assembly_GetBadges_Info.md" alt="">GetBadges_Info</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);</h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="MarkdownDocument_Assembly_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></strong></h4></td>
+<td>   </td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Assembly.cs#L123" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Assembly_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);</h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="433"></td></tr>
+</table>
+
 
 
 

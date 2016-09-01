@@ -13,16 +13,21 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Project name
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
 
         /// <summary>
         /// Project description
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = "";
 
         /// <summary>
         /// Project Url
         /// </summary>
-        public string Url { get; set; }
+        public string Url { get; set; } = "";
+
+        /// <summary>
+        /// Project LDoc Manifest Url(s)
+        /// </summary>
+        public string[] LDocManifestUrls { get; set; } = { };
         }
     }

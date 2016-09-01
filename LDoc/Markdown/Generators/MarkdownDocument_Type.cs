@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.LUnit;
 
@@ -53,13 +54,9 @@ namespace LCore.LDoc.Markdown
 
             this.Line(this.Header($"{((Type)this.TypeMeta.Member).GetGenericName()}", Size: 3));
             this.Line("");
-            this.Line(
-                this.Generator.GetBadges_Info(this, new TypeCoverage((Type)this.TypeMeta.Member),
-                    this.TypeMeta.Comments).JoinLines(" "));
+            this.Line(this.GetBadges_Info(this).JoinLines(" "));
             this.Line("");
-            this.Line(
-                this.Generator.GetBadges_Coverage(this, new TypeCoverage((Type)this.TypeMeta.Member),
-                    this.TypeMeta.Comments).JoinLines(" "));
+            this.Line(this.GetBadges_Coverage(this).JoinLines(" "));
             this.Line("");
             string TypePath = this.TypeMeta.CodeFilePath;
 
@@ -171,6 +168,113 @@ namespace LCore.LDoc.Markdown
 
             this.Generator.WriteFooter(this);
             }
+
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        [CanBeNull]
+        public virtual List<string> GetBadges_Info([NotNull] GeneratedDocument MD)
+            {
+            var Type = (Type)this.TypeMeta.Member;
+
+            if (Type != null)
+                {
+                var Out = new List<string>();
+
+                string TypeDescription =
+                    Type.IsStatic()
+                        ? "Static Class"
+                        : Type.IsAbstract
+                            ? "Abstract Class"
+                            : Type.IsEnum
+                                ? "Enum "
+                                : Type.IsInterface
+                                    ? "Interface"
+                                    : "Object Class";
+
+                List<KeyValuePair<MemberInfo, MarkdownDocument_Member>> Members = this.Generator.GetTypeMemberMarkdown(Type);
+
+                uint TotalDocumentable = 0;
+                uint Documented = 0;
+
+                // TODO: add total members
+                // TODO: add total lines of code (non 'empty')
+                // TODO: add total extension methods
+                // TODO: add total todo count
+                // TODO: add total bug count
+                // TODO: add total not implemented count
+
+                Members.Each(Member =>
+                {
+                    TotalDocumentable++;
+
+                    var MemberComments = Member.Key.GetComments();
+
+                    if (MemberComments != null)
+                        Documented++;
+                });
+
+
+                Out.Add(MD.Badge(this.Generator.Language.Badge_Type, TypeDescription, BadgeColor.Blue));
+
+                if (TotalDocumentable > 0)
+                    {
+                    int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
+                    Out.Add(MD.Badge(this.Generator.Language.Badge_Documented, $"{DocumentedPercent}%",
+                        this.Generator.GetColorByPercentage(DocumentedPercent)));
+                    }
+
+                return Out;
+                }
+
+            return null;
+            }
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        [CanBeNull]
+        public virtual List<string> GetBadges_Coverage([NotNull] GeneratedDocument MD)
+            {
+            var Type = (Type)this.TypeMeta.Member;
+
+            if (Type != null)
+                {
+                var Out = new List<string>();
+
+                List<KeyValuePair<MemberInfo, MarkdownDocument_Member>> Members = this.Generator.GetTypeMemberMarkdown(Type);
+
+                uint TotalCoverable = 0;
+                uint Covered = 0;
+
+                Members.Each(Member =>
+                {
+                    if (Member.Key is MethodInfo)
+                        {
+                        TotalCoverable++;
+
+                        var MemberCoverage = this.TypeMeta.Coverage;
+
+                        if (MemberCoverage?.IsCovered == true)
+                            Covered++;
+                        }
+                });
+
+
+                if (TotalCoverable > 0)
+                    {
+                    int CoveredPercent = Covered.PercentageOf(TotalCoverable);
+                    Out.Add(MD.Badge(this.Generator.Language.Badge_Covered, $"{CoveredPercent}%",
+                        this.Generator.GetColorByPercentage(CoveredPercent)));
+                    }
+
+                return Out;
+                }
+
+            return null;
+            }
+
 
         private string GetBadge_TotalTodos(uint TotalTodos, bool AsHtml = false)
             {

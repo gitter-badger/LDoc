@@ -2,7 +2,7 @@
 [Up](MarkdownDocument_Type.md)
 
 ### MarkdownDocument_Type
-[View Source](../Markdown/MarkdownDocument_Type.cs)
+[View Source](../Markdown/Generators/MarkdownDocument_Type.cs)
 
 # MemberMarkdown
 

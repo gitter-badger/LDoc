@@ -2,7 +2,7 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # WriteHeader
 
@@ -10,9 +10,9 @@
 
 ##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> WriteHeader(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L278)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L278)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-Blue.png "") [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L277)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L277)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 ##### Summary
 

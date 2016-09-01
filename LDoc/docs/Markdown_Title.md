@@ -2,7 +2,7 @@
 [Up](Markdown.md)
 
 ### Markdown
-[View Source](../Markdown/Markdown.cs)
+[View Source](../Markdown/Generators/Markdown.cs)
 
 # Title
 

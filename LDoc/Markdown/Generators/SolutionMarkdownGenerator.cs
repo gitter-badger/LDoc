@@ -8,8 +8,6 @@ using System.Net;
 using System.Reflection;
 using JetBrains.Annotations;
 using LCore.Extensions;
-using LCore.Interfaces;
-using LCore.LUnit;
 
 // ReSharper disable ExpressionIsAlwaysNull
 // ReSharper disable UnusedParameter.Global
@@ -47,18 +45,6 @@ namespace LCore.LDoc.Markdown
 
 
         #endregion
-
-
-        /// <summary>
-        /// Override this member to customize colors used for badges
-        /// </summary>
-        public virtual ColorSettings Colors { get; } = new ColorSettings();
-
-        /// <summary>
-        /// Keeps track of generation statistics
-        /// </summary>
-        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
-
 
         #region Reference Links
 
@@ -122,6 +108,19 @@ namespace LCore.LDoc.Markdown
 
         #endregion
 
+
+        /// <summary>
+        /// Override this member to customize colors used for badges
+        /// </summary>
+        public virtual ColorSettings Colors { get; } = new ColorSettings();
+
+        /// <summary>
+        /// Keeps track of generation statistics
+        /// </summary>
+        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
+
+
+
         /// <summary>
         /// Override this member to specify the assemblies to generae documentation.
         /// </summary>
@@ -149,6 +148,11 @@ namespace LCore.LDoc.Markdown
             {
             }
 
+        /// <summary>
+        /// Implement this member to specify the Root source control Url for the solution.
+        /// </summary>
+        public abstract string RootUrl { get; }
+
         //https://codesingularity.visualstudio.com/_apis/public/build/definitions/ef4060d7-9700-4b9c-acc3-e2263d774197/3/badge
         // TODO hook custom badge urls
         /// <summary>
@@ -162,7 +166,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>();
 
-        #region Variables + 
+        #region Properties + 
 
         /// <summary>
         /// Other titled markdown,
@@ -264,11 +268,6 @@ namespace LCore.LDoc.Markdown
         public MarkdownDocument_Member FindMarkdown(MemberInfo Member)
             {
             return this.Markdown_Member.First(MD => MD.Key == Member).Value;
-            }
-
-        private string GetFrameworkVersion()
-            {
-            return this.GetType().Assembly.ImageRuntimeVersion;
             }
 
         /// <summary>
@@ -430,190 +429,6 @@ namespace LCore.LDoc.Markdown
             {
             return this.Markdown_Type.Select(Type => Type.Key.GetAssembly()?.GetName().Name == Assembly.GetName().Name);
             }
-
-        #endregion
-
-        #region Badges +
-
-        // TODO: project badges
-
-        #region Assembly Badges
-
-        /// <summary>
-        /// Override this method to customize badges included in type generated markdown documents.
-        /// </summary>
-        public virtual List<string> GetBadges_Info([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Assembly = Coverage?.CoveringAssembly;
-
-            // ReSharper disable once UseObjectOrCollectionInitializer
-            var Out = new List<string>();
-
-            Out.Add(MD.Badge(this.Language.Badge_Framework,
-                $"Version {this.GetFrameworkVersion()}",
-                BadgeColor.Blue));
-
-            // TODO: add output file badge
-            // TODO: add file size badge
-
-            // TODO: add total classes
-            // TODO: add total members
-            // TODO: add total lines of code (non 'empty')
-            // TODO: add total extension methods
-            // TODO: add total todo count
-            // TODO: add total bug count
-            // TODO: add total not implemented count
-
-            return Out;
-            }
-
-        /// <summary>
-        /// Override this method to customize badges included in type generated markdown documents.
-        /// </summary>
-        public virtual List<string> GetBadges_Coverage([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Assembly = Coverage?.CoveringAssembly;
-
-            // ReSharper disable once UseObjectOrCollectionInitializer
-            var Out = new List<string>();
-
-
-            return Out;
-            }
-
-        #endregion
-
-        // TODO: namespace info badges
-        // TODO: namespace coverage badges
-
-        #region Type Badges
-
-        /// <summary>
-        /// Override this method to customize badges included in type generated markdown documents.
-        /// </summary>
-        [CanBeNull]
-        public virtual List<string> GetBadges_Info([NotNull] MarkdownDocument_Type MD, [CanBeNull] TypeCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Type = Coverage?.CoveringType;
-
-            if (Type != null)
-                {
-                var Out = new List<string>();
-
-                string TypeDescription =
-                    Type.IsStatic()
-                        ? "Static Class"
-                        : Type.IsAbstract
-                            ? "Abstract Class"
-                            : Type.IsEnum
-                                ? "Enum "
-                                : Type.IsInterface
-                                    ? "Interface"
-                                    : "Object Class";
-
-                List<KeyValuePair<MemberInfo, MarkdownDocument_Member>> Members = this.GetTypeMemberMarkdown(Type);
-
-                uint TotalDocumentable = 0;
-                uint Documented = 0;
-
-                // TODO: add total members
-                // TODO: add total lines of code (non 'empty')
-                // TODO: add total extension methods
-                // TODO: add total todo count
-                // TODO: add total bug count
-                // TODO: add total not implemented count
-
-                Members.Each(Member =>
-                    {
-                        TotalDocumentable++;
-
-                        var MemberComments = Member.Key.GetComments();
-
-                        if (MemberComments != null)
-                            Documented++;
-                    });
-
-
-                Out.Add(MD.Badge(this.Language.Badge_Type, TypeDescription, BadgeColor.Blue));
-
-                if (TotalDocumentable > 0)
-                    {
-                    int DocumentedPercent = Documented.PercentageOf(TotalDocumentable);
-                    Out.Add(MD.Badge(this.Language.Badge_Documented, $"{DocumentedPercent}%", this.GetColorByPercentage(DocumentedPercent)));
-                    }
-
-                return Out;
-                }
-
-            return null;
-            }
-
-        /// <summary>
-        /// Override this method to customize badges included in type generated markdown documents.
-        /// </summary>
-        [CanBeNull]
-        public virtual List<string> GetBadges_Coverage([NotNull] MarkdownDocument_Type MD, [CanBeNull] TypeCoverage Coverage,
-            [CanBeNull] ICodeComment Comments)
-            {
-            var Type = Coverage?.CoveringType;
-
-            if (Type != null)
-                {
-                var Out = new List<string>();
-
-                string TypeDescription =
-                    Type.IsStatic()
-                        ? "Static Class"
-                        : Type.IsAbstract
-                            ? "Abstract Class"
-                            : Type.IsEnum
-                                ? "Enum "
-                                : Type.IsInterface
-                                    ? "Interface"
-                                    : "Object Class";
-
-                List<KeyValuePair<MemberInfo, MarkdownDocument_Member>> Members = this.GetTypeMemberMarkdown(Type);
-
-                uint TotalCoverable = 0;
-                uint Covered = 0;
-
-                // TODO: add total lines of code (non 'empty')
-
-                Members.Each(Member =>
-                    {
-                        var MemberComments = Member.Key.GetComments();
-
-                        if (Member.Key is MethodInfo)
-                            {
-                            TotalCoverable++;
-
-                            var MemberCoverage = new MethodCoverage((MethodInfo)Member.Key);
-
-                            if (MemberCoverage.IsCovered)
-                                Covered++;
-                            }
-                    });
-
-
-                if (TotalCoverable > 0)
-                    {
-                    int CoveredPercent = Covered.PercentageOf(TotalCoverable);
-                    Out.Add(MD.Badge(this.Language.Badge_Covered, $"{CoveredPercent}%", this.GetColorByPercentage(CoveredPercent)));
-                    }
-
-                return Out;
-                }
-
-            return null;
-            }
-
-        #endregion
-
-        // TODO: member group info badges
-        // TODO: member group coverage badges
 
         #endregion
 
@@ -908,10 +723,10 @@ namespace LCore.LDoc.Markdown
             {
             var AllMarkdown = new List<GeneratedDocument>();
 
-            AllMarkdown.AddRange(this.Markdown_Other.Values);
             AllMarkdown.AddRange(this.Markdown_Assembly.Values);
             AllMarkdown.AddRange(this.Markdown_Type.Values);
             AllMarkdown.AddRange(this.Markdown_Member.Values);
+            AllMarkdown.AddRange(this.Markdown_Other.Values);
 
             return AllMarkdown;
             }
@@ -923,48 +738,8 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this value to customize the text used for markdown generation.
         /// </summary>
-        public virtual Text Language => new Text
-            {
-            MainReadme = "Home",
-            TableOfContents = "Table of Contents",
-            CoverageSummary = "Coverage Summary",
-            CoverageSummaryFile = "CoverageSummary.md",
-            TableOfContentsFile = "TableOfContents.md",
-            Header_Assemblies = "Assemblies",
-            Header_InstallationInstructions = "Installation Instructions",
-            Header_RelatedProjects = "Related Projects",
-            Header_MethodExamples = "Examples",
-            Header_Summary = "Summary",
-            Header_MethodParameters = "Parameters",
-            Header_MethodReturns = "Returns",
-            Header_MethodPermissions = "Permissions",
-            Header_MethodExceptions = "Exceptions",
-            Header_CodeLines = "Lines of Code",
-            Header_Coverage = "Coverage",
-            Header_Documentation = "Documented",
-            LinkText_ViewSource = "View Source",
-            LinkText_Home = "Home",
-            LinkText_Up = "Up",
-            TableHeaderText_MethodParameter = "Parameter",
-            TableHeaderText_Optional = "Optional",
-            TableHeaderText_Type = "Type",
-            TableHeaderText_Description = "Description",
-            Badge_Type = "Type",
-            Badge_Documented = "Documented",
-            Badge_Assertions = "Assertions",
-            Badge_AttributeTests = "AttributeTests",
-            Badge_Covered = "Covered",
-            Badge_Framework = "Framework",
-            Badge_SourceCode = "SourceCode",
-            Badge_SourceCodeAvailable = "Available",
-            Badge_SourceCodeUnavailable = "Unavailable",
-            Badge_UnitTested = "UnitTested",
-            Badge_LinesOfCode = "Lines of Code",
-            Badge_BUGs = "Bugs",
-            Badge_TODOs = "TODOs",
-            Badge_NotImplemented = "Not Implemented",
-            AltText_Logo = "Logo"
-            };
+        public virtual Text Language => new Text();
+        #endregion
 
         /// <summary>
         /// Override this to specify custom comment tags to track. 
@@ -986,234 +761,5 @@ namespace LCore.LDoc.Markdown
         /// of the particular custom tag found.
         /// </summary>
         public virtual Dictionary<string, Func<uint, BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, BadgeColor>>();
-
-        /// <summary>
-        /// Structure to customize text used in MarkdownGenerator
-        /// </summary>
-        public struct Text
-            {
-            /// <summary>
-            /// Main readme title, default is "Home"
-            /// </summary>
-            public string MainReadme { get; set; }
-
-            /// <summary>
-            /// Table of Contents readme title, default is "Table of Contents"
-            /// </summary>
-            public string TableOfContents { get; set; }
-
-            /// <summary>
-            /// Coverage Summary readme title, default is "Coverage Summary"
-            /// </summary>
-            public string CoverageSummary { get; set; }
-
-            /// <summary>
-            /// Coverage summary file name, default is "CoverageSummary.md"
-            /// </summary>
-            public string CoverageSummaryFile { get; set; }
-
-            /// <summary>
-            /// Table of contents file name, default is "TableOfContents.md"
-            /// </summary>
-            public string TableOfContentsFile { get; set; }
-
-            /// <summary>
-            /// Badge title for project framework
-            /// </summary>
-            public string Badge_Framework { get; set; }
-
-            /// <summary>
-            /// Badge title for object Type
-            /// </summary>
-            public string Badge_Type { get; set; }
-
-            /// <summary>
-            /// Badge title for lines of code
-            /// </summary>
-            public string Badge_LinesOfCode { get; set; }
-
-            /// <summary>
-            /// Badge title for to-dos
-            /// </summary>
-            public string Badge_TODOs { get; set; }
-
-            /// <summary>
-            /// Badge title for bugs
-            /// </summary>
-            public string Badge_BUGs { get; set; }
-
-            /// <summary>
-            /// Badge title for NotImplementedException
-            /// </summary>
-            public string Badge_NotImplemented { get; set; }
-
-
-            /// <summary>
-            /// Badge title for member Documented
-            /// </summary>
-            public string Badge_Documented { get; set; }
-
-            /// <summary>
-            /// Badge title for member Assertions
-            /// </summary>
-            public string Badge_Assertions { get; set; }
-
-            /// <summary>
-            /// Badge title for member UnitTested
-            /// </summary>
-            public string Badge_UnitTested { get; set; }
-
-            /// <summary>
-            /// Badge title for member Covered
-            /// </summary>
-            public string Badge_Covered { get; set; }
-
-            /// <summary>
-            /// Badge title for member Source Code
-            /// </summary>
-            public string Badge_SourceCode { get; set; }
-
-            /// <summary>
-            /// Badge title for member Source Code Available
-            /// </summary>
-            public string Badge_SourceCodeAvailable { get; set; }
-
-            /// <summary>
-            /// Badge title for member Source Code Unavailable
-            /// </summary>
-            public string Badge_SourceCodeUnavailable { get; set; }
-
-            /// <summary>
-            /// Badge title for member AttributeTests
-            /// </summary>
-            public string Badge_AttributeTests { get; set; }
-
-            /// <summary>
-            /// Badge title for Assemblies Header
-            /// </summary>
-            public string Header_Assemblies { get; set; }
-
-            /// <summary>
-            /// Badge title for Installation Instructions Header
-            /// </summary>
-            public string Header_InstallationInstructions { get; set; }
-
-            /// <summary>
-            /// Header for related projects
-            /// </summary>
-            public string Header_RelatedProjects { get; set; }
-
-            /// <summary>
-            /// Header for method parameters
-            /// </summary>
-            public string Header_MethodParameters { get; set; }
-
-            /// <summary>
-            /// Header for method returns
-            /// </summary>
-            public string Header_MethodReturns { get; set; }
-
-            /// <summary>
-            /// Header for method summary
-            /// </summary>
-            public string Header_Summary { get; set; }
-
-            /// <summary>
-            /// Header for method examples
-            /// </summary>
-            public string Header_MethodExamples { get; set; }
-
-            /// <summary>
-            /// Header for method permissions
-            /// </summary>
-            public string Header_MethodPermissions { get; set; }
-
-            /// <summary>
-            /// Header for method exceptions
-            /// </summary>
-            public string Header_MethodExceptions { get; set; }
-
-            /// <summary>
-            /// Header for code lines
-            /// </summary>
-            public string Header_CodeLines { get; set; }
-
-            /// <summary>
-            /// Header for documentation
-            /// </summary>
-            public string Header_Documentation { get; set; }
-
-            /// <summary>
-            /// Header for coverage
-            /// </summary>
-            public string Header_Coverage { get; set; }
-
-
-            /// <summary>
-            /// Link text for view source
-            /// </summary>
-            public string LinkText_ViewSource { get; set; }
-
-            /// <summary>
-            /// Link text for home
-            /// </summary>
-            public string LinkText_Home { get; set; }
-
-            /// <summary>
-            /// Link text for up
-            /// </summary>
-            public string LinkText_Up { get; set; }
-
-            /// <summary>
-            /// Alt text for the logo
-            /// </summary>
-            public string AltText_Logo { get; set; }
-
-            /// <summary>
-            /// Table header text method parameter
-            /// </summary>
-            public string TableHeaderText_MethodParameter { get; set; }
-
-            /// <summary>
-            /// Table header text optional
-            /// </summary>
-            public string TableHeaderText_Optional { get; set; }
-
-            /// <summary>
-            /// Table header text type
-            /// </summary>
-            public string TableHeaderText_Type { get; set; }
-
-            /// <summary>
-            /// Table header text description
-            /// </summary>
-            public string TableHeaderText_Description { get; set; }
-            }
-
-        #endregion
-        }
-
-    public class ColorSettings
-        {
-        public BadgeColor BadgeInfoColor { get; set; } = BadgeColor.Blue;
-        }
-    public class GeneratorStatistics
-        {
-        public uint MarkdownDocuments { get; set; }
-
-        public uint ProjectMarkdownDocuments { get; set; }
-        public uint AssemblyMarkdownDocuments { get; set; }
-        public uint TypeMarkdownDocuments { get; set; }
-        public uint MemberMarkdownDocuments { get; set; }
-
-        public uint Headers { get; set; }
-        public uint Tables { get; set; }
-        public uint Links { get; set; }
-        public uint LocalLinks { get; set; }
-        public uint SystemLinks { get; set; }
-        public uint ExternalLinks { get; set; }
-
-        public uint Badges { get; set; }
-
         }
     }

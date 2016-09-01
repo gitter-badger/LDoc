@@ -25,6 +25,14 @@ namespace LCore.LDoc.Markdown
         public string FilePath { get; }
 
         /// <inheritdoc />
+        public override void Line(string Line)
+            {
+            this.Generator.Stats.Lines++;
+
+            base.Line(Line);
+            }
+
+        /// <inheritdoc />
         public override void Table(IEnumerable<IEnumerable<string>> Rows, bool IncludeHeader = true, L.Align[] Alignment = null, bool AsHtml = false,
             string TableWidth = "")
             {
@@ -111,5 +119,21 @@ namespace LCore.LDoc.Markdown
         /// Generate the document
         /// </summary>
         protected abstract void GenerateDocument();
+
+        /// <summary>
+        /// Returns the full Url for a document once it's deployed
+        /// </summary>
+        /// <returns></returns>
+        public string GetLiveUrl()
+            {
+            string FullPath = this.FilePath;
+            string RootSolution = L.Ref.GetSolutionRootPath();
+            string RootGitHub = this.Generator.RootUrl;
+
+            string Out = FullPath.Replace(RootSolution, RootGitHub)
+                .ReplaceAll("\\", "/");
+
+            return Out;
+            }
         }
     }

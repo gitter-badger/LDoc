@@ -2,7 +2,7 @@
 [Up](GeneratedDocument.md)
 
 ### GeneratedDocument
-[View Source](../Markdown/GeneratedDocument.cs)
+[View Source](../Markdown/Generators/GeneratedDocument.cs)
 
 # Generate
 
@@ -10,9 +10,9 @@
 
 ##### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate();
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/GeneratedDocument.cs#L103)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GeneratedDocument.cs#L103)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-Blue.png "") [![Lines of Code 6](http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png "")](../Markdown/Generators/GeneratedDocument.cs#L111)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/GeneratedDocument.cs#L111)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GeneratedDocument.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/GeneratedDocument.cs)
 
 #### Returns
 

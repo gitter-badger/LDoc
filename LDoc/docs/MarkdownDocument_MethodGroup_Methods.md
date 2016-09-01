@@ -2,7 +2,7 @@
 [Up](MarkdownDocument_MethodGroup.md)
 
 ### MarkdownDocument_MethodGroup
-[View Source](../Markdown/MarkdownDocument_MethodGroup.cs)
+[View Source](../Markdown/Generators/MarkdownDocument_MethodGroup.cs)
 
 # Methods
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.Interfaces;
 using LCore.LUnit;
@@ -50,8 +51,8 @@ namespace LCore.LDoc.Markdown
 
             this.Line(this.Header($"{this.Assembly.GetName().Name}", Size: 2));
 
-            this.Line(this.Generator.GetBadges_Info(this, this.Coverage, Comments).JoinLines(" "));
-            this.Line(this.Generator.GetBadges_Coverage(this, this.Coverage, Comments).JoinLines(" "));
+            this.Line(this.GetBadges_Info(this, this.Coverage, Comments).JoinLines(" "));
+            this.Line(this.GetBadges_Coverage(this, this.Coverage, Comments).JoinLines(" "));
 
             List<KeyValuePair<Type, MarkdownDocument_Type>> Types = this.Generator.GetAssemblyTypeMarkdown(this.Assembly);
 
@@ -61,8 +62,8 @@ namespace LCore.LDoc.Markdown
 
             Namespaces.Sort();
 
-            this.Generator.GetBadges_Info(this, this.Coverage, Comments);
-            this.Generator.GetBadges_Coverage(this, this.Coverage, Comments);
+            this.GetBadges_Info(this, this.Coverage, Comments);
+            this.GetBadges_Coverage(this, this.Coverage, Comments);
 
             Namespaces.Each(Namespace =>
                 {
@@ -78,14 +79,57 @@ namespace LCore.LDoc.Markdown
                         {
                             this.Line(this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4));
 
-                            var TypeComments = Type.Value.TypeMeta.Comments;
-
-                            this.Generator.GetBadges_Info(Type.Value, new TypeCoverage(Type.Key), TypeComments);
-                            this.Generator.GetBadges_Coverage(Type.Value, new TypeCoverage(Type.Key), TypeComments);
+                            Type.Value.GetBadges_Info(Type.Value);
+                            Type.Value.GetBadges_Coverage(Type.Value);
                         });
                 });
 
             this.Generator.WriteFooter(this);
             }
+
+
+        #region Assembly Badges
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        public virtual List<string> GetBadges_Info([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            // ReSharper disable once UseObjectOrCollectionInitializer
+            var Out = new List<string>();
+
+            Out.Add(MD.Badge(this.Generator.Language.Badge_Framework,
+                $"Version {this.Assembly.ImageRuntimeVersion}",
+                BadgeColor.Blue));
+
+            // TODO: add output file badge
+            // TODO: add file size badge
+
+            // TODO: add total classes
+            // TODO: add total members
+            // TODO: add total lines of code (non 'empty')
+            // TODO: add total extension methods
+            // TODO: add total todo count
+            // TODO: add total bug count
+            // TODO: add total not implemented count
+
+            return Out;
+            }
+
+        /// <summary>
+        /// Override this method to customize badges included in type generated markdown documents.
+        /// </summary>
+        public virtual List<string> GetBadges_Coverage([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
+            [CanBeNull] ICodeComment Comments)
+            {
+            // ReSharper disable once UseObjectOrCollectionInitializer
+            var Out = new List<string>();
+
+
+            return Out;
+            }
+
+        #endregion
         }
     }

@@ -2,7 +2,7 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # DocumentUnitCoverage
 

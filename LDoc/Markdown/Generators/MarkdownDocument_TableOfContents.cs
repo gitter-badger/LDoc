@@ -29,7 +29,16 @@ namespace LCore.LDoc.Markdown
 
             this.Line(this.Header(this.Generator.Language.TableOfContents, Size: 2));
 
-            this.Generator.GetAllMarkdown().Each(Document => { this.Line($" - {this.Link(this.GetRelativePath(Document.FilePath), Document.Title)}"); });
+            this.Generator.GetAllMarkdown().Each(Document =>
+                this.Line($" - {this.Link(this.GetRelativePath(Document.FilePath), Document.Title)}"));
+
+            this.BlankLine();
+            this.Line(this.Header(this.Generator.Language.TableHeader_Statistics, Size: 3));
+            this.BlankLine();
+            List<string[,]> Stats = this.Generator.Stats.ToTables();
+
+            foreach (string[,] StatTable in Stats)
+                this.Table(StatTable);
 
             this.Generator.WriteFooter(this);
             }
