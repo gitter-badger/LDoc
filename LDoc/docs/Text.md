@@ -7,6 +7,7 @@
 
 
 
+[View Source](../Markdown/Text/Text.cs#L)
 
 ###### Summary
 

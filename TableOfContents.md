@@ -257,7 +257,7 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 5 seconds
+Duration | 6 seconds
 
 
 Documents | Total
@@ -271,16 +271,16 @@ Member Markdown Documents | 219
 
 Markdown | Total
 :---  | :--- 
-Lines | 5951
+Lines | 6710
 Headers | 1332
-Tables | 112
+Tables | 202
 Badges | 1325
 
 
 Links | Total
 :---  | :--- 
-Links | 3715
-Local Links | 2771
+Links | 4204
+Local Links | 3260
 System Links | 603
 External Links | 0
 

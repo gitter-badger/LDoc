@@ -67,9 +67,7 @@ namespace LCore.LDoc.Markdown
 
             var TodoDocument = this.Generator.Markdown_Other.SafeGet("TODO Summary");
             if (TodoDocument != null)
-                {
                 this.Line(this.Header(this.Link(this.GetRelativePath(TodoDocument.FilePath), TodoDocument.Title), Size: 3));
-                }
 
             var BugDocument = this.Generator.Markdown_Other.SafeGet("BUG Summary");
             if (BugDocument != null)

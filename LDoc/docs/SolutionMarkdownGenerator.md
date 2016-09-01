@@ -7,6 +7,7 @@
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs#L)
 
 ###### Summary
 
@@ -54,7 +55,7 @@
 <td><img src="http://b.repl.ca/v1/TODOs-3-orange.png" alt="TODOs 3" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-292-blue.png" alt="Total Code Lines 292" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-10%25-red.png" alt="Total Coverage 10%" /></td></tr></thead>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_HowToInstall.md" alt="">HowToInstall</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L147" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
@@ -227,7 +228,7 @@
 <td>   </td>
 <td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L533" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-Yes-brightgreen.png" alt="Covered Yes" /></td></tr>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_Assembly.md" alt="">MarkdownPath_Assembly</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);</h6>
 </td>
 </tr>
@@ -235,7 +236,7 @@
 <td>   </td>
 <td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L539" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-Yes-brightgreen.png" alt="Covered Yes" /></td></tr>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_Type.md" alt="">MarkdownPath_Type</a>(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);</h6>
 </td>
 </tr>
@@ -243,7 +244,7 @@
 <td>   </td>
 <td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L546" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-Yes-brightgreen.png" alt="Covered Yes" /></td></tr>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_Member.md" alt="">MarkdownPath_Member</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a> Member);</h6>
 </td>
 </tr>
@@ -279,7 +280,7 @@
 <tr><td colspan="5"><h6>public virtual <strong><a href="BadgeColor.md" alt="">BadgeColor</a></strong> <a href="SolutionMarkdownGenerator_GetColorByPercentage.md" alt="">GetColorByPercentage</a>(<a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Percentage);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="438"></td></tr>
+<tr><td width="850px" colspan="436"></td></tr>
 </table>
 
 
@@ -288,7 +289,7 @@
 <td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-72-blue.png" alt="Total Code Lines 72" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-20%25-red.png" alt="Total Coverage 20%" /></td></tr></thead>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_FindMarkdown.md" alt="">FindMarkdown</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L268" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
@@ -317,7 +318,7 @@
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
 <td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L679" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-38-blue.png" alt="Lines of Code 38" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-Yes-brightgreen.png" alt="Covered Yes" /></td></tr>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_Generate.md" alt="">Generate</a>(<a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> WriteToDisk);</h6>
 </td>
 </tr>
@@ -329,7 +330,7 @@
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong>&gt; <a href="SolutionMarkdownGenerator_GetAllMarkdown.md" alt="">GetAllMarkdown</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="427"></td></tr>
+<tr><td width="850px" colspan="425"></td></tr>
 </table>
 
 

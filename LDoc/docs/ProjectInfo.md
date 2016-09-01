@@ -7,6 +7,7 @@
 
 
 
+[View Source](../Markdown/Projects/ProjectInfo.cs#L)
 
 ###### Summary
 

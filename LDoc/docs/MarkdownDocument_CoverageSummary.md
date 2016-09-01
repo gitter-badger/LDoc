@@ -7,6 +7,7 @@
 
 
 
+[View Source](../Markdown/Generators/MarkdownDocument_CoverageSummary.cs#L)
 
 ###### Summary
 

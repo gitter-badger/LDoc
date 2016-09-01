@@ -7,6 +7,7 @@
 
 
 
+[View Source](../Markdown/Color/BadgeColor.cs#L)
 
 ###### Summary
 

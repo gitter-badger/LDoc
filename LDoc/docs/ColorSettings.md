@@ -7,6 +7,7 @@
 
 
 
+[View Source](../Markdown/Color/ColorSettings.cs#L)
 
 ###### Summary
 

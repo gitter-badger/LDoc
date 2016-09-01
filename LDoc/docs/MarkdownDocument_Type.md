@@ -7,6 +7,7 @@
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
+[View Source](../Markdown/Generators/MarkdownDocument_Type.cs#L)
 
 ###### Summary
 

@@ -7,6 +7,7 @@
 
 
 
+[View Source](../Markdown/Manifest/DocumentManifest.cs#L)
 
 ###### Summary
 
