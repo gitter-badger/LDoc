@@ -274,7 +274,7 @@ Markdown | Total
 Lines | 6710
 Headers | 1332
 Tables | 202
-Badges | 1325
+Badges | 1497
 
 
 Links | Total

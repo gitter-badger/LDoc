@@ -16,12 +16,12 @@
 
 <table>
 <thead><tr><td>Public Virtual Methods (2)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-6-orange.png" alt="TODOs 6" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-26-orange.png" alt="TODOs 26" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-64-blue.png" alt="Total Code Lines 64" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadges_Info.md" alt="">GetBadges_Info</a></strong></h4></td>
-<td><img src="http://b.repl.ca/v1/TODOs-6-yellow.png" alt="TODOs 6" />   </td>
+<td><img src="http://b.repl.ca/v1/TODOs-13-yellow.png" alt="TODOs 13" />   </td>
 <td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L177" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-40-blue.png" alt="Lines of Code 40" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
@@ -29,14 +29,14 @@
 </td>
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></strong></h4></td>
-<td>   </td>
+<td><img src="http://b.repl.ca/v1/TODOs-13-yellow.png" alt="TODOs 13" />   </td>
 <td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L238" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-24-blue.png" alt="Lines of Code 24" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Type_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="433"></td></tr>
+<tr><td width="850px" colspan="435"></td></tr>
 </table>
 
 
