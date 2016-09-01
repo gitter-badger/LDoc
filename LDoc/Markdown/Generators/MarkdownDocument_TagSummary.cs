@@ -61,17 +61,19 @@ namespace LCore.LDoc.Markdown
                         {
                             var Table = new List<List<string>>();
 
+                            string Path = File.Value.First()?.FilePath;
                             Table.Add(new List<string>
                                 {
-                                $"{this.Link(this.GetRelativePath(File.Value.First()?.FilePath), $"{this.Generator.Language.TableHeaderText_File}")} ({File.Value.Count})",
-                                this.Generator.Language.TableHeaderText_Line
+                                $"{this.Link(this.GetRelativePath(Path), $"{this.Generator.Language.TableHeaderText_File}")} ({File.Value.Count})",
+                                $"{this.Link($"{this.GetRelativePath(Path)}", Path.AfterLast("\\"))}"
+                                //this.Generator.Language.TableHeaderText_Line
                                 });
 
                             File.Value.Each(Tag =>
                                 {
                                     Table.Add(new List<string>
                                         {
-                                            $"{this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", Tag.FilePath.AfterLast("\\"))} Line {Tag.LineNumber}",
+                                            this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", $"Line {Tag.LineNumber}"),
                                             Tag.LineText
                                         });
                                 });

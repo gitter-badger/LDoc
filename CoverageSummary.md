@@ -257,7 +257,7 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 4 seconds
+Duration | 5 seconds
 
 
 Documents | Total

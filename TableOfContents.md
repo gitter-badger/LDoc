@@ -257,7 +257,7 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 5 seconds
+Duration | 6 seconds
 
 
 Documents | Total
@@ -279,8 +279,8 @@ Badges | 1325
 
 Links | Total
 :---  | :--- 
-Links | 4204
-Local Links | 3260
+Links | 4294
+Local Links | 3350
 System Links | 603
 External Links | 0
 
