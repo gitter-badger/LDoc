@@ -54,34 +54,34 @@ namespace LCore.LDoc.Markdown
                         if (Tags != null)
                             Lines.AddRange(Tags);
                         }
+                });
 
-                    Dictionary<string, List<CodeLineInfo>> FileTags = Lines.Group(Line => Line.FilePath);
+            Dictionary<string, List<CodeLineInfo>> FileTags = Lines.Group(Line => Line.FilePath);
 
-                    FileTags.Each(File =>
+            FileTags.Each(File =>
+                {
+                    var Table = new List<List<string>>();
+
+                    string Path = File.Value.First()?.FilePath;
+                    Table.Add(new List<string>
                         {
-                            var Table = new List<List<string>>();
-
-                            string Path = File.Value.First()?.FilePath;
-                            Table.Add(new List<string>
-                                {
                                 $"{this.Link(this.GetRelativePath(Path), $"{this.Generator.Language.TableHeaderText_File}")} ({File.Value.Count})",
                                 $"{this.Link($"{this.GetRelativePath(Path)}", Path.AfterLast("\\"))}"
-                                //this.Generator.Language.TableHeaderText_Line
-                                });
-
-                            File.Value.Each(Tag =>
-                                {
-                                    Table.Add(new List<string>
-                                        {
-                                            this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", $"Line {Tag.LineNumber}"),
-                                            Tag.LineText
-                                        });
-                                });
-
-                            this.Table(Table);
+                        //this.Generator.Language.TableHeaderText_Line
                         });
 
+                    File.Value.Each(Tag =>
+                        {
+                            Table.Add(new List<string>
+                                {
+                                            this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", $"Line {Tag.LineNumber}"),
+                                            Tag.LineText
+                                });
+                        });
+
+                    this.Table(Table);
                 });
+
             this.Generator.WriteFooter(this);
             }
         }

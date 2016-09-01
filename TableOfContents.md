@@ -271,16 +271,16 @@ Member Markdown Documents | 219
 
 Markdown | Total
 :---  | :--- 
-Lines | 6710
+Lines | 6041
 Headers | 1332
-Tables | 202
+Tables | 120
 Badges | 1497
 
 
 Links | Total
 :---  | :--- 
-Links | 4294
-Local Links | 3350
+Links | 3789
+Local Links | 2845
 System Links | 603
 External Links | 0
 
