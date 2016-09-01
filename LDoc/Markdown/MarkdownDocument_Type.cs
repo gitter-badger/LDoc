@@ -34,8 +34,21 @@ namespace LCore.LDoc.Markdown
             this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
 
             Generator.GetTypeMemberMarkdown((Type) this.TypeMeta?.Member).Each(
-                MD => this.MemberMarkdown.Add(MD.Key, MD.Value));
+                MD =>
+                    {
+                    this.TotalTodos += (uint) MD.Value.Meta.CommentTODO.Length;
+                    this.TotalBugs += (uint) MD.Value.Meta.CommentBUG.Length;
+                    this.TotalNotImplemented += (uint) MD.Value.Meta.NotImplemented.Length;
+
+                    this.MemberMarkdown.Add(MD.Key, MD.Value);
+                    });
             }
+
+        public uint TotalTodos { get; protected set; }
+
+        public uint TotalBugs { get; protected set; }
+
+        public uint TotalNotImplemented { get; protected set; }
 
         /// <summary>
         /// Generate the document.

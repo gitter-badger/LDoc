@@ -158,20 +158,12 @@ namespace LCore.LDoc.Markdown
                 {
                 var Method = (MethodInfo) this.Member;
                 var Details = Method.GetMemberDetails();
-
-                string Static = Method.IsStatic
-                    ? "Static "
-                    : "Instance";
-
-                string StaticLower = Method.IsStatic
-                    ? " static"
-                    : "";
-
+                
                 string Parameters = Method.GetParameters()
                     .Convert(Param => $"{this.Generator.LinkToType(this, Param.ParameterType, AsHtml)} {Param.Name}")
                     .Combine(", ");
 
-                return $"public{StaticLower} {this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {this.Member.Name}({Parameters});";
+                return $"{Details.ToCodeString()} {this.Generator.LinkToType(this, Method.ReturnType, AsHtml)} {this.Member.Name}({Parameters});";
                 }
             return "";
             }
