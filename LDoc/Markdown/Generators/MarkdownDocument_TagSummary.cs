@@ -63,7 +63,7 @@ namespace LCore.LDoc.Markdown
 
                             Table.Add(new List<string>
                                 {
-                                $"{this.Link(this.GetRelativePath(File.Value.First()?.FilePath), this.Generator.Language.TableHeaderText_File)}",
+                                $"{this.Link(this.GetRelativePath(File.Value.First()?.FilePath), $"{this.Generator.Language.TableHeaderText_File}")} ({File.Value.Count})",
                                 this.Generator.Language.TableHeaderText_Line
                                 });
 
@@ -71,7 +71,7 @@ namespace LCore.LDoc.Markdown
                                 {
                                     Table.Add(new List<string>
                                         {
-                                            $"{ this.Link(this.GetRelativePath(Tag.FilePath),$"{Tag.FilePath.AfterLast("\\")}")} Line {Tag.LineNumber}",
+                                            $"{this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", Tag.FilePath.AfterLast("\\"))} Line {Tag.LineNumber}",
                                             Tag.LineText
                                         });
                                 });
