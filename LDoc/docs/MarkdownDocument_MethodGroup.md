@@ -16,7 +16,7 @@
 
 <table>
 <thead><tr><td>Public Virtual Methods (2)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-6-orange.png" alt="TODOs 6" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-39-orange.png" alt="TODOs 39" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-26-blue.png" alt="Total Code Lines 26" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -36,13 +36,13 @@
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_MethodGroup_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="433"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 
 <table>
 <thead><tr><td>Public Methods (10)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-30-orange.png" alt="TODOs 30" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-39-orange.png" alt="TODOs 39" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-86-blue.png" alt="Total Code Lines 86" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -126,7 +126,7 @@
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_MethodGroup_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="428"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 

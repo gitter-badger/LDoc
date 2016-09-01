@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+
 // ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
 
 namespace LCore.LDoc.Markdown
@@ -13,6 +14,6 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// The color used for information badges
         /// </summary>
-        public string BadgeInfoColor { get; set; } = $"{BadgeColor.Blue}";
+        public string BadgeInfoColor { get; set; } = $"{BadgeColor.Blue}".ToLower();
         }
     }

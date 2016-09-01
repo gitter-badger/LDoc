@@ -28,7 +28,7 @@
 <tr><td colspan="5"><h6></h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="364"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 

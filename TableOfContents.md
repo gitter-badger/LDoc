@@ -38,6 +38,7 @@
  - [Grey](LDoc/docs/BadgeColor_Grey.md)
  - [BadgeInfoColor](LDoc/docs/ColorSettings_BadgeInfoColor.md)
  - [TagName](LDoc/docs/MarkdownDocument_TagSummary_TagName.md)
+ - [TagLines](LDoc/docs/MarkdownDocument_TagSummary_TagLines.md)
  - [Line](LDoc/docs/GeneratedDocument_Line.md)
  - [Table](LDoc/docs/GeneratedDocument_Table-0.md)
  - [Header](LDoc/docs/GeneratedDocument_Header.md)
@@ -265,24 +266,24 @@ Duration | 6 seconds
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 252
+Markdown Documents | 253
 Project Markdown Documents | 4
 Assembly Markdown Documents | 1
 Type Markdown Documents | 23
-Member Markdown Documents | 222
+Member Markdown Documents | 223
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 6086
-Headers | 1338
+Lines | 6107
+Headers | 1346
 Tables | 120
 Badges | 1497
 
 
 Links | Total
 :---  | :--- 
-Links | 3816
+Links | 3817
 Local Links | 2869
 System Links | 603
 External Links | 0

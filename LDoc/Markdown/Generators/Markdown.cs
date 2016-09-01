@@ -148,7 +148,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual void OrderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
-            DepthLine.Each(Line => this.OrderedList((Set<uint, string>)Line));
+            DepthLine.Each(Line => this.OrderedList((Set<uint, string>) Line));
             }
 
         /// <summary>
@@ -169,13 +169,13 @@ namespace LCore.LDoc.Markdown
 
             DepthLine.Each(Line =>
                 {
-                    if (LastLevel == null || Line.Obj1 != LastLevel)
-                        CurrentNumber = 1;
+                if (LastLevel == null || Line.Obj1 != LastLevel)
+                    CurrentNumber = 1;
 
-                    this.Line($"{"  ".Times(Line.Obj1)}{CurrentNumber}{Line.Obj2}");
+                this.Line($"{"  ".Times(Line.Obj1)}{CurrentNumber}{Line.Obj2}");
 
-                    LastLevel = Line.Obj1;
-                    CurrentNumber++;
+                LastLevel = Line.Obj1;
+                CurrentNumber++;
                 });
             }
 
@@ -205,7 +205,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual void UnorderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
-            DepthLine.Each(Line => this.UnorderedList((Set<uint, string>)Line));
+            DepthLine.Each(Line => this.UnorderedList((Set<uint, string>) Line));
             }
 
         /// <summary>
@@ -353,57 +353,57 @@ namespace LCore.LDoc.Markdown
 
             Rows.Each((i, Row) =>
                 {
-                    var Cells = new List<string>();
+                var Cells = new List<string>();
 
-                    Row.Each((j, Column) =>
+                Row.Each((j, Column) =>
+                    {
+                    Cells.Add(Column);
+
+                    if (IncludeHeader && i == 0)
                         {
-                            Cells.Add(Column);
-
-                            if (IncludeHeader && i == 0)
-                                {
-                                if (AsHtml)
-                                    {
-                                    // TODO set alignment here
-                                    }
-                                else
-                                    {
-                                    L.Align? Align = Alignment.GetAt(j);
-
-                                    if (Align == L.Align.Left)
-                                        Divider.Add(":--- ");
-                                    else if (Align == L.Align.Right)
-                                        Divider.Add(" ---:");
-                                    else if (Align == L.Align.Center)
-                                        Divider.Add(":---:");
-                                    else
-                                        Divider.Add(" --- ");
-                                    }
-                                }
-                        });
-
-                    if (AsHtml)
-                        {
-                        if (Cells.Count < Cols)
+                        if (AsHtml)
                             {
-                            string TableRow = "";
-                            for (int j = 0; j < Cells.Count; j++)
-                                {
-                                if (j == Cells.Count - 1)
-                                    TableRow += $"<td colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
-                                else
-                                    TableRow += $"<td>{Cells[j]}</td>\r\n";
-                                }
-                            Table.Add(TableRow);
+                            // TODO set alignment here
                             }
                         else
-                            Table.Add(Cells.Collect(Cell => $"<td>{Cell}</td>").JoinLines());
+                            {
+                            L.Align? Align = Alignment.GetAt(j);
+
+                            if (Align == L.Align.Left)
+                                Divider.Add(":--- ");
+                            else if (Align == L.Align.Right)
+                                Divider.Add(" ---:");
+                            else if (Align == L.Align.Center)
+                                Divider.Add(":---:");
+                            else
+                                Divider.Add(" --- ");
+                            }
+                        }
+                    });
+
+                if (AsHtml)
+                    {
+                    if (Cells.Count < Cols)
+                        {
+                        string TableRow = "";
+                        for (int j = 0; j < Cells.Count; j++)
+                            {
+                            if (j == Cells.Count - 1)
+                                TableRow += $"<td colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
+                            else
+                                TableRow += $"<td>{Cells[j]}</td>\r\n";
+                            }
+                        Table.Add(TableRow);
                         }
                     else
-                        {
-                        Table.Add(Cells.JoinLines(" | "));
-                        if (IncludeHeader && i == 0)
-                            Table.Add(Divider.JoinLines(" | "));
-                        }
+                        Table.Add(Cells.Collect(Cell => $"<td>{Cell}</td>").JoinLines());
+                    }
+                else
+                    {
+                    Table.Add(Cells.JoinLines(" | "));
+                    if (IncludeHeader && i == 0)
+                        Table.Add(Divider.JoinLines(" | "));
+                    }
                 });
 
             this.Line("");
@@ -418,7 +418,7 @@ namespace LCore.LDoc.Markdown
                         : $"<tr>{Row}</tr>"));
 
                 if (!string.IsNullOrEmpty(TableWidth))
-                    this.Line($"<tr><td width=\"{TableWidth}\" colspan=\"{Table[index: 0].Length}\"></td></tr>");
+                    this.Line($"<tr><td width=\"{TableWidth}\" colspan=\"{Table[index: 0].Count("<td>")}\"></td></tr>");
                 this.Line("</table>");
                 }
             else
@@ -542,7 +542,6 @@ namespace LCore.LDoc.Markdown
             {
             return this.Badge(Left, Right, Color.ToString().ToLower(), AsHtml);
             }
-
 
 
         /// <summary>

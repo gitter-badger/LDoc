@@ -18,6 +18,10 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string TagName { get; }
 
+        /// <summary>
+        /// All lines found in the project for the current <see cref="TagName"/>
+        /// </summary>
+        public List<CodeLineInfo> TagLines { get; }
 
         /// <summary>
         /// Create a new root Markdown file.
@@ -26,6 +30,25 @@ namespace LCore.LDoc.Markdown
             : base(Generator, FilePath, Title)
             {
             this.TagName = TagName;
+            this.TagLines = new List<CodeLineInfo>();
+
+            this.Generator.Markdown_Type.Each(Type =>
+                {
+                var Comments = Type.Key.GatherCodeCoverageMetaData(this.Generator.CustomCommentTags);
+
+                if (this.TagName.ToLower() == "todo")
+                    this.TagLines.AddRange(Comments?.CommentTODO);
+                else if (this.TagName.ToLower() == "bug")
+                    this.TagLines.AddRange(Comments?.CommentBUG);
+                else if (this.TagName.ToLower() == "throw new NotImplementedException")
+                    this.TagLines.AddRange(Comments?.NotImplemented);
+                else
+                    {
+                    List<CodeLineInfo> Tags = Comments?.CommentTags.SafeGet(this.TagName);
+                    if (Tags != null)
+                        this.TagLines.AddRange(Tags);
+                    }
+                });
             }
 
         /// <summary>
@@ -37,49 +60,34 @@ namespace LCore.LDoc.Markdown
 
             this.Generator.WriteHeader(this);
 
-            var Lines = new List<CodeLineInfo>();
-            this.Generator.Markdown_Type.Each(Type =>
-                {
-                    var Comments = Type.Key.GatherCodeCoverageMetaData(this.Generator.CustomCommentTags);
 
-                    if (this.TagName.ToLower() == "todo")
-                        Lines.AddRange(Comments?.CommentTODO);
-                    else if (this.TagName.ToLower() == "bug")
-                        Lines.AddRange(Comments?.CommentBUG);
-                    else if (this.TagName.ToLower() == "throw new NotImplementedException")
-                        Lines.AddRange(Comments?.NotImplemented);
-                    else
-                        {
-                        List<CodeLineInfo> Tags = Comments?.CommentTags.SafeGet(this.TagName);
-                        if (Tags != null)
-                            Lines.AddRange(Tags);
-                        }
-                });
+            this.Line(this.Header(this.Title, Size: 3));
+            this.Line(this.Header($"Total ({this.TagLines.Count})", Size: 4));
 
-            Dictionary<string, List<CodeLineInfo>> FileTags = Lines.Group(Line => Line.FilePath);
+            Dictionary<string, List<CodeLineInfo>> FileTags = this.TagLines.Group(Line => Line.FilePath);
 
             FileTags.Each(File =>
                 {
-                    var Table = new List<List<string>>();
+                var Table = new List<List<string>>();
 
-                    string Path = File.Value.First()?.FilePath;
+                string Path = File.Value.First()?.FilePath;
+                Table.Add(new List<string>
+                    {
+                    "Line",
+                    $"{this.Link($"{this.GetRelativePath(Path)}", $"{Path.AfterLast("\\")}")} ({File.Value.Count})"
+                    //this.Generator.Language.TableHeaderText_Line
+                    });
+
+                File.Value.Each(Tag =>
+                    {
                     Table.Add(new List<string>
                         {
-                                $"{this.Link(this.GetRelativePath(Path), $"{this.Generator.Language.TableHeaderText_File}")} ({File.Value.Count})",
-                                $"{this.Link($"{this.GetRelativePath(Path)}", Path.AfterLast("\\"))}"
-                        //this.Generator.Language.TableHeaderText_Line
+                        this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", $"{Tag.LineNumber}"),
+                        Tag.LineText
                         });
+                    });
 
-                    File.Value.Each(Tag =>
-                        {
-                            Table.Add(new List<string>
-                                {
-                                            this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", $"Line {Tag.LineNumber}"),
-                                            Tag.LineText
-                                });
-                        });
-
-                    this.Table(Table);
+                this.Table(Table);
                 });
 
             this.Generator.WriteFooter(this);

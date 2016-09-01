@@ -13,7 +13,7 @@ namespace Test_LDoc
     {
     public class LDocSolutionMarkdownGenerator : SolutionMarkdownGenerator_L
         {
-        public override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
+        public override Assembly[] DocumentAssemblies => new[] {Assembly.GetAssembly(typeof(LDoc))};
 
         public override void Home_Intro(GeneratedDocument MD)
             {
@@ -22,21 +22,15 @@ namespace Test_LDoc
         public override void HowToInstall(GeneratedDocument MD)
             {
             MD.Line($"Add {nameof(LCore.LDoc)} as a nuget package:");
-            MD.Code(new[] { $"Install-Package {nameof(LCore.LDoc)}" });
+            MD.Code(new[] {$"Install-Package {nameof(LCore.LDoc)}"});
             }
 
         public override List<ProjectInfo> Home_RelatedProjects
             => base.Home_RelatedProjects.Select(Project => Project.Name != nameof(LDoc));
 
-        /// <summary>
-        /// Override this value to display a large image on top ofthe main document
-        /// </summary>
         public override string BannerImage_Large(GeneratedDocument MD) =>
             MD.GetRelativePath($"{typeof(LDoc).GetAssembly().GetRootPath()}\\Content\\{nameof(LDoc)}-banner-large.png");
 
-        /// <summary>
-        /// Override this value to display a small banner image on top of sub-documents
-        /// </summary>
         public override string BannerImage_Small(GeneratedDocument MD) =>
             MD.GetRelativePath($"{typeof(LDoc).GetAssembly().GetRootPath()}\\Content\\{nameof(LDoc)}-banner-small.png");
 
@@ -48,12 +42,10 @@ namespace Test_LDoc
 
         public override Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>
             {
+            // TODO all of these should auto-link once manifests are working
             [typeof(AssemblyCoverage)] = $"{RootLUnitGitHub}/LUnit/docs/AssemblyCoverage.md",
-            [typeof(BadgeColor)] = "", // TODO link enums properly, fix in LCore find source file for enum types
-
-            [typeof(ICodeComment)] = "", // TODO link once LCore is documented
-            [typeof(L.Align)] = "", // TODO link once LCore is documented
-
+            [typeof(ICodeComment)] = "",
+            [typeof(L.Align)] = "",
             [typeof(Set<,>)] = "",
             [typeof(TypeCoverage)] = ""
             };

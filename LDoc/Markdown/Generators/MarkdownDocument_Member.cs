@@ -24,8 +24,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public CodeCoverageMetaData Meta { get; }
 
-
         #endregion
+
         /// <summary>
         /// Creates a new markdown member document
         /// </summary>
@@ -60,7 +60,7 @@ namespace LCore.LDoc.Markdown
 
             if (this.Member is MethodInfo)
                 {
-                var Method = (MethodInfo)this.Member;
+                var Method = (MethodInfo) this.Member;
                 var Details = Method.GetMemberDetails();
 
                 string Signature = this.GetSignature(this, AsHtml: true);
@@ -94,8 +94,8 @@ namespace LCore.LDoc.Markdown
 
                     Method.GetParameters().Each((ParamIndex, Param) =>
                         {
-                            Table.Add(new[]
-                                {
+                        Table.Add(new[]
+                            {
                             Param.Name,
                             Param.IsOptional
                                 ? "Yes"
@@ -116,7 +116,7 @@ namespace LCore.LDoc.Markdown
                 if (this.Meta.Comments?.Examples.Length > 0)
                     {
                     this.Line(this.Header(this.Generator.Language.Header_MethodExamples, Size: 4));
-                    this.Meta.Comments?.Examples.Each(Example => this.Code(new[] { Example }));
+                    this.Meta.Comments?.Examples.Each(Example => this.Code(new[] {Example}));
                     }
 
                 if (this.Meta.Comments?.Permissions.Length > 0)
@@ -150,7 +150,7 @@ namespace LCore.LDoc.Markdown
                 {
                 if (this.Member is MethodInfo)
                     {
-                    var Method = (MethodInfo)this.Member;
+                    var Method = (MethodInfo) this.Member;
 
                     bool ShowInheritance = Details.Inheritance != MemberInheritance.None;
 
@@ -216,7 +216,8 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_MemberType(GeneratedDocument MD, bool AsHtml = false)
             {
             var TypeDescription = this.Member.GetMemberDetails();
-            return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription?.ToString(), this.Generator.Colors.BadgeInfoColor, AsHtml);
+            return MD.Badge(this.Generator.Language.Badge_Type, TypeDescription?.ToString(),
+                this.Generator.Colors.BadgeInfoColor, AsHtml);
             }
 
         /// <summary>
@@ -240,7 +241,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_NotImplemented(GeneratedDocument MD, bool AsHtml = false)
             {
-            uint NotImplementedCount = (uint)this.Meta.NotImplemented.Length;
+            uint NotImplementedCount = (uint) this.Meta.NotImplemented.Length;
 
             if (NotImplementedCount == 0)
                 return "";
@@ -273,7 +274,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Todos(GeneratedDocument MD, bool AsHtml = false)
             {
-            uint TodoCount = (uint)this.Meta.CommentTODO.Length;
+            uint TodoCount = (uint) this.Meta.CommentTODO.Length;
 
             if (TodoCount == 0)
                 return "";
@@ -288,7 +289,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Bugs(GeneratedDocument MD, bool AsHtml = false)
             {
-            uint BugCount = (uint)this.Meta.CommentBUG.Length;
+            uint BugCount = (uint) this.Meta.CommentBUG.Length;
             if (BugCount == 0)
                 return "";
 
@@ -304,22 +305,20 @@ namespace LCore.LDoc.Markdown
             {
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
-                    Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
-                    uint TagCount = (uint)this.Meta.CommentTags[Tag].Count;
+                Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
+                uint TagCount = (uint) this.Meta.CommentTags[Tag].Count;
 
-                    string Color = $"{CommentColor?.Invoke(TagCount)}";
-                    if (string.IsNullOrEmpty(Color))
-                        Color = this.Generator.Colors.BadgeInfoColor;
+                string Color = $"{CommentColor?.Invoke(TagCount)}";
+                if (string.IsNullOrEmpty(Color))
+                    Color = this.Generator.Colors.BadgeInfoColor;
 
-                    return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
+                return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
                 });
             }
-
 
         #endregion
 
         #region Coverage Badges
-
 
         /// <summary>
         /// Override this method to customize badges included in member generated markdown documents.

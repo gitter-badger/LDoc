@@ -68,7 +68,7 @@
 <tr><td colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="GeneratedDocument_Badge-0.md" alt="">Badge</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Left, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Right, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> HexColor, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="360"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 
@@ -102,7 +102,7 @@
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="GeneratedDocument_GetLiveUrl.md" alt="">GetLiveUrl</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="359"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 

@@ -5,6 +5,7 @@ using System.Reflection;
 using JetBrains.Annotations;
 using LCore.Extensions;
 using Newtonsoft.Json;
+
 // ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
 
 namespace LCore.LDoc.Markdown.Manifest
@@ -35,9 +36,9 @@ namespace LCore.LDoc.Markdown.Manifest
             {
             return this.MemberDocuments.First(Doc =>
                 {
-                    if (Member is MethodInfo)
-                        return Doc.MemberName == ((MethodInfo)Member).ToInvocationSignature();
-                    return Doc.MemberName == Member.FullyQualifiedName();
+                if (Member is MethodInfo)
+                    return Doc.MemberName == ((MethodInfo) Member).ToInvocationSignature();
+                return Doc.MemberName == Member.FullyQualifiedName();
                 });
             }
 

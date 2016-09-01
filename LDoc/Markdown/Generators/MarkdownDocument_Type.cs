@@ -45,10 +45,19 @@ namespace LCore.LDoc.Markdown
                     });
             }
 
+        /// <summary>
+        /// Total number of Todos found within the current type
+        /// </summary>
         public uint TotalTodos { get; protected set; }
 
+        /// <summary>
+        /// Total number of bugs found within the current type
+        /// </summary>
         public uint TotalBugs { get; protected set; }
 
+        /// <summary>
+        /// Total number of not implemented exceptions found within the current type
+        /// </summary>
         public uint TotalNotImplemented { get; protected set; }
 
 
@@ -105,11 +114,11 @@ namespace LCore.LDoc.Markdown
 
                 uint LinesTotal = 0;
 
-                uint TotalTodos = 0;
-                uint TotalBugs = 0;
-                uint TotalNotImplemented = 0;
-
                 var Body = new List<string[]>();
+
+                uint GroupTotalTodo = 0;
+                uint GroupTotalBugs = 0;
+                uint GroupTotalNotImplemented = 0;
 
                 Group.Value.Each(Member =>
                     {
@@ -128,15 +137,14 @@ namespace LCore.LDoc.Markdown
                         : 1u;
                     DocumentedTotal += 1u;
 
-                    TotalTodos += (uint) Meta.CommentTODO.Length;
-                    TotalBugs += (uint) Meta.CommentBUG.Length;
-                    TotalNotImplemented += (uint) Meta.NotImplemented.Length;
+                    GroupTotalTodo += (uint) Meta.CommentTODO.Length;
+                    GroupTotalBugs += (uint) Meta.CommentBUG.Length;
+                    GroupTotalNotImplemented += (uint) Meta.NotImplemented.Length;
                     // TODO total for custom tags
 
                     Body.Add(new[]
                         {
-                        this.Header(this.Bold(this.Link(this.GetRelativePath(
-                                this.Generator.FindMarkdown(Member.Key).FilePath),
+                        this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath),
                             Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
                         MD.GetBadge_Bugs(this, AsHtml: true) + " " +
@@ -160,13 +168,9 @@ namespace LCore.LDoc.Markdown
                     new[]
                         {
                         $"{Group.Key.Pluralize()} ({Group.Value.Count})",
-                        this.GetBadge_TotalTodos(TotalTodos, AsHtml: true) +
-                        (TotalBugs > 0
-                            ? this.Badge(this.Generator.Language.Badge_BUGs, $"{TotalBugs}", BadgeColor.Red, AsHtml: true)
-                            : "") +
-                        (TotalNotImplemented > 0
-                            ? this.Badge(this.Generator.Language.Badge_NotImplemented, $"{TotalNotImplemented}", BadgeColor.Orange, AsHtml: true)
-                            : "")
+                        this.GetBadge_TotalTodos(this, GroupTotalTodo, AsHtml: true) +
+                        this.GetBadge_TotalBugs(this, GroupTotalBugs, AsHtml: true) +
+                        this.GetBadge_TotalNotImplemented(this, GroupTotalNotImplemented, AsHtml: true)
                         // TODO total for custom tags
                         ,
                         this.Badge($"Total {this.Generator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0
@@ -290,10 +294,24 @@ namespace LCore.LDoc.Markdown
             }
 
 
-        private string GetBadge_TotalTodos(uint TotalTodos, bool AsHtml = false)
+        public string GetBadge_TotalNotImplemented(GeneratedDocument MD, uint GroupTotalNotImplemented, bool AsHtml)
             {
-            return TotalTodos > 0
-                ? this.Badge(this.Generator.Language.Badge_TODOs, $"{TotalTodos}", BadgeColor.Orange, AsHtml)
+            return GroupTotalNotImplemented > 0
+                ? MD.Badge(this.Generator.Language.Badge_NotImplemented, $"{GroupTotalNotImplemented}", BadgeColor.Orange, AsHtml)
+                : "";
+            }
+
+        public string GetBadge_TotalBugs(GeneratedDocument MD, uint GroupTotalBugs, bool AsHtml)
+            {
+            return GroupTotalBugs > 0
+                ? MD.Badge(this.Generator.Language.Badge_BUGs, $"{GroupTotalBugs}", BadgeColor.Red, AsHtml)
+                : "";
+            }
+
+        public string GetBadge_TotalTodos(GeneratedDocument MD, uint GroupTotalTodo, bool AsHtml = false)
+            {
+            return GroupTotalTodo > 0
+                ? MD.Badge(this.Generator.Language.Badge_TODOs, $"{this.TotalTodos}", BadgeColor.Orange, AsHtml)
                 : "";
             }
         }

@@ -16,7 +16,7 @@
 
 <table>
 <thead><tr><td>Public Methods (1)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-28-orange.png" alt="TODOs 28" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-5-blue.png" alt="Total Code Lines 5" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -28,13 +28,13 @@
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="Markdown_GetMarkdownLines.md" alt="">GetMarkdownLines</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="423"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 
 <table>
 <thead><tr><td>Public Virtual Methods (26)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-26-orange.png" alt="TODOs 26" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-28-orange.png" alt="TODOs 28" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-276-blue.png" alt="Total Code Lines 276" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-73%25-green.png" alt="Total Documentation 73%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -240,13 +240,13 @@
 </tr>
 <tr><td><h4><strong><a href="Markdown_Gravatar.md" alt="">Gravatar</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="../Markdown/Generators/Markdown.cs#L551" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/Markdown.cs#L550" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="Markdown_Gravatar.md" alt="">Gravatar</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ID, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="430"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 

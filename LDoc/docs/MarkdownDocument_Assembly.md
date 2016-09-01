@@ -16,7 +16,7 @@
 
 <table>
 <thead><tr><td>Public Virtual Methods (2)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-20-orange.png" alt="TODOs 20" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-40-orange.png" alt="TODOs 40" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-20-blue.png" alt="Total Code Lines 20" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -36,7 +36,7 @@
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Assembly_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="435"></td></tr>
+<tr><td width="850px" colspan="5"></td></tr>
 </table>
 
 

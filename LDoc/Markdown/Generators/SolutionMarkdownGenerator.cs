@@ -43,7 +43,6 @@ namespace LCore.LDoc.Markdown
         public static string MicrosoftSystemReferencePath(Type SystemType) =>
             "https://msdn.microsoft.com/en-us/library/" + $"{SystemType.FullyQualifiedName().ToLower().Before("[]")}.aspx";
 
-
         #endregion
 
         #region Reference Links
@@ -108,7 +107,6 @@ namespace LCore.LDoc.Markdown
 
         #endregion
 
-
         /// <summary>
         /// Override this member to customize colors used for badges
         /// </summary>
@@ -120,16 +118,15 @@ namespace LCore.LDoc.Markdown
         public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
 
 
-
         /// <summary>
-        /// Override this member to specify the assemblies to generae documentation.
+        /// Override this member to specify the assemblies to generate documentation.
         /// </summary>
         public abstract Assembly[] DocumentAssemblies { get; }
 
         /// <summary>
         /// Override this member to specify any test assemblies
         /// </summary>
-        public virtual Assembly[] TestAssemblies => new Assembly[] { };
+        public virtual Assembly[] TestAssemblies => new Assembly[] {};
 
         /// <summary>
         /// Write the markdown intro to your project, in the front page README.
@@ -158,7 +155,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this to provide custom badge urls for the project.
         /// </summary>
-        public virtual string[] CustomBadgeUrls => new string[] { };
+        public virtual string[] CustomBadgeUrls => new string[] {};
 
         /// <summary>
         /// Override this value to supply custom links to foreign types.
@@ -576,7 +573,7 @@ namespace LCore.LDoc.Markdown
         public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
             !Member.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
             !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
-            !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
+            !(Member is MethodInfo && ((MethodInfo) Member).IsPropertyGetterOrSetter()) &&
             Member.IsDeclaredMember() &&
             !(Member is ConstructorInfo);
 
@@ -593,7 +590,7 @@ namespace LCore.LDoc.Markdown
         /// 100         | BadgeColor.BrightGreen
         /// 101+        | BadgeColor.Blue
         /// </summary>
-        public virtual int[] ColorThresholds => new[] { 30, 50, 70, 100 };
+        public virtual int[] ColorThresholds => new[] {30, 50, 70, 100};
 
         /// <summary>
         /// Gets a BadgeColor for a given <paramref name="Percentage"/>
@@ -716,17 +713,17 @@ namespace LCore.LDoc.Markdown
                 {
                 AllMarkdown.Each(MD =>
                     {
-                        MD.Generate();
+                    MD.Generate();
 
-                        string Path = MD.FilePath;
+                    string Path = MD.FilePath;
 
-                        // just to be safe
-                        if (Path.EndsWith(".md"))
-                            {
-                            Path.EnsurePathExists();
+                    // just to be safe
+                    if (Path.EndsWith(".md"))
+                        {
+                        Path.EnsurePathExists();
 
-                            File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
-                            }
+                        File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
+                        }
                     });
 
                 // TODO generate JSON manifest
@@ -762,6 +759,7 @@ namespace LCore.LDoc.Markdown
         /// Override this value to customize the text used for markdown generation.
         /// </summary>
         public virtual Text Language => new Text();
+
         #endregion
 
         /// <summary>
@@ -777,7 +775,7 @@ namespace LCore.LDoc.Markdown
         ///  "//CustomTag ... " 
         /// 
         /// </summary>
-        public virtual string[] CustomCommentTags => new string[] { };
+        public virtual string[] CustomCommentTags => new string[] {};
 
         /// <summary>
         /// Override this value to determine custom colors depending on the count
