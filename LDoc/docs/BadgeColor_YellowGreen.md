@@ -2,6 +2,7 @@
 [Up](BadgeColor.md)
 
 ### BadgeColor
+[View Source](../Markdown/Color/BadgeColor.cs)
 
 # YellowGreen
 

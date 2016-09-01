@@ -3,10 +3,11 @@
 
 ### MarkdownDocument_Assembly
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 66%](http://b.repl.ca/v1/Documented-66%25-yellowgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
+[View Source](../Markdown/Generators/MarkdownDocument_Assembly.cs#L)
 
 ###### Summary
 
@@ -14,19 +15,28 @@
             
 
 <table>
-<tr><td>Public Override Methods (1)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-1-orange.png" alt="TODOs 1" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-29-blue.png" alt="Total Lines of Code 29" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
-<tr><td><strong><a href="MarkdownDocument_Assembly_Generate.md" alt="">Generate</a></strong></td>
-<td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="../Markdown/MarkdownDocument_Assembly.cs#L41" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png" alt="Lines of Code 29" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<thead><tr><td>Public Virtual Methods (2)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-20-orange.png" alt="TODOs 20" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-20-blue.png" alt="Total Code Lines 20" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="MarkdownDocument_Assembly_GetBadges_Info.md" alt="">GetBadges_Info</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Assembly.cs#L96" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-16-blue.png" alt="Lines of Code 16" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"></td>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Assembly_GetBadges_Info.md" alt="">GetBadges_Info</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);</h6>
+</td>
 </tr>
-<tr><td width="850px" colspan="424"></td></tr>
+<tr><td><h4><strong><a href="MarkdownDocument_Assembly_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Assembly.cs#L123" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Assembly_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="" target="_blank">AssemblyCoverage</a> Coverage, <a href="" alt="" target="_blank">ICodeComment</a> Comments);</h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="435"></td></tr>
 </table>
 
 

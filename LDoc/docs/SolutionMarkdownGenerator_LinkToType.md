@@ -2,17 +2,17 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # LinkToType
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) LinkToType(**[GitHubMarkdown](GitHubMarkdown.md)** MD, [Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) Type);
+##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> LinkToType(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 49](http://b.repl.ca/v1/Lines%20of%20Code-49-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L396) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L396)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-Blue.png "") [![Lines of Code 51](http://b.repl.ca/v1/Lines%20of%20Code-51-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L344) ![TODOs 5](http://b.repl.ca/v1/TODOs-5-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L344)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 ##### Summary
 
@@ -27,8 +27,9 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
+MD | No | **[GeneratedDocument](GeneratedDocument.md)** | 
 Type | No | [Type](https://msdn.microsoft.com/en-us/library/system.type.aspx) | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

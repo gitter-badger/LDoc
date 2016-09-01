@@ -7,7 +7,7 @@
 
 
 
-[View Source](../Markdown/GitHubMarkdown.cs#L548)
+[View Source](../Markdown/Color/BadgeColor.cs#L)
 
 ###### Summary
 

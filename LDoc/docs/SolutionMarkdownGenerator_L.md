@@ -3,10 +3,11 @@
 
 ### SolutionMarkdownGenerator_L
 
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 
 
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator_L.cs#L)
 
 ###### Summary
 

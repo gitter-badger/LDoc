@@ -32,12 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentAssertions, Version=4.13.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.4.13.0\lib\net45\FluentAssertions.dll</HintPath>
+    <Reference Include="FluentAssertions, Version=4.13.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.13.1\lib\net45\FluentAssertions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FluentAssertions.Core, Version=4.13.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.4.13.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+    <Reference Include="FluentAssertions.Core, Version=4.13.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.13.1\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
@@ -45,15 +45,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="L Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.244.2.18\lib\net451\L Utilities.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.245.8.49\lib\net451\L Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="L, Version=0.9.0.11, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.244.2.18\lib\net451\L.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.245.8.49\lib\net451\L.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LUnit.2016.244.2.14\lib\net451\LUnit.dll</HintPath>
+      <HintPath>..\packages\LUnit.2016.244.21.35\lib\net452\LUnit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.UnitTestFramework.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5bf63060baa03a11, processorArchitecture=MSIL">
@@ -61,6 +61,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -70,25 +74,307 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LDoc.cs" />
     <Compile Include="Attributes\ExcludeFromMarkdownAttribute.cs" />
-    <Compile Include="Markdown\GeneratedDocument.cs" />
-    <Compile Include="Markdown\GitHubMarkdown.cs" />
+    <Compile Include="Markdown\Color\BadgeColor.cs" />
+    <Compile Include="Markdown\Color\ColorSettings.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_TagSummary.cs" />
+    <Compile Include="Markdown\Manifest\DocumentManifest.cs" />
+    <Compile Include="Markdown\Generators\GeneratedDocument.cs" />
+    <Compile Include="Markdown\Statistics\GeneratorStatistics.cs" />
+    <Compile Include="Markdown\Manifest\LDocManifest.cs" />
+    <Compile Include="Markdown\Generators\Markdown.cs" />
     <Compile Include="Attributes\Interfaces\IExcludeFromMarkdownAttribute.cs" />
-    <Compile Include="Markdown\MarkdownDocument_Assembly.cs" />
-    <Compile Include="Markdown\MarkdownDocument_Member.cs" />
-    <Compile Include="Markdown\MarkdownDocument_MethodGroup.cs" />
-    <Compile Include="Markdown\MarkdownDocument_Type.cs" />
-    <Compile Include="Markdown\SolutionMarkdownGenerator.cs" />
-    <Compile Include="Markdown\SolutionMarkdownGenerator_L.cs" />
-    <Compile Include="Markdown\ProjectInfo.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_Assembly.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_Member.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_MethodGroup.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_CoverageSummary.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_TableOfContents.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_Root.cs" />
+    <Compile Include="Markdown\Generators\MarkdownDocument_Type.cs" />
+    <Compile Include="Markdown\Generators\SolutionMarkdownGenerator.cs" />
+    <Compile Include="Markdown\Generators\SolutionMarkdownGenerator_L.cs" />
+    <Compile Include="Markdown\Projects\ProjectInfo.cs" />
+    <Compile Include="Markdown\Text\Text.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Content\LDoc small logo.pdn" />
+    <None Include="docs\BadgeColor.md" />
+    <None Include="docs\BadgeColor_Blue.md" />
+    <None Include="docs\BadgeColor_BrightGreen.md" />
+    <None Include="docs\BadgeColor_Green.md" />
+    <None Include="docs\BadgeColor_Grey.md" />
+    <None Include="docs\BadgeColor_LightGrey.md" />
+    <None Include="docs\BadgeColor_Orange.md" />
+    <None Include="docs\BadgeColor_Red.md" />
+    <None Include="docs\BadgeColor_value__.md" />
+    <None Include="docs\BadgeColor_Yellow.md" />
+    <None Include="docs\BadgeColor_YellowGreen.md" />
+    <None Include="docs\ColorSettings.md" />
+    <None Include="docs\ColorSettings_BadgeInfoColor.md" />
+    <None Include="docs\ExcludeFromMarkdownAttribute.md" />
+    <None Include="docs\GeneratedDocument.md" />
+    <None Include="docs\GeneratedDocument_Badge-0.md" />
+    <None Include="docs\GeneratedDocument_FilePath.md" />
+    <None Include="docs\GeneratedDocument_Generate.md" />
+    <None Include="docs\GeneratedDocument_GetRelativePath.md" />
+    <None Include="docs\GeneratedDocument_Header.md" />
+    <None Include="docs\GeneratedDocument_HeaderUnderline.md" />
+    <None Include="docs\GeneratedDocument_Link.md" />
+    <None Include="docs\GeneratedDocument_Table-0.md" />
+    <None Include="docs\GeneratorStatistics.md" />
+    <None Include="docs\GeneratorStatistics_AssemblyMarkdownDocuments.md" />
+    <None Include="docs\GeneratorStatistics_Badges.md" />
+    <None Include="docs\GeneratorStatistics_ExternalLinks.md" />
+    <None Include="docs\GeneratorStatistics_Headers.md" />
+    <None Include="docs\GeneratorStatistics_Links.md" />
+    <None Include="docs\GeneratorStatistics_LocalLinks.md" />
+    <None Include="docs\GeneratorStatistics_MarkdownDocuments.md" />
+    <None Include="docs\GeneratorStatistics_MemberMarkdownDocuments.md" />
+    <None Include="docs\GeneratorStatistics_ProjectMarkdownDocuments.md" />
+    <None Include="docs\GeneratorStatistics_SystemLinks.md" />
+    <None Include="docs\GeneratorStatistics_Tables.md" />
+    <None Include="docs\GeneratorStatistics_TypeMarkdownDocuments.md" />
+    <None Include="docs\GitHubMarkdown.md" />
+    <None Include="docs\GitHubMarkdown_Badge-0.md" />
+    <None Include="docs\GitHubMarkdown_Badge-1.md" />
+    <None Include="docs\GitHubMarkdown_BadgeColor.md" />
+    <None Include="docs\GitHubMarkdown_BlankLine.md" />
+    <None Include="docs\GitHubMarkdown_BlockQuote.md" />
+    <None Include="docs\GitHubMarkdown_Bold.md" />
+    <None Include="docs\GitHubMarkdown_Code.md" />
+    <None Include="docs\GitHubMarkdown_FilePath.md" />
+    <None Include="docs\GitHubMarkdown_GetMarkdownLines.md" />
+    <None Include="docs\GitHubMarkdown_GetRelativePath.md" />
+    <None Include="docs\GitHubMarkdown_Gravatar.md" />
+    <None Include="docs\GitHubMarkdown_Header.md" />
+    <None Include="docs\GitHubMarkdown_HeaderUnderline.md" />
+    <None Include="docs\GitHubMarkdown_Highlight.md" />
+    <None Include="docs\GitHubMarkdown_HorizontalRule.md" />
+    <None Include="docs\GitHubMarkdown_Image.md" />
+    <None Include="docs\GitHubMarkdown_InlineCode.md" />
+    <None Include="docs\GitHubMarkdown_Italic.md" />
+    <None Include="docs\GitHubMarkdown_Line.md" />
+    <None Include="docs\GitHubMarkdown_Lines.md" />
+    <None Include="docs\GitHubMarkdown_Link.md" />
+    <None Include="docs\GitHubMarkdown_OrderedList-0.md" />
+    <None Include="docs\GitHubMarkdown_OrderedList-1.md" />
+    <None Include="docs\GitHubMarkdown_OrderedList-2.md" />
+    <None Include="docs\GitHubMarkdown_Strikethrough.md" />
+    <None Include="docs\GitHubMarkdown_Table-0.md" />
+    <None Include="docs\GitHubMarkdown_Table-1.md" />
+    <None Include="docs\GitHubMarkdown_Title.md" />
+    <None Include="docs\GitHubMarkdown_UnorderedList-0.md" />
+    <None Include="docs\GitHubMarkdown_UnorderedList-1.md" />
+    <None Include="docs\GitHubMarkdown_UnorderedList-2.md" />
+    <None Include="docs\IExcludeFromMarkdownAttribute.md" />
+    <None Include="docs\LDoc.md" />
+    <None Include="docs\LDoc_Urls.md" />
+    <None Include="docs\Markdown.md" />
+    <None Include="docs\MarkdownDocument_Assembly.md" />
+    <None Include="docs\MarkdownDocument_Assembly_Assembly.md" />
+    <None Include="docs\MarkdownDocument_Assembly_Coverage.md" />
+    <None Include="docs\MarkdownDocument_Assembly_Generate.md" />
+    <None Include="docs\MarkdownDocument_CoverageSummary.md" />
+    <None Include="docs\MarkdownDocument_Member.md" />
+    <None Include="docs\MarkdownDocument_Member_Generate.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_Assertions.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_AttributeCoverage.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_Bugs.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_CodeLines.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_Covered.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_CustomTags.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_Documented.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_MemberType.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_NotImplemented.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_SourceCode.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_Todos.md" />
+    <None Include="docs\MarkdownDocument_Member_GetBadge_UnitTests.md" />
+    <None Include="docs\MarkdownDocument_Member_GetSignature.md" />
+    <None Include="docs\MarkdownDocument_Member_Member.md" />
+    <None Include="docs\MarkdownDocument_Member_Meta.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_Generate.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadges_Coverage.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadges_Info.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_Assertions.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_AttributeCoverage.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_Bugs.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_CodeLines.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_CustomTags.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_Documented.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_MemberType.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_NotImplemented.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_Todos.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_GetBadge_UnitTests.md" />
+    <None Include="docs\MarkdownDocument_MethodGroup_Methods.md" />
+    <None Include="docs\MarkdownDocument_Root.md" />
+    <None Include="docs\MarkdownDocument_TableOfContents.md" />
+    <None Include="docs\MarkdownDocument_Type.md" />
+    <None Include="docs\MarkdownDocument_Type_Generate.md" />
+    <None Include="docs\MarkdownDocument_Type_MemberMarkdown.md" />
+    <None Include="docs\MarkdownDocument_Type_TypeMeta.md" />
+    <None Include="docs\Markdown_Badge-0.md" />
+    <None Include="docs\Markdown_Badge-1.md" />
+    <None Include="docs\Markdown_BlankLine.md" />
+    <None Include="docs\Markdown_BlockQuote.md" />
+    <None Include="docs\Markdown_Bold.md" />
+    <None Include="docs\Markdown_Code.md" />
+    <None Include="docs\Markdown_GetMarkdownLines.md" />
+    <None Include="docs\Markdown_Gravatar.md" />
+    <None Include="docs\Markdown_Header.md" />
+    <None Include="docs\Markdown_HeaderUnderline.md" />
+    <None Include="docs\Markdown_Highlight.md" />
+    <None Include="docs\Markdown_HorizontalRule.md" />
+    <None Include="docs\Markdown_Image.md" />
+    <None Include="docs\Markdown_InlineCode.md" />
+    <None Include="docs\Markdown_Italic.md" />
+    <None Include="docs\Markdown_Line.md" />
+    <None Include="docs\Markdown_Lines.md" />
+    <None Include="docs\Markdown_Link.md" />
+    <None Include="docs\Markdown_OrderedList-0.md" />
+    <None Include="docs\Markdown_OrderedList-1.md" />
+    <None Include="docs\Markdown_OrderedList-2.md" />
+    <None Include="docs\Markdown_Strikethrough.md" />
+    <None Include="docs\Markdown_Table-0.md" />
+    <None Include="docs\Markdown_Table-1.md" />
+    <None Include="docs\Markdown_Title.md" />
+    <None Include="docs\Markdown_UnorderedList-0.md" />
+    <None Include="docs\Markdown_UnorderedList-1.md" />
+    <None Include="docs\Markdown_UnorderedList-2.md" />
+    <None Include="docs\ProjectInfo.md" />
+    <None Include="docs\ProjectInfo_Description.md" />
+    <None Include="docs\ProjectInfo_Name.md" />
+    <None Include="docs\ProjectInfo_Url.md" />
+    <None Include="docs\SolutionMarkdownGenerator.md" />
+    <None Include="docs\SolutionMarkdownGenerator_BannerImage_Large.md" />
+    <None Include="docs\SolutionMarkdownGenerator_BannerImage_Small.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Colors.md" />
+    <None Include="docs\SolutionMarkdownGenerator_ColorThresholds.md" />
+    <None Include="docs\SolutionMarkdownGenerator_CSharpLanguage.md" />
+    <None Include="docs\SolutionMarkdownGenerator_CustomBadgeUrls.md" />
+    <None Include="docs\SolutionMarkdownGenerator_CustomCommentColor.md" />
+    <None Include="docs\SolutionMarkdownGenerator_CustomCommentTags.md" />
+    <None Include="docs\SolutionMarkdownGenerator_CustomTypeLinks.md" />
+    <None Include="docs\SolutionMarkdownGenerator_DocumentAssemblies.md" />
+    <None Include="docs\SolutionMarkdownGenerator_DocumentAttributeCoverage.md" />
+    <None Include="docs\SolutionMarkdownGenerator_DocumentUnitCoverage.md" />
+    <None Include="docs\SolutionMarkdownGenerator_FindMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_FormatComment.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Generate.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateCoverageSummaryMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GeneratedMarkdownRoot.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateMarkdown-0.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateMarkdown-1.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateMarkdown-2.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateMarkdown-3.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateRootMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GenerateTableOfContentsMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetAllMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetBadges_Coverage-0.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetBadges_Coverage-1.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetBadges_Info-0.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetBadges_Info-1.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetColorByPercentage.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetOtherDocuments.md" />
+    <None Include="docs\SolutionMarkdownGenerator_GetTypeMemberMarkdown.md" />
+    <None Include="docs\SolutionMarkdownGenerator_HomeLink.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Home_Intro.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Home_RelatedProjects.md" />
+    <None Include="docs\SolutionMarkdownGenerator_HowToInstall.md" />
+    <None Include="docs\SolutionMarkdownGenerator_IncludeMember.md" />
+    <None Include="docs\SolutionMarkdownGenerator_IncludeType.md" />
+    <None Include="docs\SolutionMarkdownGenerator_L.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Language.md" />
+    <None Include="docs\SolutionMarkdownGenerator_LinkToType.md" />
+    <None Include="docs\SolutionMarkdownGenerator_LogoImage_Large.md" />
+    <None Include="docs\SolutionMarkdownGenerator_LogoImage_Small.md" />
+    <None Include="docs\SolutionMarkdownGenerator_L_Home_RelatedProjects.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_Assembly.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_CoverageSummary.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_Member.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_MethodGroup.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_Root.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_RootFile.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_TableOfContents.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MarkdownPath_Type.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Markdown_Assembly.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Markdown_Member.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Markdown_MethodGroups.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Markdown_Other.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Markdown_Type.md" />
+    <None Include="docs\SolutionMarkdownGenerator_MicrosoftSystemReferencePath.md" />
+    <None Include="docs\SolutionMarkdownGenerator_RequireDirectLinksToAllForeignTypes.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Stats.md" />
+    <None Include="docs\SolutionMarkdownGenerator_TableOfContentsLink.md" />
+    <None Include="docs\SolutionMarkdownGenerator_TestAssemblies.md" />
+    <None Include="docs\SolutionMarkdownGenerator_Text.md" />
+    <None Include="docs\SolutionMarkdownGenerator_WriteCustomFooter.md" />
+    <None Include="docs\SolutionMarkdownGenerator_WriteFooter.md" />
+    <None Include="docs\SolutionMarkdownGenerator_WriteHeader.md" />
+    <None Include="docs\Text.md" />
+    <None Include="docs\Text_AltText_Logo.md" />
+    <None Include="docs\Text_Badge_Assertions.md" />
+    <None Include="docs\Text_Badge_AttributeTests.md" />
+    <None Include="docs\Text_Badge_BUGs.md" />
+    <None Include="docs\Text_Badge_Covered.md" />
+    <None Include="docs\Text_Badge_Documented.md" />
+    <None Include="docs\Text_Badge_Framework.md" />
+    <None Include="docs\Text_Badge_LinesOfCode.md" />
+    <None Include="docs\Text_Badge_NotImplemented.md" />
+    <None Include="docs\Text_Badge_SourceCode.md" />
+    <None Include="docs\Text_Badge_SourceCodeAvailable.md" />
+    <None Include="docs\Text_Badge_SourceCodeUnavailable.md" />
+    <None Include="docs\Text_Badge_TODOs.md" />
+    <None Include="docs\Text_Badge_Type.md" />
+    <None Include="docs\Text_Badge_UnitTested.md" />
+    <None Include="docs\Text_CoverageSummary.md" />
+    <None Include="docs\Text_CoverageSummaryFile.md" />
+    <None Include="docs\Text_Header_Assemblies.md" />
+    <None Include="docs\Text_Header_CodeLines.md" />
+    <None Include="docs\Text_Header_Coverage.md" />
+    <None Include="docs\Text_Header_Documentation.md" />
+    <None Include="docs\Text_Header_InstallationInstructions.md" />
+    <None Include="docs\Text_Header_MethodExamples.md" />
+    <None Include="docs\Text_Header_MethodExceptions.md" />
+    <None Include="docs\Text_Header_MethodParameters.md" />
+    <None Include="docs\Text_Header_MethodPermissions.md" />
+    <None Include="docs\Text_Header_MethodReturns.md" />
+    <None Include="docs\Text_Header_RelatedProjects.md" />
+    <None Include="docs\Text_Header_Summary.md" />
+    <None Include="docs\Text_LinkText_Home.md" />
+    <None Include="docs\Text_LinkText_Up.md" />
+    <None Include="docs\Text_LinkText_ViewSource.md" />
+    <None Include="docs\Text_MainReadme.md" />
+    <None Include="docs\Text_TableHeaderText_Description.md" />
+    <None Include="docs\Text_TableHeaderText_MethodParameter.md" />
+    <None Include="docs\Text_TableHeaderText_Optional.md" />
+    <None Include="docs\Text_TableHeaderText_Type.md" />
+    <None Include="docs\Text_TableOfContents.md" />
+    <None Include="docs\Text_TableOfContentsFile.md" />
+    <None Include="docs\Urls.md" />
+    <None Include="docs\Urls_GitHubUrl.md" />
     <None Include="LDoc.md" />
     <None Include="LDoc.nuspec">
       <SubType>Designer</SubType>

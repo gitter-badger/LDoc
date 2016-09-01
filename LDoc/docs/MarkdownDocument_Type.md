@@ -3,10 +3,11 @@
 
 ### MarkdownDocument_Type
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 66%](http://b.repl.ca/v1/Documented-66%25-yellowgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 57%](http://b.repl.ca/v1/Documented-57%25-yellowgreen.png "")
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
+[View Source](../Markdown/Generators/MarkdownDocument_Type.cs#L)
 
 ###### Summary
 
@@ -14,19 +15,28 @@
             
 
 <table>
-<tr><td>Public Override Methods (1)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-7-orange.png" alt="TODOs 7" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Lines%20of%20Code-96-blue.png" alt="Total Lines of Code 96" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documented-0%25-red.png" alt="Total Documented 0%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr>
-<tr><td><strong><a href="MarkdownDocument_Type_Generate.md" alt="">Generate</a></strong></td>
-<td><img src="http://b.repl.ca/v1/TODOs-7-yellow.png" alt="TODOs 7" />   </td>
-<td><a href="../Markdown/MarkdownDocument_Type.cs#L43" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-96-blue.png" alt="Lines of Code 96" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<thead><tr><td>Public Virtual Methods (2)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-26-orange.png" alt="TODOs 26" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-64-blue.png" alt="Total Code Lines 64" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadges_Info.md" alt="">GetBadges_Info</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-13-yellow.png" alt="TODOs 13" />   </td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L191" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-40-blue.png" alt="Lines of Code 40" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"></td>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Type_GetBadges_Info.md" alt="">GetBadges_Info</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
+</td>
 </tr>
-<tr><td width="850px" colspan="424"></td></tr>
+<tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-13-yellow.png" alt="TODOs 13" />   </td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L252" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-24-blue.png" alt="Lines of Code 24" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="MarkdownDocument_Type_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="435"></td></tr>
 </table>
 
 

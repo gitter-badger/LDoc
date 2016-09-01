@@ -2,21 +2,26 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # GenerateRootMarkdown
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public **[GitHubMarkdown](GitHubMarkdown.md)** GenerateRootMarkdown();
+##### public virtual <strong><a href="MarkdownDocument_Root.md" alt="">MarkdownDocument_Root</a></strong> GenerateRootMarkdown();
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 28](http://b.repl.ca/v1/Lines%20of%20Code-28-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L195)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-Blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L208) ![TODOs 5](http://b.repl.ca/v1/TODOs-5-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L208)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
+
+##### Summary
+
+            Generates root markdown document (front page)
+            
 
 #### Returns
 
-###### **[GitHubMarkdown](GitHubMarkdown.md)**
+###### **[MarkdownDocument_Root](MarkdownDocument_Root.md)**
 
 
 

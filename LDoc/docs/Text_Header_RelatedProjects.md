@@ -2,6 +2,7 @@
 [Up](Text.md)
 
 ### Text
+[View Source](../Markdown/Text/Text.cs)
 
 # Header_RelatedProjects
 

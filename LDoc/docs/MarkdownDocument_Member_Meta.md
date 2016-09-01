@@ -2,7 +2,7 @@
 [Up](MarkdownDocument_Member.md)
 
 ### MarkdownDocument_Member
-[View Source](../Markdown/MarkdownDocument_Member.cs)
+[View Source](../Markdown/Generators/MarkdownDocument_Member.cs)
 
 # Meta
 

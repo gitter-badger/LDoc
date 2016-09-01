@@ -2,7 +2,7 @@
 [Up](MarkdownDocument_Assembly.md)
 
 ### MarkdownDocument_Assembly
-[View Source](../Markdown/MarkdownDocument_Assembly.cs)
+[View Source](../Markdown/Generators/MarkdownDocument_Assembly.cs)
 
 # Assembly
 

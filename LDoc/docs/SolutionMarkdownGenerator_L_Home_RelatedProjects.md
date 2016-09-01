@@ -2,7 +2,7 @@
 [Up](SolutionMarkdownGenerator_L.md)
 
 ### SolutionMarkdownGenerator_L
-[View Source](../Markdown/SolutionMarkdownGenerator_L.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator_L.cs)
 
 # Home_RelatedProjects
 

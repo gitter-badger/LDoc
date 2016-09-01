@@ -6,7 +6,6 @@ using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.LDoc.Markdown;
 using Test_LDoc;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace LDoc_Tests.LCore.LDoc.Markdown
@@ -23,6 +22,15 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
         public void Dispose()
             {
+
+            }
+
+        [Fact]
+        public void TestPathFinding()
+            {
+            //typeof(GeneratedDocument).GetMember("Table")[0].DeclaringType.FindSourceCode().ShouldBe("");
+            //typeof(GeneratedDocument).GetMember("Table")[0].DeclaringType.FindClassFile().ShouldBe("");
+            //typeof(GeneratedDocument).GetMember("Table")[0].FindSourceCode().ShouldBe("");
             }
 
 
@@ -38,7 +46,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
             Gen.Generate(WriteToDisk: true);
 
-            List<GitHubMarkdown> Markdown = Gen.GetAllMarkdown();
+            List<GeneratedDocument> Markdown = Gen.GetAllMarkdown();
 
             List<string> Paths = Markdown.Convert(MD => MD?.FilePath);
 

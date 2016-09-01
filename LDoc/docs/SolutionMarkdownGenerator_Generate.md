@@ -2,17 +2,17 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # Generate
 
-#### InstanceMethod
+#### Public Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) Generate([Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) WriteToDisk);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Generate(<a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> WriteToDisk);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 29](http://b.repl.ca/v1/Lines%20of%20Code-29-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L905) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L905)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-Blue.png "") [![Lines of Code 38](http://b.repl.ca/v1/Lines%20of%20Code-38-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L679) ![TODOs 5](http://b.repl.ca/v1/TODOs-5-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L679)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 ##### Summary
 

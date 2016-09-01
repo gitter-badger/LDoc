@@ -6,11 +6,11 @@
 
 # UnorderedList
 
-#### InstanceMethod
+#### Public Method
 
-###### public [void](https://msdn.microsoft.com/en-us/library/system.void.aspx) UnorderedList(<a href="https://msdn.microsoft.com/en-us/library/dd268536.aspx" alt="" target="_blank">Tuple</a>&lt;[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32.aspx), [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;[] DepthLine);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> UnorderedList(<a href="https://msdn.microsoft.com/en-us/library/dd268536.aspx" alt="" target="_blank">Tuple</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L202)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L202)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/GitHubMarkdown.cs#L203)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L203)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 

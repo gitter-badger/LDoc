@@ -2,6 +2,12 @@
 
 ## Home
 
+### Installation Instructions
+Add LDoc as a nuget package:
+```cs
+Install-Package LDoc
+```
+
 ## LDoc
 
  - [LDoc](LDoc/LDoc.md)
@@ -9,6 +15,8 @@
 ### Related Projects
 - [LCore](https://github.com/CodeSingularity/LCore) 
 - [LUnit](https://github.com/CodeSingularity/LUnit) 
+
+### [Summary &#39;TODO&#39;](TagSummary_TODO.md)
 
 
 

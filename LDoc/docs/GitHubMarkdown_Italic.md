@@ -6,11 +6,11 @@
 
 # Italic
 
-#### InstanceMethod
+#### Public Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Italic([String](https://msdn.microsoft.com/en-us/library/system.string.aspx) Text, [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) AsHtml);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Italic(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Text, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L497)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L497)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](../Markdown/GitHubMarkdown.cs#L503)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/GitHubMarkdown.cs#L503)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/GitHubMarkdown.cs)
 

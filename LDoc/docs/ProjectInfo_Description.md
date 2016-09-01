@@ -2,7 +2,7 @@
 [Up](ProjectInfo.md)
 
 ### ProjectInfo
-[View Source](../Markdown/ProjectInfo.cs)
+[View Source](../Markdown/Projects/ProjectInfo.cs)
 
 # Description
 

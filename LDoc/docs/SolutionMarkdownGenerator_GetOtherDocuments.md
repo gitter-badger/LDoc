@@ -2,21 +2,26 @@
 [Up](SolutionMarkdownGenerator.md)
 
 ### SolutionMarkdownGenerator
-[View Source](../Markdown/SolutionMarkdownGenerator.cs)
+[View Source](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 
 # GetOtherDocuments
 
-#### InstanceMethod
+#### Public Virtual Method
 
-###### public <a href="https://msdn.microsoft.com/en-us/library/xfhwa508.aspx" alt="" target="_blank">Dictionary</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx), **[GitHubMarkdown](GitHubMarkdown.md)**&gt; GetOtherDocuments();
+##### public virtual <a href="https://msdn.microsoft.com/en-us/library/xfhwa508.aspx" alt="" target="_blank">Dictionary</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>, <strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong>&gt; GetOtherDocuments();
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/SolutionMarkdownGenerator.cs#L373)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/SolutionMarkdownGenerator.cs#L373)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-Blue.png "") [![Lines of Code 5](http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L321) ![TODOs 5](http://b.repl.ca/v1/TODOs-5-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L321)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/SolutionMarkdownGenerator.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
+
+##### Summary
+
+            Override this method to generate custom documents for your project.
+            
 
 #### Returns
 
-###### <a href="https://msdn.microsoft.com/en-us/library/xfhwa508.aspx" alt="" target="_blank">Dictionary</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx), **[GitHubMarkdown](GitHubMarkdown.md)**&gt;
+###### <a href="https://msdn.microsoft.com/en-us/library/xfhwa508.aspx" alt="" target="_blank">Dictionary</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx), **[GeneratedDocument](GeneratedDocument.md)**&gt;
 
 
 

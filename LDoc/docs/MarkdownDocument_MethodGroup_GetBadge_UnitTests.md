@@ -2,17 +2,17 @@
 [Up](MarkdownDocument_MethodGroup.md)
 
 ### MarkdownDocument_MethodGroup
-[View Source](../Markdown/MarkdownDocument_MethodGroup.cs)
+[View Source](../Markdown/Generators/MarkdownDocument_MethodGroup.cs)
 
 # GetBadge_UnitTests
 
-#### InstanceMethod
+#### Public Method
 
-###### public [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) GetBadge_UnitTests(**[GitHubMarkdown](GitHubMarkdown.md)** MD);
+##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetBadge_UnitTests(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L177) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![SourceCode Available](http://b.repl.ca/v1/SourceCode-Available-brightgreen.png "")](../Markdown/MarkdownDocument_MethodGroup.cs#L177)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-Blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/Generators/MarkdownDocument_MethodGroup.cs#L178) ![TODOs 3](http://b.repl.ca/v1/TODOs-3-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/MarkdownDocument_MethodGroup.cs#L178)
 
-![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![UnitTested No](http://b.repl.ca/v1/UnitTested-No-lightgrey.png "") ![AttributeTests 0](http://b.repl.ca/v1/AttributeTests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/MarkdownDocument_MethodGroup.cs)
+![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/MarkdownDocument_MethodGroup.cs)
 
 ##### Summary
 
@@ -23,7 +23,7 @@
 
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
-MD | No | **[GitHubMarkdown](GitHubMarkdown.md)** | 
+MD | No | **[GeneratedDocument](GeneratedDocument.md)** | 
 
 
 #### Returns
