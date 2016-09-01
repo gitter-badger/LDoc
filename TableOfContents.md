@@ -6,6 +6,7 @@
  - [ExcludeFromMarkdownAttribute](LDoc/docs/ExcludeFromMarkdownAttribute.md)
  - [BadgeColor](LDoc/docs/BadgeColor.md)
  - [ColorSettings](LDoc/docs/ColorSettings.md)
+ - [MarkdownDocument_TagSummary](LDoc/docs/MarkdownDocument_TagSummary.md)
  - [GeneratedDocument](LDoc/docs/GeneratedDocument.md)
  - [GeneratorStatistics](LDoc/docs/GeneratorStatistics.md)
  - [Markdown](LDoc/docs/Markdown.md)
@@ -36,6 +37,7 @@
  - [LightGrey](LDoc/docs/BadgeColor_LightGrey.md)
  - [Grey](LDoc/docs/BadgeColor_Grey.md)
  - [BadgeInfoColor](LDoc/docs/ColorSettings_BadgeInfoColor.md)
+ - [TagName](LDoc/docs/MarkdownDocument_TagSummary_TagName.md)
  - [Line](LDoc/docs/GeneratedDocument_Line.md)
  - [Table](LDoc/docs/GeneratedDocument_Table-0.md)
  - [Header](LDoc/docs/GeneratedDocument_Header.md)
@@ -152,6 +154,7 @@
  - [LogoImage_Small](LDoc/docs/SolutionMarkdownGenerator_LogoImage_Small.md)
  - [WriteFooter](LDoc/docs/SolutionMarkdownGenerator_WriteFooter.md)
  - [WriteCustomFooter](LDoc/docs/SolutionMarkdownGenerator_WriteCustomFooter.md)
+ - [MarkdownPath_TagSummary](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_TagSummary.md)
  - [MarkdownPath_Assembly](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Assembly.md)
  - [MarkdownPath_Type](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Type.md)
  - [MarkdownPath_Member](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Member.md)
@@ -232,6 +235,8 @@
  - [TableHeaderText_Type](LDoc/docs/Text_TableHeaderText_Type.md)
  - [TableHeaderText_Description](LDoc/docs/Text_TableHeaderText_Description.md)
  - [TableHeader_Statistics](LDoc/docs/Text_TableHeader_Statistics.md)
+ - [TableHeaderText_File](LDoc/docs/Text_TableHeaderText_File.md)
+ - [TableHeaderText_Line](LDoc/docs/Text_TableHeaderText_Line.md)
  - [MemberName](LDoc/docs/DocumentManifest_MemberName.md)
  - [FullUrl_Documentation](LDoc/docs/DocumentManifest_FullUrl_Documentation.md)
  - [GetDocument](LDoc/docs/LDocManifest_GetDocument.md)
@@ -241,6 +246,9 @@
  - [GitHubUrl](LDoc/docs/Urls_GitHubUrl.md)
  - [Home](README.md)
  - [Coverage Summary](CoverageSummary.md)
+ - [Summary &#39;TODO&#39;](TagSummary_TODO.md)
+ - [Summary &#39;BUG&#39;](TagSummary_BUG.md)
+ - [Summary &#39;throw new NotImplementedException&#39;](TagSummary_throw%20new%20NotImplementedException.md)
  - [Table of Contents]
 
 
@@ -249,31 +257,31 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 4 seconds
+Duration | 5 seconds
 
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 241
-Project Markdown Documents | 1
+Markdown Documents | 249
+Project Markdown Documents | 4
 Assembly Markdown Documents | 1
-Type Markdown Documents | 22
-Member Markdown Documents | 215
+Type Markdown Documents | 23
+Member Markdown Documents | 219
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 5789
-Headers | 1298
-Tables | 111
-Badges | 1310
+Lines | 5951
+Headers | 1332
+Tables | 112
+Badges | 1325
 
 
 Links | Total
 :---  | :--- 
-Links | 3636
-Local Links | 2706
-System Links | 597
+Links | 3715
+Local Links | 2771
+System Links | 603
 External Links | 0
 
 

@@ -3,7 +3,7 @@
 
 ### GeneratedDocument
 
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "") ![Documented 70%](http://b.repl.ca/v1/Documented-70%25-green.png "")
+![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "") ![Documented 90%](http://b.repl.ca/v1/Documented-90%25-green.png "")
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
@@ -75,7 +75,7 @@
 <thead><tr><td>Public Methods (3)</td>
 <td></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-30-blue.png" alt="Total Code Lines 30" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documentation-33%25-yellow.png" alt="Total Documentation 33%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="GeneratedDocument_GetRelativePath.md" alt="">GetRelativePath</a></strong></h4></td>
 <td>   </td>
@@ -88,7 +88,7 @@
 <tr><td><h4><strong><a href="GeneratedDocument_Generate.md" alt="">Generate</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/GeneratedDocument.cs#L111" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="GeneratedDocument_Generate.md" alt="">Generate</a>();</h6>
 </td>
@@ -96,12 +96,12 @@
 <tr><td><h4><strong><a href="GeneratedDocument_GetLiveUrl.md" alt="">GetLiveUrl</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/GeneratedDocument.cs#L127" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png" alt="Lines of Code 11" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="GeneratedDocument_GetLiveUrl.md" alt="">GetLiveUrl</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="352"></td></tr>
+<tr><td width="850px" colspan="359"></td></tr>
 </table>
 
 

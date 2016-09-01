@@ -10,9 +10,14 @@
 
 ##### public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[]&gt; ToTables();
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-Blue.png "") [![Lines of Code 34](http://b.repl.ca/v1/Lines%20of%20Code-34-blue.png "")](../Markdown/Statistics/GeneratorStatistics.cs#L88)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Statistics/GeneratorStatistics.cs#L88)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-Blue.png "") [![Lines of Code 34](http://b.repl.ca/v1/Lines%20of%20Code-34-blue.png "")](../Markdown/Statistics/GeneratorStatistics.cs#L88)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Statistics/GeneratorStatistics.cs#L88)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Statistics/GeneratorStatistics.cs)
+
+##### Summary
+
+            Retrieves a list of tables representing statistics gathered.
+            
 
 #### Returns
 

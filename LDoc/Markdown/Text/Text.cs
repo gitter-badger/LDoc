@@ -211,5 +211,15 @@ namespace LCore.LDoc.Markdown
         /// Table header statistics
         /// </summary>
         public string TableHeader_Statistics { get; set; } = "Statistics";
+
+        /// <summary>
+        /// Table header file
+        /// </summary>
+        public string TableHeaderText_File { get; set; } = "File";
+
+        /// <summary>
+        /// Table header line
+        /// </summary>
+        public string TableHeaderText_Line { get; set; } = "Line";
         }
     }

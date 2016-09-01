@@ -3,7 +3,7 @@
 
 ### LDocManifest
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 75%](http://b.repl.ca/v1/Documented-75%25-green.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
@@ -17,7 +17,7 @@
 <thead><tr><td>Public Methods (2)</td>
 <td></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-15-blue.png" alt="Total Code Lines 15" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documentation-50%25-yellowgreen.png" alt="Total Documentation 50%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="LDocManifest_GetDocument.md" alt="">GetDocument</a></strong></h4></td>
 <td>   </td>
@@ -30,12 +30,12 @@
 <tr><td><h4><strong><a href="LDocManifest_CreateManifestJSON.md" alt="">CreateManifestJSON</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Manifest/LDocManifest.cs#L47" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="LDocManifest_CreateManifestJSON.md" alt="">CreateManifestJSON</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="357"></td></tr>
+<tr><td width="850px" colspan="359"></td></tr>
 </table>
 
 

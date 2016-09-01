@@ -29,6 +29,7 @@ namespace LCore.LDoc.Markdown
         public Dictionary<MethodInfo, CodeCoverageMetaData> Methods { get; }
         = new Dictionary<MethodInfo, CodeCoverageMetaData>();
 
+        /// <inheritdoc />
         protected override void GenerateDocument()
             {
             }
@@ -86,7 +87,7 @@ namespace LCore.LDoc.Markdown
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
                     Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
-                    uint TagCount = this.Methods.Sum(SubMember => SubMember.Value.CommentTags[Tag].Length);
+                    uint TagCount = this.Methods.Sum(SubMember => SubMember.Value.CommentTags[Tag].Count);
 
                     var Color = CommentColor?.Invoke(TagCount) ?? InfoColor;
 

@@ -1,16 +1,16 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
-### SolutionMarkdownGenerator_L
+### MarkdownDocument_TagSummary
 
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
 
 
 
 
 ###### Summary
 
-            Markdown generator for projects in the L family.
+            Generates markdown for the tag summary file of a project.
             
 
 

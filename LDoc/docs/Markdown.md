@@ -3,7 +3,7 @@
 
 ### Markdown
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 64%](http://b.repl.ca/v1/Documented-64%25-yellowgreen.png "")
+![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "") ![Documented 75%](http://b.repl.ca/v1/Documented-75%25-green.png "")
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
@@ -17,17 +17,17 @@
 <thead><tr><td>Public Methods (1)</td>
 <td></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-5-blue.png" alt="Total Code Lines 5" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documentation-0%25-red.png" alt="Total Documentation 0%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="Markdown_GetMarkdownLines.md" alt="">GetMarkdownLines</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/Markdown.cs#L52" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="Markdown_GetMarkdownLines.md" alt="">GetMarkdownLines</a>();</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="345"></td></tr>
+<tr><td width="850px" colspan="357"></td></tr>
 </table>
 
 
@@ -35,12 +35,12 @@
 <thead><tr><td>Public Virtual Methods (26)</td>
 <td></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-276-blue.png" alt="Total Code Lines 276" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documentation-65%25-yellowgreen.png" alt="Total Documentation 65%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-73%25-green.png" alt="Total Documentation 73%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="Markdown_BlankLine.md" alt="">BlankLine</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/Markdown.cs#L60" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_BlankLine.md" alt="">BlankLine</a>();</h6>
 </td>
@@ -48,7 +48,7 @@
 <tr><td><h4><strong><a href="Markdown_HorizontalRule.md" alt="">HorizontalRule</a></strong></h4></td>
 <td>   </td>
 <td><a href="../Markdown/Generators/Markdown.cs#L72" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-11-blue.png" alt="Lines of Code 11" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_HorizontalRule.md" alt="">HorizontalRule</a>();</h6>
 </td>
@@ -245,7 +245,7 @@
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="Markdown_Gravatar.md" alt="">Gravatar</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ID, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
-<tr><td width="850px" colspan="368"></td></tr>
+<tr><td width="850px" colspan="362"></td></tr>
 </table>
 
 

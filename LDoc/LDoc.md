@@ -41,6 +41,8 @@ LCore.LDoc.Markdown
 
 #### [MarkdownDocument_TableOfContents](docs/MarkdownDocument_TableOfContents.md)
 
+#### [MarkdownDocument_TagSummary](docs/MarkdownDocument_TagSummary.md)
+
 #### [MarkdownDocument_Type](docs/MarkdownDocument_Type.md)
 
 #### [ProjectInfo](docs/ProjectInfo.md)

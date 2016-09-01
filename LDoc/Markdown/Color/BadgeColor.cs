@@ -19,6 +19,6 @@ namespace LCore.LDoc.Markdown
         Blue,
         LightGrey,
         Grey
-#pragma warning restore 1591|
+#pragma warning restore 1591
         }
     }

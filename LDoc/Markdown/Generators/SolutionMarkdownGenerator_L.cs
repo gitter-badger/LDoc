@@ -9,6 +9,7 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public abstract class SolutionMarkdownGenerator_L : SolutionMarkdownGenerator
         {
+        /// <inheritdoc />
         public override List<ProjectInfo> Home_RelatedProjects => new List<ProjectInfo>
             {
             new ProjectInfo

@@ -305,7 +305,7 @@ namespace LCore.LDoc.Markdown
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
                     Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
-                    uint TagCount = (uint)this.Meta.CommentTags[Tag].Length;
+                    uint TagCount = (uint)this.Meta.CommentTags[Tag].Count;
 
                     string Color = $"{CommentColor?.Invoke(TagCount)}";
                     if (string.IsNullOrEmpty(Color))

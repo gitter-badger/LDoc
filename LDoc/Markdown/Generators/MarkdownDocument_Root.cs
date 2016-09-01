@@ -64,6 +64,19 @@ namespace LCore.LDoc.Markdown
                 this.Generator.Home_RelatedProjects.Convert(
                     Project => $"{this.Link(Project.Url, Project.Name)} {Project.Description}").Array());
 
+
+            var TodoDocument = this.Generator.Markdown_Other.SafeGet("TODO Summary");
+            if (TodoDocument != null)
+                {
+                this.Line(this.Header(this.Link(this.GetRelativePath(TodoDocument.FilePath), TodoDocument.Title), Size: 3));
+                }
+
+            var BugDocument = this.Generator.Markdown_Other.SafeGet("BUG Summary");
+            if (BugDocument != null)
+                {
+
+                }
+
             this.Generator.WriteFooter(this);
             }
         }
