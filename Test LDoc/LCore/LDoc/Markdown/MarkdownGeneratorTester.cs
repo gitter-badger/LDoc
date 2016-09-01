@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.LDoc.Markdown;
+using LCore.LUnit.Fluent;
 using Test_LDoc;
 using Xunit.Abstractions;
 
@@ -22,6 +23,15 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
         public void Dispose()
             {
+
+            }
+
+        [Fact]
+        public void TestPathFinding()
+            {
+            //typeof(GeneratedDocument).GetMember("Table")[0].DeclaringType.FindSourceCode().ShouldBe("");
+            //typeof(GeneratedDocument).GetMember("Table")[0].DeclaringType.FindClassFile().ShouldBe("");
+            //typeof(GeneratedDocument).GetMember("Table")[0].FindSourceCode().ShouldBe("");
             }
 
 

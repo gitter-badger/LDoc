@@ -16,7 +16,7 @@
 <table>
 <thead><tr><td>Public Override Methods (6)</td>
 <td></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-16-blue.png" alt="Total Code Lines 16" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-22-blue.png" alt="Total Code Lines 22" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-83%25-green.png" alt="Total Documentation 83%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="GeneratedDocument_Line.md" alt="">Line</a></strong></h4></td>
@@ -29,7 +29,7 @@
 </tr>
 <tr><td><h4><strong><a href="GeneratedDocument_Table-0.md" alt="">Table</a></strong></h4></td>
 <td>   </td>
-<td><a href="../Markdown/Generators/GeneratedDocument.cs#L36" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
+<td><a href="../Markdown/Generators/GeneratedDocument.cs#L36" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-3-blue.png" alt="Lines of Code 3" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="GeneratedDocument_Table-0.md" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);</h6>
@@ -53,7 +53,7 @@
 </tr>
 <tr><td><h4><strong><a href="GeneratedDocument_Link.md" alt="">Link</a></strong></h4></td>
 <td>   </td>
-<td><a href="../Markdown/Generators/GeneratedDocument.cs#L61" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
+<td><a href="../Markdown/Generators/GeneratedDocument.cs#L61" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-3-blue.png" alt="Lines of Code 3" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="GeneratedDocument_Link.md" alt="">Link</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Text, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> TargetNewWindow, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> EscapeText, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>

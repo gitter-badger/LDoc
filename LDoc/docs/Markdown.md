@@ -34,7 +34,7 @@
 <table>
 <thead><tr><td>Public Virtual Methods (26)</td>
 <td></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-256-blue.png" alt="Total Code Lines 256" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-276-blue.png" alt="Total Code Lines 276" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-65%25-yellowgreen.png" alt="Total Documentation 65%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="Markdown_BlankLine.md" alt="">BlankLine</a></strong></h4></td>
@@ -191,7 +191,7 @@
 </tr>
 <tr><td><h4><strong><a href="Markdown_Link.md" alt="">Link</a></strong></h4></td>
 <td>   </td>
-<td><a href="../Markdown/Generators/Markdown.cs#L439" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
+<td><a href="../Markdown/Generators/Markdown.cs#L439" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="Markdown_Link.md" alt="">Link</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Text, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> TargetNewWindow, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> EscapeText, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -199,7 +199,7 @@
 </tr>
 <tr><td><h4><strong><a href="Markdown_Image.md" alt="">Image</a></strong></h4></td>
 <td>   </td>
-<td><a href="../Markdown/Generators/Markdown.cs#L472" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-0-red.png" alt="Lines of Code 0" /></a></td>
+<td><a href="../Markdown/Generators/Markdown.cs#L472" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="Markdown_Image.md" alt="">Image</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="" alt="" target="_blank">L.Align</a>&gt; Align, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>

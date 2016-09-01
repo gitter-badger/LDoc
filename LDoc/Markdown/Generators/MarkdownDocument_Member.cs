@@ -224,6 +224,9 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_SourceCode(GeneratedDocument MD, bool AsHtml = false)
             {
+            if (string.IsNullOrEmpty(this.Meta.CodeFilePath))
+                throw new Exception(this.Meta.Member.FullyQualifiedName());
+
             return string.IsNullOrEmpty(this.Meta.CodeFilePath)
                 ? MD.Badge(this.Generator.Language.Badge_SourceCode, this.Generator.Language.Badge_SourceCodeUnavailable,
                     BadgeColor.Red)
@@ -252,6 +255,11 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_CodeLines(GeneratedDocument MD, bool AsHtml = false)
             {
+            if (this.Meta.CodeLineNumber == null || this.Meta.CodeLineNumber <= 0u)
+                throw new Exception($"Code lines number was not determined for: {this.Meta.Member.FullyQualifiedName()}");
+            if (this.Meta.CodeLineCount == null || this.Meta.CodeLineCount == 0u)
+                throw new Exception($"Code lines were not determined for: {this.Meta.Member.FullyQualifiedName()}");
+
             return MD.Link($"{MD.GetRelativePath(this.Meta.CodeFilePath)}#L{this.Meta.CodeLineNumber}",
                 MD.Badge(this.Generator.Language.Badge_LinesOfCode,
                     $"{this.Meta.CodeLineCount ?? 0u}",
