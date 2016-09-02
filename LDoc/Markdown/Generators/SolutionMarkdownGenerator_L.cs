@@ -15,20 +15,21 @@ namespace LCore.LDoc.Markdown
             new ProjectInfo
                 {
                 Name = "LCore",
-                Description= "",
-                Url= LUnit.LUnit.Urls.GitHubRepository_LCore
+                Description = "",
+                Url = LUnit.LUnit.Urls.GitHubRepository_LCore
                 },
             new ProjectInfo
                 {
                 Name = "LUnit",
-                Description= "",
-                Url= LUnit.LUnit.Urls.GitHubRepository_LUnit
+                Description = "",
+                Url = LUnit.LUnit.Urls.GitHubRepository_LUnit
                 },
             new ProjectInfo
                 {
                 Name = "LDoc",
-                Description= "",
-                Url= LDoc.Urls.GitHubUrl
+                Description = "",
+                Url = LDoc.Urls.GitHubUrl,
+                LDocManifestUrls = new[] {"https://raw.githubusercontent.com/CodeSingularity/LDoc/master/document-manifest.json"}
                 }
             };
         }

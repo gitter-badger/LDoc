@@ -31,7 +31,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Project LDoc Manifest Url(s)
         /// </summary>
-        public string[] LDocManifestUrls { get; } = {};
+        public string[] LDocManifestUrls { get; set; } = {};
 
         private LDocManifest[] _Manifests;
 
