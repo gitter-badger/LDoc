@@ -60,7 +60,7 @@ namespace LCore.LDoc.Markdown
 
             if (this.Member is MethodInfo)
                 {
-                var Method = (MethodInfo) this.Member;
+                var Method = (MethodInfo)this.Member;
                 var Details = Method.GetMemberDetails();
 
                 string Signature = this.GetSignature(this, AsHtml: true);
@@ -94,8 +94,8 @@ namespace LCore.LDoc.Markdown
 
                     Method.GetParameters().Each((ParamIndex, Param) =>
                         {
-                        Table.Add(new[]
-                            {
+                            Table.Add(new[]
+                                {
                             Param.Name,
                             Param.IsOptional
                                 ? "Yes"
@@ -116,7 +116,7 @@ namespace LCore.LDoc.Markdown
                 if (this.Meta.Comments?.Examples.Length > 0)
                     {
                     this.Line(this.Header(this.Generator.Language.Header_MethodExamples, Size: 4));
-                    this.Meta.Comments?.Examples.Each(Example => this.Code(new[] {Example}));
+                    this.Meta.Comments?.Examples.Each(Example => this.Code(new[] { Example }));
                     }
 
                 if (this.Meta.Comments?.Permissions.Length > 0)
@@ -150,7 +150,7 @@ namespace LCore.LDoc.Markdown
                 {
                 if (this.Member is MethodInfo)
                     {
-                    var Method = (MethodInfo) this.Member;
+                    var Method = (MethodInfo)this.Member;
 
                     bool ShowInheritance = Details.Inheritance != MemberInheritance.None;
 
@@ -226,7 +226,11 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_SourceCode(GeneratedDocument MD, bool AsHtml = false)
             {
             if (string.IsNullOrEmpty(this.Meta.CodeFilePath))
-                throw new Exception(this.Meta.Member.FullyQualifiedName());
+                {
+                this.Generator.ErrorsReported.Add(
+                    $"Could not find code file path for {this.Meta.Member.FullyQualifiedName()}");
+                return "";
+                }
 
             return string.IsNullOrEmpty(this.Meta.CodeFilePath)
                 ? MD.Badge(this.Generator.Language.Badge_SourceCode, this.Generator.Language.Badge_SourceCodeUnavailable,
@@ -241,7 +245,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_NotImplemented(GeneratedDocument MD, bool AsHtml = false)
             {
-            uint NotImplementedCount = (uint) this.Meta.NotImplemented.Length;
+            uint NotImplementedCount = (uint)this.Meta.NotImplemented.Length;
 
             if (NotImplementedCount == 0)
                 return "";
@@ -257,9 +261,17 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_CodeLines(GeneratedDocument MD, bool AsHtml = false)
             {
             if (this.Meta.CodeLineNumber == null || this.Meta.CodeLineNumber <= 0u)
-                throw new Exception($"Code lines number was not determined for: {this.Meta.Member.FullyQualifiedName()}");
+                {
+                this.Generator.ErrorsReported.Add(
+                    $"Could not find code line number for {this.Meta.Member.FullyQualifiedName()}");
+                return "";
+                }
             if (this.Meta.CodeLineCount == null || this.Meta.CodeLineCount == 0u)
-                throw new Exception($"Code lines were not determined for: {this.Meta.Member.FullyQualifiedName()}");
+                {
+                this.Generator.ErrorsReported.Add(
+                    $"Could not find code line count for {this.Meta.Member.FullyQualifiedName()}");
+                return "";
+                }
 
             return MD.Link($"{MD.GetRelativePath(this.Meta.CodeFilePath)}#L{this.Meta.CodeLineNumber}",
                 MD.Badge(this.Generator.Language.Badge_LinesOfCode,
@@ -274,7 +286,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Todos(GeneratedDocument MD, bool AsHtml = false)
             {
-            uint TodoCount = (uint) this.Meta.CommentTODO.Length;
+            uint TodoCount = (uint)this.Meta.CommentTODO.Length;
 
             if (TodoCount == 0)
                 return "";
@@ -289,7 +301,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Bugs(GeneratedDocument MD, bool AsHtml = false)
             {
-            uint BugCount = (uint) this.Meta.CommentBUG.Length;
+            uint BugCount = (uint)this.Meta.CommentBUG.Length;
             if (BugCount == 0)
                 return "";
 
@@ -305,14 +317,14 @@ namespace LCore.LDoc.Markdown
             {
             return this.Generator.CustomCommentTags.Convert(Tag =>
                 {
-                Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
-                uint TagCount = (uint) this.Meta.CommentTags[Tag].Count;
+                    Func<uint, BadgeColor> CommentColor = this.Generator.CustomCommentColor.SafeGet(Tag);
+                    uint TagCount = (uint)this.Meta.CommentTags[Tag].Count;
 
-                string Color = $"{CommentColor?.Invoke(TagCount)}";
-                if (string.IsNullOrEmpty(Color))
-                    Color = this.Generator.Colors.BadgeInfoColor;
+                    string Color = $"{CommentColor?.Invoke(TagCount)}";
+                    if (string.IsNullOrEmpty(Color))
+                        Color = this.Generator.Colors.BadgeInfoColor;
 
-                return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
+                    return MD.Badge(Tag, $"{TagCount}", Color, AsHtml);
                 });
             }
 

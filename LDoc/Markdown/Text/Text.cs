@@ -228,5 +228,10 @@ namespace LCore.LDoc.Markdown
         /// The default file name for JSON manifest documents
         /// </summary>
         public string ManifestFile { get; set; } = "document-manifest.json";
+
+        /// <summary>
+        /// Table header for errors
+        /// </summary>
+        public string TableHeader_Errors { get; set; } = "Errors";
         }
     }

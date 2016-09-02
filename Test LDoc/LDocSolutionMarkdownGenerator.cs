@@ -13,7 +13,7 @@ namespace Test_LDoc
     {
     public class LDocSolutionMarkdownGenerator : SolutionMarkdownGenerator_L
         {
-        public override Assembly[] DocumentAssemblies => new[] {Assembly.GetAssembly(typeof(LDoc))};
+        public override Assembly[] DocumentAssemblies => new[] { Assembly.GetAssembly(typeof(LDoc)) };
 
         public override void Home_Intro(GeneratedDocument MD)
             {
@@ -22,7 +22,7 @@ namespace Test_LDoc
         public override void HowToInstall(GeneratedDocument MD)
             {
             MD.Line($"Add {nameof(LCore.LDoc)} as a nuget package:");
-            MD.Code(new[] {$"Install-Package {nameof(LCore.LDoc)}"});
+            MD.Code(new[] { $"Install-Package {nameof(LCore.LDoc)}" });
             }
 
         public override List<ProjectInfo> Home_RelatedProjects
@@ -36,19 +36,18 @@ namespace Test_LDoc
 
         public override string RootUrl => LDoc.Urls.GitHubUrl;
 
-        public override bool RequireDirectLinksToAllForeignTypes => true;
+        //  private const string RootLUnitGitHub = "https://github.com/CodeSingularity/LUnit/blob/master";
 
-        private const string RootLUnitGitHub = "https://github.com/CodeSingularity/LUnit/blob/master";
-
-        public override Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>
-            {
-            // TODO all of these should auto-link once manifests are working
-            [typeof(AssemblyCoverage)] = $"{RootLUnitGitHub}/LUnit/docs/AssemblyCoverage.md",
-            [typeof(ICodeComment)] = "",
-            [typeof(L.Align)] = "",
-            [typeof(Set<,>)] = "",
-            [typeof(TypeCoverage)] = ""
-            };
+        /*
+                public override Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>
+                    {
+                    // TODO all of these should auto-link once manifests are working
+                    [typeof(AssemblyCoverage)] = $"{RootLUnitGitHub}/LUnit/docs/AssemblyCoverage.md",
+                    [typeof(ICodeComment)] = "",
+                    [typeof(L.Align)] = "",
+                    [typeof(Set<,>)] = "",
+                    [typeof(TypeCoverage)] = ""
+                    };*/
 
         /*
         /// <summary>

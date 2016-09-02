@@ -127,7 +127,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this member to specify any test assemblies
         /// </summary>
-        public virtual Assembly[] TestAssemblies => new Assembly[] {};
+        public virtual Assembly[] TestAssemblies => new Assembly[] { };
 
         /// <summary>
         /// Write the markdown intro to your project, in the front page README.
@@ -156,7 +156,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Override this to provide custom badge urls for the project.
         /// </summary>
-        public virtual string[] CustomBadgeUrls => new string[] {};
+        public virtual string[] CustomBadgeUrls => new string[] { };
 
         /// <summary>
         /// Override this value to supply custom links to foreign types.
@@ -403,8 +403,8 @@ namespace LCore.LDoc.Markdown
             // Execution past here is considered 'failure'
 
 
-            if (!this.TypeLinksNotFound.Has(Type))
-                this.TypeLinksNotFound.Add(Type);
+            if (!this.ErrorsReported.Has(Type))
+                this.ErrorsReported.Add($"Could not find type link for {Type.FullyQualifiedName()}");
 
             this.Stats.ExternalLinks++;
 
@@ -418,7 +418,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Stores types where documentation wasn't successfully located
         /// </summary>
-        protected List<Type> TypeLinksNotFound { get; } = new List<Type>();
+        public List<string> ErrorsReported { get; } = new List<string>();
 
         /// <summary>
         /// Get all Member group markdown owned by a given <paramref name="Type"/>
@@ -439,12 +439,6 @@ namespace LCore.LDoc.Markdown
         #endregion
 
         #region Options +
-
-        /// <summary>
-        /// Requires all foreign types to have a link supplied.
-        /// Override <see cref="CustomTypeLinks"/>
-        /// </summary>
-        public virtual bool RequireDirectLinksToAllForeignTypes => false;
 
         /// <summary>
         /// Override this value to display a large image on top ofthe main document
@@ -590,7 +584,7 @@ namespace LCore.LDoc.Markdown
         public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
             !Member.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
             !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
-            !(Member is MethodInfo && ((MethodInfo) Member).IsPropertyGetterOrSetter()) &&
+            !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
             Member.IsDeclaredMember() &&
             !(Member is ConstructorInfo);
 
@@ -607,7 +601,7 @@ namespace LCore.LDoc.Markdown
         /// 100         | BadgeColor.BrightGreen
         /// 101+        | BadgeColor.Blue
         /// </summary>
-        public virtual int[] ColorThresholds => new[] {30, 50, 70, 100};
+        public virtual int[] ColorThresholds => new[] { 30, 50, 70, 100 };
 
         /// <summary>
         /// Gets a BadgeColor for a given <paramref name="Percentage"/>
@@ -720,29 +714,24 @@ namespace LCore.LDoc.Markdown
             this.Markdown_Other.Add(this.Language.TableOfContents, this.GenerateTableOfContentsMarkdown());
 
             List<GeneratedDocument> AllMarkdown = this.GetAllMarkdown();
-
-            // Report missing types 
-            if (this.RequireDirectLinksToAllForeignTypes && !this.TypeLinksNotFound.IsEmpty())
-                throw new InvalidOperationException(
-                    $"Type links not found: {this.TypeLinksNotFound.Convert(Type => Type.FullyQualifiedName()).JoinLines(", ")}");
-
+            
             if (WriteToDisk)
                 {
                 AllMarkdown.Each(MD =>
                     {
-                    MD.Generate();
+                        MD.Generate();
 
-                    string Path = MD.FilePath;
+                        string Path = MD.FilePath;
 
-                    // just to be safe
-                    if (Path.EndsWith(".md"))
-                        {
-                        Path.EnsurePathExists();
+                        // just to be safe
+                        if (Path.EndsWith(".md"))
+                            {
+                            Path.EnsurePathExists();
 
-                        File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
+                            File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
 
-                        MD.Clear();
-                        }
+                            MD.Clear();
+                            }
                     });
 
                 var Manifest = new LDocManifest(AllMarkdown);
@@ -796,7 +785,7 @@ namespace LCore.LDoc.Markdown
         ///  "//CustomTag ... " 
         /// 
         /// </summary>
-        public virtual string[] CustomCommentTags => new string[] {};
+        public virtual string[] CustomCommentTags => new string[] { };
 
         /// <summary>
         /// Override this value to determine custom colors depending on the count
