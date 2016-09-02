@@ -287,7 +287,7 @@
 <table>
 <thead><tr><td>Public Methods (5)</td>
 <td><img src="http://b.repl.ca/v1/TODOs-186-orange.png" alt="TODOs 186" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-74-blue.png" alt="Total Code Lines 74" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-75-blue.png" alt="Total Code Lines 75" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_FindMarkdown.md" alt="">FindMarkdown</a></strong></h4></td>
@@ -316,7 +316,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_Generate.md" alt="">Generate</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L693" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-40-blue.png" alt="Lines of Code 40" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L693" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-41-blue.png" alt="Lines of Code 41" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_Generate.md" alt="">Generate</a>(<a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> WriteToDisk);</h6>
@@ -324,7 +324,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetAllMarkdown.md" alt="">GetAllMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L761" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L763" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong>&gt; <a href="SolutionMarkdownGenerator_GetAllMarkdown.md" alt="">GetAllMarkdown</a>();</h6>

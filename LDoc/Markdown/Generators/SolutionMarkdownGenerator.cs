@@ -740,6 +740,8 @@ namespace LCore.LDoc.Markdown
                         Path.EnsurePathExists();
 
                         File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
+
+                        MD.Clear();
                         }
                     });
 

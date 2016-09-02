@@ -66,6 +66,7 @@
  - [StartGenerationTime](LDoc/docs/GeneratorStatistics_StartGenerationTime.md)
  - [EndGenerationTime](LDoc/docs/GeneratorStatistics_EndGenerationTime.md)
  - [Duration](LDoc/docs/GeneratorStatistics_Duration.md)
+ - [Clear](LDoc/docs/Markdown_Clear.md)
  - [GetMarkdownLines](LDoc/docs/Markdown_GetMarkdownLines.md)
  - [BlankLine](LDoc/docs/Markdown_BlankLine.md)
  - [HorizontalRule](LDoc/docs/Markdown_HorizontalRule.md)
@@ -272,26 +273,26 @@ Duration | 9 seconds
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 255
+Markdown Documents | 256
 Project Markdown Documents | 1
 Assembly Markdown Documents | 1
 Type Markdown Documents | 23
-Member Markdown Documents | 229
+Member Markdown Documents | 230
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 5857
-Headers | 1371
+Lines | 5890
+Headers | 1383
 Tables | 112
-Badges | 1540
+Badges | 1553
 
 
 Links | Total
 :---  | :--- 
-Links | 3602
-Local Links | 2625
-System Links | 630
+Links | 3619
+Local Links | 2638
+System Links | 633
 External Links | 0
 
 

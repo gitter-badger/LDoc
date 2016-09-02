@@ -47,6 +47,14 @@ namespace LCore.LDoc.Markdown
         protected List<string> MarkdownLines { get; } = new List<string>();
 
         /// <summary>
+        /// Clears the markdown document lines
+        /// </summary>
+        public void Clear()
+            {
+            this.MarkdownLines.Clear();
+            }
+
+        /// <summary>
         /// Gets a list of all markdown lines.
         /// </summary>
         public List<string> GetMarkdownLines()
@@ -148,7 +156,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual void OrderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
-            DepthLine.Each(Line => this.OrderedList((Set<uint, string>) Line));
+            DepthLine.Each(Line => this.OrderedList((Set<uint, string>)Line));
             }
 
         /// <summary>
@@ -169,13 +177,13 @@ namespace LCore.LDoc.Markdown
 
             DepthLine.Each(Line =>
                 {
-                if (LastLevel == null || Line.Obj1 != LastLevel)
-                    CurrentNumber = 1;
+                    if (LastLevel == null || Line.Obj1 != LastLevel)
+                        CurrentNumber = 1;
 
-                this.Line($"{"  ".Times(Line.Obj1)}{CurrentNumber}{Line.Obj2}");
+                    this.Line($"{"  ".Times(Line.Obj1)}{CurrentNumber}{Line.Obj2}");
 
-                LastLevel = Line.Obj1;
-                CurrentNumber++;
+                    LastLevel = Line.Obj1;
+                    CurrentNumber++;
                 });
             }
 
@@ -205,7 +213,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual void UnorderedList([CanBeNull] params Tuple<uint, string>[] DepthLine)
             {
-            DepthLine.Each(Line => this.UnorderedList((Set<uint, string>) Line));
+            DepthLine.Each(Line => this.UnorderedList((Set<uint, string>)Line));
             }
 
         /// <summary>
@@ -353,57 +361,57 @@ namespace LCore.LDoc.Markdown
 
             Rows.Each((i, Row) =>
                 {
-                var Cells = new List<string>();
+                    var Cells = new List<string>();
 
-                Row.Each((j, Column) =>
-                    {
-                    Cells.Add(Column);
-
-                    if (IncludeHeader && i == 0)
+                    Row.Each((j, Column) =>
                         {
-                        if (AsHtml)
+                            Cells.Add(Column);
+
+                            if (IncludeHeader && i == 0)
+                                {
+                                if (AsHtml)
+                                    {
+                                    // TODO set alignment here
+                                    }
+                                else
+                                    {
+                                    L.Align? Align = Alignment.GetAt(j);
+
+                                    if (Align == L.Align.Left)
+                                        Divider.Add(":--- ");
+                                    else if (Align == L.Align.Right)
+                                        Divider.Add(" ---:");
+                                    else if (Align == L.Align.Center)
+                                        Divider.Add(":---:");
+                                    else
+                                        Divider.Add(" --- ");
+                                    }
+                                }
+                        });
+
+                    if (AsHtml)
+                        {
+                        if (Cells.Count < Cols)
                             {
-                            // TODO set alignment here
+                            string TableRow = "";
+                            for (int j = 0; j < Cells.Count; j++)
+                                {
+                                if (j == Cells.Count - 1)
+                                    TableRow += $"<td colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
+                                else
+                                    TableRow += $"<td>{Cells[j]}</td>\r\n";
+                                }
+                            Table.Add(TableRow);
                             }
                         else
-                            {
-                            L.Align? Align = Alignment.GetAt(j);
-
-                            if (Align == L.Align.Left)
-                                Divider.Add(":--- ");
-                            else if (Align == L.Align.Right)
-                                Divider.Add(" ---:");
-                            else if (Align == L.Align.Center)
-                                Divider.Add(":---:");
-                            else
-                                Divider.Add(" --- ");
-                            }
-                        }
-                    });
-
-                if (AsHtml)
-                    {
-                    if (Cells.Count < Cols)
-                        {
-                        string TableRow = "";
-                        for (int j = 0; j < Cells.Count; j++)
-                            {
-                            if (j == Cells.Count - 1)
-                                TableRow += $"<td colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
-                            else
-                                TableRow += $"<td>{Cells[j]}</td>\r\n";
-                            }
-                        Table.Add(TableRow);
+                            Table.Add(Cells.Collect(Cell => $"<td>{Cell}</td>").JoinLines());
                         }
                     else
-                        Table.Add(Cells.Collect(Cell => $"<td>{Cell}</td>").JoinLines());
-                    }
-                else
-                    {
-                    Table.Add(Cells.JoinLines(" | "));
-                    if (IncludeHeader && i == 0)
-                        Table.Add(Divider.JoinLines(" | "));
-                    }
+                        {
+                        Table.Add(Cells.JoinLines(" | "));
+                        if (IncludeHeader && i == 0)
+                            Table.Add(Divider.JoinLines(" | "));
+                        }
                 });
 
             this.Line("");
