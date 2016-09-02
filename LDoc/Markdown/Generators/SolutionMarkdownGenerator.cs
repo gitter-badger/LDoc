@@ -418,7 +418,7 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Stores types where documentation wasn't successfully located
         /// </summary>
-        public List<string> ErrorsReported { get; } = new List<string>();
+        protected List<string> ErrorsReported { get; } = new List<string>();
 
         /// <summary>
         /// Get all Member group markdown owned by a given <paramref name="Type"/>
@@ -714,7 +714,7 @@ namespace LCore.LDoc.Markdown
             this.Markdown_Other.Add(this.Language.TableOfContents, this.GenerateTableOfContentsMarkdown());
 
             List<GeneratedDocument> AllMarkdown = this.GetAllMarkdown();
-            
+
             if (WriteToDisk)
                 {
                 AllMarkdown.Each(MD =>
@@ -792,5 +792,22 @@ namespace LCore.LDoc.Markdown
         /// of the particular custom tag found.
         /// </summary>
         public virtual Dictionary<string, Func<uint, BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, BadgeColor>>();
+
+        /// <summary>
+        /// Adds an error to be reported within the markdown
+        /// </summary>
+        public void AddError(string Error)
+            {
+            if (!this.ErrorsReported.Has(Error))
+                this.ErrorsReported.Add(Error);
+            }
+
+        /// <summary>
+        /// Returns all errors reported during generation
+        /// </summary>
+        public List<string> GetErrors()
+            {
+            return this.ErrorsReported.List();
+            }
         }
     }

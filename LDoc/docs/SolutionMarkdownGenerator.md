@@ -16,7 +16,7 @@
 
 <table>
 <thead><tr><td>Public Static Methods (1)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-186-orange.png" alt="TODOs 186" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-189-orange.png" alt="TODOs 189" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-4-blue.png" alt="Total Code Lines 4" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -34,7 +34,7 @@
 
 <table>
 <thead><tr><td>Public Abstract Methods (1)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-186-orange.png" alt="TODOs 186" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-189-orange.png" alt="TODOs 189" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-4-blue.png" alt="Total Code Lines 4" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -52,7 +52,7 @@
 
 <table>
 <thead><tr><td>Public Virtual Methods (28)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-186-orange.png" alt="TODOs 186" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-189-orange.png" alt="TODOs 189" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-298-blue.png" alt="Total Code Lines 298" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -285,9 +285,9 @@
 
 
 <table>
-<thead><tr><td>Public Methods (5)</td>
-<td><img src="http://b.repl.ca/v1/TODOs-186-orange.png" alt="TODOs 186" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-71-blue.png" alt="Total Code Lines 71" /></td>
+<thead><tr><td>Public Methods (7)</td>
+<td><img src="http://b.repl.ca/v1/TODOs-189-orange.png" alt="TODOs 189" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-82-blue.png" alt="Total Code Lines 82" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_FindMarkdown.md" alt="">FindMarkdown</a></strong></h4></td>
@@ -328,6 +328,22 @@
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong>&gt; <a href="SolutionMarkdownGenerator_GetAllMarkdown.md" alt="">GetAllMarkdown</a>();</h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="SolutionMarkdownGenerator_AddError.md" alt="">AddError</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L799" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_AddError.md" alt="">AddError</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Error);</h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetErrors.md" alt="">GetErrors</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L808" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="SolutionMarkdownGenerator_GetErrors.md" alt="">GetErrors</a>();</h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="5"></td></tr>

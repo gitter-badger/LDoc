@@ -227,7 +227,7 @@ namespace LCore.LDoc.Markdown
             {
             if (string.IsNullOrEmpty(this.Meta.CodeFilePath))
                 {
-                this.Generator.ErrorsReported.Add(
+                this.Generator.AddError(
                     $"Could not find code file path for {this.Meta.Member.FullyQualifiedName()}");
                 return "";
                 }
@@ -262,13 +262,13 @@ namespace LCore.LDoc.Markdown
             {
             if (this.Meta.CodeLineNumber == null || this.Meta.CodeLineNumber <= 0u)
                 {
-                this.Generator.ErrorsReported.Add(
+                this.Generator.AddError(
                     $"Could not find code line number for {this.Meta.Member.FullyQualifiedName()}");
                 return "";
                 }
             if (this.Meta.CodeLineCount == null || this.Meta.CodeLineCount == 0u)
                 {
-                this.Generator.ErrorsReported.Add(
+                this.Generator.AddError(
                     $"Could not find code line count for {this.Meta.Member.FullyQualifiedName()}");
                 return "";
                 }

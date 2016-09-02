@@ -40,11 +40,13 @@ namespace LCore.LDoc.Markdown
             foreach (string[,] StatTable in Stats)
                 this.Table(StatTable);
 
-            if (!this.Generator.ErrorsReported.IsEmpty())
-                {
-                this.Line(this.Header($"{this.Generator.Language.TableHeader_Errors} ({this.Generator.ErrorsReported.Count})", Size: 3));
+            List<string> Errors = this.Generator.GetErrors();
 
-                this.Generator.ErrorsReported.Each(Error => this.Line($"- {Error}"));
+            if (!Errors.IsEmpty())
+                {
+                this.Line(this.Header($"{this.Generator.Language.TableHeader_Errors} ({Errors.Count})", Size: 3));
+
+                Errors.Each(Error => this.Line($"- {Error}"));
                 }
 
             this.Generator.WriteFooter(this);

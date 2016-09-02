@@ -22,7 +22,8 @@ namespace LCore.LDoc.Markdown
                 {
                 Name = "LUnit",
                 Description = "",
-                Url = LUnit.LUnit.Urls.GitHubRepository_LUnit
+                Url = LUnit.LUnit.Urls.GitHubRepository_LUnit,
+                LDocManifestUrls = new [] { "https://raw.githubusercontent.com/CodeSingularity/LUnit/master/document-manifest.json" }
                 },
             new ProjectInfo
                 {

@@ -172,6 +172,8 @@
  - [GetColorByPercentage](LDoc/docs/SolutionMarkdownGenerator_GetColorByPercentage.md)
  - [Generate](LDoc/docs/SolutionMarkdownGenerator_Generate.md)
  - [GetAllMarkdown](LDoc/docs/SolutionMarkdownGenerator_GetAllMarkdown.md)
+ - [AddError](LDoc/docs/SolutionMarkdownGenerator_AddError.md)
+ - [GetErrors](LDoc/docs/SolutionMarkdownGenerator_GetErrors.md)
  - [Colors](LDoc/docs/SolutionMarkdownGenerator_Colors.md)
  - [Stats](LDoc/docs/SolutionMarkdownGenerator_Stats.md)
  - [DocumentAssemblies](LDoc/docs/SolutionMarkdownGenerator_DocumentAssemblies.md)
@@ -185,7 +187,6 @@
  - [Markdown_Type](LDoc/docs/SolutionMarkdownGenerator_Markdown_Type.md)
  - [Markdown_Member](LDoc/docs/SolutionMarkdownGenerator_Markdown_Member.md)
  - [Markdown_MethodGroups](LDoc/docs/SolutionMarkdownGenerator_Markdown_MethodGroups.md)
- - [ErrorsReported](LDoc/docs/SolutionMarkdownGenerator_ErrorsReported.md)
  - [GeneratedMarkdownRoot](LDoc/docs/SolutionMarkdownGenerator_GeneratedMarkdownRoot.md)
  - [MarkdownPath_Root](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Root.md)
  - [MarkdownPath_TableOfContents](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_TableOfContents.md)
@@ -269,44 +270,42 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 6 seconds
+Duration | 10 seconds
 
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 257
+Markdown Documents | 258
 Project Markdown Documents | 1
 Assembly Markdown Documents | 1
 Type Markdown Documents | 23
-Member Markdown Documents | 231
+Member Markdown Documents | 232
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 5904
-Headers | 1385
-Tables | 112
-Badges | 1553
+Lines | 5950
+Headers | 1402
+Tables | 113
+Badges | 1579
 
 
 Links | Total
 :---  | :--- 
-Links | 3627
-Local Links | 2645
-System Links | 633
-External Links | 30
+Links | 3659
+Local Links | 2664
+System Links | 642
+External Links | 24
 
 
-### Errors (30)
+### Errors (24)
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Tools.Set<T1, T2>
 - Could not find type link for LCore.Tools.Set<T1, T2>
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Extensions.L.Align
@@ -320,13 +319,9 @@ External Links | 30
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
 
 
