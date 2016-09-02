@@ -35,7 +35,7 @@
 <table>
 <thead><tr><td>Public Methods (12)</td>
 <td><img src="http://b.repl.ca/v1/TODOs-30-orange.png" alt="TODOs 30" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-119-blue.png" alt="Total Code Lines 119" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-125-blue.png" alt="Total Code Lines 125" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_Documented.md" alt="">GetBadge_Documented</a></strong></h4></td>
@@ -56,7 +56,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_SourceCode.md" alt="">GetBadge_SourceCode</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L226" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png" alt="Lines of Code 12" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L226" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_SourceCode.md" alt="">GetBadge_SourceCode</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -64,7 +64,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_NotImplemented.md" alt="">GetBadge_NotImplemented</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L242" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L246" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_NotImplemented.md" alt="">GetBadge_NotImplemented</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -72,7 +72,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_CodeLines.md" alt="">GetBadge_CodeLines</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L257" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L261" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png" alt="Lines of Code 18" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_CodeLines.md" alt="">GetBadge_CodeLines</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -80,7 +80,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_Todos.md" alt="">GetBadge_Todos</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L275" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L287" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_Todos.md" alt="">GetBadge_Todos</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -88,7 +88,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_Bugs.md" alt="">GetBadge_Bugs</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L290" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L302" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_Bugs.md" alt="">GetBadge_Bugs</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -96,7 +96,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_CustomTags.md" alt="">GetBadge_CustomTags</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L304" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png" alt="Lines of Code 12" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L316" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png" alt="Lines of Code 12" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] <a href="MarkdownDocument_Member_GetBadge_CustomTags.md" alt="">GetBadge_CustomTags</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -104,7 +104,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_Covered.md" alt="">GetBadge_Covered</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L352" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L364" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_Covered.md" alt="">GetBadge_Covered</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -112,7 +112,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_AttributeCoverage.md" alt="">GetBadge_AttributeCoverage</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L362" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L374" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_AttributeCoverage.md" alt="">GetBadge_AttributeCoverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -120,7 +120,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_UnitTests.md" alt="">GetBadge_UnitTests</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L374" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L386" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_UnitTests.md" alt="">GetBadge_UnitTests</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -128,7 +128,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Member_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-2-yellow.png" alt="TODOs 2" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L386" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Member.cs#L398" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="MarkdownDocument_Member_GetBadge_Assertions.md" alt="">GetBadge_Assertions</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>

@@ -8,7 +8,7 @@
 
 #### Public Override Method
 
-##### public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Table(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="" alt="" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);
+##### public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Table(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);
 
 ![Type Public Override Method](http://b.repl.ca/v1/Type-Public%20Override%20Method-blue.png "") [![Lines of Code 3](http://b.repl.ca/v1/Lines%20of%20Code-3-blue.png "")](../Markdown/Generators/GeneratedDocument.cs#L36)    ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/GeneratedDocument.cs#L36)
 
@@ -20,7 +20,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Rows | No | <a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;[String](https://msdn.microsoft.com/en-us/library/system.string.aspx)&gt;&gt; | 
 IncludeHeader | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
-Alignment | Yes | <a href="" alt="" target="_blank">L.Align</a>[] | 
+Alignment | Yes | <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] | 
 AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 TableWidth | Yes | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 

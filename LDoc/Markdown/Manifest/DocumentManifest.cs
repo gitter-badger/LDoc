@@ -9,6 +9,7 @@ namespace LCore.LDoc.Markdown.Manifest
     /// <summary>
     /// Stores information about a generated markdown document
     /// </summary>
+    [Serializable]
     public class DocumentManifest
         {
         /// <summary>
@@ -20,6 +21,15 @@ namespace LCore.LDoc.Markdown.Manifest
         /// The fully qualified URL to the 
         /// </summary>
         public string FullUrl_Documentation { get; set; }
+
+        /// <summary>
+        /// Create a new <see cref="DocumentManifest"/>. 
+        /// This constructor is used for JSON deserialization.
+        /// </summary>
+        public DocumentManifest()
+            {
+
+            }
 
         /// <summary>
         /// Create a <see cref="DocumentManifest"/> from a <see cref="GeneratedDocument"/>.

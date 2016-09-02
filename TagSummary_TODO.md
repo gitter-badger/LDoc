@@ -26,7 +26,7 @@ Line | [MarkdownDocument_Assembly.cs](LDoc/Markdown/Generators/MarkdownDocument_
 Line | [MarkdownDocument_Member.cs](LDoc/Markdown/Generators/MarkdownDocument_Member.cs) (2)
 :---  | :--- 
 [75](LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L75) |                 // TODO: Add test coverage link
-[343](LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L343) |                 // TODO: Add Test Status: Passing / Failing / Untested
+[355](LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L355) |                 // TODO: Add Test Status: Passing / Failing / Untested
 
 
 Line | [MarkdownDocument_MethodGroup.cs](LDoc/Markdown/Generators/MarkdownDocument_MethodGroup.cs) (3)
