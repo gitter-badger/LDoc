@@ -99,7 +99,7 @@
 <td><a href="../Markdown/Generators/Markdown.cs#L141" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_OrderedList-2.md" alt="">OrderedList</a>(<a href="https://www.google.com/#q=C%23+LCore.Tools.Set&lt;T1, T2&gt;" alt="Search for 'LCore.Tools.Set&lt;T1, T2&gt;'" target="_blank">Set</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);</h6>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_OrderedList-2.md" alt="">OrderedList</a>(<a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Set`2.md" alt="">Set</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="Markdown_UnorderedList-0.md" alt="">UnorderedList</a></strong></h4></td>
@@ -123,7 +123,7 @@
 <td><a href="../Markdown/Generators/Markdown.cs#L198" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_UnorderedList-2.md" alt="">UnorderedList</a>(<a href="https://www.google.com/#q=C%23+LCore.Tools.Set&lt;T1, T2&gt;" alt="Search for 'LCore.Tools.Set&lt;T1, T2&gt;'" target="_blank">Set</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);</h6>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_UnorderedList-2.md" alt="">UnorderedList</a>(<a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Set`2.md" alt="">Set</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="Markdown_Code.md" alt="">Code</a></strong></h4></td>
@@ -187,7 +187,7 @@
 <td><a href="../Markdown/Generators/Markdown.cs#L326" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png" alt="Lines of Code 18" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_Table-0.md" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_Table-0.md" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Align.md" alt="">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="Markdown_Table-1.md" alt="">Table</a></strong></h4></td>
@@ -195,7 +195,7 @@
 <td><a href="../Markdown/Generators/Markdown.cs#L326" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png" alt="Lines of Code 18" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_Table-1.md" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);</h6>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="Markdown_Table-1.md" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Align.md" alt="">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="Markdown_Link.md" alt="">Link</a></strong></h4></td>
@@ -211,7 +211,7 @@
 <td><a href="../Markdown/Generators/Markdown.cs#L480" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="Markdown_Image.md" alt="">Image</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>&gt; Align, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
+<tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="Markdown_Image.md" alt="">Image</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Url, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> ReferenceText, <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" alt="" target="_blank">Nullable</a>&lt;<a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Align.md" alt="">L.Align</a>&gt; Align, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="Markdown_Italic.md" alt="">Italic</a></strong></h4></td>

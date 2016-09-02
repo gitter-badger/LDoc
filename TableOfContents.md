@@ -270,7 +270,7 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 10 seconds
+Duration | 14 seconds
 
 
 Documents | Total
@@ -284,8 +284,8 @@ Member Markdown Documents | 232
 
 Markdown | Total
 :---  | :--- 
-Lines | 6379
-Headers | 1411
+Lines | 6354
+Headers | 1410
 Tables | 125
 Badges | 1579
 
@@ -295,34 +295,8 @@ Links | Total
 Links | 3983
 Local Links | 2984
 System Links | 642
-External Links | 24
+External Links | 0
 
-
-### Errors (24)
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.Interfaces.ICodeComment
-- Could not find type link for LCore.Interfaces.ICodeComment
 
 
 
