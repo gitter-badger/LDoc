@@ -294,6 +294,9 @@ namespace LCore.LDoc.Markdown
             }
 
 
+        /// <summary>
+        /// Get a badge representing total Not Implemented Exceptions declared
+        /// </summary>
         public string GetBadge_TotalNotImplemented(GeneratedDocument MD, uint GroupTotalNotImplemented, bool AsHtml)
             {
             return GroupTotalNotImplemented > 0
@@ -301,6 +304,9 @@ namespace LCore.LDoc.Markdown
                 : "";
             }
 
+        /// <summary>
+        /// Get a badge representing total bugs declared
+        /// </summary>
         public string GetBadge_TotalBugs(GeneratedDocument MD, uint GroupTotalBugs, bool AsHtml)
             {
             return GroupTotalBugs > 0
@@ -308,6 +314,9 @@ namespace LCore.LDoc.Markdown
                 : "";
             }
 
+        /// <summary>
+        /// Get a badge representing total todos declared
+        /// </summary>
         public string GetBadge_TotalTodos(GeneratedDocument MD, uint GroupTotalTodo, bool AsHtml = false)
             {
             return GroupTotalTodo > 0

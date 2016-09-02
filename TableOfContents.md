@@ -128,6 +128,9 @@
  - [Methods](LDoc/docs/MarkdownDocument_MethodGroup_Methods.md)
  - [GetBadges_Info](LDoc/docs/MarkdownDocument_Type_GetBadges_Info.md)
  - [GetBadges_Coverage](LDoc/docs/MarkdownDocument_Type_GetBadges_Coverage.md)
+ - [GetBadge_TotalNotImplemented](LDoc/docs/MarkdownDocument_Type_GetBadge_TotalNotImplemented.md)
+ - [GetBadge_TotalBugs](LDoc/docs/MarkdownDocument_Type_GetBadge_TotalBugs.md)
+ - [GetBadge_TotalTodos](LDoc/docs/MarkdownDocument_Type_GetBadge_TotalTodos.md)
  - [TypeMeta](LDoc/docs/MarkdownDocument_Type_TypeMeta.md)
  - [MemberMarkdown](LDoc/docs/MarkdownDocument_Type_MemberMarkdown.md)
  - [TotalTodos](LDoc/docs/MarkdownDocument_Type_TotalTodos.md)
@@ -186,6 +189,7 @@
  - [MarkdownPath_Root](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Root.md)
  - [MarkdownPath_TableOfContents](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_TableOfContents.md)
  - [MarkdownPath_CoverageSummary](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_CoverageSummary.md)
+ - [MarkdownPath_Manifest](LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Manifest.md)
  - [ColorThresholds](LDoc/docs/SolutionMarkdownGenerator_ColorThresholds.md)
  - [DocumentUnitCoverage](LDoc/docs/SolutionMarkdownGenerator_DocumentUnitCoverage.md)
  - [DocumentAttributeCoverage](LDoc/docs/SolutionMarkdownGenerator_DocumentAttributeCoverage.md)
@@ -199,6 +203,7 @@
  - [Description](LDoc/docs/ProjectInfo_Description.md)
  - [Url](LDoc/docs/ProjectInfo_Url.md)
  - [LDocManifestUrls](LDoc/docs/ProjectInfo_LDocManifestUrls.md)
+ - [Manifests](LDoc/docs/ProjectInfo_Manifests.md)
  - [MainReadme](LDoc/docs/Text_MainReadme.md)
  - [TableOfContents](LDoc/docs/Text_TableOfContents.md)
  - [CoverageSummary](LDoc/docs/Text_CoverageSummary.md)
@@ -241,6 +246,7 @@
  - [TableHeader_Statistics](LDoc/docs/Text_TableHeader_Statistics.md)
  - [TableHeaderText_File](LDoc/docs/Text_TableHeaderText_File.md)
  - [TableHeaderText_Line](LDoc/docs/Text_TableHeaderText_Line.md)
+ - [ManifestFile](LDoc/docs/Text_ManifestFile.md)
  - [MemberName](LDoc/docs/DocumentManifest_MemberName.md)
  - [FullUrl_Documentation](LDoc/docs/DocumentManifest_FullUrl_Documentation.md)
  - [GetDocument](LDoc/docs/LDocManifest_GetDocument.md)
@@ -261,31 +267,31 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 6 seconds
+Duration | 9 seconds
 
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 253
+Markdown Documents | 259
 Project Markdown Documents | 4
 Assembly Markdown Documents | 1
 Type Markdown Documents | 23
-Member Markdown Documents | 223
+Member Markdown Documents | 229
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 6107
-Headers | 1346
-Tables | 120
-Badges | 1497
+Lines | 6258
+Headers | 1379
+Tables | 124
+Badges | 1540
 
 
 Links | Total
 :---  | :--- 
-Links | 3817
-Local Links | 2869
-System Links | 603
+Links | 3923
+Local Links | 2942
+System Links | 630
 External Links | 0
 
 

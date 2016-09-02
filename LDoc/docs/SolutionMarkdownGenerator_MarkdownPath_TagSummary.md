@@ -10,7 +10,7 @@
 
 ##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> MarkdownPath_TagSummary(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Tag);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L513) ![TODOs 5](http://b.repl.ca/v1/TODOs-5-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L513)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L522) ![TODOs 3](http://b.repl.ca/v1/TODOs-3-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs#L522)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/SolutionMarkdownGenerator.cs)
 

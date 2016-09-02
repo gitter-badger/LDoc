@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+
 // ReSharper disable InconsistentNaming
 
 namespace LCore.LDoc.Markdown
@@ -221,5 +222,11 @@ namespace LCore.LDoc.Markdown
         /// Table header line
         /// </summary>
         public string TableHeaderText_Line { get; set; } = "Line";
+
+
+        /// <summary>
+        /// The default file name for JSON manifest documents
+        /// </summary>
+        public string ManifestFile { get; set; } = "document-manifest.json";
         }
     }

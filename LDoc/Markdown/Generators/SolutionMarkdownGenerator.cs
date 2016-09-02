@@ -8,6 +8,7 @@ using System.Net;
 using System.Reflection;
 using JetBrains.Annotations;
 using LCore.Extensions;
+using LCore.LDoc.Markdown.Manifest;
 
 // ReSharper disable ExpressionIsAlwaysNull
 // ReSharper disable UnusedParameter.Global
@@ -381,8 +382,6 @@ namespace LCore.LDoc.Markdown
             if (ReferenceLinks.ContainsKey(Type))
                 return MD.Link(ReferenceLinks[Type], Name, "", TargetNewWindow: true, AsHtml: AsHtml);
 
-            // TODO: resolve related project assemblies
-
             // Resolve all non-generic System types
             if (!Type.ContainsGenericParameters && // Generic parameters aren't supported with named links on their docs
                 Type.FullyQualifiedName().ToLower().StartsWith("system."))
@@ -393,6 +392,16 @@ namespace LCore.LDoc.Markdown
 
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
                 return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name, AsHtml: AsHtml);
+
+            // Search all known manifests for the type
+            foreach (var Project in this.Home_RelatedProjects)
+                foreach (var Manifest in Project.Manifests)
+                    foreach (var Document in Manifest.MemberDocuments)
+                        if (Document.MemberName == Type.FullyQualifiedName())
+                            return MD.Link(Document.FullUrl_Documentation, Name, AsHtml: AsHtml);
+
+            // Execution past here is considered 'failure'
+
 
             if (!this.TypeLinksNotFound.Has(Type))
                 this.TypeLinksNotFound.Add(Type);
@@ -536,6 +545,14 @@ namespace LCore.LDoc.Markdown
         public virtual string MarkdownPath_Type([NotNull] Type Type) =>
             $"{Type.Assembly.GetRootPath()}\\{this.MarkdownPath_Documentation}\\" +
             $"{Type.Name.CleanFileName()}.md";
+
+        /// <summary>
+        /// Generates the markdown path for the manifest JSON file
+        /// </summary>
+        public virtual string MarkdownPath_Manifest =>
+            $"{L.Ref.GetSolutionRootPath()}\\" +
+            $"{this.Language.ManifestFile}";
+
 
         /// <summary>
         /// Generates the document title for a Member
@@ -726,7 +743,9 @@ namespace LCore.LDoc.Markdown
                         }
                     });
 
-                // TODO generate JSON manifest
+                var Manifest = new LDocManifest(AllMarkdown);
+                string JSON = Manifest.CreateManifestJSON();
+                File.WriteAllText(this.MarkdownPath_Manifest, JSON);
                 }
             }
 

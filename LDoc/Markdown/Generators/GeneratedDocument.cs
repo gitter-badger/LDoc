@@ -128,7 +128,7 @@ namespace LCore.LDoc.Markdown
             {
             string FullPath = this.FilePath;
             string RootSolution = L.Ref.GetSolutionRootPath();
-            string RootGitHub = this.Generator.RootUrl;
+            string RootGitHub = $"{this.Generator.RootUrl}/blob/master";
 
             string Out = FullPath.Replace(RootSolution, RootGitHub)
                 .ReplaceAll("\\", "/");
