@@ -10,7 +10,7 @@
 
 ##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> OrderedList(<a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Set`2.md" alt="">Set</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a>, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;[] DepthLine);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/Generators/Markdown.cs#L142) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/Markdown.cs#L142)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 10](http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png "")](../Markdown/Generators/Markdown.cs#L158) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/Markdown.cs#L158)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/Markdown.cs)
 

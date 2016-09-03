@@ -6,8 +6,10 @@ using System.IO;
 using System.Linq.Expressions;
 using System.Net;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 using LCore.Extensions;
+using LCore.Interfaces;
 using LCore.LDoc.Markdown.Manifest;
 
 // ReSharper disable ExpressionIsAlwaysNull
@@ -151,8 +153,6 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public abstract string RootUrl { get; }
 
-        //https://codesingularity.visualstudio.com/_apis/public/build/definitions/ef4060d7-9700-4b9c-acc3-e2263d774197/3/badge
-        // TODO hook custom badge urls
         /// <summary>
         /// Override this to provide custom badge urls for the project.
         /// </summary>
@@ -323,12 +323,40 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Formats comments, properly displaying comment tags.
         /// </summary>
-        public virtual string FormatComment(string CommentText)
+        public virtual string FormatComment(GeneratedDocument MD, string CommentText)
             {
-            // TODO add support for <see>
-            // TODO add support for <seealso>
+            CommentText.Matches("<code>(.*)</code>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    $"\r\n```\r\n{Match.Groups[groupnum: 1]}\r\n```\r\n"));
+
+            CommentText.Matches("<value>(.*)</value>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    $"` {Match.Groups[groupnum: 1]} `"));
+
+            CommentText.Matches("<see cref=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            CommentText.Matches("<seealso cref=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            CommentText.Matches("<paramref name=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            CommentText.Matches("<typeparamref name=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
 
             return CommentText;
+            }
+
+        private string LinkToString(GeneratedDocument MD, string Link)
+            {
+            // TODO resolve string link
+
+            return Link;
             }
 
         /// <summary>
@@ -574,17 +602,22 @@ namespace LCore.LDoc.Markdown
         /// Determines if a Type should be included in documentation
         /// </summary>
         public virtual bool IncludeType([NotNull] Type Type) =>
-            !Type.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
             !Type.HasAttribute<IExcludeFromMarkdownAttribute>();
 
         /// <summary>
         /// Determines if a Member should be included in documentation
         /// </summary>
         public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
-            !Member.HasAttribute<ExcludeFromCodeCoverageAttribute>(IncludeBaseClasses: true) &&
+            // Manually excluded members and declaring types
             !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
+            !Member.DeclaringType?.HasAttribute<IExcludeFromMarkdownAttribute>() != true &&
+            // Property getters and setters are handled under the PropertyInfo member, not the get and set methods
             !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
+            // Don't include members that are being exposed from base classes
             Member.IsDeclaredMember() &&
+            // Don't make a document for each enum value
+            Member.DeclaringType?.IsEnum == false &&
+            // TODO enable constructors
             !(Member is ConstructorInfo);
 
         /// <summary>
@@ -791,6 +824,12 @@ namespace LCore.LDoc.Markdown
         /// of the particular custom tag found.
         /// </summary>
         public virtual Dictionary<string, Func<uint, BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, BadgeColor>>();
+
+        /// <summary>
+        /// Override or add values to this dictionary to specify <see cref="Assembly"/> comments.
+        /// </summary>
+        public virtual Dictionary<Assembly, ICodeComment> AssemblyComments { get; }
+            = new Dictionary<Assembly, ICodeComment>();
 
         /// <summary>
         /// Adds an error to be reported within the markdown

@@ -1,9 +1,13 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
+###### namespace LCore.LDoc
+
+###### public static class LDoc
+
 ### LDoc
 
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "") ![Documented 100%](http://b.repl.ca/v1/Documented-100%25-brightgreen.png "")
+ ![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "")
 
 
 
@@ -13,24 +17,6 @@
 
             Static class to store LDoc constants
             
-
-<table>
-<thead><tr><td>Public Static Classes (1)</td>
-<td></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-8-blue.png" alt="Total Code Lines 8" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
-<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
-<tr><td><h4><strong><a href="LDoc_Urls.md" alt="">Urls</a></strong></h4></td>
-<td>   </td>
-<td><a href="../LDoc.cs#L12" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
-<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
-<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td colspan="5"><h6></h6>
-</td>
-</tr>
-<tr><td width="850px" colspan="5"></td></tr>
-</table>
-
 
 
 

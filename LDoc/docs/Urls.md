@@ -1,9 +1,13 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
+###### namespace LCore.LDoc
+
+###### public static class Urls
+
 ### Urls
 
-![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
+ ![Type Static Class](http://b.repl.ca/v1/Type-Static%20Class-blue.png "")
 
 
 

@@ -1,9 +1,13 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
+###### namespace LCore.LDoc.Markdown
+
+###### public class MarkdownDocument_TableOfContents
+
 ### MarkdownDocument_TableOfContents
 
-![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "")
+ ![Type Object Class](http://b.repl.ca/v1/Type-Object%20Class-blue.png "")
 
 
 

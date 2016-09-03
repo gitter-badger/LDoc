@@ -44,6 +44,11 @@ namespace LCore.LDoc.Markdown
             this.Generator.Stats.MemberMarkdownDocuments++;
 
             this.Generator.WriteHeader(this);
+
+            this.Line(this.Header($"namespace {this.Meta.Type.Namespace}", Size: 6));
+            this.Line(this.Header($"{this.Meta.Type.GetMemberDetails()?.ToCodeString()} " +
+                                  $"{this.Link(this.GetRelativePath(this.Generator.LinkToType(this, this.Meta.Type)), this.Meta.Type.GetGenericName())}", Size: 6));
+
             this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Type(this.Member.DeclaringType)), this.Generator.Language.LinkText_Up));
 
             this.Line(this.Header($"{this.Member.DeclaringType?.Name}", Size: 3));
@@ -55,8 +60,9 @@ namespace LCore.LDoc.Markdown
                 this.Line(this.Link(this.GetRelativePath(TypePath), this.Generator.Language.LinkText_ViewSource));
                 }
 
-
             this.Line(this.Header(this.Member.Name));
+
+            #region MethodInfo
 
             if (this.Member is MethodInfo)
                 {
@@ -72,12 +78,10 @@ namespace LCore.LDoc.Markdown
                 this.Line("");
                 this.Line(this.GetBadges_Coverage().JoinLines(" "));
 
-                // TODO: Add test coverage link
-
                 if (this.Meta.Comments?.Summary != null)
                     {
                     this.Line(this.Header(this.Generator.Language.Header_Summary, Size: 5));
-                    this.Line(this.Generator.FormatComment(this.Meta.Comments?.Summary));
+                    this.Line(this.Generator.FormatComment(this, this.Meta.Comments?.Summary));
                     }
 
                 if (Method.GetParameters().Length > 0)
@@ -131,6 +135,26 @@ namespace LCore.LDoc.Markdown
                     this.Meta.Comments?.Exceptions.Each(Exception => this.Line($"{Exception.Obj1} {Exception.Obj2}"));
                     }
                 }
+
+            #endregion
+
+            #region PropertyInfo
+
+            if (Member is PropertyInfo)
+                {
+                // TODO document for PropertyInfo
+                }
+
+            #endregion
+
+            #region FieldInfo
+
+            if (Member is FieldInfo)
+                {
+                // TODO document for FieldInfo
+                }
+
+            #endregion
 
             this.Generator.WriteFooter(this);
             }
@@ -352,7 +376,7 @@ namespace LCore.LDoc.Markdown
 
                 Out.Add(this.GetBadge_Assertions(this));
 
-                // TODO: Add Test Status: Passing / Failing / Untested
+                // TODO: Add test coverage link
                 }
             return Out;
             }

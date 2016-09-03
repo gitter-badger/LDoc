@@ -32,6 +32,9 @@ namespace LCore.LDoc.Markdown
             this.Generator.WriteHeader(this);
             this.Line(this.Header(this.Generator.Language.MainReadme, Size: 2));
 
+            if (!this.Generator.CustomBadgeUrls.IsEmpty())
+                this.Line(this.Generator.CustomBadgeUrls.Convert(Url => this.Image(Url)).JoinLines(" "));
+
             this.Generator.Home_Intro(this);
 
             if (!this.GetType().GetMembers().Has(
@@ -46,8 +49,8 @@ namespace LCore.LDoc.Markdown
             this.Generator.Markdown_Assembly.Each(Document =>
             {
                 var Coverage = new AssemblyCoverage(Document.Key);
-                // TODO pull assembly comments from override
-                ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
+
+                ICodeComment Comments = this.Generator.AssemblyComments.SafeGet(Document.Key);
 
                 this.Line(this.Header(Document.Value.Title, Size: 2));
                 //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));

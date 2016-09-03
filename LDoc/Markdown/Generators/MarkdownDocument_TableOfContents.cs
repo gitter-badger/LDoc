@@ -12,6 +12,9 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public class MarkdownDocument_TableOfContents : GeneratedDocument
         {
+        public string AnchorLink_Statistics;
+        public string AnchorLink_Errors;
+
         /// <summary>
         /// Create a new root Markdown file.
         /// </summary>
@@ -33,7 +36,8 @@ namespace LCore.LDoc.Markdown
                 this.Line($" - {this.Link(this.GetRelativePath(Document.FilePath), Document.Title)}"));
 
             this.BlankLine();
-            this.Line(this.Header(this.Generator.Language.TableHeader_Statistics, Size: 3));
+
+            this.Line(this.HeaderAnchor(this.Generator.Language.TableHeader_Statistics, out this.AnchorLink_Statistics, Size: 3));
             this.BlankLine();
             List<string[,]> Stats = this.Generator.Stats.ToTables();
 
@@ -44,12 +48,13 @@ namespace LCore.LDoc.Markdown
 
             if (!Errors.IsEmpty())
                 {
-                this.Line(this.Header($"{this.Generator.Language.TableHeader_Errors} ({Errors.Count})", Size: 3));
+                this.Line(this.HeaderAnchor($"{this.Generator.Language.TableHeader_Errors} ({Errors.Count})", out this.AnchorLink_Errors, Size: 3));
 
                 Errors.Each(Error => this.Line($"- {Error}"));
                 }
 
             this.Generator.WriteFooter(this);
             }
+
         }
     }

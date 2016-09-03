@@ -107,6 +107,22 @@ namespace LCore.LDoc.Markdown
                 ? $"<h{Size}>{Line}</h{Size}>"
                 : $"\r\n{"#".Times(Size)} {Line}";
             }
+        /// <summary>
+        /// Returns a header line, extracting the <param name="Anchor"></param> text into a variable
+        /// </summary>
+        public virtual string HeaderAnchor(string Line, [CanBeNull]out string Anchor, int Size = 1, bool AsHtml = false)
+            {
+            if (Size < 1)
+                Size = 1;
+            if (Size > 6)
+                Size = 6;
+
+            Anchor = Line.ToUrlSlug();
+
+            return AsHtml
+                ? $"<h{Size}>{Line}</h{Size}>"
+                : $"\r\n{"#".Times(Size)} {Line}";
+            }
 
         /// <summary>
         /// Add a header underlined:

@@ -1,9 +1,13 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
+###### namespace LCore.LDoc.Markdown
+
+###### public enum BadgeColor
+
 ### BadgeColor
 
-![Type Enum ](http://b.repl.ca/v1/Type-Enum%20-blue.png "") ![Documented 0%](http://b.repl.ca/v1/Documented-0%25-red.png "")
+ ![Type Enum ](http://b.repl.ca/v1/Type-Enum%20-blue.png "")
 
 
 

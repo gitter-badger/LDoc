@@ -1,9 +1,13 @@
 ![](../Content/LDoc-banner-small.png "")
 [Up](../LDoc.md)
 
+###### namespace LCore.LDoc.Markdown
+
+###### public abstract interface IExcludeFromMarkdownAttribute
+
 ### IExcludeFromMarkdownAttribute
 
-![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "")
+ ![Type Abstract Class](http://b.repl.ca/v1/Type-Abstract%20Class-blue.png "")
 
 
 

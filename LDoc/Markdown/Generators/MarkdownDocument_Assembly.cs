@@ -87,9 +87,6 @@ namespace LCore.LDoc.Markdown
             this.Generator.WriteFooter(this);
             }
 
-
-        #region Assembly Badges
-
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
@@ -99,9 +96,7 @@ namespace LCore.LDoc.Markdown
             // ReSharper disable once UseObjectOrCollectionInitializer
             var Out = new List<string>();
 
-            Out.Add(MD.Badge(this.Generator.Language.Badge_Framework,
-                $"Version {this.Assembly.ImageRuntimeVersion}",
-                BadgeColor.Blue));
+            Out.Add(this.GetBadge_FrameworkVersion(MD));
 
             // TODO: add output file badge
             // TODO: add file size badge
@@ -117,19 +112,24 @@ namespace LCore.LDoc.Markdown
             return Out;
             }
 
+        public virtual string GetBadge_FrameworkVersion(GeneratedDocument MD)
+            {
+            return MD.Badge(this.Generator.Language.Badge_Framework,
+                            $"Version {this.Assembly.ImageRuntimeVersion}",
+                            BadgeColor.Blue);
+            }
+
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
         public virtual List<string> GetBadges_Coverage([NotNull] GeneratedDocument MD, [CanBeNull] AssemblyCoverage Coverage,
             [CanBeNull] ICodeComment Comments)
             {
-            // ReSharper disable once UseObjectOrCollectionInitializer
             var Out = new List<string>();
+
 
 
             return Out;
             }
-
-        #endregion
         }
     }

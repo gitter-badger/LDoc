@@ -60,10 +60,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_Documented(GeneratedDocument MD)
             {
-            // TODO replace with simpler Percent function
-            int PercentageCommented = (int)(this.Methods.Convert(Method => Method.Value.Comments == null
-                                                ? 0
-                                                : 1).Average() * 100).Round();
+            int PercentageCommented = this.Methods.Percent(Method => Method.Value.Comments == null);
 
             return MD.Badge(this.Generator.Language.Badge_Documented,
                 $"{PercentageCommented}%",
@@ -153,8 +150,6 @@ namespace LCore.LDoc.Markdown
 
             Out.Add(this.GetBadge_Assertions(this));
 
-            // TODO: Add Test Status: Passing / Failing / Untested
-
             return Out;
             }
 
@@ -177,10 +172,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string GetBadge_UnitTests(GeneratedDocument MD)
             {
-            // TODO replace with simpler Percent function
-            int PercentageCovered = (int)(this.Methods.Convert(Method => Method.Value.Coverage.IsCovered
-                                              ? 0
-                                              : 1).Average() * 100).Round();
+            int PercentageCovered = this.Methods.Percent(Method => Method.Value.Coverage.IsCovered);
 
             return MD.Badge(this.Generator.Language.Badge_UnitTested,
                 $"{PercentageCovered}", this.Generator.GetColorByPercentage(PercentageCovered));

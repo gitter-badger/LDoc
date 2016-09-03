@@ -5,6 +5,7 @@ using System.Reflection;
 using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.LUnit;
+// ReSharper disable MemberCanBeProtected.Global
 
 // ReSharper disable SuggestBaseTypeForParameter
 
@@ -26,6 +27,11 @@ namespace LCore.LDoc.Markdown
         public Dictionary<MemberInfo, MarkdownDocument_Member> MemberMarkdown { get; } =
             new Dictionary<MemberInfo, MarkdownDocument_Member>();
 
+
+        public Type Type { get; }
+
+        public string TypeName { get; }
+
         /// <summary>
         /// Create a new Type Markdown file.
         /// </summary>
@@ -34,15 +40,18 @@ namespace LCore.LDoc.Markdown
             {
             this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
 
-            Generator.GetTypeMemberMarkdown((Type) this.TypeMeta?.Member).Each(
+            Generator.GetTypeMemberMarkdown((Type)this.TypeMeta?.Member).Each(
                 MD =>
                     {
-                    this.TotalTodos += (uint) MD.Value.Meta.CommentTODO.Length;
-                    this.TotalBugs += (uint) MD.Value.Meta.CommentBUG.Length;
-                    this.TotalNotImplemented += (uint) MD.Value.Meta.NotImplemented.Length;
+                        this.TotalTodos += (uint)MD.Value.Meta.CommentTODO.Length;
+                        this.TotalBugs += (uint)MD.Value.Meta.CommentBUG.Length;
+                        this.TotalNotImplemented += (uint)MD.Value.Meta.NotImplemented.Length;
 
-                    this.MemberMarkdown.Add(MD.Key, MD.Value);
+                        this.MemberMarkdown.Add(MD.Key, MD.Value);
                     });
+
+            this.Type = (Type)this.TypeMeta?.Member;
+            this.TypeName = Type.GetGenericName();
             }
 
         /// <summary>
@@ -67,15 +76,15 @@ namespace LCore.LDoc.Markdown
         protected override void GenerateDocument()
             {
             this.Generator.Stats.TypeMarkdownDocuments++;
-
             this.Generator.WriteHeader(this);
 
-            this.Line(
-                this.Link(
-                    this.GetRelativePath(this.Generator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
-                    this.Generator.Language.LinkText_Up, EscapeText: false));
+            this.Line(this.Link(
+                this.GetRelativePath(this.Generator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
+                this.Generator.Language.LinkText_Up, EscapeText: false));
 
-            this.Line(this.Header($"{((Type) this.TypeMeta.Member).GetGenericName()}", Size: 3));
+            this.Line(this.Header($"namespace {this.Type.Namespace}", Size: 6));
+            this.Line(this.Header($"{this.TypeMeta.Details.ToCodeString()} {this.TypeName}", Size: 6));
+            this.Line(this.Header($"{this.TypeName}", Size: 3));
             this.Line("");
             this.Line(this.GetBadges_Info(this).JoinLines(" "));
             this.Line("");
@@ -95,6 +104,7 @@ namespace LCore.LDoc.Markdown
                 this.Line(this.TypeMeta.Comments?.Summary);
                 }
 
+            // TODO display properties 
             // TODO display constructors 
             // TODO display attributes
             // TODO display interfaces 
@@ -106,44 +116,44 @@ namespace LCore.LDoc.Markdown
 
             MemberGroups.Each(Group =>
                 {
-                uint Documented = 0;
-                uint DocumentedTotal = 0;
+                    uint Documented = 0;
+                    uint DocumentedTotal = 0;
 
-                uint Covered = 0;
-                uint CoveredTotal = 0;
+                    uint Covered = 0;
+                    uint CoveredTotal = 0;
 
-                uint LinesTotal = 0;
+                    uint LinesTotal = 0;
 
-                var Body = new List<string[]>();
+                    var Body = new List<string[]>();
 
-                uint GroupTotalTodo = 0;
-                uint GroupTotalBugs = 0;
-                uint GroupTotalNotImplemented = 0;
+                    uint GroupTotalTodo = 0;
+                    uint GroupTotalBugs = 0;
+                    uint GroupTotalNotImplemented = 0;
 
-                Group.Value.Each(Member =>
-                    {
-                    var MD = Member.Value;
-                    var Meta = MD.Meta;
-
-                    LinesTotal += Meta.CodeLineCount ?? 0u;
-
-                    Covered += Meta.Coverage?.IsCovered == true
-                        ? 1u
-                        : 0u;
-                    CoveredTotal += 1u;
-
-                    Documented += Meta.Comments == null
-                        ? 0u
-                        : 1u;
-                    DocumentedTotal += 1u;
-
-                    GroupTotalTodo += (uint) Meta.CommentTODO.Length;
-                    GroupTotalBugs += (uint) Meta.CommentBUG.Length;
-                    GroupTotalNotImplemented += (uint) Meta.NotImplemented.Length;
-                    // TODO total for custom tags
-
-                    Body.Add(new[]
+                    Group.Value.Each(Member =>
                         {
+                            var MD = Member.Value;
+                            var Meta = MD.Meta;
+
+                            LinesTotal += Meta.CodeLineCount ?? 0u;
+
+                            Covered += Meta.Coverage?.IsCovered == true
+                            ? 1u
+                            : 0u;
+                            CoveredTotal += 1u;
+
+                            Documented += Meta.Comments == null
+                            ? 0u
+                            : 1u;
+                            DocumentedTotal += 1u;
+
+                            GroupTotalTodo += (uint)Meta.CommentTODO.Length;
+                            GroupTotalBugs += (uint)Meta.CommentBUG.Length;
+                            GroupTotalNotImplemented += (uint)Meta.NotImplemented.Length;
+                            // TODO total for custom tags
+
+                            Body.Add(new[]
+                                {
                         this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath),
                             Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
@@ -153,21 +163,21 @@ namespace LCore.LDoc.Markdown
                         MD.GetBadge_CodeLines(this, AsHtml: true),
                         MD.GetBadge_Documented(this, AsHtml: true),
                         MD.GetBadge_Covered(this, AsHtml: true)
-                        });
-                    Body.Add(new[]
-                        {
+                            });
+                            Body.Add(new[]
+                            {
                         $"{this.Header(MD.GetSignature(this, AsHtml: true), Size: 6, AsHtml: true)}\r\n"
+                            });
                         });
-                    });
 
-                int CoveredPercent = Covered.PercentageOf(CoveredTotal);
-                int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
+                    int CoveredPercent = Covered.PercentageOf(CoveredTotal);
+                    int DocumentedPercent = Documented.PercentageOf(DocumentedTotal);
 
-                var Header = new[]
-                    {
+                    var Header = new[]
+                        {
                     new[]
                         {
-                        $"{Group.Key.Pluralize()} ({Group.Value.Count})",
+                        this.Header($"{Group.Key.Pluralize()} {this.Bold($"({Group.Value.Count})", AsHtml:true)}", Size: 4, AsHtml:true),
                         this.GetBadge_TotalTodos(this, GroupTotalTodo, AsHtml: true) +
                         this.GetBadge_TotalBugs(this, GroupTotalBugs, AsHtml: true) +
                         this.GetBadge_TotalNotImplemented(this, GroupTotalNotImplemented, AsHtml: true)
@@ -181,7 +191,7 @@ namespace LCore.LDoc.Markdown
                         }
                     };
 
-                this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
+                    this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
                 });
 
             this.Generator.WriteFooter(this);
@@ -194,7 +204,7 @@ namespace LCore.LDoc.Markdown
         [CanBeNull]
         public virtual List<string> GetBadges_Info([NotNull] GeneratedDocument MD)
             {
-            var Type = (Type) this.TypeMeta.Member;
+            var Type = (Type)this.TypeMeta.Member;
 
             if (Type != null)
                 {
@@ -216,7 +226,7 @@ namespace LCore.LDoc.Markdown
                 uint TotalDocumentable = 0;
                 uint Documented = 0;
 
-                // TODO: add total members
+                Out.Add(this.GetBadge_TotalMembers(this));
                 // TODO: add total lines of code (non 'empty')
                 // TODO: add total extension methods
                 // TODO: add total todo count
@@ -225,12 +235,12 @@ namespace LCore.LDoc.Markdown
 
                 Members.Each(Member =>
                     {
-                    TotalDocumentable++;
+                        TotalDocumentable++;
 
-                    var MemberComments = Member.Key.GetComments();
+                        var MemberComments = Member.Key.GetComments();
 
-                    if (MemberComments != null)
-                        Documented++;
+                        if (MemberComments != null)
+                            Documented++;
                     });
 
 
@@ -249,13 +259,19 @@ namespace LCore.LDoc.Markdown
             return null;
             }
 
+        public virtual string GetBadge_TotalMembers([NotNull] GeneratedDocument MD)
+            {
+            // TODO: add total members
+            return "";
+            }
+
         /// <summary>
         /// Override this method to customize badges included in type generated markdown documents.
         /// </summary>
         [CanBeNull]
         public virtual List<string> GetBadges_Coverage([NotNull] GeneratedDocument MD)
             {
-            var Type = (Type) this.TypeMeta.Member;
+            var Type = (Type)this.TypeMeta.Member;
 
             if (Type != null)
                 {
@@ -268,15 +284,15 @@ namespace LCore.LDoc.Markdown
 
                 Members.Each(Member =>
                     {
-                    if (Member.Key is MethodInfo)
-                        {
-                        TotalCoverable++;
+                        if (Member.Key is MethodInfo)
+                            {
+                            TotalCoverable++;
 
-                        var MemberCoverage = this.TypeMeta.Coverage;
+                            var MemberCoverage = this.TypeMeta.Coverage;
 
-                        if (MemberCoverage?.IsCovered == true)
-                            Covered++;
-                        }
+                            if (MemberCoverage?.IsCovered == true)
+                                Covered++;
+                            }
                     });
 
 
