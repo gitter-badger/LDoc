@@ -3,11 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using LCore.Extensions;
-using LCore.Interfaces;
 using LCore.LDoc;
 using LCore.LDoc.Markdown;
-using LCore.LUnit;
-using LCore.Tools;
 
 namespace Test_LDoc
     {
@@ -35,19 +32,6 @@ namespace Test_LDoc
             MD.GetRelativePath($"{typeof(LDoc).GetAssembly().GetRootPath()}\\Content\\{nameof(LDoc)}-banner-small.png");
 
         public override string RootUrl => LDoc.Urls.GitHubUrl;
-
-        //  private const string RootLUnitGitHub = "https://github.com/CodeSingularity/LUnit/blob/master";
-
-        /*
-                public override Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>
-                    {
-                    // TODO all of these should auto-link once manifests are working
-                    [typeof(AssemblyCoverage)] = $"{RootLUnitGitHub}/LUnit/docs/AssemblyCoverage.md",
-                    [typeof(ICodeComment)] = "",
-                    [typeof(L.Align)] = "",
-                    [typeof(Set<,>)] = "",
-                    [typeof(TypeCoverage)] = ""
-                    };*/
 
         /*
         /// <summary>

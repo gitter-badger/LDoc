@@ -66,7 +66,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateRootMarkdown.md" alt="">GenerateRootMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L206" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L205" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_Root.md" alt="">MarkdownDocument_Root</a></strong> <a href="SolutionMarkdownGenerator_GenerateRootMarkdown.md" alt="">GenerateRootMarkdown</a>();</h6>
@@ -74,7 +74,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateTableOfContentsMarkdown.md" alt="">GenerateTableOfContentsMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L214" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L213" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_TableOfContents.md" alt="">MarkdownDocument_TableOfContents</a></strong> <a href="SolutionMarkdownGenerator_GenerateTableOfContentsMarkdown.md" alt="">GenerateTableOfContentsMarkdown</a>();</h6>
@@ -82,7 +82,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateCoverageSummaryMarkdown.md" alt="">GenerateCoverageSummaryMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L222" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L221" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_TableOfContents.md" alt="">MarkdownDocument_TableOfContents</a></strong> <a href="SolutionMarkdownGenerator_GenerateCoverageSummaryMarkdown.md" alt="">GenerateCoverageSummaryMarkdown</a>();</h6>
@@ -90,7 +90,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateMarkdown-0.md" alt="">GenerateMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L230" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L229" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_Assembly.md" alt="">MarkdownDocument_Assembly</a></strong> <a href="SolutionMarkdownGenerator_GenerateMarkdown-0.md" alt="">GenerateMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);</h6>
@@ -98,7 +98,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateMarkdown-1.md" alt="">GenerateMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L238" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L237" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong> <a href="SolutionMarkdownGenerator_GenerateMarkdown-1.md" alt="">GenerateMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);</h6>
@@ -106,7 +106,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateMarkdown-2.md" alt="">GenerateMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L246" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L245" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_MethodGroup.md" alt="">MarkdownDocument_MethodGroup</a></strong> <a href="SolutionMarkdownGenerator_GenerateMarkdown-2.md" alt="">GenerateMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx" alt="">MethodInfo</a>[] MethodGroup);</h6>
@@ -114,7 +114,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GenerateMarkdown-3.md" alt="">GenerateMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L254" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L253" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="MarkdownDocument_Member.md" alt="">MarkdownDocument_Member</a></strong> <a href="SolutionMarkdownGenerator_GenerateMarkdown-3.md" alt="">GenerateMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a> Member);</h6>
@@ -122,7 +122,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_WriteHeader.md" alt="">WriteHeader</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L275" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L274" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_WriteHeader.md" alt="">WriteHeader</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -130,7 +130,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_TableOfContentsLink.md" alt="">TableOfContentsLink</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L303" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L302" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_TableOfContentsLink.md" alt="">TableOfContentsLink</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -138,7 +138,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_HomeLink.md" alt="">HomeLink</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L311" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L310" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_HomeLink.md" alt="">HomeLink</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -146,7 +146,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetOtherDocuments.md" alt="">GetOtherDocuments</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L319" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L318" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/xfhwa508.aspx" alt="" target="_blank">Dictionary</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>, <strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong>&gt; <a href="SolutionMarkdownGenerator_GetOtherDocuments.md" alt="">GetOtherDocuments</a>();</h6>
@@ -154,7 +154,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_FormatComment.md" alt="">FormatComment</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L327" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L326" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_FormatComment.md" alt="">FormatComment</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> CommentText);</h6>
@@ -162,7 +162,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_LinkToType.md" alt="">LinkToType</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L342" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-57-blue.png" alt="Lines of Code 57" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L341" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-57-blue.png" alt="Lines of Code 57" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_LinkToType.md" alt="">LinkToType</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -170,7 +170,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md" alt="">GetAssemblyTypeMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L434" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L433" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a>, <strong><a href="MarkdownDocument_Type.md" alt="">MarkdownDocument_Type</a></strong>&gt;&gt; <a href="SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md" alt="">GetAssemblyTypeMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);</h6>
@@ -178,7 +178,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_BannerImage_Large.md" alt="">BannerImage_Large</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L446" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L445" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_BannerImage_Large.md" alt="">BannerImage_Large</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -186,7 +186,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_BannerImage_Small.md" alt="">BannerImage_Small</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L451" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L450" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_BannerImage_Small.md" alt="">BannerImage_Small</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -194,7 +194,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_LogoImage_Large.md" alt="">LogoImage_Large</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L456" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L455" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_LogoImage_Large.md" alt="">LogoImage_Large</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -202,7 +202,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_LogoImage_Small.md" alt="">LogoImage_Small</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L461" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L460" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_LogoImage_Small.md" alt="">LogoImage_Small</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -210,7 +210,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_WriteCustomFooter.md" alt="">WriteCustomFooter</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L485" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L484" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-9-blue.png" alt="Lines of Code 9" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_WriteCustomFooter.md" alt="">WriteCustomFooter</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -218,7 +218,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_MarkdownPath_TagSummary.md" alt="">MarkdownPath_TagSummary</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L516" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L515" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_TagSummary.md" alt="">MarkdownPath_TagSummary</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Tag);</h6>
@@ -226,7 +226,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_MarkdownPath_Assembly.md" alt="">MarkdownPath_Assembly</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L533" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L532" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_Assembly.md" alt="">MarkdownPath_Assembly</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.assembly.aspx" alt="">Assembly</a> Assembly);</h6>
@@ -234,7 +234,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_MarkdownPath_Type.md" alt="">MarkdownPath_Type</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L539" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L538" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_Type.md" alt="">MarkdownPath_Type</a>(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);</h6>
@@ -242,7 +242,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_MarkdownPath_Member.md" alt="">MarkdownPath_Member</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L554" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L553" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_Member.md" alt="">MarkdownPath_Member</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a> Member);</h6>
@@ -250,7 +250,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_MarkdownPath_MethodGroup.md" alt="">MarkdownPath_MethodGroup</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L569" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L568" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="SolutionMarkdownGenerator_MarkdownPath_MethodGroup.md" alt="">MarkdownPath_MethodGroup</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.aspx" alt="">MethodInfo</a>[] Methods);</h6>
@@ -258,7 +258,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_IncludeType.md" alt="">IncludeType</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L577" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L576" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> <a href="SolutionMarkdownGenerator_IncludeType.md" alt="">IncludeType</a>(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);</h6>
@@ -266,7 +266,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_IncludeMember.md" alt="">IncludeMember</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L584" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L583" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> <a href="SolutionMarkdownGenerator_IncludeMember.md" alt="">IncludeMember</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a> Member);</h6>
@@ -274,7 +274,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetColorByPercentage.md" alt="">GetColorByPercentage</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L611" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L610" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-20-blue.png" alt="Lines of Code 20" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public virtual <strong><a href="BadgeColor.md" alt="">BadgeColor</a></strong> <a href="SolutionMarkdownGenerator_GetColorByPercentage.md" alt="">GetColorByPercentage</a>(<a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Percentage);</h6>
@@ -292,7 +292,7 @@
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_FindMarkdown.md" alt="">FindMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L266" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L265" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <strong><a href="MarkdownDocument_Member.md" alt="">MarkdownDocument_Member</a></strong> <a href="SolutionMarkdownGenerator_FindMarkdown.md" alt="">FindMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a> Member);</h6>
@@ -300,7 +300,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetTypeMemberMarkdown.md" alt="">GetTypeMemberMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L426" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L425" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/5tbh8a42.aspx" alt="" target="_blank">KeyValuePair</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a>, <strong><a href="MarkdownDocument_Member.md" alt="">MarkdownDocument_Member</a></strong>&gt;&gt; <a href="SolutionMarkdownGenerator_GetTypeMemberMarkdown.md" alt="">GetTypeMemberMarkdown</a>(<a href="https://msdn.microsoft.com/en-us/library/system.type.aspx" alt="">Type</a> Type);</h6>
@@ -308,7 +308,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_WriteFooter.md" alt="">WriteFooter</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L466" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L465" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_WriteFooter.md" alt="">WriteFooter</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -316,7 +316,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_Generate.md" alt="">Generate</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L687" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-37-blue.png" alt="Lines of Code 37" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L686" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-37-blue.png" alt="Lines of Code 37" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_Generate.md" alt="">Generate</a>(<a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> WriteToDisk);</h6>
@@ -324,7 +324,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetAllMarkdown.md" alt="">GetAllMarkdown</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L752" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L751" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-10-blue.png" alt="Lines of Code 10" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong>&gt; <a href="SolutionMarkdownGenerator_GetAllMarkdown.md" alt="">GetAllMarkdown</a>();</h6>
@@ -332,7 +332,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_AddError.md" alt="">AddError</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L799" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L798" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="SolutionMarkdownGenerator_AddError.md" alt="">AddError</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Error);</h6>
@@ -340,7 +340,7 @@
 </tr>
 <tr><td><h4><strong><a href="SolutionMarkdownGenerator_GetErrors.md" alt="">GetErrors</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-3-yellow.png" alt="TODOs 3" />   </td>
-<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L808" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Generators/SolutionMarkdownGenerator.cs#L807" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="SolutionMarkdownGenerator_GetErrors.md" alt="">GetErrors</a>();</h6>

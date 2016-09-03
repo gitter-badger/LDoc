@@ -160,7 +160,6 @@ namespace LCore.LDoc.Markdown
 
         /// <summary>
         /// Override this value to supply custom links to foreign types.
-        /// <see cref="RequireDirectLinksToAllForeignTypes"/>
         /// </summary>
         public virtual Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>();
 

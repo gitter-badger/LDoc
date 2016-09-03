@@ -6,7 +6,7 @@
 
 Line | [Markdown.cs](LDoc/Markdown/Generators/Markdown.cs) (1)
 :---  | :--- 
-[374](LDoc/Markdown/Generators/Markdown.cs#L374) |                                     // TODO set alignment here
+[375](LDoc/Markdown/Generators/Markdown.cs#L375) |                                     // TODO set alignment here
 
 
 Line | [MarkdownDocument_Assembly.cs](LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs) (10)
@@ -66,8 +66,8 @@ Line | [MarkdownDocument_Type.cs](LDoc/Markdown/Generators/MarkdownDocument_Type
 Line | [SolutionMarkdownGenerator.cs](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs) (3)
 :---  | :--- 
 [155](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L155) |         // TODO hook custom badge urls
-[329](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L329) |             // TODO add support for <see>
-[330](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L330) |             // TODO add support for <seealso>
+[328](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L328) |             // TODO add support for <see>
+[329](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L329) |             // TODO add support for <seealso>
 
 
 

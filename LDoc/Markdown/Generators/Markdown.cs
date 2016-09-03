@@ -52,6 +52,7 @@ namespace LCore.LDoc.Markdown
         public void Clear()
             {
             this.MarkdownLines.Clear();
+            this.MarkdownLines.TrimExcess();
             }
 
         /// <summary>
