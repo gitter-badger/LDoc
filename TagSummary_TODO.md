@@ -11,42 +11,42 @@ Line | [Markdown.cs](LDoc/LDoc/Markdown/Generators/Markdown.cs) (1)
 
 Line | [MarkdownDocument_Assembly.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs) (10)
 :---  | :--- 
-[109](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L109) |                     // TODO namespace badges
-[134](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L134) |             // TODO: add output file badge
-[135](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L135) |             // TODO: add file size badge
-[137](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L137) |             // TODO: add total classes
-[138](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L138) |             // TODO: add total members
-[139](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L139) |             // TODO: add total lines of code (non 'empty')
-[140](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L140) |             // TODO: add total extension methods
-[141](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L141) |             // TODO: add total todo count
-[142](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L142) |             // TODO: add total bug count
-[143](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L143) |             // TODO: add total not implemented count
+[107](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L107) |                     // TODO namespace badges
+[130](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L130) |             // TODO: add output file badge
+[131](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L131) |             // TODO: add file size badge
+[133](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L133) |             // TODO: add total classes
+[134](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L134) |             // TODO: add total members
+[135](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L135) |             // TODO: add total lines of code (non 'empty')
+[136](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L136) |             // TODO: add total extension methods
+[137](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L137) |             // TODO: add total todo count
+[138](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L138) |             // TODO: add total bug count
+[139](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs#L139) |             // TODO: add total not implemented count
 
 
 Line | [MarkdownDocument_Member.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs) (5)
 :---  | :--- 
-[80](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L80) |             // TODO display attributes
-[150](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L150) |                 // TODO coverage section
-[159](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L159) |                 // TODO document for PropertyInfo
-[168](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L168) |                 // TODO document for FieldInfo
-[393](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L393) |                 // TODO: Add test coverage link
+[78](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L78) |             // TODO display attributes
+[148](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L148) |                 // TODO coverage section
+[157](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L157) |                 // TODO document for PropertyInfo
+[166](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L166) |                 // TODO document for FieldInfo
+[389](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Member.cs#L389) |                 // TODO: Add test coverage link
 
 
 Line | [MarkdownDocument_CoverageSummary.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument_CoverageSummary.cs) (1)
 :---  | :--- 
-[40](LDoc/LDoc/Markdown/Generators/MarkdownDocument_CoverageSummary.cs#L40) |             // TODO Generate summary markdown
+[38](LDoc/LDoc/Markdown/Generators/MarkdownDocument_CoverageSummary.cs#L38) |             // TODO Generate summary markdown
 
 
 Line | [MarkdownDocument_Type.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs) (14)
 :---  | :--- 
-[128](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L128) |             // TODO display properties 
-[129](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L129) |             // TODO display constructors 
-[130](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L130) |             // TODO display attributes
-[131](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L131) |             // TODO display interfaces 
-[132](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L132) |             // TODO display constructors
-[133](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L133) |             // TODO display subtypes
-[174](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L174) |                             // TODO total for custom tags
-[205](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L205) |                         // TODO total for custom tags
+[130](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L130) |             // TODO display properties 
+[131](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L131) |             // TODO display constructors 
+[132](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L132) |             // TODO display attributes
+[133](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L133) |             // TODO display interfaces 
+[134](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L134) |             // TODO display constructors
+[135](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L135) |             // TODO display subtypes
+[176](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L176) |                             // TODO total for custom tags
+[207](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L207) |                         // TODO total for custom tags
 [251](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L251) |                 // TODO: add total lines of code (non 'empty')
 [252](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L252) |                 // TODO: add total extension methods
 [253](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L253) |                 // TODO: add total todo count
@@ -57,16 +57,16 @@ Line | [MarkdownDocument_Type.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument
 
 Line | [SolutionMarkdownGenerator.cs](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs) (4)
 :---  | :--- 
-[368](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L368) |             // TODO resolve link from type name
-[370](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L370) |             // TODO resolve link from sibling member
-[372](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L372) |             // TODO resolve link from member parameter
-[600](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L600) |             // TODO enable constructors
+[573](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L573) |             // TODO enable constructors
+[590](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L590) |             // TODO resolve link from type name
+[592](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L592) |             // TODO resolve link from sibling member
+[594](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L594) |             // TODO resolve link from member parameter
 
 
 
 
 ---
 
-Copyright 2016 &copy; [Home](LDoc/README.md) [Table of Contents](LDoc/TableOfContents.md)
+Copyright 2016 &copy; [](LDoc/README.md) [](LDoc/TableOfContents.md)
 
 This markdown was generated by [LDoc](https://github.com/CodeSingularity/LDoc), powered by [LUnit](https://github.com/CodeSingularity/LUnit), [LCore](https://github.com/CodeSingularity/LCore)

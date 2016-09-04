@@ -88,7 +88,10 @@ namespace LCore.LDoc.Markdown
             this.TotalLineCount = this.TypeMeta?.CodeLineCount ?? 0u;
             }
 
+        /// <inheritdoc />
         protected override string FileName => $"{this.Type.Name.CleanFileName()}.md";
+
+        /// <inheritdoc />
         protected override string FilePath => this.Generator.MarkdownPath_MemberRoot(this.Type);
 
         /// <summary>
@@ -97,7 +100,6 @@ namespace LCore.LDoc.Markdown
         protected override void GenerateDocument()
             {
             this.Generator.Stats.TypeMarkdownDocuments++;
-            this.Generator.WriteHeader(this);
 
             this.Line(this.Link(
                 this.GetRelativePath(this.Generator.Markdown_Assembly[this.TypeMeta.Member.GetAssembly()].FullPath),
@@ -214,8 +216,6 @@ namespace LCore.LDoc.Markdown
 
                     this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
                 });
-
-            this.Generator.WriteFooter(this);
             }
 
 

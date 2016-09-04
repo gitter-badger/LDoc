@@ -131,7 +131,12 @@ namespace LCore.LDoc.Markdown
             {
             this.Generator.Stats.MarkdownDocuments++;
 
+
+            this.Generator.WriteHeader(this);
+
             this.GenerateDocument();
+
+            this.Generator.WriteFooter(this);
             }
 
         /// <summary>

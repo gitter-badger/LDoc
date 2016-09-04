@@ -34,7 +34,6 @@ namespace LCore.LDoc.Markdown
             {
             this.Generator.Stats.ProjectMarkdownDocuments++;
 
-            this.Generator.WriteHeader(this);
             this.Line(this.Header(this.Generator.Language.MainReadme, Size: 2));
 
             if (!this.Generator.CustomBadgeUrls.IsEmpty())
@@ -66,11 +65,24 @@ namespace LCore.LDoc.Markdown
             });
 
             if (!this.Generator.Home_RelatedProjects.IsEmpty())
+                {
                 this.Line(this.Header(this.Generator.Language.Header_RelatedProjects, Size: 3));
 
-            this.UnorderedList(
-                this.Generator.Home_RelatedProjects.Convert(
-                    Project => $"{this.Link(Project.Url, Project.Name)} {Project.Description}").Array());
+                this.UnorderedList(
+                    this.Generator.Home_RelatedProjects
+                    .Select(Project => !string.IsNullOrEmpty(Project.Name))
+                    .Convert(Project => $"{this.Link(Project.Url, Project.Name)} {Project.Description}").Array());
+                }
+
+            if (!this.Generator.Home_DependencyProjects.IsEmpty())
+                {
+                this.Line(this.Header(this.Generator.Language.Header_Dependencies, Size: 3));
+
+                this.UnorderedList(
+                    this.Generator.Home_DependencyProjects
+                    .Select(Project => !string.IsNullOrEmpty(Project.Name))
+                    .Convert(Project => $"{this.Link(Project.Url, Project.Name)} {Project.Description}").Array());
+                }
 
 
             var TodoDocument = this.Generator.Markdown_Other.SafeGet("TODO Summary");
@@ -82,8 +94,6 @@ namespace LCore.LDoc.Markdown
                 {
 
                 }
-
-            this.Generator.WriteFooter(this);
             }
         }
     }

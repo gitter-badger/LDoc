@@ -33,13 +33,12 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected override void GenerateDocument()
             {
-            this.Generator.WriteHeader(this);
-
             this.Line(this.Header(this.Generator.Language.CoverageSummary));
 
             // TODO Generate summary markdown
 
             this.Line(this.Header(this.Generator.Language.Header_Assemblies));
+
             this.Generator.Markdown_Assembly.Each(AssemblyMD =>
             {
                 var Coverage = new AssemblyCoverage(AssemblyMD.Key);
@@ -50,8 +49,6 @@ namespace LCore.LDoc.Markdown
                 // ReSharper disable once ExpressionIsAlwaysNull
                 this.Line(AssemblyMD.Value.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
             });
-
-            this.Generator.WriteFooter(this);
             }
         }
     }

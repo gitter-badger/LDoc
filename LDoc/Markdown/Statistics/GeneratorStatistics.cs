@@ -60,7 +60,10 @@ namespace LCore.LDoc.Markdown
         /// External links generated
         /// </summary>
         public uint ExternalLinks { get; set; }
-
+        /// <summary>
+        /// LDoc links included via linked LDoc manifests
+        /// </summary>
+        public uint LDocLinks { get; set; }
 
         /// <summary>
         /// Badges generated
@@ -81,6 +84,7 @@ namespace LCore.LDoc.Markdown
         /// Retrieves the running duration of generation
         /// </summary>
         public TimeSpan Duration => this.EndGenerationTime - this.StartGenerationTime;
+
 
         /// <summary>
         /// Retrieves a list of tables representing statistics gathered.
@@ -119,6 +123,7 @@ namespace LCore.LDoc.Markdown
                         {nameof(this.Links).Humanize(), $"{this.Links}"},
                         {nameof(this.LocalLinks).Humanize(), $"{this.LocalLinks}"},
                         {nameof(this.SystemLinks).Humanize(), $"{this.SystemLinks}"},
+                        {"LDoc Links", $"{this.LDocLinks}"},
                         {nameof(this.ExternalLinks).Humanize(), $"{this.ExternalLinks}"}
                     }
                 };

@@ -21,6 +21,9 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public class Markdown
         {
+        // TODO add AsHtml to remaining methods
+
+
         /// <summary>
         /// The title of the markdown file
         /// </summary>
@@ -108,7 +111,7 @@ namespace LCore.LDoc.Markdown
                 : $"\r\n{"#".Times(Size)} {Line}";
             }
         /// <summary>
-        /// Returns a header line, extracting the <param name="Anchor"></param> text into a variable
+        /// Returns a header line, extracting the <paramref name="Anchor"/> text into a variable
         /// </summary>
         public virtual string HeaderAnchor(string Line, [CanBeNull]out string Anchor, int Size = 1, bool AsHtml = false)
             {

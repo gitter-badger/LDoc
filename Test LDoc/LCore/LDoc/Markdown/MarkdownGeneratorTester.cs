@@ -26,15 +26,6 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
             }
 
         [Fact]
-        public void TestPathFinding()
-            {
-            //typeof(GeneratedDocument).GetMember("Table")[0].DeclaringType.FindSourceCode().ShouldBe("");
-            //typeof(GeneratedDocument).GetMember("Table")[0].DeclaringType.FindClassFile().ShouldBe("");
-            //typeof(GeneratedDocument).GetMember("Table")[0].FindSourceCode().ShouldBe("");
-            }
-
-
-        [Fact]
         [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.Generate) + "(Boolean)")]
         [Trait(Traits.TargetMember, nameof(LCore) + "." + nameof(global::LCore.LDoc) + "." + nameof(global::LCore.LDoc.Markdown) + "." + nameof(SolutionMarkdownGenerator) + "." + nameof(SolutionMarkdownGenerator.GetAllMarkdown) + "() => List<GitHubMarkdown>")]
         public void Generate()

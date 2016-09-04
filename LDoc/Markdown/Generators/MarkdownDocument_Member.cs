@@ -51,8 +51,6 @@ namespace LCore.LDoc.Markdown
             {
             this.Generator.Stats.MemberMarkdownDocuments++;
 
-            this.Generator.WriteHeader(this);
-
             this.Line(this.Header($"namespace {this.Meta.Type.Namespace}", Size: 6));
             this.Line(this.Header($"{this.Meta.Type.GetMemberDetails()?.ToCodeString()} " +
                                   $"{this.Link(this.GetRelativePath(this.Generator.Markdown_Type[this.Meta.Type].FullPath), this.Meta.Type.GetGenericName())}", Size: 6));
@@ -169,8 +167,6 @@ namespace LCore.LDoc.Markdown
                 }
 
             #endregion
-
-            this.Generator.WriteFooter(this);
             }
 
         /// <summary>

@@ -52,6 +52,7 @@
  - [LocalLinks](LDoc/LDoc/docs/GeneratorStatistics_LocalLinks.md)
  - [SystemLinks](LDoc/LDoc/docs/GeneratorStatistics_SystemLinks.md)
  - [ExternalLinks](LDoc/LDoc/docs/GeneratorStatistics_ExternalLinks.md)
+ - [LDocLinks](LDoc/LDoc/docs/GeneratorStatistics_LDocLinks.md)
  - [Badges](LDoc/LDoc/docs/GeneratorStatistics_Badges.md)
  - [StartGenerationTime](LDoc/LDoc/docs/GeneratorStatistics_StartGenerationTime.md)
  - [EndGenerationTime](LDoc/LDoc/docs/GeneratorStatistics_EndGenerationTime.md)
@@ -142,7 +143,9 @@
  - [TotalLineCount](LDoc/LDoc/docs/MarkdownDocument_Type_TotalLineCount.md)
  - [MicrosoftSystemReferencePath](LDoc/LDoc/docs/SolutionMarkdownGenerator_MicrosoftSystemReferencePath.md)
  - [Home_Intro](LDoc/LDoc/docs/SolutionMarkdownGenerator_Home_Intro.md)
- - [HowToInstall](LDoc/LDoc/docs/SolutionMarkdownGenerator_HowToInstall.md)
+ - [AddError](LDoc/LDoc/docs/SolutionMarkdownGenerator_AddError.md)
+ - [GetErrors](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetErrors.md)
+ - [GetColorByPercentage](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetColorByPercentage.md)
  - [GenerateRootMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateRootMarkdown.md)
  - [GenerateTableOfContentsMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateTableOfContentsMarkdown.md)
  - [GenerateCoverageSummaryMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateCoverageSummaryMarkdown.md)
@@ -150,55 +153,54 @@
  - [GenerateMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateMarkdown-1.md)
  - [GenerateMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateMarkdown-2.md)
  - [GenerateMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateMarkdown-3.md)
- - [FindMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_FindMarkdown.md)
- - [WriteHeader](LDoc/LDoc/docs/SolutionMarkdownGenerator_WriteHeader.md)
- - [TableOfContentsLink](LDoc/LDoc/docs/SolutionMarkdownGenerator_TableOfContentsLink.md)
- - [HomeLink](LDoc/LDoc/docs/SolutionMarkdownGenerator_HomeLink.md)
- - [GetOtherDocuments](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetOtherDocuments.md)
- - [FormatComment](LDoc/LDoc/docs/SolutionMarkdownGenerator_FormatComment.md)
- - [LinkToType](LDoc/LDoc/docs/SolutionMarkdownGenerator_LinkToType.md)
- - [GetTypeMemberMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetTypeMemberMarkdown.md)
- - [GetAssemblyTypeMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md)
+ - [GenerateTagSummaryMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GenerateTagSummaryMarkdown.md)
  - [BannerImage_Large](LDoc/LDoc/docs/SolutionMarkdownGenerator_BannerImage_Large.md)
  - [BannerImage_Small](LDoc/LDoc/docs/SolutionMarkdownGenerator_BannerImage_Small.md)
  - [LogoImage_Large](LDoc/LDoc/docs/SolutionMarkdownGenerator_LogoImage_Large.md)
  - [LogoImage_Small](LDoc/LDoc/docs/SolutionMarkdownGenerator_LogoImage_Small.md)
+ - [HowToInstall](LDoc/LDoc/docs/SolutionMarkdownGenerator_HowToInstall.md)
+ - [WriteHeader](LDoc/LDoc/docs/SolutionMarkdownGenerator_WriteHeader.md)
  - [WriteFooter](LDoc/LDoc/docs/SolutionMarkdownGenerator_WriteFooter.md)
  - [WriteCustomFooter](LDoc/LDoc/docs/SolutionMarkdownGenerator_WriteCustomFooter.md)
  - [MarkdownPath_AssemblyRoot](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_AssemblyRoot.md)
  - [MarkdownPath_MemberRoot](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_MemberRoot.md)
- - [GetMethodIndex](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetMethodIndex.md)
  - [IncludeType](LDoc/LDoc/docs/SolutionMarkdownGenerator_IncludeType.md)
  - [IncludeMember](LDoc/LDoc/docs/SolutionMarkdownGenerator_IncludeMember.md)
- - [GetColorByPercentage](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetColorByPercentage.md)
- - [Generate](LDoc/LDoc/docs/SolutionMarkdownGenerator_Generate.md)
+ - [LinkToString](LDoc/LDoc/docs/SolutionMarkdownGenerator_LinkToString.md)
+ - [LinkToType](LDoc/LDoc/docs/SolutionMarkdownGenerator_LinkToType.md)
+ - [FormatComment](LDoc/LDoc/docs/SolutionMarkdownGenerator_FormatComment.md)
  - [GetAllMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetAllMarkdown.md)
- - [AddError](LDoc/LDoc/docs/SolutionMarkdownGenerator_AddError.md)
- - [GetErrors](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetErrors.md)
+ - [FindMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_FindMarkdown.md)
+ - [GetOtherDocuments](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetOtherDocuments.md)
+ - [GetTypeMemberMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetTypeMemberMarkdown.md)
+ - [GetAssemblyTypeMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md)
+ - [GetMethodIndex](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetMethodIndex.md)
+ - [Generate](LDoc/LDoc/docs/SolutionMarkdownGenerator_Generate.md)
+ - [DocumentAssemblies](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentAssemblies.md)
+ - [RootUrl](LDoc/LDoc/docs/SolutionMarkdownGenerator_RootUrl.md)
  - [Markdown_Root](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_Root.md)
  - [Markdown_TableOfContents](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_TableOfContents.md)
- - [Colors](LDoc/LDoc/docs/SolutionMarkdownGenerator_Colors.md)
- - [Stats](LDoc/LDoc/docs/SolutionMarkdownGenerator_Stats.md)
- - [DocumentAssemblies](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentAssemblies.md)
- - [TestAssemblies](LDoc/LDoc/docs/SolutionMarkdownGenerator_TestAssemblies.md)
- - [Home_RelatedProjects](LDoc/LDoc/docs/SolutionMarkdownGenerator_Home_RelatedProjects.md)
- - [RootUrl](LDoc/LDoc/docs/SolutionMarkdownGenerator_RootUrl.md)
- - [CustomBadgeUrls](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomBadgeUrls.md)
- - [CustomTypeLinks](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomTypeLinks.md)
  - [Markdown_Other](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_Other.md)
  - [Markdown_Assembly](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_Assembly.md)
  - [Markdown_Type](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_Type.md)
  - [Markdown_Member](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_Member.md)
  - [Markdown_MethodGroups](LDoc/LDoc/docs/SolutionMarkdownGenerator_Markdown_MethodGroups.md)
+ - [Stats](LDoc/LDoc/docs/SolutionMarkdownGenerator_Stats.md)
+ - [ColorThresholds](LDoc/LDoc/docs/SolutionMarkdownGenerator_ColorThresholds.md)
+ - [Colors](LDoc/LDoc/docs/SolutionMarkdownGenerator_Colors.md)
+ - [Language](LDoc/LDoc/docs/SolutionMarkdownGenerator_Language.md)
+ - [Home_RelatedProjects](LDoc/LDoc/docs/SolutionMarkdownGenerator_Home_RelatedProjects.md)
+ - [Home_DependencyProjects](LDoc/LDoc/docs/SolutionMarkdownGenerator_Home_DependencyProjects.md)
+ - [CustomBadgeUrls](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomBadgeUrls.md)
+ - [AssemblyComments](LDoc/LDoc/docs/SolutionMarkdownGenerator_AssemblyComments.md)
  - [GeneratedMarkdownRoot](LDoc/LDoc/docs/SolutionMarkdownGenerator_GeneratedMarkdownRoot.md)
  - [MarkdownPath_Manifest](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Manifest.md)
- - [ColorThresholds](LDoc/LDoc/docs/SolutionMarkdownGenerator_ColorThresholds.md)
- - [DocumentUnitCoverage](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentUnitCoverage.md)
- - [DocumentAttributeCoverage](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentAttributeCoverage.md)
- - [Language](LDoc/LDoc/docs/SolutionMarkdownGenerator_Language.md)
+ - [CustomTypeLinks](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomTypeLinks.md)
  - [CustomCommentTags](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomCommentTags.md)
  - [CustomCommentColor](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomCommentColor.md)
- - [AssemblyComments](LDoc/LDoc/docs/SolutionMarkdownGenerator_AssemblyComments.md)
+ - [TestAssemblies](LDoc/LDoc/docs/SolutionMarkdownGenerator_TestAssemblies.md)
+ - [DocumentUnitCoverage](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentUnitCoverage.md)
+ - [DocumentAttributeCoverage](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentAttributeCoverage.md)
  - [CSharpLanguage](LDoc/LDoc/docs/SolutionMarkdownGenerator_CSharpLanguage.md)
  - [MarkdownPath_RootFile](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_RootFile.md)
  - [Home_RelatedProjects](LDoc/LDoc/docs/SolutionMarkdownGenerator_L_Home_RelatedProjects.md)
@@ -251,6 +253,7 @@
  - [TableHeaderText_Line](LDoc/LDoc/docs/Text_TableHeaderText_Line.md)
  - [ManifestFile](LDoc/LDoc/docs/Text_ManifestFile.md)
  - [TableHeader_Errors](LDoc/LDoc/docs/Text_TableHeader_Errors.md)
+ - [Header_Dependencies](LDoc/LDoc/docs/Text_Header_Dependencies.md)
  - [MemberName](LDoc/LDoc/docs/DocumentManifest_MemberName.md)
  - [FullUrl_Documentation](LDoc/LDoc/docs/DocumentManifest_FullUrl_Documentation.md)
  - [GetDocument](LDoc/LDoc/docs/LDocManifest_GetDocument.md)
@@ -271,38 +274,42 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 15 seconds
+Duration | 14 seconds
 
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 263
+Markdown Documents | 266
 Project Markdown Documents | 4
 Assembly Markdown Documents | 1
 Type Markdown Documents | 23
-Member Markdown Documents | 233
+Member Markdown Documents | 236
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 7133
-Headers | 2067
+Lines | 7194
+Headers | 2082
 Tables | 124
-Badges | 1566
+Badges | 1564
 
 
 Links | Total
 :---  | :--- 
-Links | 4248
-Local Links | 3239
-System Links | 651
+Links | 4279
+Local Links | 3264
+System Links | 654
+LDoc Links | 30
 External Links | 0
 
+
+### Errors (1)
+- Could not find code line number for LCore.LDoc.Markdown.SolutionMarkdownGenerator.LinkToString
 
 
 
 ---
 
-Copyright 2016 &copy; [Home](LDoc/README.md) [Table of Contents](LDoc/TableOfContents.md)
+Copyright 2016 &copy; [](LDoc/README.md) [](LDoc/TableOfContents.md)
 
 This markdown was generated by [LDoc](https://github.com/CodeSingularity/LDoc), powered by [LUnit](https://github.com/CodeSingularity/LUnit), [LCore](https://github.com/CodeSingularity/LCore)

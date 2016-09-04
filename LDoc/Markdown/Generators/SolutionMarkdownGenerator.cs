@@ -26,15 +26,6 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public abstract class SolutionMarkdownGenerator
         {
-        /// <summary>
-        /// Root documentation generated document
-        /// </summary>
-        public MarkdownDocument_Root Markdown_Root { get; set; }
-        /// <summary>
-        /// Table of contents generated document
-        /// </summary>
-        public MarkdownDocument_TableOfContents Markdown_TableOfContents { get; set; }
-
         #region Statics
 
         /// <summary>
@@ -117,16 +108,7 @@ namespace LCore.LDoc.Markdown
 
         #endregion
 
-        /// <summary>
-        /// Override this member to customize colors used for badges
-        /// </summary>
-        public virtual ColorSettings Colors { get; } = new ColorSettings();
-
-        /// <summary>
-        /// Keeps track of generation statistics
-        /// </summary>
-        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
-
+        #region Abstract 
 
         /// <summary>
         /// Override this member to specify the assemblies to generate documentation.
@@ -134,43 +116,53 @@ namespace LCore.LDoc.Markdown
         public abstract Assembly[] DocumentAssemblies { get; }
 
         /// <summary>
-        /// Override this member to specify any test assemblies
-        /// </summary>
-        public virtual Assembly[] TestAssemblies => new Assembly[] { };
-
-        /// <summary>
         /// Write the markdown intro to your project, in the front page README.
         /// </summary>
         public abstract void Home_Intro(GeneratedDocument MD);
-
-        /// <summary>
-        /// Override this value to link to related projects at the bottom of your home document
-        /// </summary>
-        public virtual List<ProjectInfo> Home_RelatedProjects => new List<ProjectInfo>();
-
-        /// <summary>
-        /// Override this value to indicate installation instructions.
-        /// </summary>
-        public virtual void HowToInstall([NotNull] GeneratedDocument MD)
-            {
-            }
 
         /// <summary>
         /// Implement this member to specify the Root source control Url for the solution.
         /// </summary>
         public abstract string RootUrl { get; }
 
+
+        #endregion
+
+        #region Errors
         /// <summary>
-        /// Override this to provide custom badge urls for the project.
+        /// Stores types where documentation wasn't successfully located
         /// </summary>
-        public virtual string[] CustomBadgeUrls => new string[] { };
+        protected List<string> ErrorsReported { get; } = new List<string>();
 
         /// <summary>
-        /// Override this value to supply custom links to foreign types.
+        /// Adds an error to be reported within the markdown
         /// </summary>
-        public virtual Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>();
+        public void AddError(string Error)
+            {
+            if (!this.ErrorsReported.Has(Error))
+                this.ErrorsReported.Add(Error);
+            }
 
-        #region Properties + 
+        /// <summary>
+        /// Returns all errors reported during generation
+        /// </summary>
+        public List<string> GetErrors()
+            {
+            return this.ErrorsReported.List();
+            }
+
+        #endregion
+
+        #region Documents
+
+        /// <summary>
+        /// Root documentation generated document
+        /// </summary>
+        public MarkdownDocument_Root Markdown_Root { get; set; }
+        /// <summary>
+        /// Table of contents generated document
+        /// </summary>
+        public MarkdownDocument_TableOfContents Markdown_TableOfContents { get; set; }
 
         /// <summary>
         /// Other titled markdown,
@@ -202,9 +194,79 @@ namespace LCore.LDoc.Markdown
         public Dictionary<MethodInfo[], MarkdownDocument_MethodGroup> Markdown_MethodGroups { get; } =
             new Dictionary<MethodInfo[], MarkdownDocument_MethodGroup>();
 
+
+
         #endregion
 
-        #region Generators + 
+        #region Statistics
+
+        /// <summary>
+        /// Keeps track of generation statistics
+        /// </summary>
+        public GeneratorStatistics Stats { get; } = new GeneratorStatistics();
+
+        #endregion
+
+        #region Colors
+
+        /// <summary>
+        /// Override this value with an array of EXACTLY 4 numbers to specify the levels of coloring
+        /// Default is: `{ 30, 50, 70, 100 }`
+        /// 
+        /// Percentage  | Color
+        /// ---         | ---
+        /// 30-         | BadgeColor.Red
+        /// 31-50       | BadgeColor.Yellow
+        /// 51-70       | BadgeColor.YellowGreen
+        /// 71-100      | BadgeColor.Green
+        /// 100         | BadgeColor.BrightGreen
+        /// 101+        | BadgeColor.Blue
+        /// </summary>
+        public virtual int[] ColorThresholds => new[] { 30, 50, 70, 100 };
+
+        /// <summary>
+        /// Gets a BadgeColor for a given <paramref name="Percentage"/>
+        /// 
+        /// Override this method to customize the deciding of BadgeColor by Percentage.
+        /// </summary>
+        public virtual BadgeColor GetColorByPercentage(int Percentage)
+            {
+            if (Percentage < this.ColorThresholds[0])
+                return BadgeColor.Red;
+            if (Percentage < this.ColorThresholds[1])
+                return BadgeColor.Yellow;
+            if (Percentage < this.ColorThresholds[2])
+                return BadgeColor.YellowGreen;
+            if (Percentage < this.ColorThresholds[3])
+                return BadgeColor.Green;
+            if (Percentage == this.ColorThresholds[3])
+                return BadgeColor.BrightGreen;
+            // ReSharper disable once ConvertIfStatementToReturnStatement
+            if (Percentage > this.ColorThresholds[3])
+                return BadgeColor.Blue;
+
+            return BadgeColor.LightGrey;
+            }
+
+
+        /// <summary>
+        /// Override this member to customize colors used for badges
+        /// </summary>
+        public virtual ColorSettings Colors { get; } = new ColorSettings();
+
+
+        #endregion
+
+        #region Language
+
+        /// <summary>
+        /// Override this value or set its properties to customize the text used for markdown generation.
+        /// </summary>
+        public virtual Text Language => new Text();
+
+        #endregion
+
+        #region Document Generators
 
         /// <summary>
         /// Generates root markdown document (front page)
@@ -223,8 +285,6 @@ namespace LCore.LDoc.Markdown
             this.Markdown_TableOfContents = new MarkdownDocument_TableOfContents(this, this.Language.TableOfContents);
             return this.Markdown_TableOfContents;
             }
-
-
 
         /// <summary>
         /// Generates coverage summary document
@@ -266,17 +326,82 @@ namespace LCore.LDoc.Markdown
             return new MarkdownDocument_Member(Member, this, Member.Name);
             }
 
+        /// <summary>
+        /// Generates markdown for a tag summary 
+        /// </summary>
+        public virtual MarkdownDocument_TagSummary GenerateTagSummaryMarkdown(string Tag)
+            {
+            return new MarkdownDocument_TagSummary(this, $"Summary '{Tag}'", Tag);
+            }
+
+
         #endregion
 
-        #region Helpers +
+        #region Display + 
+
+        #region Images
 
         /// <summary>
-        /// Locates a markdown document for a particular <paramref name="Member"/>
+        /// Override this value to display a large image on top ofthe main document
         /// </summary>
-        public MarkdownDocument_Member FindMarkdown(MemberInfo Member)
+        public virtual string BannerImage_Large([NotNull] GeneratedDocument MD) => "";
+
+        /// <summary>
+        /// Override this value to display a small banner image on top of sub-documents
+        /// </summary>
+        public virtual string BannerImage_Small([NotNull] GeneratedDocument MD) => "";
+
+        /// <summary>
+        /// Override this value to display a large image in the upper right corner of the main document
+        /// </summary>
+        public virtual string LogoImage_Large([NotNull] GeneratedDocument MD) => "";
+
+        /// <summary>
+        /// Override this value to display a small image in the upper right corner of sub-documents
+        /// </summary>
+        public virtual string LogoImage_Small([NotNull] GeneratedDocument MD) => "";
+
+
+        #endregion
+
+        #region Root
+
+        /// <summary>
+        /// Override this value to link to related projects at the bottom of your home document
+        /// </summary>
+        public virtual List<ProjectInfo> Home_RelatedProjects => new List<ProjectInfo>();
+
+        /// <summary>
+        /// Override this value to link to project dependencies at the bottom of your home document
+        /// </summary>
+        public virtual List<ProjectInfo> Home_DependencyProjects => new List<ProjectInfo>();
+
+        /// <summary>
+        /// Override this to provide custom badge urls for the project.
+        /// </summary>
+        public virtual string[] CustomBadgeUrls => new string[] { };
+
+
+        /// <summary>
+        /// Override this value to indicate installation instructions.
+        /// </summary>
+        public virtual void HowToInstall([NotNull] GeneratedDocument MD)
             {
-            return this.Markdown_Member.First(MD => MD.Key == Member).Value;
             }
+
+        #endregion
+
+        #region Assembly
+
+        /// <summary>
+        /// Override or add values to this dictionary to specify <see cref="Assembly"/> comments.
+        /// </summary>
+        public virtual Dictionary<Assembly, ICodeComment> AssemblyComments { get; }
+            = new Dictionary<Assembly, ICodeComment>();
+
+        #endregion
+
+        #region Header
 
         /// <summary>
         /// Writes the default header, including the large or small
@@ -307,63 +432,160 @@ namespace LCore.LDoc.Markdown
             }
 
 
+        #endregion
+
+        #region Footer
+
+
+
         /// <summary>
-        /// Retrieves a formatted link to the table of contents
+        /// Writes the footer to a markdown document.
         /// </summary>
-        public virtual string TableOfContentsLink(GeneratedDocument MD)
+        public void WriteFooter([NotNull] GeneratedDocument MD)
             {
-            return MD.Link(MD.GetRelativePath(this.Markdown_TableOfContents.FullPath), this.Language.TableOfContents);
+            MD.Line("");
+            MD.Line("");
+            MD.HorizontalRule();
+
+            this.WriteCustomFooter(MD);
+            MD.Line("");
+            MD.Line(new[]
+                {
+                $"This markdown was generated by {MD.Link(LDoc.Urls.GitHubUrl, nameof(LDoc))}, " +
+                $"powered by {MD.Link(LUnit.LUnit.Urls.GitHubRepository_LUnit, nameof(LUnit))}, " +
+                $"{MD.Link(LUnit.LUnit.Urls.GitHubRepository_LCore, nameof(LCore))}"
+                }.JoinLines(" "));
             }
 
         /// <summary>
-        /// Retrieves a formatted link to the home readme
+        /// Writes the footer for your markdown document
         /// </summary>
-        public virtual string HomeLink(GeneratedDocument MD)
+        public virtual void WriteCustomFooter(GeneratedDocument MD)
             {
-            return MD.Link(MD.GetRelativePath(this.Markdown_Root.FullPath), this.Language.MainReadme);
+            MD.Line(new[]
+                {
+                $"Copyright {DateTime.Now.Year} &copy;",
+                MD.Link(MD.GetRelativePath(this.Markdown_Root.FullPath)),
+                MD.Link(MD.GetRelativePath(this.Markdown_TableOfContents.FullPath))
+                }.JoinLines(" "));
             }
+
+
+
+        #endregion
+
+        #endregion
+
+        #region Loading
+
+        private void Load(Assembly Assembly)
+            {
+            Assembly.GetExportedTypes().Select(this.IncludeType).Each(this.Load);
+
+            this.Markdown_Assembly.Add(Assembly, this.GenerateMarkdown(Assembly));
+            }
+
+        private void Load(Type Type)
+            {
+            MemberInfo[] AllMembers = Type.GetMembers().Select(this.IncludeMember);
+
+            Dictionary<string, List<MethodInfo>> Methods = AllMembers
+                .Filter<MethodInfo>()
+                .Group(Method => Method.Name);
+
+            List<KeyValuePair<string, List<MethodInfo>>> MethodGroups = Methods.Select(Method => Method.Value.Count > 1);
+
+            MethodGroups.Convert(Group => Group.Value.Array()).Each(this.Load);
+            AllMembers.Each(this.Load);
+
+            this.Markdown_Type.Add(Type, this.GenerateMarkdown(Type));
+            }
+
+        private void Load(MemberInfo Member)
+            {
+            this.Markdown_Member.Add(Member, this.GenerateMarkdown(Member));
+            }
+
+        private void Load(MethodInfo[] MethodGroup)
+            {
+            this.Markdown_MethodGroups.Add(MethodGroup, this.GenerateMarkdown(MethodGroup));
+            }
+
+
+        #endregion
+
+        #region File Paths
 
         /// <summary>
-        /// Override this method to generate custom documents for your project.
+        /// Root path of the current running solution (development ONLY)
         /// </summary>
-        public virtual Dictionary<string, GeneratedDocument> GetOtherDocuments()
-            {
-            return new Dictionary<string, GeneratedDocument>();
-            }
+        public virtual string GeneratedMarkdownRoot => L.Ref.GetSolutionRootPath();
 
         /// <summary>
-        /// Formats comments, properly displaying comment tags.
+        /// Returns the root directory for an assembly, which is a folder beneath the <param name="Assembly"></param> 
+        /// root directory
         /// </summary>
-        public virtual string FormatComment(GeneratedDocument MD, string CommentText)
-            {
-            CommentText.Matches("<code>(.*)</code>").Each(Match =>
-                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
-                    $"\r\n```\r\n{Match.Groups[groupnum: 1]}\r\n```\r\n"));
+        public virtual string MarkdownPath_AssemblyRoot(Assembly Assembly) =>
+            $"{Assembly.GetRootPath()}\\{this.MarkdownPath_Documentation}";
 
-            CommentText.Matches("<value>(.*)</value>").Each(Match =>
-                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
-                    $"` {Match.Groups[groupnum: 1]} `"));
+        /// <summary>
+        /// Returns the root directory for the repository, which is the root directory for markdown generation
+        /// </summary>
+        public virtual string MarkdownPath_MemberRoot(MemberInfo Member) =>
+            this.MarkdownPath_AssemblyRoot(Member.GetAssembly());
 
-            CommentText.Matches("<see cref=\"(.*)\"/>").Each(Match =>
-                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
-                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+        /// <summary>
+        /// Documents folder, default is "docs"
+        /// </summary>
+        protected virtual string MarkdownPath_Documentation => "docs";
 
-            CommentText.Matches("<seealso cref=\"(.*)\"/>").Each(Match =>
-                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
-                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
 
-            CommentText.Matches("<paramref name=\"(.*)\"/>").Each(Match =>
-                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
-                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+        /// <summary>
+        /// Generates the markdown path for the manifest JSON file
+        /// </summary>
+        public virtual string MarkdownPath_Manifest =>
+            $"{L.Ref.GetSolutionRootPath()}\\" +
+            $"{this.Language.ManifestFile}";
 
-            CommentText.Matches("<typeparamref name=\"(.*)\"/>").Each(Match =>
-                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
-                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+        #endregion
 
-            return CommentText;
-            }
+        #region Inclusion Conditions
 
-        private string LinkToString(GeneratedDocument MD, string Link)
+        /// <summary>
+        /// Determines if a Type should be included in documentation
+        /// </summary>
+        public virtual bool IncludeType([NotNull] Type Type) =>
+            !Type.HasAttribute<IExcludeFromMarkdownAttribute>();
+
+        /// <summary>
+        /// Determines if a Member should be included in documentation
+        /// </summary>
+        public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
+            // Manually excluded members and declaring types
+            !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
+            Member.DeclaringType?.HasAttribute<IExcludeFromMarkdownAttribute>() != true &&
+            // Property getters and setters are handled under the PropertyInfo member, not the get and set methods
+            !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
+            // Don't include members that are being exposed from base classes
+            Member.IsDeclaredMember() &&
+            // Don't make a document for each enum value
+            Member.DeclaringType?.IsEnum == false &&
+            // TODO enable constructors
+            !(Member is ConstructorInfo);
+
+        #endregion
+
+        #region Links
+
+        /// <summary>
+        /// Override this value to supply custom links to foreign types.
+        /// </summary>
+        public virtual Dictionary<Type, string> CustomTypeLinks => new Dictionary<Type, string>();
+
+        /// <summary>
+        /// Links to a string of a possibly unknown type or member
+        /// </summary>
+        public virtual string LinkToString(GeneratedDocument MD, string Link)
             {
             // TODO resolve link from type name
 
@@ -440,7 +662,20 @@ namespace LCore.LDoc.Markdown
                 foreach (var Manifest in Project.Manifests)
                     foreach (var Document in Manifest.MemberDocuments)
                         if (Document.MemberName == Type.FullyQualifiedName())
+                            {
+                            this.Stats.LDocLinks++;
                             return MD.Link(Document.FullUrl_Documentation, Name, AsHtml: AsHtml);
+                            }
+
+            // Search all dependency manifests for the type
+            foreach (var Project in this.Home_DependencyProjects)
+                foreach (var Manifest in Project.Manifests)
+                    foreach (var Document in Manifest.MemberDocuments)
+                        if (Document.MemberName == Type.FullyQualifiedName())
+                            {
+                            this.Stats.LDocLinks++;
+                            return MD.Link(Document.FullUrl_Documentation, Name, AsHtml: AsHtml);
+                            }
 
             // Execution past here is considered 'failure'
 
@@ -457,10 +692,122 @@ namespace LCore.LDoc.Markdown
                 TargetNewWindow: true, AsHtml: AsHtml);
             }
 
+
+        #endregion
+
+        #region Comments
+
         /// <summary>
-        /// Stores types where documentation wasn't successfully located
+        /// Formats comments, properly displaying comment tags.
         /// </summary>
-        protected List<string> ErrorsReported { get; } = new List<string>();
+        public virtual string FormatComment(GeneratedDocument MD, string CommentText)
+            {
+            CommentText.Matches("<code>(.*)</code>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    $"\r\n```\r\n{Match.Groups[groupnum: 1]}\r\n```\r\n"));
+
+            CommentText.Matches("<value>(.*)</value>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    $"` {Match.Groups[groupnum: 1]} `"));
+
+            CommentText.Matches("<see cref=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            CommentText.Matches("<seealso cref=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            CommentText.Matches("<paramref name=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            CommentText.Matches("<typeparamref name=\"(.*)\"/>").Each(Match =>
+                CommentText = CommentText.Replace(Match.Groups[groupnum: 0].Value,
+                    this.LinkToString(MD, Match.Groups[groupnum: 1].Value)));
+
+            return CommentText;
+            }
+
+        /// <summary>
+        /// Override this to specify custom comment tags to track. 
+        /// By default only todo and bug are tracked (upper case only)
+        /// for example, 
+        /// 
+        /// public override string[] CustomCommentTags => new string[] { "CustomTag" };
+        /// 
+        /// Will track all instances of:
+        /// 
+        ///  "// CustomTag ... "
+        ///  "//CustomTag ... " 
+        /// 
+        /// </summary>
+        public virtual string[] CustomCommentTags => new string[] { };
+
+        /// <summary>
+        /// Override this value to determine custom colors depending on the count
+        /// of the particular custom tag found.
+        /// </summary>
+        public virtual Dictionary<string, Func<uint, BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, BadgeColor>>();
+
+
+        #endregion
+
+        #region Testing
+
+        /// <summary>
+        /// Override this member to specify any test assemblies
+        /// </summary>
+        public virtual Assembly[] TestAssemblies => new Assembly[] { };
+
+        /// <summary>
+        /// Override this value to disable LUnit Unit test coverage tracking by Trait.
+        /// Default is true.
+        /// </summary>
+        public virtual bool DocumentUnitCoverage => true;
+
+        /// <summary>
+        /// Override this value to disable LUnit Attribute test coverage tracking.
+        /// Default is true.
+        /// </summary>
+        public virtual bool DocumentAttributeCoverage => true;
+        #endregion
+
+        #region Helpers
+
+
+
+        /// <summary>
+        /// Gets all markdown generated by the generator.
+        /// </summary>
+        public List<GeneratedDocument> GetAllMarkdown()
+            {
+            var AllMarkdown = new List<GeneratedDocument>();
+
+            AllMarkdown.AddRange(this.Markdown_Assembly.Values);
+            AllMarkdown.AddRange(this.Markdown_Type.Values);
+            AllMarkdown.AddRange(this.Markdown_Member.Values);
+            AllMarkdown.AddRange(this.Markdown_Other.Values);
+
+            return AllMarkdown;
+            }
+
+        /// <summary>
+        /// Locates a markdown document for a particular <paramref name="Member"/>
+        /// </summary>
+        public MarkdownDocument_Member FindMarkdown(MemberInfo Member)
+            {
+            return this.Markdown_Member.First(MD => MD.Key == Member).Value;
+            }
+
+        /// <summary>
+        /// Override this method to generate custom documents for your project.
+        /// </summary>
+        public virtual Dictionary<string, GeneratedDocument> GetOtherDocuments()
+            {
+            return new Dictionary<string, GeneratedDocument>();
+            }
+
 
         /// <summary>
         /// Get all Member group markdown owned by a given <paramref name="Type"/>
@@ -478,93 +825,6 @@ namespace LCore.LDoc.Markdown
             return this.Markdown_Type.Select(Type => Type.Key.GetAssembly()?.GetName().Name == Assembly.GetName().Name);
             }
 
-        #endregion
-
-        #region Options +
-
-        /// <summary>
-        /// Override this value to display a large image on top ofthe main document
-        /// </summary>
-        public virtual string BannerImage_Large([NotNull] GeneratedDocument MD) => "";
-
-        /// <summary>
-        /// Override this value to display a small banner image on top of sub-documents
-        /// </summary>
-        public virtual string BannerImage_Small([NotNull] GeneratedDocument MD) => "";
-
-        /// <summary>
-        /// Override this value to display a large image in the upper right corner of the main document
-        /// </summary>
-        public virtual string LogoImage_Large([NotNull] GeneratedDocument MD) => "";
-
-        /// <summary>
-        /// Override this value to display a small image in the upper right corner of sub-documents
-        /// </summary>
-        public virtual string LogoImage_Small([NotNull] GeneratedDocument MD) => "";
-
-        /// <summary>
-        /// Writes the footer to a markdown document.
-        /// </summary>
-        public void WriteFooter([NotNull] GeneratedDocument MD)
-            {
-            MD.Line("");
-            MD.Line("");
-            MD.HorizontalRule();
-
-            this.WriteCustomFooter(MD);
-            MD.Line("");
-            MD.Line(new[]
-                {
-                $"This markdown was generated by {MD.Link(LDoc.Urls.GitHubUrl, nameof(LDoc))}, " +
-                $"powered by {MD.Link(LUnit.LUnit.Urls.GitHubRepository_LUnit, nameof(LUnit))}, " +
-                $"{MD.Link(LUnit.LUnit.Urls.GitHubRepository_LCore, nameof(LCore))}"
-                }.JoinLines(" "));
-            }
-
-        /// <summary>
-        /// Writes the footer for your markdown document
-        /// </summary>
-        public virtual void WriteCustomFooter(GeneratedDocument MD)
-            {
-            MD.Line(new[]
-                {
-                $"Copyright {DateTime.Now.Year} &copy;",
-                this.HomeLink(MD),
-                this.TableOfContentsLink(MD)
-                }.JoinLines(" "));
-            }
-
-
-        /// <summary>
-        /// Root path of the current running solution (development ONLY)
-        /// </summary>
-        public virtual string GeneratedMarkdownRoot => L.Ref.GetSolutionRootPath();
-
-        /// <summary>
-        /// Returns the root directory for an assembly, which is a folder beneath the <param name="Assembly"></param> 
-        /// root directory
-        /// </summary>
-        public virtual string MarkdownPath_AssemblyRoot(Assembly Assembly) =>
-            $"{Assembly.GetRootPath()}\\{this.MarkdownPath_Documentation}";
-
-        /// <summary>
-        /// Returns the root directory for the repository, which is the root directory for markdown generation
-        /// </summary>
-        public virtual string MarkdownPath_MemberRoot(MemberInfo Member) =>
-            this.MarkdownPath_AssemblyRoot(Member.GetAssembly());
-
-        /// <summary>
-        /// Documents folder, default is "docs"
-        /// </summary>
-        protected virtual string MarkdownPath_Documentation => "docs";
-
-
-        /// <summary>
-        /// Generates the markdown path for the manifest JSON file
-        /// </summary>
-        public virtual string MarkdownPath_Manifest =>
-            $"{L.Ref.GetSolutionRootPath()}\\" +
-            $"{this.Language.ManifestFile}";
 
         /// <summary>
         /// Returns the index of a declared member. 
@@ -578,120 +838,9 @@ namespace LCore.LDoc.Markdown
             return "";
             }
 
-        /// <summary>
-        /// Determines if a Type should be included in documentation
-        /// </summary>
-        public virtual bool IncludeType([NotNull] Type Type) =>
-            !Type.HasAttribute<IExcludeFromMarkdownAttribute>();
 
-        /// <summary>
-        /// Determines if a Member should be included in documentation
-        /// </summary>
-        public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
-            // Manually excluded members and declaring types
-            !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
-            Member.DeclaringType?.HasAttribute<IExcludeFromMarkdownAttribute>() != true &&
-            // Property getters and setters are handled under the PropertyInfo member, not the get and set methods
-            !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
-            // Don't include members that are being exposed from base classes
-            Member.IsDeclaredMember() &&
-            // Don't make a document for each enum value
-            Member.DeclaringType?.IsEnum == false &&
-            // TODO enable constructors
-            !(Member is ConstructorInfo);
-
-        /// <summary>
-        /// Override this value with an array of EXACTLY 4 numbers to specify the levels of coloring
-        /// Default is: `{ 30, 50, 70, 100 }`
-        /// 
-        /// Percentage  | Color
-        /// ---         | ---
-        /// 30-         | BadgeColor.Red
-        /// 31-50       | BadgeColor.Yellow
-        /// 51-70       | BadgeColor.YellowGreen
-        /// 71-100      | BadgeColor.Green
-        /// 100         | BadgeColor.BrightGreen
-        /// 101+        | BadgeColor.Blue
-        /// </summary>
-        public virtual int[] ColorThresholds => new[] { 30, 50, 70, 100 };
-
-        /// <summary>
-        /// Gets a BadgeColor for a given <paramref name="Percentage"/>
-        /// 
-        /// Override this method to customize the deciding of BadgeColor by Percentage.
-        /// </summary>
-        public virtual BadgeColor GetColorByPercentage(int Percentage)
-            {
-            if (Percentage < this.ColorThresholds[0])
-                return BadgeColor.Red;
-            if (Percentage < this.ColorThresholds[1])
-                return BadgeColor.Yellow;
-            if (Percentage < this.ColorThresholds[2])
-                return BadgeColor.YellowGreen;
-            if (Percentage < this.ColorThresholds[3])
-                return BadgeColor.Green;
-            if (Percentage == this.ColorThresholds[3])
-                return BadgeColor.BrightGreen;
-            // ReSharper disable once ConvertIfStatementToReturnStatement
-            if (Percentage > this.ColorThresholds[3])
-                return BadgeColor.Blue;
-
-            return BadgeColor.LightGrey;
-            }
-
-
-        /// <summary>
-        /// Override this value to disable LUnit Unit test coverage tracking by Trait.
-        /// Default is true.
-        /// </summary>
-        public virtual bool DocumentUnitCoverage => true;
-
-        /// <summary>
-        /// Override this value to disable LUnit Attribute test coverage tracking.
-        /// Default is true.
-        /// </summary>
-        public virtual bool DocumentAttributeCoverage => true;
 
         #endregion
-
-        #region Private Methods +
-
-        private void Load(Assembly Assembly)
-            {
-            Assembly.GetExportedTypes().Select(this.IncludeType).Each(this.Load);
-
-            this.Markdown_Assembly.Add(Assembly, this.GenerateMarkdown(Assembly));
-            }
-
-        private void Load(Type Type)
-            {
-            MemberInfo[] AllMembers = Type.GetMembers().Select(this.IncludeMember);
-
-            Dictionary<string, List<MethodInfo>> Methods = AllMembers
-                .Filter<MethodInfo>()
-                .Group(Method => Method.Name);
-
-            List<KeyValuePair<string, List<MethodInfo>>> MethodGroups = Methods.Select(Method => Method.Value.Count > 1);
-
-            MethodGroups.Convert(Group => Group.Value.Array()).Each(this.Load);
-            AllMembers.Each(this.Load);
-
-            this.Markdown_Type.Add(Type, this.GenerateMarkdown(Type));
-            }
-
-        private void Load(MemberInfo Member)
-            {
-            this.Markdown_Member.Add(Member, this.GenerateMarkdown(Member));
-            }
-
-        private void Load(MethodInfo[] MethodGroup)
-            {
-            this.Markdown_MethodGroups.Add(MethodGroup, this.GenerateMarkdown(MethodGroup));
-            }
-
-        #endregion
-
-        #region Public Methods +
 
         /// <summary>
         /// Generates all markdown documentation, optionally writing all files to disk using <paramref name="WriteToDisk"/>. 
@@ -754,82 +903,6 @@ namespace LCore.LDoc.Markdown
                 string JSON = Manifest.CreateManifestJSON();
                 File.WriteAllText(this.MarkdownPath_Manifest, JSON);
                 }
-            }
-
-        private MarkdownDocument_TagSummary GenerateTagSummaryMarkdown(string Tag)
-            {
-            return new MarkdownDocument_TagSummary(this, $"Summary '{Tag}'", Tag);
-            }
-
-
-        /// <summary>
-        /// Gets all markdown generated by the generator.
-        /// </summary>
-        public List<GeneratedDocument> GetAllMarkdown()
-            {
-            var AllMarkdown = new List<GeneratedDocument>();
-
-            AllMarkdown.AddRange(this.Markdown_Assembly.Values);
-            AllMarkdown.AddRange(this.Markdown_Type.Values);
-            AllMarkdown.AddRange(this.Markdown_Member.Values);
-            AllMarkdown.AddRange(this.Markdown_Other.Values);
-
-            return AllMarkdown;
-            }
-
-        #endregion
-
-        #region Language +
-
-        /// <summary>
-        /// Override this value to customize the text used for markdown generation.
-        /// </summary>
-        public virtual Text Language => new Text();
-
-        #endregion
-
-        /// <summary>
-        /// Override this to specify custom comment tags to track. 
-        /// By default only todo and bug are tracked (upper case only)
-        /// for example, 
-        /// 
-        /// public override string[] CustomCommentTags => new string[] { "CustomTag" };
-        /// 
-        /// Will track all instances of:
-        /// 
-        ///  "// CustomTag ... "
-        ///  "//CustomTag ... " 
-        /// 
-        /// </summary>
-        public virtual string[] CustomCommentTags => new string[] { };
-
-        /// <summary>
-        /// Override this value to determine custom colors depending on the count
-        /// of the particular custom tag found.
-        /// </summary>
-        public virtual Dictionary<string, Func<uint, BadgeColor>> CustomCommentColor => new Dictionary<string, Func<uint, BadgeColor>>();
-
-        /// <summary>
-        /// Override or add values to this dictionary to specify <see cref="Assembly"/> comments.
-        /// </summary>
-        public virtual Dictionary<Assembly, ICodeComment> AssemblyComments { get; }
-            = new Dictionary<Assembly, ICodeComment>();
-
-        /// <summary>
-        /// Adds an error to be reported within the markdown
-        /// </summary>
-        public void AddError(string Error)
-            {
-            if (!this.ErrorsReported.Has(Error))
-                this.ErrorsReported.Add(Error);
-            }
-
-        /// <summary>
-        /// Returns all errors reported during generation
-        /// </summary>
-        public List<string> GetErrors()
-            {
-            return this.ErrorsReported.List();
             }
         }
     }

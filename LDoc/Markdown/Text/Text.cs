@@ -233,5 +233,10 @@ namespace LCore.LDoc.Markdown
         /// Table header for errors
         /// </summary>
         public string TableHeader_Errors { get; set; } = "Errors";
+
+        /// <summary>
+        /// Header for dependencies
+        /// </summary>
+        public string Header_Dependencies { get; set; } = "Dependencies";
         }
     }

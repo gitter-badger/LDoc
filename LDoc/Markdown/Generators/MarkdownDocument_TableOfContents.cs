@@ -41,8 +41,6 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         protected override void GenerateDocument()
             {
-            this.Generator.WriteHeader(this);
-
             this.Line(this.Header(this.Generator.Language.TableOfContents, Size: 2));
 
             this.Generator.GetAllMarkdown().Each(Document =>
@@ -65,8 +63,6 @@ namespace LCore.LDoc.Markdown
 
                 Errors.Each(Error => this.Line($"- {Error}"));
                 }
-
-            this.Generator.WriteFooter(this);
             }
 
         }

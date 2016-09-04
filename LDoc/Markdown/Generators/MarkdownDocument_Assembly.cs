@@ -76,8 +76,6 @@ namespace LCore.LDoc.Markdown
             {
             this.Generator.Stats.AssemblyMarkdownDocuments++;
 
-            this.Generator.WriteHeader(this);
-
             ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
             this.Line(this.Link(this.GetRelativePath(this.Generator.Markdown_Root.FullPath), this.Generator.Language.LinkText_Home));
@@ -116,8 +114,6 @@ namespace LCore.LDoc.Markdown
                             Type.Value.GetBadges_Coverage(Type.Value);
                         });
                 });
-
-            this.Generator.WriteFooter(this);
             }
 
         /// <summary>

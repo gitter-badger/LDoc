@@ -64,8 +64,6 @@ namespace LCore.LDoc.Markdown
             {
             this.Generator.Stats.ProjectMarkdownDocuments++;
 
-            this.Generator.WriteHeader(this);
-
 
             this.Line(this.Header(this.Title, Size: 3));
             this.Line(this.Header($"Total ({this.TagLines.Count})", Size: 4));
@@ -95,8 +93,6 @@ namespace LCore.LDoc.Markdown
 
                     this.Table(Table);
                 });
-
-            this.Generator.WriteFooter(this);
             }
         }
     }
