@@ -17,10 +17,16 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new root Markdown file.
         /// </summary>
-        public MarkdownDocument_CoverageSummary(SolutionMarkdownGenerator Generator, string FilePath, string Title)
-            : base(Generator, FilePath, Title)
+        public MarkdownDocument_CoverageSummary(SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
             {
             }
+
+        /// <inheritdoc />
+        protected override string FileName => $"{this.Generator.Language.CoverageSummaryFile}";
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.GeneratedMarkdownRoot;
 
         /// <summary>
         /// Generate the document.

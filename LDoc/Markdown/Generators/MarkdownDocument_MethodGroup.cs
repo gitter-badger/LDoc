@@ -17,8 +17,8 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         ///   Create a new Member Markdown file.
         /// </summary>
-        public MarkdownDocument_MethodGroup(MethodInfo[] Members, SolutionMarkdownGenerator Generator, string FilePath, string Title)
-            : base(Generator, FilePath, Title)
+        public MarkdownDocument_MethodGroup(MethodInfo[] Members, SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
             {
             Members.Each(Method => { this.Methods.Add(Method, new CodeCoverageMetaData(Method, Generator.CustomCommentTags)); });
             }
@@ -28,6 +28,14 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public Dictionary<MethodInfo, CodeCoverageMetaData> Methods { get; }
         = new Dictionary<MethodInfo, CodeCoverageMetaData>();
+
+        /// <inheritdoc />
+        protected override string FileName =>
+            $"{this.Methods.First().Key.DeclaringType?.Name.CleanFileName()}_" +
+            $"{this.Methods.First().Key.Name.CleanFileName()}+{this.Methods.Count - 1}.md";
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.MarkdownPath_MemberRoot(this.Methods.First().Key);
 
         /// <inheritdoc />
         protected override void GenerateDocument()

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using LCore.Extensions;
-using LCore.Interfaces;
 using LCore.LUnit;
 
 // ReSharper disable SuggestBaseTypeForParameter
@@ -17,10 +16,16 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new root Markdown file.
         /// </summary>
-        public MarkdownDocument_Root(SolutionMarkdownGenerator Generator, string FilePath, string Title)
-            : base(Generator, FilePath, Title)
+        public MarkdownDocument_Root(SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
             {
             }
+
+        /// <inheritdoc />
+        protected override string FileName => SolutionMarkdownGenerator.MarkdownPath_RootFile;
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.GeneratedMarkdownRoot;
 
         /// <summary>
         /// Generate the document.
@@ -50,14 +55,14 @@ namespace LCore.LDoc.Markdown
             {
                 var Coverage = new AssemblyCoverage(Document.Key);
 
-                ICodeComment Comments = this.Generator.AssemblyComments.SafeGet(Document.Key);
+                var Comments = this.Generator.AssemblyComments.SafeGet(Document.Key);
 
                 this.Line(this.Header(Document.Value.Title, Size: 2));
                 //MD.Line(this.GetBadges_Info(MD, Coverage, Comments).JoinLines(" "));
                 // ReSharper disable once ExpressionIsAlwaysNull
                 this.Line(Document.Value.GetBadges_Coverage(this, Coverage, Comments).JoinLines(" "));
 
-                this.Line($" - {this.Link(this.GetRelativePath(Document.Value.FilePath), Document.Value.Title)}");
+                this.Line($" - {this.Link(this.GetRelativePath(Document.Value.FullPath), Document.Value.Title)}");
             });
 
             if (!this.Generator.Home_RelatedProjects.IsEmpty())
@@ -70,7 +75,7 @@ namespace LCore.LDoc.Markdown
 
             var TodoDocument = this.Generator.Markdown_Other.SafeGet("TODO Summary");
             if (TodoDocument != null)
-                this.Line(this.Header(this.Link(this.GetRelativePath(TodoDocument.FilePath), TodoDocument.Title), Size: 3));
+                this.Line(this.Header(this.Link(this.GetRelativePath(TodoDocument.FullPath), TodoDocument.Title), Size: 3));
 
             var BugDocument = this.Generator.Markdown_Other.SafeGet("BUG Summary");
             if (BugDocument != null)

@@ -123,7 +123,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.FormatComment) + "(String) => String")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.FormatComment) + "(GeneratedDocument, String) => String")]
         public void FormatComment()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.FormatComment
@@ -193,38 +193,24 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_TagSummary) + "(String) => String")]
-        public void MarkdownPath_TagSummary()
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_AssemblyRoot) + "(Assembly) => String")]
+        public void MarkdownPath_AssemblyRoot()
         {
-            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_TagSummary
+            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_AssemblyRoot
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_Assembly) + "(Assembly) => String")]
-        public void MarkdownPath_Assembly()
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_MemberRoot) + "(MemberInfo) => String")]
+        public void MarkdownPath_MemberRoot()
         {
-            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_Assembly
+            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_MemberRoot
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_Type) + "(Type) => String")]
-        public void MarkdownPath_Type()
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetMethodIndex) + "(MemberInfo) => String")]
+        public void GetMethodIndex()
         {
-            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_Type
-        }
-
-        [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_Member) + "(MemberInfo) => String")]
-        public void MarkdownPath_Member()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_Member
-        }
-
-        [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.MarkdownPath_MethodGroup) + "(MethodInfo[]) => String")]
-        public void MarkdownPath_MethodGroup()
-        {
-            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_MethodGroup
+            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetMethodIndex
         }
 
         [Fact]
@@ -260,6 +246,20 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         public void GetAllMarkdown()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetAllMarkdown
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.AddError) + "(String)")]
+        public void AddError()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.AddError
+        }
+
+        [Fact]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(SolutionMarkdownGenerator)+ "." + nameof(SolutionMarkdownGenerator.GetErrors) + "() => List<String>")]
+        public void GetErrors()
+        {
+            // TODO: Implement method test LCore.LDoc.Markdown.SolutionMarkdownGenerator.GetErrors
         }
 
     }

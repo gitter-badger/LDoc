@@ -12,16 +12,29 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public class MarkdownDocument_TableOfContents : GeneratedDocument
         {
+        /// <summary>
+        /// Anchor link to the statistics section
+        /// </summary>
         public string AnchorLink_Statistics;
+
+        /// <summary>
+        /// Anchor link to the errors section
+        /// </summary>
         public string AnchorLink_Errors;
 
         /// <summary>
         /// Create a new root Markdown file.
         /// </summary>
-        public MarkdownDocument_TableOfContents(SolutionMarkdownGenerator Generator, string FilePath, string Title)
-            : base(Generator, FilePath, Title)
+        public MarkdownDocument_TableOfContents(SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
             {
             }
+
+        /// <inheritdoc />
+        protected override string FileName => this.Generator.Language.TableOfContentsFile;
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.GeneratedMarkdownRoot;
 
         /// <summary>
         /// Generate the document.
@@ -33,7 +46,7 @@ namespace LCore.LDoc.Markdown
             this.Line(this.Header(this.Generator.Language.TableOfContents, Size: 2));
 
             this.Generator.GetAllMarkdown().Each(Document =>
-                this.Line($" - {this.Link(this.GetRelativePath(Document.FilePath), Document.Title)}"));
+                this.Line($" - {this.Link(this.GetRelativePath(Document.FullPath), Document.Title)}"));
 
             this.BlankLine();
 

@@ -29,12 +29,20 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Creates a new markdown member document
         /// </summary>
-        public MarkdownDocument_Member(MemberInfo Member, SolutionMarkdownGenerator Generator, string FilePath, string Title) : base(Generator, FilePath, Title)
+        public MarkdownDocument_Member(MemberInfo Member, SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
             {
             this.Member = Member;
 
             this.Meta = Member.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
             }
+
+        /// <inheritdoc />
+        protected override string FileName =>
+            $"{this.Member.DeclaringType?.Name.CleanFileName()}_{this.Member.Name.CleanFileName()}{this.Generator.GetMethodIndex(this.Member)}.md";
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.MarkdownPath_MemberRoot(this.Member);
 
         /// <summary>
         /// Generate the document
@@ -47,9 +55,10 @@ namespace LCore.LDoc.Markdown
 
             this.Line(this.Header($"namespace {this.Meta.Type.Namespace}", Size: 6));
             this.Line(this.Header($"{this.Meta.Type.GetMemberDetails()?.ToCodeString()} " +
-                                  $"{this.Link(this.GetRelativePath(this.Generator.LinkToType(this, this.Meta.Type)), this.Meta.Type.GetGenericName())}", Size: 6));
+                                  $"{this.Link(this.GetRelativePath(this.Generator.Markdown_Type[this.Meta.Type].FullPath), this.Meta.Type.GetGenericName())}", Size: 6));
 
-            this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Type(this.Member.DeclaringType)), this.Generator.Language.LinkText_Up));
+            this.Line(this.Link(this.GetRelativePath(
+                this.Generator.Markdown_Type[this.Member.DeclaringType].FullPath), this.Generator.Language.LinkText_Up));
 
             this.Line(this.Header($"{this.Member.DeclaringType?.Name}", Size: 3));
 
@@ -61,6 +70,14 @@ namespace LCore.LDoc.Markdown
                 }
 
             this.Line(this.Header(this.Member.Name));
+
+            if (this.Meta.Comments?.Summary != null)
+                {
+                this.Line(this.Header(this.Generator.Language.Header_Summary, Size: 5));
+                this.Line(this.Generator.FormatComment(this, this.Meta.Comments?.Summary));
+                }
+
+            // TODO display attributes
 
             #region MethodInfo
 
@@ -78,11 +95,6 @@ namespace LCore.LDoc.Markdown
                 this.Line("");
                 this.Line(this.GetBadges_Coverage().JoinLines(" "));
 
-                if (this.Meta.Comments?.Summary != null)
-                    {
-                    this.Line(this.Header(this.Generator.Language.Header_Summary, Size: 5));
-                    this.Line(this.Generator.FormatComment(this, this.Meta.Comments?.Summary));
-                    }
 
                 if (Method.GetParameters().Length > 0)
                     {
@@ -134,13 +146,15 @@ namespace LCore.LDoc.Markdown
                     this.Line(this.Header(this.Generator.Language.Header_MethodExceptions, Size: 4));
                     this.Meta.Comments?.Exceptions.Each(Exception => this.Line($"{Exception.Obj1} {Exception.Obj2}"));
                     }
+
+                // TODO coverage section
                 }
 
             #endregion
 
             #region PropertyInfo
 
-            if (Member is PropertyInfo)
+            if (this.Member is PropertyInfo)
                 {
                 // TODO document for PropertyInfo
                 }
@@ -149,7 +163,7 @@ namespace LCore.LDoc.Markdown
 
             #region FieldInfo
 
-            if (Member is FieldInfo)
+            if (this.Member is FieldInfo)
                 {
                 // TODO document for FieldInfo
                 }

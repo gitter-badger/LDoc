@@ -26,15 +26,48 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public AssemblyCoverage Coverage { get; }
 
+        /// <summary>
+        /// All types under the <see cref="Assembly"/>
+        /// </summary>
+        public List<KeyValuePair<Type, MarkdownDocument_Type>> TypesCovered { get; }
+
+        /// <summary>
+        /// Total number of todo items within the type's members
+        /// </summary>
+        public uint TotalTodos { get; }
+
+        /// <summary>
+        /// Total number of bug items within the type's members
+        /// </summary>
+        public uint TotalBugs { get; }
+
+        /// <summary>
+        /// Total number of not implemented items within the type's members
+        /// </summary>
+        public uint TotalNotImplemented { get; }
+
 
         /// <summary>
         /// Create a new Assembly Markdown file.
         /// </summary>
-        public MarkdownDocument_Assembly(Assembly Assembly, SolutionMarkdownGenerator Generator, string FilePath, string Title) : base(Generator, FilePath, Title)
+        public MarkdownDocument_Assembly(Assembly Assembly, SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
             {
             this.Assembly = Assembly;
             this.Coverage = new AssemblyCoverage(Assembly);
+
+            this.TypesCovered = this.Generator.GetAssemblyTypeMarkdown(Assembly);
+
+            this.TotalTodos = this.TypesCovered.Sum(Type => Type.Value.TotalTodos);
+            this.TotalBugs = this.TypesCovered.Sum(Type => Type.Value.TotalBugs);
+            this.TotalNotImplemented = this.TypesCovered.Sum(Type => Type.Value.TotalNotImplemented);
             }
+
+        /// <inheritdoc />
+        protected override string FileName => $"{this.Assembly.GetName().Name.CleanFileName()}.md";
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.MarkdownPath_AssemblyRoot(this.Assembly);
 
         /// <summary>
         /// Generate the markdown document
@@ -47,7 +80,7 @@ namespace LCore.LDoc.Markdown
 
             ICodeComment Comments = null; // No assembly comments Document.Key.GetComments();
 
-            this.Line(this.Link(this.GetRelativePath(this.Generator.MarkdownPath_Root), this.Generator.Language.LinkText_Home));
+            this.Line(this.Link(this.GetRelativePath(this.Generator.Markdown_Root.FullPath), this.Generator.Language.LinkText_Home));
 
             this.Line(this.Header($"{this.Assembly.GetName().Name}", Size: 2));
 
@@ -77,7 +110,7 @@ namespace LCore.LDoc.Markdown
 
                     NamespaceTypeMarkdown.Each(Type =>
                         {
-                            this.Line(this.Header(this.Link(this.GetRelativePath(Type.Value.FilePath), Type.Key.GetGenericName()), Size: 4));
+                            this.Line(this.Header(this.Link(this.GetRelativePath(Type.Value.FullPath), Type.Key.GetGenericName()), Size: 4));
 
                             Type.Value.GetBadges_Info(Type.Value);
                             Type.Value.GetBadges_Coverage(Type.Value);
@@ -112,6 +145,9 @@ namespace LCore.LDoc.Markdown
             return Out;
             }
 
+        /// <summary>
+        /// Get the framework version badge
+        /// </summary>
         public virtual string GetBadge_FrameworkVersion(GeneratedDocument MD)
             {
             return MD.Badge(this.Generator.Language.Badge_Framework,

@@ -27,32 +27,20 @@ namespace LCore.LDoc.Markdown
         public Dictionary<MemberInfo, MarkdownDocument_Member> MemberMarkdown { get; } =
             new Dictionary<MemberInfo, MarkdownDocument_Member>();
 
-
+        /// <summary>
+        /// The type being documented
+        /// </summary>
         public Type Type { get; }
 
+        /// <summary>
+        /// Friendly name of the type
+        /// </summary>
         public string TypeName { get; }
 
         /// <summary>
-        /// Create a new Type Markdown file.
+        /// The total number of members within the <see cref="Type"/> being documented.
         /// </summary>
-        public MarkdownDocument_Type(Type Type, SolutionMarkdownGenerator Generator, string FilePath, string Title)
-            : base(Generator, FilePath, Title)
-            {
-            this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
-
-            Generator.GetTypeMemberMarkdown((Type)this.TypeMeta?.Member).Each(
-                MD =>
-                    {
-                        this.TotalTodos += (uint)MD.Value.Meta.CommentTODO.Length;
-                        this.TotalBugs += (uint)MD.Value.Meta.CommentBUG.Length;
-                        this.TotalNotImplemented += (uint)MD.Value.Meta.NotImplemented.Length;
-
-                        this.MemberMarkdown.Add(MD.Key, MD.Value);
-                    });
-
-            this.Type = (Type)this.TypeMeta?.Member;
-            this.TypeName = Type.GetGenericName();
-            }
+        public uint TotalMembers { get; }
 
         /// <summary>
         /// Total number of Todos found within the current type
@@ -69,6 +57,39 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public uint TotalNotImplemented { get; protected set; }
 
+        /// <summary>
+        /// Total number of non-empty lines within the type
+        /// </summary>
+        public uint TotalLineCount { get; }
+
+        /// <summary>
+        /// Create a new Type Markdown file.
+        /// </summary>
+        public MarkdownDocument_Type(Type Type, SolutionMarkdownGenerator Generator, string Title)
+            : base(Generator, Title)
+            {
+            this.TypeMeta = Type.GatherCodeCoverageMetaData(Generator.CustomCommentTags);
+
+            Generator.GetTypeMemberMarkdown((Type)this.TypeMeta?.Member).Each(
+                MD =>
+                    {
+                        this.TotalTodos += (uint)MD.Value.Meta.CommentTODO.Length;
+                        this.TotalBugs += (uint)MD.Value.Meta.CommentBUG.Length;
+                        this.TotalNotImplemented += (uint)MD.Value.Meta.NotImplemented.Length;
+
+                        this.MemberMarkdown.Add(MD.Key, MD.Value);
+                    });
+
+            this.TotalMembers = (uint)this.MemberMarkdown.Keys.Count;
+
+            this.Type = (Type)this.TypeMeta?.Member;
+            this.TypeName = Type.GetGenericName();
+
+            this.TotalLineCount = this.TypeMeta?.CodeLineCount ?? 0u;
+            }
+
+        protected override string FileName => $"{this.Type.Name.CleanFileName()}.md";
+        protected override string FilePath => this.Generator.MarkdownPath_MemberRoot(this.Type);
 
         /// <summary>
         /// Generate the document.
@@ -79,7 +100,7 @@ namespace LCore.LDoc.Markdown
             this.Generator.WriteHeader(this);
 
             this.Line(this.Link(
-                this.GetRelativePath(this.Generator.MarkdownPath_Assembly(this.TypeMeta.Member.GetAssembly())),
+                this.GetRelativePath(this.Generator.Markdown_Assembly[this.TypeMeta.Member.GetAssembly()].FullPath),
                 this.Generator.Language.LinkText_Up, EscapeText: false));
 
             this.Line(this.Header($"namespace {this.Type.Namespace}", Size: 6));
@@ -154,7 +175,7 @@ namespace LCore.LDoc.Markdown
 
                             Body.Add(new[]
                                 {
-                        this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FilePath),
+                        this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FullPath),
                             Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
                         MD.GetBadge_Todos(this, AsHtml: true) + " " +
                         MD.GetBadge_Bugs(this, AsHtml: true) + " " +
@@ -259,6 +280,9 @@ namespace LCore.LDoc.Markdown
             return null;
             }
 
+        /// <summary>
+        /// Get a badge representing total members declared on the type
+        /// </summary>
         public virtual string GetBadge_TotalMembers([NotNull] GeneratedDocument MD)
             {
             // TODO: add total members

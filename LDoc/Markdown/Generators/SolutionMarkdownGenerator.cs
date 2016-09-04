@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq.Expressions;
 using System.Net;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.Interfaces;
@@ -28,6 +26,15 @@ namespace LCore.LDoc.Markdown
     /// </summary>
     public abstract class SolutionMarkdownGenerator
         {
+        /// <summary>
+        /// Root documentation generated document
+        /// </summary>
+        public MarkdownDocument_Root Markdown_Root { get; set; }
+        /// <summary>
+        /// Table of contents generated document
+        /// </summary>
+        public MarkdownDocument_TableOfContents Markdown_TableOfContents { get; set; }
+
         #region Statics
 
         /// <summary>
@@ -204,7 +211,8 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual MarkdownDocument_Root GenerateRootMarkdown()
             {
-            return new MarkdownDocument_Root(this, this.MarkdownPath_Root, this.Language.MainReadme);
+            this.Markdown_Root = new MarkdownDocument_Root(this, this.Language.MainReadme);
+            return this.Markdown_Root;
             }
 
         /// <summary>
@@ -212,15 +220,18 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual MarkdownDocument_TableOfContents GenerateTableOfContentsMarkdown()
             {
-            return new MarkdownDocument_TableOfContents(this, this.MarkdownPath_TableOfContents, this.Language.TableOfContents);
+            this.Markdown_TableOfContents = new MarkdownDocument_TableOfContents(this, this.Language.TableOfContents);
+            return this.Markdown_TableOfContents;
             }
+
+
 
         /// <summary>
         /// Generates coverage summary document
         /// </summary>
         public virtual MarkdownDocument_TableOfContents GenerateCoverageSummaryMarkdown()
             {
-            return new MarkdownDocument_TableOfContents(this, this.MarkdownPath_CoverageSummary, this.Language.CoverageSummary);
+            return new MarkdownDocument_TableOfContents(this, this.Language.CoverageSummary);
             }
 
         /// <summary>
@@ -228,7 +239,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual MarkdownDocument_Assembly GenerateMarkdown(Assembly Assembly)
             {
-            return new MarkdownDocument_Assembly(Assembly, this, this.MarkdownPath_Assembly(Assembly), Assembly.GetName().Name);
+            return new MarkdownDocument_Assembly(Assembly, this, Assembly.GetName().Name);
             }
 
         /// <summary>
@@ -236,7 +247,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual MarkdownDocument_Type GenerateMarkdown(Type Type)
             {
-            return new MarkdownDocument_Type(Type, this, this.MarkdownPath_Type(Type), Type.Name);
+            return new MarkdownDocument_Type(Type, this, Type.Name);
             }
 
         /// <summary>
@@ -244,7 +255,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual MarkdownDocument_MethodGroup GenerateMarkdown(MethodInfo[] MethodGroup)
             {
-            return new MarkdownDocument_MethodGroup(MethodGroup, this, this.MarkdownPath_MethodGroup(MethodGroup), $"{MethodGroup.First()?.Name} + {MethodGroup.Length - 1} Overloads");
+            return new MarkdownDocument_MethodGroup(MethodGroup, this, $"{MethodGroup.First()?.Name} + {MethodGroup.Length - 1} Overloads");
             }
 
         /// <summary>
@@ -252,7 +263,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual MarkdownDocument_Member GenerateMarkdown(MemberInfo Member)
             {
-            return new MarkdownDocument_Member(Member, this, this.MarkdownPath_Member(Member), Member.Name);
+            return new MarkdownDocument_Member(Member, this, Member.Name);
             }
 
         #endregion
@@ -273,7 +284,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual void WriteHeader(GeneratedDocument MD)
             {
-            bool IsMain = MD.FilePath == this.MarkdownPath_Root;
+            bool IsMain = MD.FullPath == this.Markdown_Root.FullPath;
 
 
             if (IsMain && !string.IsNullOrEmpty(this.BannerImage_Large(MD)))
@@ -291,7 +302,7 @@ namespace LCore.LDoc.Markdown
                 }
             else if (!string.IsNullOrEmpty(this.LogoImage_Small(MD)))
                 {
-                MD.Line(MD.Link(MD.GetRelativePath(this.MarkdownPath_Root), MD.Image(this.LogoImage_Small(MD), this.Language.AltText_Logo, L.Align.Right)));
+                MD.Line(MD.Link(MD.GetRelativePath(this.Markdown_Root.FullPath), MD.Image(this.LogoImage_Small(MD), this.Language.AltText_Logo, L.Align.Right)));
                 }
             }
 
@@ -301,7 +312,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string TableOfContentsLink(GeneratedDocument MD)
             {
-            return MD.Link(MD.GetRelativePath(this.MarkdownPath_TableOfContents), this.Language.TableOfContents);
+            return MD.Link(MD.GetRelativePath(this.Markdown_TableOfContents.FullPath), this.Language.TableOfContents);
             }
 
         /// <summary>
@@ -309,7 +320,7 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string HomeLink(GeneratedDocument MD)
             {
-            return MD.Link(MD.GetRelativePath(this.MarkdownPath_Root), this.Language.MainReadme);
+            return MD.Link(MD.GetRelativePath(this.Markdown_Root.FullPath), this.Language.MainReadme);
             }
 
         /// <summary>
@@ -354,7 +365,11 @@ namespace LCore.LDoc.Markdown
 
         private string LinkToString(GeneratedDocument MD, string Link)
             {
-            // TODO resolve string link
+            // TODO resolve link from type name
+
+            // TODO resolve link from sibling member
+
+            // TODO resolve link from member parameter
 
             return Link;
             }
@@ -395,7 +410,7 @@ namespace LCore.LDoc.Markdown
             string Name = Type.GetNestedNames().Before("<");
 
             // Local links for known documented types
-            string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FilePath;
+            string TypeLink = this.Markdown_Type.First(MDType => MDType.Key == Type).Value?.FullPath;
             // bold local links
             if (!string.IsNullOrEmpty(TypeLink))
                 return MD.Bold(MD.Link(MD.GetRelativePath(TypeLink), Name, AsHtml: AsHtml), AsHtml);
@@ -418,7 +433,7 @@ namespace LCore.LDoc.Markdown
                 }
 
             if (this.DocumentAssemblies.Has(Type.GetAssembly()))
-                return MD.Link(MD.GetRelativePath(this.MarkdownPath_Type(Type)), Name, AsHtml: AsHtml);
+                return MD.Link(MD.GetRelativePath(this.Markdown_Type[Type].FullPath), Name, AsHtml: AsHtml);
 
             // Search all known manifests for the type
             foreach (var Project in this.Home_RelatedProjects)
@@ -525,47 +540,24 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public virtual string GeneratedMarkdownRoot => L.Ref.GetSolutionRootPath();
 
+        /// <summary>
+        /// Returns the root directory for an assembly, which is a folder beneath the <param name="Assembly"></param> 
+        /// root directory
+        /// </summary>
+        public virtual string MarkdownPath_AssemblyRoot(Assembly Assembly) =>
+            $"{Assembly.GetRootPath()}\\{this.MarkdownPath_Documentation}";
 
         /// <summary>
-        /// Root readme full path
+        /// Returns the root directory for the repository, which is the root directory for markdown generation
         /// </summary>
-        public virtual string MarkdownPath_Root => $"{this.GeneratedMarkdownRoot}\\{MarkdownPath_RootFile}";
-
-        /// <summary>
-        /// Table of contents readme full path
-        /// </summary>
-        public virtual string MarkdownPath_TableOfContents =>
-            $"{this.GeneratedMarkdownRoot}\\{this.Language.TableOfContentsFile}";
-
-        /// <summary>
-        /// Tag Summary file path
-        /// </summary>
-        public virtual string MarkdownPath_TagSummary(string Tag) =>
-            $"{this.GeneratedMarkdownRoot}\\TagSummary_{Tag.CleanFileName()}.md";
-
-        /// <summary>
-        /// Coverage summary readme full path
-        /// </summary>
-        public virtual string MarkdownPath_CoverageSummary =>
-            $"{this.GeneratedMarkdownRoot}\\{this.Language.CoverageSummaryFile}";
+        public virtual string MarkdownPath_MemberRoot(MemberInfo Member) =>
+            this.MarkdownPath_AssemblyRoot(Member.GetAssembly());
 
         /// <summary>
         /// Documents folder, default is "docs"
         /// </summary>
         protected virtual string MarkdownPath_Documentation => "docs";
 
-        /// <summary>
-        /// Generates the document title for an Assembly
-        /// </summary>
-        public virtual string MarkdownPath_Assembly([NotNull] Assembly Assembly) =>
-            $"{Assembly.GetRootPath()}\\{Assembly.GetName().Name.CleanFileName()}.md";
-
-        /// <summary>
-        /// Generates the document title for a Type
-        /// </summary>
-        public virtual string MarkdownPath_Type([NotNull] Type Type) =>
-            $"{Type.Assembly.GetRootPath()}\\{this.MarkdownPath_Documentation}\\" +
-            $"{Type.Name.CleanFileName()}.md";
 
         /// <summary>
         /// Generates the markdown path for the manifest JSON file
@@ -574,29 +566,17 @@ namespace LCore.LDoc.Markdown
             $"{L.Ref.GetSolutionRootPath()}\\" +
             $"{this.Language.ManifestFile}";
 
-
         /// <summary>
-        /// Generates the document title for a Member
+        /// Returns the index of a declared member. 
+        /// This corresponds to the order the member is defined in the file.
         /// </summary>
-        public virtual string MarkdownPath_Member([NotNull] MemberInfo Member) =>
-            $"{Member.GetAssembly().GetRootPath()}\\{this.MarkdownPath_Documentation}\\" +
-            $"{Member.DeclaringType?.Name.CleanFileName()}_{Member.Name.CleanFileName()}{this.GetMethodIndex(Member)}.md";
-
-        private string GetMethodIndex(MemberInfo Member)
+        public string GetMethodIndex(MemberInfo Member)
             {
             if (Member is MethodInfo && Member.DeclaringType?.GetMember(Member.Name).Length > 1)
                 return $"-{Member.DeclaringType?.GetMember(Member.Name).IndexOf(o => o == Member)}";
 
             return "";
             }
-
-        /// <summary>
-        /// Generates the document title for a Method Group
-        /// </summary>
-        public virtual string MarkdownPath_MethodGroup([NotNull] MethodInfo[] Methods) =>
-            $"{Methods.First().GetAssembly().GetRootPath()}\\{this.MarkdownPath_Documentation}\\" +
-            $"{Methods.First()?.DeclaringType?.Name.CleanFileName()}_{Methods.First()?.Name.CleanFileName()}+{Methods.Length - 1}.md";
-
 
         /// <summary>
         /// Determines if a Type should be included in documentation
@@ -610,7 +590,7 @@ namespace LCore.LDoc.Markdown
         public virtual bool IncludeMember([NotNull] MemberInfo Member) =>
             // Manually excluded members and declaring types
             !Member.HasAttribute<IExcludeFromMarkdownAttribute>() &&
-            !Member.DeclaringType?.HasAttribute<IExcludeFromMarkdownAttribute>() != true &&
+            Member.DeclaringType?.HasAttribute<IExcludeFromMarkdownAttribute>() != true &&
             // Property getters and setters are handled under the PropertyInfo member, not the get and set methods
             !(Member is MethodInfo && ((MethodInfo)Member).IsPropertyGetterOrSetter()) &&
             // Don't include members that are being exposed from base classes
@@ -753,7 +733,7 @@ namespace LCore.LDoc.Markdown
                     {
                         MD.Generate();
 
-                        string Path = MD.FilePath;
+                        string Path = MD.FullPath;
 
                         // just to be safe
                         if (Path.EndsWith(".md"))
@@ -763,6 +743,10 @@ namespace LCore.LDoc.Markdown
                             File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
 
                             MD.Clear();
+                            }
+                        else
+                            {
+                            this.ErrorsReported.Add($"File generated was not a markdown file: {Path}");
                             }
                     });
 
@@ -774,7 +758,7 @@ namespace LCore.LDoc.Markdown
 
         private MarkdownDocument_TagSummary GenerateTagSummaryMarkdown(string Tag)
             {
-            return new MarkdownDocument_TagSummary(this, this.MarkdownPath_TagSummary(Tag), $"Summary '{Tag}'", Tag);
+            return new MarkdownDocument_TagSummary(this, $"Summary '{Tag}'", Tag);
             }
 
 

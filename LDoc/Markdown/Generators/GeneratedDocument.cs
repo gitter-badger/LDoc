@@ -14,15 +14,29 @@ namespace LCore.LDoc.Markdown
     public abstract class GeneratedDocument : Markdown
         {
         /// <summary>
+        /// Specify the name of the generated file. 
+        /// 
+        /// To be created the file MUST end in .md
+        /// </summary>
+        protected abstract string FileName { get; }
+
+        /// <summary>
+        /// Retrieve the file path to store this document. 
+        /// 
+        /// Access <see cref="Generator"/> to utilize path methods.
+        /// </summary>
+        protected abstract string FilePath { get; }
+
+        /// <summary>
+        /// Returns the full path to the output markdown file
+        /// </summary>
+        public string FullPath => $"{this.FilePath}\\{this.FileName}";
+
+        /// <summary>
         /// The <see cref="SolutionMarkdownGenerator "/> that generated this document
         /// </summary>
         [NotNull]
         protected SolutionMarkdownGenerator Generator { get; }
-
-        /// <summary>
-        /// The path relative to the root repository folder that this markdown file will be saved
-        /// </summary>
-        public string FilePath { get; }
 
         /// <inheritdoc />
         public override void Line(string Line)
@@ -87,22 +101,27 @@ namespace LCore.LDoc.Markdown
             if (string.IsNullOrEmpty(this.FilePath))
                 return FullPath;
 
+            try
+                {
+                var Uri1 = new Uri(FullPath);
+                var Uri2 = new Uri(this.FilePath);
 
-            var Uri1 = new Uri(FullPath);
-            var Uri2 = new Uri(this.FilePath);
+                var Out = Uri2.MakeRelativeUri(Uri1);
 
-            var Out = Uri2.MakeRelativeUri(Uri1);
-
-            return Out.ToString();
+                return Out.ToString();
+                }
+            catch (Exception)
+                {
+                throw new InvalidOperationException($"{this.FilePath} {FullPath}");
+                }
             }
 
         /// <summary>
-        /// Pass a <paramref name="Generator"/> and <paramref name="FilePath"/> and <paramref name="Title"/> to create a generated document
+        /// Pass a <paramref name="Generator"/> and <paramref name="Title"/> to create a generated document
         /// </summary>
-        protected GeneratedDocument(SolutionMarkdownGenerator Generator, string FilePath, string Title) : base(Title)
+        protected GeneratedDocument(SolutionMarkdownGenerator Generator, string Title) : base(Title)
             {
             this.Generator = Generator;
-            this.FilePath = FilePath;
             }
 
         /// <summary>

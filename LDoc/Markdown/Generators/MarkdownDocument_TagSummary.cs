@@ -26,30 +26,36 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Create a new root Markdown file.
         /// </summary>
-        public MarkdownDocument_TagSummary(SolutionMarkdownGenerator Generator, string FilePath, string Title, string TagName)
-            : base(Generator, FilePath, Title)
+        public MarkdownDocument_TagSummary(SolutionMarkdownGenerator Generator, string Title, string TagName)
+            : base(Generator, Title)
             {
             this.TagName = TagName;
             this.TagLines = new List<CodeLineInfo>();
 
             this.Generator.Markdown_Type.Each(Type =>
                 {
-                var Comments = Type.Key.GatherCodeCoverageMetaData(this.Generator.CustomCommentTags);
+                    var Comments = Type.Key.GatherCodeCoverageMetaData(this.Generator.CustomCommentTags);
 
-                if (this.TagName.ToLower() == "todo")
-                    this.TagLines.AddRange(Comments?.CommentTODO);
-                else if (this.TagName.ToLower() == "bug")
-                    this.TagLines.AddRange(Comments?.CommentBUG);
-                else if (this.TagName.ToLower() == "throw new NotImplementedException")
-                    this.TagLines.AddRange(Comments?.NotImplemented);
-                else
-                    {
-                    List<CodeLineInfo> Tags = Comments?.CommentTags.SafeGet(this.TagName);
-                    if (Tags != null)
-                        this.TagLines.AddRange(Tags);
-                    }
+                    if (this.TagName.ToLower() == "todo")
+                        this.TagLines.AddRange(Comments?.CommentTODO);
+                    else if (this.TagName.ToLower() == "bug")
+                        this.TagLines.AddRange(Comments?.CommentBUG);
+                    else if (this.TagName.ToLower() == "throw new NotImplementedException")
+                        this.TagLines.AddRange(Comments?.NotImplemented);
+                    else
+                        {
+                        List<CodeLineInfo> Tags = Comments?.CommentTags.SafeGet(this.TagName);
+                        if (Tags != null)
+                            this.TagLines.AddRange(Tags);
+                        }
                 });
             }
+
+        /// <inheritdoc />
+        protected override string FileName => $"TagSummary_{this.TagName.CleanFileName()}.md";
+
+        /// <inheritdoc />
+        protected override string FilePath => this.Generator.GeneratedMarkdownRoot;
 
         /// <summary>
         /// Generate the document.
@@ -68,26 +74,26 @@ namespace LCore.LDoc.Markdown
 
             FileTags.Each(File =>
                 {
-                var Table = new List<List<string>>();
+                    var Table = new List<List<string>>();
 
-                string Path = File.Value.First()?.FilePath;
-                Table.Add(new List<string>
+                    string Path = File.Value.First()?.FilePath;
+                    Table.Add(new List<string>
                     {
                     "Line",
                     $"{this.Link($"{this.GetRelativePath(Path)}", $"{Path.AfterLast("\\")}")} ({File.Value.Count})"
                     //this.Generator.Language.TableHeaderText_Line
                     });
 
-                File.Value.Each(Tag =>
-                    {
-                    Table.Add(new List<string>
+                    File.Value.Each(Tag =>
                         {
+                            Table.Add(new List<string>
+                            {
                         this.Link($"{this.GetRelativePath(Tag.FilePath)}#L{Tag.LineNumber}", $"{Tag.LineNumber}"),
                         Tag.LineText
+                            });
                         });
-                    });
 
-                this.Table(Table);
+                    this.Table(Table);
                 });
 
             this.Generator.WriteFooter(this);

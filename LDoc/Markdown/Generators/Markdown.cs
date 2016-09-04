@@ -386,11 +386,7 @@ namespace LCore.LDoc.Markdown
 
                             if (IncludeHeader && i == 0)
                                 {
-                                if (AsHtml)
-                                    {
-                                    // TODO set alignment here
-                                    }
-                                else
+                                if (!AsHtml)
                                     {
                                     L.Align? Align = Alignment.GetAt(j);
 
@@ -413,10 +409,19 @@ namespace LCore.LDoc.Markdown
                             string TableRow = "";
                             for (int j = 0; j < Cells.Count; j++)
                                 {
+                                L.Align? Align = Alignment.GetAt(j);
+                                string CellAlignment = "";
+
+                                // TODO test html cell alignment
+
+                                // ReSharper disable once ConditionIsAlwaysTrueOrFalse
+                                if (Align != null)
+                                    CellAlignment = $" align=\"{Align}\"";
+
                                 if (j == Cells.Count - 1)
-                                    TableRow += $"<td colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
+                                    TableRow += $"<td{CellAlignment} colspan=\"{Cols - j}\">{Cells[j]}</td>\r\n";
                                 else
-                                    TableRow += $"<td>{Cells[j]}</td>\r\n";
+                                    TableRow += $"<td{CellAlignment}>{Cells[j]}</td>\r\n";
                                 }
                             Table.Add(TableRow);
                             }
