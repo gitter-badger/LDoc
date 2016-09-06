@@ -20,7 +20,7 @@
 
 <table>
 <thead><tr><td><h4>Public Virtual Methods <strong>(3)</strong></h4></td>
-<td><img src="http://b.repl.ca/v1/TODOs-210-orange.png" alt="TODOs 210" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-42-orange.png" alt="TODOs 42" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-70-blue.png" alt="Total Code Lines 70" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -54,7 +54,7 @@
 
 <table>
 <thead><tr><td><h4>Public Methods <strong>(3)</strong></h4></td>
-<td><img src="http://b.repl.ca/v1/TODOs-210-orange.png" alt="TODOs 210" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-42-orange.png" alt="TODOs 42" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-21-blue.png" alt="Total Code Lines 21" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
@@ -88,7 +88,7 @@
 
 <table>
 <thead><tr><td><h4>Public Properties <strong>(9)</strong></h4></td>
-<td><img src="http://b.repl.ca/v1/TODOs-210-orange.png" alt="TODOs 210" /></td>
+<td><img src="http://b.repl.ca/v1/TODOs-126-orange.png" alt="TODOs 126" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-40-blue.png" alt="Total Code Lines 40" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>

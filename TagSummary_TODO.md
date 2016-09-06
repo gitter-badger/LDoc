@@ -47,7 +47,7 @@ Line | [MarkdownDocument_Type.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument
 [134](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L134) |             // TODO display constructors
 [135](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L135) |             // TODO display subtypes
 [176](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L176) |                             // TODO total for custom tags
-[207](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L207) |                         // TODO total for custom tags
+[207](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L207) |                             // TODO total for custom tags
 [251](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L251) |                 // TODO: add total lines of code (non 'empty')
 [252](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L252) |                 // TODO: add total extension methods
 [253](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L253) |                 // TODO: add total todo count

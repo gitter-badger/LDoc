@@ -177,16 +177,16 @@ namespace LCore.LDoc.Markdown
 
                             Body.Add(new[]
                                 {
-                        this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FullPath),
-                            Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
-                            Member.Value.GetBadge_Todos(this, AsHtml: true) + " " +
-                            Member.Value.GetBadge_Bugs(this, AsHtml: true) + " " +
-                            Member.Value.GetBadge_NotImplemented(this, AsHtml: true) + " " +
-                            Member.Value.GetBadge_CustomTags(this, AsHtml: true).JoinLines(" "),
-                            Member.Value.GetBadge_CodeLines(this, AsHtml: true),
-                            Member.Value.GetBadge_Documented(this, AsHtml: true),
-                            Member.Value.GetBadge_Covered(this, AsHtml: true)
-                            });
+                                this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FullPath),
+                                    Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
+                                    MD.GetBadge_Todos(this, AsHtml: true) + " " +
+                                    MD.GetBadge_Bugs(this, AsHtml: true) + " " +
+                                    MD.GetBadge_NotImplemented(this, AsHtml: true) + " " +
+                                    MD.GetBadge_CustomTags(this, AsHtml: true).JoinLines(" "),
+                                    MD.GetBadge_CodeLines(this, AsHtml: true),
+                                    MD.GetBadge_Documented(this, AsHtml: true),
+                                    MD.GetBadge_Covered(this, AsHtml: true)
+                                    });
                             Body.Add(new[]
                             {
                         $"{this.Header(MD.GetSignature(this, AsHtml: true), Size: 6, AsHtml: true)}\r\n"
@@ -198,21 +198,21 @@ namespace LCore.LDoc.Markdown
 
                     var Header = new[]
                         {
-                    new[]
-                        {
-                        this.Header($"{Group.Key.Pluralize()} {this.Bold($"({Group.Value.Count})", AsHtml:true)}", Size: 4, AsHtml:true),
-                        this.GetBadge_TotalTodos(this, GroupTotalTodo, AsHtml: true) +
-                        this.GetBadge_TotalBugs(this, GroupTotalBugs, AsHtml: true) +
-                        this.GetBadge_TotalNotImplemented(this, GroupTotalNotImplemented, AsHtml: true)
-                        // TODO total for custom tags
-                        ,
-                        this.Badge($"Total {this.Generator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0
-                            ? BadgeColor.Red
-                            : BadgeColor.Blue, AsHtml: true),
-                        this.Badge($"Total {this.Generator.Language.Header_Documentation}", $"{DocumentedPercent}%", this.Generator.GetColorByPercentage(DocumentedPercent), AsHtml: true),
-                        this.Badge($"Total {this.Generator.Language.Header_Coverage}", $"{CoveredPercent}%", this.Generator.GetColorByPercentage(CoveredPercent), AsHtml: true)
-                        }
-                    };
+                        new[]
+                            {
+                            this.Header($"{Group.Key.Pluralize()} {this.Bold($"({Group.Value.Count})", AsHtml:true)}", Size: 4, AsHtml:true),
+                            this.GetBadge_TotalTodos(this, GroupTotalTodo, AsHtml: true) +
+                            this.GetBadge_TotalBugs(this, GroupTotalBugs, AsHtml: true) +
+                            this.GetBadge_TotalNotImplemented(this, GroupTotalNotImplemented, AsHtml: true)
+                            // TODO total for custom tags
+                            ,
+                            this.Badge($"Total {this.Generator.Language.Header_CodeLines}", $"{LinesTotal}", LinesTotal == 0
+                                ? BadgeColor.Red
+                                : BadgeColor.Blue, AsHtml: true),
+                            this.Badge($"Total {this.Generator.Language.Header_Documentation}", $"{DocumentedPercent}%", this.Generator.GetColorByPercentage(DocumentedPercent), AsHtml: true),
+                            this.Badge($"Total {this.Generator.Language.Header_Coverage}", $"{CoveredPercent}%", this.Generator.GetColorByPercentage(CoveredPercent), AsHtml: true)
+                            }
+                        };
 
                     this.Table(Header.Add(Body), AsHtml: true, TableWidth: "850px");
                 });
@@ -360,7 +360,7 @@ namespace LCore.LDoc.Markdown
         public string GetBadge_TotalTodos(GeneratedDocument MD, uint GroupTotalTodo, bool AsHtml = false)
             {
             return GroupTotalTodo > 0
-                ? MD.Badge(this.Generator.Language.Badge_TODOs, $"{this.TotalTodos}", BadgeColor.Orange, AsHtml)
+                ? MD.Badge(this.Generator.Language.Badge_TODOs, $"{GroupTotalTodo}", BadgeColor.Orange, AsHtml)
                 : "";
             }
         }
