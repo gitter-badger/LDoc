@@ -104,7 +104,7 @@ namespace LCore.LDoc.Markdown
             try
                 {
                 var Uri1 = new Uri(FullPath);
-                var Uri2 = new Uri(this.FilePath);
+                var Uri2 = new Uri(this.FullPath);
 
                 var Out = Uri2.MakeRelativeUri(Uri1);
 
@@ -150,11 +150,10 @@ namespace LCore.LDoc.Markdown
         /// <returns></returns>
         public string GetLiveUrl()
             {
-            string FullPath = this.FilePath;
             string RootSolution = L.Ref.GetSolutionRootPath();
             string RootGitHub = $"{this.Generator.RootUrl}/blob/master";
 
-            string Out = FullPath.Replace(RootSolution, RootGitHub)
+            string Out = this.FullPath.Replace(RootSolution, RootGitHub)
                 .ReplaceAll("\\", "/");
 
             return Out;

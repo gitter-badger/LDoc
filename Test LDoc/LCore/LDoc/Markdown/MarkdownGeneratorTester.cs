@@ -22,7 +22,6 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
 
         public void Dispose()
             {
-
             }
 
 
@@ -31,26 +30,26 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
             {
             var Gen = new LDocSolutionMarkdownGenerator();
 
-            Gen.SaveCategoryPieChart(new[]
-                    {
-                    "Public Method",
-                    "Public Method",
-                    "Public Method",
-                    "Public Method",
-                    "Public Method",
-                    "Private Method",
-                    "Public Method",
-                    "Public Virtual Method",
-                    "Public Virtual Method",
-                    "Public Virtual Method",
-                    "Public Virtual Method",
-                    "Public Abstract Method",
-                    "Public Abstract Method",
-                    "Public Abstract Method",
-                    "Public Override Method"
-                    },
-                s => s,
-                @"C:\Users\Ben\Desktop\test.png");
+//       Gen.SaveCategoryPieChart(new[]
+//               {
+//               "Public Method",
+//               "Public Method",
+//               "Public Method",
+//               "Public Method",
+//               "Public Method",
+//               "Private Method",
+//               "Public Method",
+//               "Public Virtual Method",
+//               "Public Virtual Method",
+//               "Public Virtual Method",
+//               "Public Virtual Method",
+//               "Public Abstract Method",
+//               "Public Abstract Method",
+//               "Public Abstract Method",
+//               "Public Override Method"
+//               },
+//           s => s,
+//           @"C:\Users\Ben\Desktop\test.png");
             }
 
         [Fact]

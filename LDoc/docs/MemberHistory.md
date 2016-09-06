@@ -1,5 +1,5 @@
-![](Content/LDoc-banner-small.png "")
-[Up](docs/LDoc.md)
+![](../Content/LDoc-banner-small.png "")
+[Up](LDoc.md)
 
 ###### namespace LCore.LDoc.Markdown.Manifest
 
@@ -11,7 +11,7 @@
 
 ![Covered 0%](http://b.repl.ca/v1/Covered-0%25-red.png "")
 
-[View Source](Markdown/Manifest/MemberHistory.cs#L)
+[View Source](../Markdown/Manifest/MemberHistory.cs#L)
 
 ###### Summary
 
@@ -24,12 +24,12 @@
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-15-blue.png" alt="Total Code Lines 15" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
-<tr><td><h4><strong><a href="docs/MemberHistory_UpdateCurrentData.md" alt="">UpdateCurrentData</a></strong></h4></td>
+<tr><td><h4><strong><a href="MemberHistory_UpdateCurrentData.md" alt="">UpdateCurrentData</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="Markdown/Manifest/MemberHistory.cs#L105" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-15-blue.png" alt="Lines of Code 15" /></a></td>
+<td><a href="../Markdown/Manifest/MemberHistory.cs#L105" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-15-blue.png" alt="Lines of Code 15" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td align="Left" colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="" alt="">UpdateCurrentData</a>();</h6>
+<tr><td align="Left" colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="../docs" alt="">UpdateCurrentData</a>();</h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="5"></td></tr>
@@ -42,33 +42,33 @@
 <td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-20-blue.png" alt="Total Code Lines 20" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
-<tr><td><h4><strong><a href="docs/MemberHistory_MemberName.md" alt="">MemberName</a></strong></h4></td>
+<tr><td><h4><strong><a href="MemberHistory_MemberName.md" alt="">MemberName</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="Markdown/Manifest/MemberHistory.cs#L17" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Manifest/MemberHistory.cs#L17" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6></h6>
 </td>
 </tr>
-<tr><td><h4><strong><a href="docs/MemberHistory_FullUrl_Documentation.md" alt="">FullUrl_Documentation</a></strong></h4></td>
+<tr><td><h4><strong><a href="MemberHistory_FullUrl_Documentation.md" alt="">FullUrl_Documentation</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="Markdown/Manifest/MemberHistory.cs#L22" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Manifest/MemberHistory.cs#L22" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6></h6>
 </td>
 </tr>
-<tr><td><h4><strong><a href="docs/MemberHistory_Current.md" alt="">Current</a></strong></h4></td>
+<tr><td><h4><strong><a href="MemberHistory_Current.md" alt="">Current</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="Markdown/Manifest/MemberHistory.cs#L27" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Manifest/MemberHistory.cs#L27" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6></h6>
 </td>
 </tr>
-<tr><td><h4><strong><a href="docs/MemberHistory_History.md" alt="">History</a></strong></h4></td>
+<tr><td><h4><strong><a href="MemberHistory_History.md" alt="">History</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-1-yellow.png" alt="TODOs 1" />   </td>
-<td><a href="Markdown/Manifest/MemberHistory.cs#L32" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><a href="../Markdown/Manifest/MemberHistory.cs#L32" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6></h6>
@@ -82,6 +82,6 @@
 
 ---
 
-Copyright 2016 &copy; [](../README.md) [](../TableOfContents.md)
+Copyright 2016 &copy; [](../../README.md) [](../../TableOfContents.md)
 
 This markdown was generated by [LDoc](https://github.com/CodeSingularity/LDoc), powered by [LUnit](https://github.com/CodeSingularity/LUnit), [LCore](https://github.com/CodeSingularity/LCore)
