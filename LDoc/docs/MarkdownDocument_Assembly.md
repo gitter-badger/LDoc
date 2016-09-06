@@ -29,7 +29,7 @@
 <td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L122" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png" alt="Lines of Code 14" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="" alt="">GetBadges_Info</a>(<strong><a href="docs/GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="">AssemblyCoverage</a> Coverage, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/ICodeComment.md" alt="">ICodeComment</a> Comments);</h6>
+<tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="" alt="">GetBadges_Info</a>(<strong><a href="docs/GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> Comments);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_GetBadge_FrameworkVersion.md" alt="">GetBadge_FrameworkVersion</a></strong></h4></td>
@@ -45,7 +45,65 @@
 <td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L157" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-3-blue.png" alt="Lines of Code 3" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="" alt="">GetBadges_Coverage</a>(<strong><a href="docs/GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="">AssemblyCoverage</a> Coverage, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/ICodeComment.md" alt="">ICodeComment</a> Comments);</h6>
+<tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="" alt="">GetBadges_Coverage</a>(<strong><a href="docs/GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> Comments);</h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
+
+<table>
+<thead><tr><td><h4>Public Properties <strong>(6)</strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-90-orange.png" alt="TODOs 90" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-29-blue.png" alt="Total Code Lines 29" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_Assembly.md" alt="">Assembly</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L22" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_Coverage.md" alt="">Coverage</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L27" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_TypesCovered.md" alt="">TypesCovered</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L32" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_TotalTodos.md" alt="">TotalTodos</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L37" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_TotalBugs.md" alt="">TotalBugs</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L42" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_Assembly_TotalNotImplemented.md" alt="">TotalNotImplemented</a></strong></h4></td>
+<td><img src="http://b.repl.ca/v1/TODOs-10-yellow.png" alt="TODOs 10" />   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_Assembly.cs#L47" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="5"></td></tr>

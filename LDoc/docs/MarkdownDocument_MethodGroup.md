@@ -134,6 +134,24 @@
 </table>
 
 
+<table>
+<thead><tr><td><h4>Public Properties <strong>(1)</strong></h4></td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-0-red.png" alt="Total Code Lines 0" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_MethodGroup_Methods.md" alt="">Methods</a></strong></h4></td>
+<td>   </td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
+
 
 
 ---

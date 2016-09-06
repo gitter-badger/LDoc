@@ -13,19 +13,28 @@ namespace LCore.LDoc.Markdown.Manifest
     /// <summary>
     /// Stores manifest information for automatically inter-linking LDoc projects
     /// </summary>
-    public class LDocManifest
+    public class LDocTypeManifest
         {
         /// <summary>
         /// Member documents generated (member fully qualified name, full url to document)
         /// </summary>
-        public List<DocumentManifest> MemberDocuments { get; set; }
+        public List<DocumentManifest> MemberDocuments { get; set; } = new List<DocumentManifest>();
+
+        /// <summary>
+        /// Create a new manifest file
+        /// </summary>
+        public LDocTypeManifest()
+            {
+            }
 
         /// <summary>
         /// Create a manifest file from a group of <see cref="GeneratedDocument"/>
         /// </summary>
-        public LDocManifest(IEnumerable<GeneratedDocument> Docs)
+        public LDocTypeManifest(IEnumerable<GeneratedDocument> Docs)
             {
-            this.MemberDocuments = Docs.Convert(Doc => new DocumentManifest(Doc));
+            this.MemberDocuments = Docs
+                .Select(Doc => Doc is MarkdownDocument_Type)
+                .Convert(Doc => new DocumentManifest(Doc));
             }
 
         /// <summary>
@@ -36,9 +45,9 @@ namespace LCore.LDoc.Markdown.Manifest
             {
             return this.MemberDocuments.First(Doc =>
                 {
-                if (Member is MethodInfo)
-                    return Doc.MemberName == ((MethodInfo) Member).ToInvocationSignature();
-                return Doc.MemberName == Member.FullyQualifiedName();
+                    if (Member is MethodInfo)
+                        return Doc.MemberName == ((MethodInfo)Member).ToInvocationSignature();
+                    return Doc.MemberName == Member.FullyQualifiedName();
                 });
             }
 
@@ -51,11 +60,20 @@ namespace LCore.LDoc.Markdown.Manifest
             }
 
         /// <summary>
-        /// Creates a <see cref="LDocManifest"/> from a JSON <see cref="string"/>
+        /// Creates a <see cref="LDocTypeManifest"/> from a JSON <see cref="string"/>
         /// </summary>
-        public static LDocManifest FromJSON(string Data)
+        public static LDocTypeManifest FromJSON(string Data)
             {
-            return JsonConvert.DeserializeObject<LDocManifest>(Data);
+            return JsonConvert.DeserializeObject<LDocTypeManifest>(Data);
+            }
+
+        /// <summary>
+        /// Merges an existing <see cref="LDocTypeManifest"/> with a current document structure.
+        /// This should only add changes since last generation.
+        /// </summary>
+        public void CaptureHistory(IEnumerable<GeneratedDocument> Docs)
+            {
+            // TODO merge local data with existing
             }
         }
     }

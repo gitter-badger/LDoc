@@ -15,8 +15,41 @@
 
 ###### Summary
 
-            Constant Urls
+             Constant Urls
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
             
+             
+             
+
+<table>
+<thead><tr><td><h4>Public Static Properties <strong>(1)</strong></h4></td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-18-blue.png" alt="Total Code Lines 18" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-0%25-red.png" alt="Total Documentation 0%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/Urls_GitHubUrl.md" alt="">GitHubUrl</a></strong></h4></td>
+<td>   </td>
+<td><a href="LDoc.cs#L47" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png" alt="Lines of Code 18" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
 
 
 

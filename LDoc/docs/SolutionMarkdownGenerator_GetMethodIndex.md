@@ -20,7 +20,7 @@
 
 ##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetMethodIndex(<a href="https://msdn.microsoft.com/en-us/library/system.reflection.memberinfo.aspx" alt="">MemberInfo</a> Member);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](Markdown/Generators/SolutionMarkdownGenerator.cs#L833) ![TODOs 4](http://b.repl.ca/v1/TODOs-4-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/SolutionMarkdownGenerator.cs#L833)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 8](http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png "")](Markdown/Generators/SolutionMarkdownGenerator.cs#L844) ![TODOs 4](http://b.repl.ca/v1/TODOs-4-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/SolutionMarkdownGenerator.cs#L844)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](Markdown/Generators/SolutionMarkdownGenerator.cs)
 

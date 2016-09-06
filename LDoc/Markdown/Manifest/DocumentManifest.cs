@@ -18,7 +18,7 @@ namespace LCore.LDoc.Markdown.Manifest
         public string MemberName { get; set; }
 
         /// <summary>
-        /// The fully qualified URL to the 
+        /// The fully qualified URL to the member documentation
         /// </summary>
         public string FullUrl_Documentation { get; set; }
 

@@ -18,6 +18,56 @@
             Class to describe projects within markdown documents
             
 
+<table>
+<thead><tr><td><h4>Public Properties <strong>(5)</strong></h4></td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-35-blue.png" alt="Total Code Lines 35" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/ProjectInfo_Name.md" alt="">Name</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Projects/ProjectInfo.cs#L19" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/ProjectInfo_Description.md" alt="">Description</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Projects/ProjectInfo.cs#L24" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/ProjectInfo_Url.md" alt="">Url</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Projects/ProjectInfo.cs#L29" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/ProjectInfo_LDocTypeManifestUrls.md" alt="">LDocTypeManifestUrls</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Projects/ProjectInfo.cs#L34" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/ProjectInfo_Manifests.md" alt="">Manifests</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Projects/ProjectInfo.cs#L41" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-15-blue.png" alt="Lines of Code 15" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
+
 
 
 ---

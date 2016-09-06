@@ -17,21 +17,21 @@ namespace LCore.LDoc.Markdown
                 Name = "LCore",
                 Description = "",
                 Url = LUnit.LUnit.Urls.GitHubRepository_LCore,
-                LDocManifestUrls = new [] { "https://raw.githubusercontent.com/CodeSingularity/LCore/master/document-manifest.json" }
+                LDocTypeManifestUrls = new [] { "https://raw.githubusercontent.com/CodeSingularity/LCore/master/type-manifest.json" }
                 },
             new ProjectInfo
                 {
                 Name = "LUnit",
                 Description = "",
                 Url = LUnit.LUnit.Urls.GitHubRepository_LUnit,
-                LDocManifestUrls = new [] { "https://raw.githubusercontent.com/CodeSingularity/LUnit/master/document-manifest.json" }
+                LDocTypeManifestUrls = new [] { "https://raw.githubusercontent.com/CodeSingularity/LUnit/master/type-manifest.json" }
                 },
             new ProjectInfo
                 {
                 Name = "LDoc",
                 Description = "",
                 Url = LDoc.Urls.GitHubUrl,
-                LDocManifestUrls = new[] {"https://raw.githubusercontent.com/CodeSingularity/LDoc/master/document-manifest.json"}
+                LDocTypeManifestUrls = new[] { "https://raw.githubusercontent.com/CodeSingularity/LDoc/master/type-manifest.json" }
                 }
             };
         }

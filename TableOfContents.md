@@ -23,7 +23,11 @@
  - [ProjectInfo](LDoc/LDoc/docs/ProjectInfo.md)
  - [Text](LDoc/LDoc/docs/Text.md)
  - [DocumentManifest](LDoc/LDoc/docs/DocumentManifest.md)
- - [LDocManifest](LDoc/LDoc/docs/LDocManifest.md)
+ - [LDocTypeManifest](LDoc/LDoc/docs/LDocTypeManifest.md)
+ - [MemberHistory](LDoc/LDoc/docs/MemberHistory.md)
+ - [MemberHistoryRecord](LDoc/LDoc/docs/MemberHistoryRecord.md)
+ - [TypeHistoryRecord](LDoc/LDoc/docs/TypeHistoryRecord.md)
+ - [LDocDataManifest](LDoc/LDoc/docs/LDocDataManifest.md)
  - [Urls](LDoc/LDoc/docs/Urls.md)
  - [Urls](LDoc/LDoc/docs/LDoc_Urls.md)
  - [BadgeInfoColor](LDoc/LDoc/docs/ColorSettings_BadgeInfoColor.md)
@@ -175,6 +179,7 @@
  - [GetTypeMemberMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetTypeMemberMarkdown.md)
  - [GetAssemblyTypeMarkdown](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetAssemblyTypeMarkdown.md)
  - [GetMethodIndex](LDoc/LDoc/docs/SolutionMarkdownGenerator_GetMethodIndex.md)
+ - [SaveCategoryPieChart](LDoc/LDoc/docs/SolutionMarkdownGenerator_SaveCategoryPieChart.md)
  - [Generate](LDoc/LDoc/docs/SolutionMarkdownGenerator_Generate.md)
  - [DocumentAssemblies](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentAssemblies.md)
  - [RootUrl](LDoc/LDoc/docs/SolutionMarkdownGenerator_RootUrl.md)
@@ -194,20 +199,25 @@
  - [CustomBadgeUrls](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomBadgeUrls.md)
  - [AssemblyComments](LDoc/LDoc/docs/SolutionMarkdownGenerator_AssemblyComments.md)
  - [GeneratedMarkdownRoot](LDoc/LDoc/docs/SolutionMarkdownGenerator_GeneratedMarkdownRoot.md)
- - [MarkdownPath_Manifest](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_Manifest.md)
+ - [MarkdownPath_DataManifest](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_DataManifest.md)
+ - [MarkdownPath_TypeManifest](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_TypeManifest.md)
  - [CustomTypeLinks](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomTypeLinks.md)
  - [CustomCommentTags](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomCommentTags.md)
  - [CustomCommentColor](LDoc/LDoc/docs/SolutionMarkdownGenerator_CustomCommentColor.md)
  - [TestAssemblies](LDoc/LDoc/docs/SolutionMarkdownGenerator_TestAssemblies.md)
  - [DocumentUnitCoverage](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentUnitCoverage.md)
  - [DocumentAttributeCoverage](LDoc/LDoc/docs/SolutionMarkdownGenerator_DocumentAttributeCoverage.md)
+ - [EnableDataManifest](LDoc/LDoc/docs/SolutionMarkdownGenerator_EnableDataManifest.md)
+ - [EnableTypeManifest](LDoc/LDoc/docs/SolutionMarkdownGenerator_EnableTypeManifest.md)
+ - [Manifest_Data](LDoc/LDoc/docs/SolutionMarkdownGenerator_Manifest_Data.md)
+ - [Manifest_Type](LDoc/LDoc/docs/SolutionMarkdownGenerator_Manifest_Type.md)
  - [CSharpLanguage](LDoc/LDoc/docs/SolutionMarkdownGenerator_CSharpLanguage.md)
  - [MarkdownPath_RootFile](LDoc/LDoc/docs/SolutionMarkdownGenerator_MarkdownPath_RootFile.md)
  - [Home_RelatedProjects](LDoc/LDoc/docs/SolutionMarkdownGenerator_L_Home_RelatedProjects.md)
  - [Name](LDoc/LDoc/docs/ProjectInfo_Name.md)
  - [Description](LDoc/LDoc/docs/ProjectInfo_Description.md)
  - [Url](LDoc/LDoc/docs/ProjectInfo_Url.md)
- - [LDocManifestUrls](LDoc/LDoc/docs/ProjectInfo_LDocManifestUrls.md)
+ - [LDocTypeManifestUrls](LDoc/LDoc/docs/ProjectInfo_LDocTypeManifestUrls.md)
  - [Manifests](LDoc/LDoc/docs/ProjectInfo_Manifests.md)
  - [MainReadme](LDoc/LDoc/docs/Text_MainReadme.md)
  - [TableOfContents](LDoc/LDoc/docs/Text_TableOfContents.md)
@@ -251,15 +261,36 @@
  - [TableHeader_Statistics](LDoc/LDoc/docs/Text_TableHeader_Statistics.md)
  - [TableHeaderText_File](LDoc/LDoc/docs/Text_TableHeaderText_File.md)
  - [TableHeaderText_Line](LDoc/LDoc/docs/Text_TableHeaderText_Line.md)
+ - [TypeManifestFile](LDoc/LDoc/docs/Text_TypeManifestFile.md)
  - [ManifestFile](LDoc/LDoc/docs/Text_ManifestFile.md)
  - [TableHeader_Errors](LDoc/LDoc/docs/Text_TableHeader_Errors.md)
  - [Header_Dependencies](LDoc/LDoc/docs/Text_Header_Dependencies.md)
  - [MemberName](LDoc/LDoc/docs/DocumentManifest_MemberName.md)
  - [FullUrl_Documentation](LDoc/LDoc/docs/DocumentManifest_FullUrl_Documentation.md)
- - [GetDocument](LDoc/LDoc/docs/LDocManifest_GetDocument.md)
- - [CreateManifestJSON](LDoc/LDoc/docs/LDocManifest_CreateManifestJSON.md)
- - [FromJSON](LDoc/LDoc/docs/LDocManifest_FromJSON.md)
- - [MemberDocuments](LDoc/LDoc/docs/LDocManifest_MemberDocuments.md)
+ - [GetDocument](LDoc/LDoc/docs/LDocTypeManifest_GetDocument.md)
+ - [CreateManifestJSON](LDoc/LDoc/docs/LDocTypeManifest_CreateManifestJSON.md)
+ - [FromJSON](LDoc/LDoc/docs/LDocTypeManifest_FromJSON.md)
+ - [CaptureHistory](LDoc/LDoc/docs/LDocTypeManifest_CaptureHistory.md)
+ - [MemberDocuments](LDoc/LDoc/docs/LDocTypeManifest_MemberDocuments.md)
+ - [UpdateCurrentData](LDoc/LDoc/docs/MemberHistory_UpdateCurrentData.md)
+ - [MemberName](LDoc/LDoc/docs/MemberHistory_MemberName.md)
+ - [FullUrl_Documentation](LDoc/LDoc/docs/MemberHistory_FullUrl_Documentation.md)
+ - [Current](LDoc/LDoc/docs/MemberHistory_Current.md)
+ - [History](LDoc/LDoc/docs/MemberHistory_History.md)
+ - [DataTime](LDoc/LDoc/docs/MemberHistoryRecord_DataTime.md)
+ - [MemberType](LDoc/LDoc/docs/MemberHistoryRecord_MemberType.md)
+ - [Documented](LDoc/LDoc/docs/MemberHistoryRecord_Documented.md)
+ - [Covered](LDoc/LDoc/docs/MemberHistoryRecord_Covered.md)
+ - [LineCount](LDoc/LDoc/docs/MemberHistoryRecord_LineCount.md)
+ - [IsChanged](LDoc/LDoc/docs/MemberHistoryRecord_IsChanged.md)
+ - [BaseType](LDoc/LDoc/docs/TypeHistoryRecord_BaseType.md)
+ - [Interfaces](LDoc/LDoc/docs/TypeHistoryRecord_Interfaces.md)
+ - [Members](LDoc/LDoc/docs/TypeHistoryRecord_Members.md)
+ - [GetDocument](LDoc/LDoc/docs/LDocDataManifest_GetDocument.md)
+ - [CreateManifestJSON](LDoc/LDoc/docs/LDocDataManifest_CreateManifestJSON.md)
+ - [FromJSON](LDoc/LDoc/docs/LDocDataManifest_FromJSON.md)
+ - [CaptureHistory](LDoc/LDoc/docs/LDocDataManifest_CaptureHistory.md)
+ - [MemberDocuments](LDoc/LDoc/docs/LDocDataManifest_MemberDocuments.md)
  - [GitHubUrl](LDoc/LDoc/docs/Urls_GitHubUrl.md)
  - [Home](LDoc/README.md)
  - [Coverage Summary](LDoc/TableOfContents.md)
@@ -274,37 +305,81 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 14 seconds
+Duration | 16 seconds
 
 
 Documents | Total
 :---  | :--- 
-Markdown Documents | 266
+Markdown Documents | 297
 Project Markdown Documents | 4
 Assembly Markdown Documents | 1
-Type Markdown Documents | 23
-Member Markdown Documents | 236
+Type Markdown Documents | 27
+Member Markdown Documents | 263
 
 
 Markdown | Total
 :---  | :--- 
-Lines | 7194
-Headers | 2082
-Tables | 124
-Badges | 1564
+Lines | 8421
+Headers | 2595
+Tables | 159
+Badges | 2251
 
 
 Links | Total
 :---  | :--- 
-Links | 4279
-Local Links | 3264
-System Links | 654
-LDoc Links | 30
-External Links | 0
+Links | 4975
+Local Links | 3884
+System Links | 684
+LDoc Links | 0
+External Links | 30
 
 
-### Errors (1)
+### Errors (45)
+- Could not find code line count for LCore.LDoc.Markdown.ColorSettings.BadgeInfoColor
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Tools.Set<T1, T2>
+- Could not find type link for LCore.Tools.Set<T1, T2>
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.LUnit.AssemblyCoverage
+- Could not find type link for LCore.Interfaces.ICodeComment
+- Could not find type link for LCore.LUnit.AssemblyCoverage
+- Could not find type link for LCore.Interfaces.ICodeComment
+- Could not find code line count for LCore.LDoc.Markdown.MarkdownDocument_MethodGroup.Methods
+- Could not find code line count for LCore.LDoc.Markdown.MarkdownDocument_Type.MemberMarkdown
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.SaveCategoryPieChart
 - Could not find code line number for LCore.LDoc.Markdown.SolutionMarkdownGenerator.LinkToString
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.Markdown_Assembly
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.Markdown_Member
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.Markdown_MethodGroups
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.AssemblyComments
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_DataManifest
+- Could not find code line count for LCore.LDoc.Markdown.SolutionMarkdownGenerator.MarkdownPath_TypeManifest
+- Could not find code line count for LCore.LDoc.Markdown.Text.Header_Dependencies
+- Could not find code line number for LCore.LDoc.Markdown.Manifest.MemberHistoryRecord.Documented
+- Could not find code line number for LCore.LDoc.Markdown.Manifest.MemberHistoryRecord.Covered
+- Could not find code line number for LCore.LDoc.Markdown.Manifest.MemberHistoryRecord.LineCount
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Tools.Set<T1, T2>
+- Could not find type link for LCore.Tools.Set<T1, T2>
+- Could not find type link for LCore.Tools.Set<T1, T2>
+- Could not find type link for LCore.Tools.Set<T1, T2>
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.LUnit.AssemblyCoverage
+- Could not find type link for LCore.Interfaces.ICodeComment
+- Could not find type link for LCore.LUnit.AssemblyCoverage
+- Could not find type link for LCore.Interfaces.ICodeComment
+- Could not find type link for LCore.LUnit.AssemblyCoverage
+- Could not find type link for LCore.Interfaces.ICodeComment
+- Could not find type link for LCore.LUnit.AssemblyCoverage
+- Could not find type link for LCore.Interfaces.ICodeComment
 
 
 

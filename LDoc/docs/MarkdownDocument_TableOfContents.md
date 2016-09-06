@@ -18,6 +18,32 @@
             Generates markdown for the a project's table of contents.
             
 
+<table>
+<thead><tr><td><h4>Public Properties <strong>(2)</strong></h4></td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-10-blue.png" alt="Total Code Lines 10" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_TableOfContents_AnchorLink_Statistics.md" alt="">AnchorLink_Statistics</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_TableOfContents.cs#L18" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_TableOfContents_AnchorLink_Errors.md" alt="">AnchorLink_Errors</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_TableOfContents.cs#L23" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
+
 
 
 ---

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq.Expressions;
 using System.Net;
@@ -9,6 +10,8 @@ using JetBrains.Annotations;
 using LCore.Extensions;
 using LCore.Interfaces;
 using LCore.LDoc.Markdown.Manifest;
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 // ReSharper disable ExpressionIsAlwaysNull
 // ReSharper disable UnusedParameter.Global
@@ -541,12 +544,19 @@ namespace LCore.LDoc.Markdown
 
 
         /// <summary>
-        /// Generates the markdown path for the manifest JSON file
+        /// Generates the markdown path for the data manifest JSON file
         /// </summary>
-        public virtual string MarkdownPath_Manifest =>
+        public virtual string MarkdownPath_DataManifest =>
             $"{L.Ref.GetSolutionRootPath()}\\" +
             $"{this.Language.ManifestFile}";
 
+
+        /// <summary>
+        /// Generates the markdown path for the type manifest JSON file
+        /// </summary>
+        public string MarkdownPath_TypeManifest =>
+            $"{L.Ref.GetSolutionRootPath()}\\" +
+            $"{this.Language.TypeManifestFile}";
         #endregion
 
         #region Inclusion Conditions
@@ -660,12 +670,13 @@ namespace LCore.LDoc.Markdown
             // Search all known manifests for the type
             foreach (var Project in this.Home_RelatedProjects)
                 foreach (var Manifest in Project.Manifests)
-                    foreach (var Document in Manifest.MemberDocuments)
-                        if (Document.MemberName == Type.FullyQualifiedName())
-                            {
-                            this.Stats.LDocLinks++;
-                            return MD.Link(Document.FullUrl_Documentation, Name, AsHtml: AsHtml);
-                            }
+                    if (Manifest != null)
+                        foreach (var Document in Manifest.MemberDocuments)
+                            if (Document.MemberName == Type.FullyQualifiedName())
+                                {
+                                this.Stats.LDocLinks++;
+                                return MD.Link(Document.FullUrl_Documentation, Name, AsHtml: AsHtml);
+                                }
 
             // Search all dependency manifests for the type
             foreach (var Project in this.Home_DependencyProjects)
@@ -842,6 +853,168 @@ namespace LCore.LDoc.Markdown
 
         #endregion
 
+        #region Charting
+
+        /// <summary>
+        /// Enables generation and use of of charts 
+        /// </summary>
+        protected virtual bool EnableChartGeneration => true;
+
+        /// <summary>
+        /// Save an image chart of a collection split into categories
+        /// </summary>
+        public void SaveCategoryPieChart<T>(IEnumerable<T> Collection, Func<T, string> Categorizer, string FullPath, Size? Size = null)
+            {
+            Dictionary<string, List<T>> GroupedCollection = Collection.Group(Categorizer);
+
+            Size = Size ?? new Size(width: 350, height: 250);
+
+            using (var Chart = new Chart())
+                {
+                Chart.Size = (Size)Size;
+
+                Chart.BackColor = Color.Transparent;
+
+                Chart.ChartAreas.Add(new ChartArea());
+                Chart.Palette = ChartColorPalette.None;
+
+                uint TotalCount = GroupedCollection.Sum(Item => Item.Value.Count);
+
+                var Series = Chart.Series.Add("series");
+
+                Series.IsVisibleInLegend = true;
+
+                Series.CustomProperties = "PieLabelStyle=Outside";
+
+                GroupedCollection.Each((i, Item) =>
+                    {
+
+                        Series.ChartType = SeriesChartType.Doughnut;
+
+                        Series.Points.Add(Item.Value.Count);
+                        Series.SmartLabelStyle = new AnnotationSmartLabelStyle
+                            {
+                            AllowOutsidePlotArea = LabelOutsidePlotAreaStyle.Yes
+                            };
+
+                        var Point = Series.Points[i];
+
+                        Point.XValue = Item.Value.Count;
+
+                        //  Point.Color = Colors.GetAt(i);
+                        Point.BackGradientStyle = GradientStyle.VerticalCenter;
+                        Point.BackSecondaryColor = Color.FromArgb(alpha: 150, baseColor: Point.Color);
+
+                        Point.IsVisibleInLegend = true;
+                        Point.LabelBackColor = Color.FromArgb(alpha: 160, baseColor: Color.Gray);
+
+                        Point.Font = new Font(Point.Font.FontFamily, emSize: 12f);
+
+                        Point.AxisLabel = $"{Item.Key.Pluralize()}".ReplaceAll(" ", "\r\n") +
+                                          $"\r\n{Item.Value.Count} ({Item.Value.Count.PercentageOf((int)TotalCount)}%)";
+                        Point.LegendText = $"{Item.Key}";
+                    });
+
+                Chart.ChartAreas[index: 0].Area3DStyle.Enable3D = true;
+                Chart.ChartAreas[index: 0].Area3DStyle.Inclination = 15;
+                Chart.ChartAreas[index: 0].Area3DStyle.IsClustered = true;
+
+                Chart.SaveImage(FullPath, ChartImageFormat.Png);
+                }
+            }
+
+        #endregion
+
+        #region Manifests
+
+        /// <summary>
+        /// Control the generation of data historical manifest.
+        /// This will track all changes to code over time.
+        /// </summary>
+        public virtual bool EnableDataManifest => false;
+
+        /// <summary>
+        /// Control the generation of type manifest.
+        /// This enables cross-project type linking.
+        /// </summary>
+        public virtual bool EnableTypeManifest => true;
+
+        private void GenerateManifests(List<GeneratedDocument> AllMarkdown)
+            {
+            this.GenerateTypeManifest(AllMarkdown);
+            this.GenerateDataManifest(AllMarkdown);
+            }
+
+        /// <summary>
+        /// Data manifest
+        /// </summary>
+        public LDocDataManifest Manifest_Data { get; protected set; }
+        /// <summary>
+        /// Type manifest
+        /// </summary>
+        public LDocTypeManifest Manifest_Type { get; protected set; }
+
+        private void GenerateDataManifest(List<GeneratedDocument> AllMarkdown)
+            {
+            if (this.Manifest_Data == null)
+                this.Manifest_Data = new LDocDataManifest(AllMarkdown);
+            else
+                this.Manifest_Data.CaptureHistory(AllMarkdown);
+            string JSON = this.Manifest_Data.CreateManifestJSON();
+            File.WriteAllText(this.MarkdownPath_DataManifest, JSON);
+            }
+
+
+        private void GenerateTypeManifest(List<GeneratedDocument> AllMarkdown)
+            {
+            if (this.Manifest_Type == null)
+                this.Manifest_Type = new LDocTypeManifest(AllMarkdown);
+            else
+                this.Manifest_Type.CaptureHistory(AllMarkdown);
+
+            string JSON = this.Manifest_Type.CreateManifestJSON();
+            File.WriteAllText(this.MarkdownPath_TypeManifest, JSON);
+            }
+
+        private void LoadManifests()
+            {
+            this.LoadDataManifest();
+            this.LoadTypeManifest();
+            }
+
+        private void LoadTypeManifest()
+            {
+            try
+                {
+                if (this.EnableTypeManifest)
+                    {
+                    string JSON = File.ReadAllText(this.MarkdownPath_TypeManifest);
+                    this.Manifest_Type = LDocTypeManifest.FromJSON(JSON);
+                    }
+                }
+            catch
+                {
+                }
+            }
+
+        private void LoadDataManifest()
+            {
+            try
+                {
+                if (this.EnableDataManifest)
+                    {
+                    string JSON = File.ReadAllText(this.MarkdownPath_DataManifest);
+                    this.Manifest_Data = LDocDataManifest.FromJSON(JSON);
+                    }
+                }
+            catch
+                {
+                }
+            }
+
+        #endregion
+
+
         /// <summary>
         /// Generates all markdown documentation, optionally writing all files to disk using <paramref name="WriteToDisk"/>. 
         /// </summary>
@@ -874,34 +1047,35 @@ namespace LCore.LDoc.Markdown
             // Lastly, generate table of contents
             this.Markdown_Other.Add(this.Language.TableOfContents, this.GenerateTableOfContentsMarkdown());
 
+            // Load existing manifests
+            this.LoadManifests();
+
             List<GeneratedDocument> AllMarkdown = this.GetAllMarkdown();
 
             if (WriteToDisk)
                 {
                 AllMarkdown.Each(MD =>
-                    {
-                        MD.Generate();
+                {
+                    MD.Generate();
 
-                        string Path = MD.FullPath;
+                    string Path = MD.FullPath;
 
-                        // just to be safe
-                        if (Path.EndsWith(".md"))
-                            {
-                            Path.EnsurePathExists();
+                    // just to be safe
+                    if (Path.EndsWith(".md"))
+                        {
+                        Path.EnsurePathExists();
 
-                            File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
+                        File.WriteAllLines(Path, MD.GetMarkdownLines().Array());
 
-                            MD.Clear();
-                            }
-                        else
-                            {
-                            this.ErrorsReported.Add($"File generated was not a markdown file: {Path}");
-                            }
-                    });
+                        MD.Clear();
+                        }
+                    else
+                        {
+                        this.ErrorsReported.Add($"File generated was not a markdown file: {Path}");
+                        }
+                });
 
-                var Manifest = new LDocManifest(AllMarkdown);
-                string JSON = Manifest.CreateManifestJSON();
-                File.WriteAllText(this.MarkdownPath_Manifest, JSON);
+                this.GenerateManifests(AllMarkdown);
                 }
             }
         }

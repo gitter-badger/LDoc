@@ -179,13 +179,13 @@ namespace LCore.LDoc.Markdown
                                 {
                         this.Header(this.Bold(this.Link(this.GetRelativePath(this.Generator.FindMarkdown(Member.Key).FullPath),
                             Member.Key.Name, AsHtml: true), AsHtml: true), Size: 4, AsHtml: true),
-                        MD.GetBadge_Todos(this, AsHtml: true) + " " +
-                        MD.GetBadge_Bugs(this, AsHtml: true) + " " +
-                        MD.GetBadge_NotImplemented(this, AsHtml: true) + " " +
-                        MD.GetBadge_CustomTags(this, AsHtml: true).JoinLines(" "),
-                        MD.GetBadge_CodeLines(this, AsHtml: true),
-                        MD.GetBadge_Documented(this, AsHtml: true),
-                        MD.GetBadge_Covered(this, AsHtml: true)
+                            Member.Value.GetBadge_Todos(this, AsHtml: true) + " " +
+                            Member.Value.GetBadge_Bugs(this, AsHtml: true) + " " +
+                            Member.Value.GetBadge_NotImplemented(this, AsHtml: true) + " " +
+                            Member.Value.GetBadge_CustomTags(this, AsHtml: true).JoinLines(" "),
+                            Member.Value.GetBadge_CodeLines(this, AsHtml: true),
+                            Member.Value.GetBadge_Documented(this, AsHtml: true),
+                            Member.Value.GetBadge_Covered(this, AsHtml: true)
                             });
                             Body.Add(new[]
                             {

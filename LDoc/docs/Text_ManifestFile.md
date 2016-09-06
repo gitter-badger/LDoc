@@ -12,7 +12,7 @@
 
 ##### Summary
 
-            The default file name for JSON manifest documents
+            The default file name for JSON data manifest documents
             
 
 

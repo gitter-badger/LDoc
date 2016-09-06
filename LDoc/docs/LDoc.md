@@ -21,12 +21,12 @@
 <table>
 <thead><tr><td><h4>Public Static Classes <strong>(1)</strong></h4></td>
 <td></td>
-<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-8-blue.png" alt="Total Code Lines 8" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-37-blue.png" alt="Total Code Lines 37" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="docs/LDoc_Urls.md" alt="">Urls</a></strong></h4></td>
 <td>   </td>
-<td><a href="LDoc.cs#L12" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-8-blue.png" alt="Lines of Code 8" /></a></td>
+<td><a href="LDoc.cs#L12" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-37-blue.png" alt="Lines of Code 37" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6></h6>

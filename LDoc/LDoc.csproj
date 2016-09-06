@@ -32,12 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentAssertions, Version=4.13.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.4.13.1\lib\net45\FluentAssertions.dll</HintPath>
+    <Reference Include="FluentAssertions, Version=4.14.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FluentAssertions.Core, Version=4.13.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.4.13.1\lib\net45\FluentAssertions.Core.dll</HintPath>
+    <Reference Include="FluentAssertions.Core, Version=4.14.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=10.1.5.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
@@ -45,15 +45,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="L Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.246.7.26\lib\net451\L Utilities.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.250.5.27\lib\net451\L Utilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="L, Version=0.9.0.11, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LCore.2016.246.7.26\lib\net451\L.dll</HintPath>
+      <HintPath>..\packages\LCore.2016.250.5.27\lib\net451\L.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="LUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LUnit.2016.246.6.57\lib\net452\LUnit.dll</HintPath>
+      <HintPath>..\packages\LUnit.2016.246.22.42\lib\net452\LUnit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.UnitTestFramework.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5bf63060baa03a11, processorArchitecture=MSIL">
@@ -68,6 +68,24 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization">
+      <HintPath>..\packages\Microsoft.Chart.Controls.3.5.30729\lib\net35\System.Web.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design">
+      <HintPath>..\packages\Microsoft.Chart.Controls.3.5.30729\lib\net35\System.Web.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <HintPath>..\packages\Microsoft.Chart.Controls.3.5.30729\lib\net35\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design">
+      <HintPath>..\packages\Microsoft.Chart.Controls.3.5.30729\lib\net35\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -99,8 +117,12 @@
     <Compile Include="Markdown\Generators\MarkdownDocument_TagSummary.cs" />
     <Compile Include="Markdown\Manifest\DocumentManifest.cs" />
     <Compile Include="Markdown\Generators\GeneratedDocument.cs" />
+    <Compile Include="Markdown\Manifest\LDocTypeManifest.cs" />
+    <Compile Include="Markdown\Manifest\MemberHistory.cs" />
+    <Compile Include="Markdown\Manifest\MemberHistoryRecord.cs" />
+    <Compile Include="Markdown\Manifest\TypeHistoryRecord.cs" />
     <Compile Include="Markdown\Statistics\GeneratorStatistics.cs" />
-    <Compile Include="Markdown\Manifest\LDocManifest.cs" />
+    <Compile Include="Markdown\Manifest\LDocDataManifest.cs" />
     <Compile Include="Markdown\Generators\Markdown.cs" />
     <Compile Include="Attributes\Interfaces\IExcludeFromMarkdownAttribute.cs" />
     <Compile Include="Markdown\Generators\MarkdownDocument_Assembly.cs" />

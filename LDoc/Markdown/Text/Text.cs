@@ -223,9 +223,13 @@ namespace LCore.LDoc.Markdown
         /// </summary>
         public string TableHeaderText_Line { get; set; } = "Line";
 
+        /// <summary>
+        /// The default file name for JSON type manifest documents
+        /// </summary>
+        public string TypeManifestFile { get; set; } = "type-manifest.json";
 
         /// <summary>
-        /// The default file name for JSON manifest documents
+        /// The default file name for JSON data manifest documents
         /// </summary>
         public string ManifestFile { get; set; } = "document-manifest.json";
 

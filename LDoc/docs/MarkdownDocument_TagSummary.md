@@ -18,6 +18,32 @@
             Generates markdown for the tag summary file of a project.
             
 
+<table>
+<thead><tr><td><h4>Public Properties <strong>(2)</strong></h4></td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-10-blue.png" alt="Total Code Lines 10" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_TagSummary_TagName.md" alt="">TagName</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_TagSummary.cs#L19" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td><h4><strong><a href="docs/MarkdownDocument_TagSummary_TagLines.md" alt="">TagLines</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Generators/MarkdownDocument_TagSummary.cs#L24" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-5-blue.png" alt="Lines of Code 5" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
+
 
 
 ---

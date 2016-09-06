@@ -31,14 +31,14 @@ namespace LCore.LDoc.Markdown
         /// <summary>
         /// Project LDoc Manifest Url(s)
         /// </summary>
-        public string[] LDocManifestUrls { get; set; } = {};
+        public string[] LDocTypeManifestUrls { get; set; } = { };
 
-        private LDocManifest[] _Manifests;
+        private LDocTypeManifest[] _Manifests;
 
         /// <summary>
-        /// Loads and caches <see cref="LDocManifest"/> documents for the project
+        /// Loads and caches <see cref="LDocTypeManifest"/> documents for the project
         /// </summary>
-        public LDocManifest[] Manifests
+        public LDocTypeManifest[] Manifests
             {
             get
                 {
@@ -46,11 +46,19 @@ namespace LCore.LDoc.Markdown
 
                 return L.Logic.Cache(ref this._Manifests, () =>
                     {
-                    return this.LDocManifestUrls.Convert(Url =>
-                        {
-                        string JSON = Client.DownloadString(Url);
-                        return LDocManifest.FromJSON(JSON);
-                        });
+                        return this.LDocTypeManifestUrls.Convert(Url =>
+                            {
+                                try
+                                    {
+
+                                    string JSON = Client.DownloadString(Url);
+                                    return LDocTypeManifest.FromJSON(JSON);
+                                    }
+                                catch (WebException)
+                                    {
+                                    return null;
+                                    }
+                            });
                     });
                 }
             }

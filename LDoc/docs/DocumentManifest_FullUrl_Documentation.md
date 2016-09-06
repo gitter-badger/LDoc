@@ -12,7 +12,7 @@
 
 ##### Summary
 
-            The fully qualified URL to the 
+            The fully qualified URL to the member documentation
             
 
 

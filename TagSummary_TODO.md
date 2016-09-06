@@ -2,11 +2,12 @@
 
 ### Summary 'TODO'
 
-#### Total (35)
+#### Total (45)
 
-Line | [Markdown.cs](LDoc/LDoc/Markdown/Generators/Markdown.cs) (1)
+Line | [Markdown.cs](LDoc/LDoc/Markdown/Generators/Markdown.cs) (2)
 :---  | :--- 
-[415](LDoc/LDoc/Markdown/Generators/Markdown.cs#L415) |                                 // TODO test html cell alignment
+[24](LDoc/LDoc/Markdown/Generators/Markdown.cs#L24) |         // TODO add AsHtml to remaining methods
+[418](LDoc/LDoc/Markdown/Generators/Markdown.cs#L418) |                                 // TODO test html cell alignment
 
 
 Line | [MarkdownDocument_Assembly.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs) (10)
@@ -57,10 +58,35 @@ Line | [MarkdownDocument_Type.cs](LDoc/LDoc/Markdown/Generators/MarkdownDocument
 
 Line | [SolutionMarkdownGenerator.cs](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs) (4)
 :---  | :--- 
-[573](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L573) |             // TODO enable constructors
-[590](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L590) |             // TODO resolve link from type name
-[592](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L592) |             // TODO resolve link from sibling member
-[594](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L594) |             // TODO resolve link from member parameter
+[583](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L583) |             // TODO enable constructors
+[600](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L600) |             // TODO resolve link from type name
+[602](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L602) |             // TODO resolve link from sibling member
+[604](LDoc/LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs#L604) |             // TODO resolve link from member parameter
+
+
+Line | [LDocTypeManifest.cs](LDoc/LDoc/Markdown/Manifest/LDocTypeManifest.cs) (1)
+:---  | :--- 
+[76](LDoc/LDoc/Markdown/Manifest/LDocTypeManifest.cs#L76) |             // TODO merge local data with existing
+
+
+Line | [MemberHistory.cs](LDoc/LDoc/Markdown/Manifest/MemberHistory.cs) (1)
+:---  | :--- 
+[110](LDoc/LDoc/Markdown/Manifest/MemberHistory.cs#L110) |             // TODO ensure FindMembers properly handles method invocation signatures
+
+
+Line | [TypeHistoryRecord.cs](LDoc/LDoc/Markdown/Manifest/TypeHistoryRecord.cs) (5)
+:---  | :--- 
+[36](LDoc/LDoc/Markdown/Manifest/TypeHistoryRecord.cs#L36) |         // TODO track comments and tags
+[61](LDoc/LDoc/Markdown/Manifest/TypeHistoryRecord.cs#L61) |                 // TODO compare base type
+[62](LDoc/LDoc/Markdown/Manifest/TypeHistoryRecord.cs#L62) |                 // TODO compare interfaces type
+[63](LDoc/LDoc/Markdown/Manifest/TypeHistoryRecord.cs#L63) |                 // TODO compare member count
+[78](LDoc/LDoc/Markdown/Manifest/TypeHistoryRecord.cs#L78) |             // TODO load members
+
+
+Line | [LDocDataManifest.cs](LDoc/LDoc/Markdown/Manifest/LDocDataManifest.cs) (2)
+:---  | :--- 
+[100](LDoc/LDoc/Markdown/Manifest/LDocDataManifest.cs#L100) |             // TODO map deleted
+[101](LDoc/LDoc/Markdown/Manifest/LDocDataManifest.cs#L101) |             // TODO map renamed
 
 
 

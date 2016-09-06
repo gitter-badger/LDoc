@@ -37,7 +37,7 @@
 <td><a href="Markdown/Generators/GeneratedDocument.cs#L50" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-3-blue.png" alt="Lines of Code 3" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-No-red.png" alt="Documented No" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td align="Left" colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Align.md" alt="">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);</h6>
+<tr><td align="Left" colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="" alt="">Table</a>(<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/78dfe2yb.aspx" alt="" target="_blank">IEnumerable</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt;&gt; Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml, <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> TableWidth);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="docs/GeneratedDocument_Header.md" alt="">Header</a></strong></h4></td>
@@ -104,6 +104,24 @@
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="" alt="">GetLiveUrl</a>();</h6>
+</td>
+</tr>
+<tr><td width="850px" colspan="5"></td></tr>
+</table>
+
+
+<table>
+<thead><tr><td><h4>Public Properties <strong>(1)</strong></h4></td>
+<td></td>
+<td><img src="http://b.repl.ca/v1/Total%20Code%20Lines-4-blue.png" alt="Total Code Lines 4" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Documentation-100%25-brightgreen.png" alt="Total Documentation 100%" /></td>
+<td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
+<tr><td><h4><strong><a href="docs/GeneratedDocument_FullPath.md" alt="">FullPath</a></strong></h4></td>
+<td>   </td>
+<td><a href="Markdown/Generators/GeneratedDocument.cs#L33" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
+<td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
+<td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
+<tr><td align="Left" colspan="5"><h6></h6>
 </td>
 </tr>
 <tr><td width="850px" colspan="5"></td></tr>

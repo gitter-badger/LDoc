@@ -14,7 +14,7 @@
 
 ##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> HeaderAnchor(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, ref <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Anchor, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](Markdown/Generators/Markdown.cs#L113) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/Markdown.cs#L113)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 12](http://b.repl.ca/v1/Lines%20of%20Code-12-blue.png "")](Markdown/Generators/Markdown.cs#L116) ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/Markdown.cs#L116)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](Markdown/Generators/Markdown.cs)
 

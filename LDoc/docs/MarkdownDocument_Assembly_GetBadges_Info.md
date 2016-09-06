@@ -17,7 +17,7 @@
 
 #### Public Virtual Method
 
-##### public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; GetBadges_Info(<strong><a href="docs/GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md" alt="">AssemblyCoverage</a> Coverage, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/ICodeComment.md" alt="">ICodeComment</a> Comments);
+##### public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; GetBadges_Info(<strong><a href="docs/GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> Coverage, <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> Comments);
 
 ![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 14](http://b.repl.ca/v1/Lines%20of%20Code-14-blue.png "")](Markdown/Generators/MarkdownDocument_Assembly.cs#L122) ![TODOs 10](http://b.repl.ca/v1/TODOs-10-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/MarkdownDocument_Assembly.cs#L122)
 
@@ -28,8 +28,8 @@
 Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | **[GeneratedDocument](docs/GeneratedDocument.md)** | 
-Coverage | No | [AssemblyCoverage](https://github.com/CodeSingularity/LUnit/blob/master/LUnit/docs/AssemblyCoverage.md) | 
-Comments | No | [ICodeComment](https://github.com/CodeSingularity/LCore/blob/master/L/docs/ICodeComment.md) | 
+Coverage | No | <a href="https://www.google.com/#q=C%23+LCore.LUnit.AssemblyCoverage" alt="Search for 'LCore.LUnit.AssemblyCoverage'" target="_blank">AssemblyCoverage</a> | 
+Comments | No | <a href="https://www.google.com/#q=C%23+LCore.Interfaces.ICodeComment" alt="Search for 'LCore.Interfaces.ICodeComment'" target="_blank">ICodeComment</a> | 
 
 
 #### Returns

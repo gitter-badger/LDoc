@@ -12,9 +12,9 @@
 
 #### Public Virtual Method
 
-##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Table(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://github.com/CodeSingularity/LCore/blob/master/L/docs/Align.md" alt="">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
+##### public virtual <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> Table(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>[] Rows, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> IncludeHeader, <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] Alignment, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](Markdown/Generators/Markdown.cs#L343) ![TODOs 1](http://b.repl.ca/v1/TODOs-1-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/Markdown.cs#L343)
+![Type Public Virtual Method](http://b.repl.ca/v1/Type-Public%20Virtual%20Method-blue.png "") [![Lines of Code 18](http://b.repl.ca/v1/Lines%20of%20Code-18-blue.png "")](Markdown/Generators/Markdown.cs#L346) ![TODOs 2](http://b.repl.ca/v1/TODOs-2-yellow.png "")   ![Documented No](http://b.repl.ca/v1/Documented-No-red.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](Markdown/Generators/Markdown.cs#L346)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](Markdown/Generators/Markdown.cs)
 
@@ -24,7 +24,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Rows | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx)[] | 
 IncludeHeader | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
-Alignment | Yes | [L.Align](https://github.com/CodeSingularity/LCore/blob/master/L/docs/Align.md)[] | 
+Alignment | Yes | <a href="https://www.google.com/#q=C%23+LCore.Extensions.L.Align" alt="Search for 'LCore.Extensions.L.Align'" target="_blank">L.Align</a>[] | 
 AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
