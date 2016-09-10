@@ -6,8 +6,8 @@
 
 Line | [Markdown.cs](LDoc/Markdown/Generators/Markdown.cs) (2)
 :---  | :--- 
-[24](LDoc/Markdown/Generators/Markdown.cs#L24) |         // TODO add AsHtml to remaining methods
-[418](LDoc/Markdown/Generators/Markdown.cs#L418) |                                 // TODO test html cell alignment
+[24](LDoc/Markdown/Generators/Markdown.cs#L24) |         // TODO find a service to provide glyphs
+[428](LDoc/Markdown/Generators/Markdown.cs#L428) |                             // TODO test html cell alignment
 
 
 Line | [MarkdownDocument_Assembly.cs](LDoc/Markdown/Generators/MarkdownDocument_Assembly.cs) (10)
@@ -46,14 +46,14 @@ Line | [MarkdownDocument_Type.cs](LDoc/Markdown/Generators/MarkdownDocument_Type
 [133](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L133) |             // TODO display interfaces 
 [134](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L134) |             // TODO display constructors
 [135](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L135) |             // TODO display subtypes
-[176](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L176) |                             // TODO total for custom tags
-[207](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L207) |                             // TODO total for custom tags
-[251](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L251) |                 // TODO: add total lines of code (non 'empty')
-[252](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L252) |                 // TODO: add total extension methods
-[253](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L253) |                 // TODO: add total todo count
-[254](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L254) |                 // TODO: add total bug count
-[255](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L255) |                 // TODO: add total not implemented count
-[288](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L288) |             // TODO: add total members
+[180](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L180) |                             // TODO total for custom tags
+[213](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L213) |                             // TODO total for custom tags
+[259](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L259) |                 // TODO: add total lines of code (non 'empty')
+[260](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L260) |                 // TODO: add total extension methods
+[261](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L261) |                 // TODO: add total todo count
+[262](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L262) |                 // TODO: add total bug count
+[263](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L263) |                 // TODO: add total not implemented count
+[296](LDoc/Markdown/Generators/MarkdownDocument_Type.cs#L296) |             // TODO: add total members
 
 
 Line | [SolutionMarkdownGenerator.cs](LDoc/Markdown/Generators/SolutionMarkdownGenerator.cs) (4)

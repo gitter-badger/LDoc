@@ -26,7 +26,7 @@
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadges_Info.md" alt="">GetBadges_Info</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-14-yellow.png" alt="TODOs 14" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L226" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-40-blue.png" alt="Lines of Code 40" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L234" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-40-blue.png" alt="Lines of Code 40" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="../docs" alt="">GetBadges_Info</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -34,7 +34,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadge_TotalMembers.md" alt="">GetBadge_TotalMembers</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-14-yellow.png" alt="TODOs 14" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L286" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L294" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-6-blue.png" alt="Lines of Code 6" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="../docs" alt="">GetBadge_TotalMembers</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -42,7 +42,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadges_Coverage.md" alt="">GetBadges_Coverage</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-14-yellow.png" alt="TODOs 14" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L296" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-24-blue.png" alt="Lines of Code 24" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L304" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-24-blue.png" alt="Lines of Code 24" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public virtual <a href="https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" alt="" target="_blank">List</a>&lt;<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a>&gt; <a href="../docs" alt="">GetBadges_Coverage</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD);</h6>
@@ -60,7 +60,7 @@
 <td><img src="http://b.repl.ca/v1/Total%20Coverage-0%25-red.png" alt="Total Coverage 0%" /></td></tr></thead>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadge_TotalNotImplemented.md" alt="">GetBadge_TotalNotImplemented</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-14-yellow.png" alt="TODOs 14" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L340" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L348" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="../docs" alt="">GetBadge_TotalNotImplemented</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a> GroupTotalNotImplemented, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -68,7 +68,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadge_TotalBugs.md" alt="">GetBadge_TotalBugs</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-14-yellow.png" alt="TODOs 14" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L350" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L358" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="../docs" alt="">GetBadge_TotalBugs</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a> GroupTotalBugs, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
@@ -76,7 +76,7 @@
 </tr>
 <tr><td><h4><strong><a href="MarkdownDocument_Type_GetBadge_TotalTodos.md" alt="">GetBadge_TotalTodos</a></strong></h4></td>
 <td><img src="http://b.repl.ca/v1/TODOs-14-yellow.png" alt="TODOs 14" />   </td>
-<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L360" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
+<td><a href="../Markdown/Generators/MarkdownDocument_Type.cs#L368" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png" alt="Lines of Code 7" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
 <tr><td align="Left" colspan="5"><h6>public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> <a href="../docs" alt="">GetBadge_TotalTodos</a>(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a> GroupTotalTodo, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>

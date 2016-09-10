@@ -64,11 +64,11 @@ namespace LCore.LDoc.Markdown
             }
 
         /// <inheritdoc />
-        public override void HeaderUnderline(string Line, int Size = 1)
+        public override void HeaderUnderline(string Line, int Size = 1, bool AsHtml = false)
             {
             this.Generator.Stats.Headers++;
 
-            base.HeaderUnderline(Line, Size);
+            base.HeaderUnderline(Line, Size, AsHtml);
             }
 
         /// <inheritdoc />

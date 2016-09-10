@@ -15,7 +15,7 @@
 
 #### Public Override Method
 
-##### public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> HeaderUnderline(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size);
+##### public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> HeaderUnderline(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
 ![Type Public Override Method](http://b.repl.ca/v1/Type-Public%20Override%20Method-blue.png "") [![Lines of Code 4](http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png "")](../Markdown/Generators/GeneratedDocument.cs#L67)    ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/GeneratedDocument.cs#L67)
 
@@ -27,6 +27,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 Line | No | [String](https://msdn.microsoft.com/en-us/library/system.string.aspx) | 
 Size | Yes | [Int32](https://msdn.microsoft.com/en-us/library/system.int32.aspx) | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

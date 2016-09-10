@@ -28,8 +28,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         [Fact]
         public void PieChartGeneration()
             {
-            var Gen = new LDocSolutionMarkdownGenerator();
-
+//          var Gen = new LDocSolutionMarkdownGenerator();
 //       Gen.SaveCategoryPieChart(new[]
 //               {
 //               "Public Method",

@@ -53,7 +53,7 @@
 <td><a href="../Markdown/Generators/GeneratedDocument.cs#L67" alt=""><img src="http://b.repl.ca/v1/Lines%20of%20Code-4-blue.png" alt="Lines of Code 4" /></a></td>
 <td><img src="http://b.repl.ca/v1/Documented-Yes-brightgreen.png" alt="Documented Yes" /></td>
 <td><img src="http://b.repl.ca/v1/Covered-No-red.png" alt="Covered No" /></td></tr>
-<tr><td align="Left" colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="../docs" alt="">HeaderUnderline</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size);</h6>
+<tr><td align="Left" colspan="5"><h6>public override <a href="https://msdn.microsoft.com/en-us/library/system.void.aspx" alt="">void</a> <a href="../docs" alt="">HeaderUnderline</a>(<a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> Line, <a href="https://msdn.microsoft.com/en-us/library/system.int32.aspx" alt="">Int32</a> Size, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);</h6>
 </td>
 </tr>
 <tr><td><h4><strong><a href="GeneratedDocument_Link.md" alt="">Link</a></strong></h4></td>

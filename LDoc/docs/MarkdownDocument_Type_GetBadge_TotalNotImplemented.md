@@ -19,7 +19,7 @@
 
 ##### public <a href="https://msdn.microsoft.com/en-us/library/system.string.aspx" alt="">String</a> GetBadge_TotalNotImplemented(<strong><a href="GeneratedDocument.md" alt="">GeneratedDocument</a></strong> MD, <a href="https://msdn.microsoft.com/en-us/library/system.uint32.aspx" alt="">UInt32</a> GroupTotalNotImplemented, <a href="https://msdn.microsoft.com/en-us/library/system.boolean.aspx" alt="">Boolean</a> AsHtml);
 
-![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")](../Markdown/Generators/MarkdownDocument_Type.cs#L340) ![TODOs 14](http://b.repl.ca/v1/TODOs-14-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/MarkdownDocument_Type.cs#L340)
+![Type Public Method](http://b.repl.ca/v1/Type-Public%20Method-blue.png "") [![Lines of Code 7](http://b.repl.ca/v1/Lines%20of%20Code-7-blue.png "")](../Markdown/Generators/MarkdownDocument_Type.cs#L348) ![TODOs 14](http://b.repl.ca/v1/TODOs-14-yellow.png "")   ![Documented Yes](http://b.repl.ca/v1/Documented-Yes-brightgreen.png "") [![Source Code Available](http://b.repl.ca/v1/Source%20Code-Available-brightgreen.png "")](../Markdown/Generators/MarkdownDocument_Type.cs#L348)
 
 ![Covered No](http://b.repl.ca/v1/Covered-No-red.png "") ![Unit Tested No](http://b.repl.ca/v1/Unit%20Tested-No-lightgrey.png "") ![Attribute Tests 0](http://b.repl.ca/v1/Attribute%20Tests-0-lightgrey.png "") [![Assertions 0](http://b.repl.ca/v1/Assertions-0-lightgrey.png "")](../Markdown/Generators/MarkdownDocument_Type.cs)
 
@@ -29,7 +29,7 @@ Parameter | Optional | Type | Description
 :---  | :---  | :---  | :--- 
 MD | No | **[GeneratedDocument](GeneratedDocument.md)** | 
 GroupTotalNotImplemented | No | [UInt32](https://msdn.microsoft.com/en-us/library/system.uint32.aspx) | 
-AsHtml | No | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
+AsHtml | Yes | [Boolean](https://msdn.microsoft.com/en-us/library/system.boolean.aspx) | 
 
 
 #### Returns

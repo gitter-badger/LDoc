@@ -61,36 +61,36 @@
  - [StartGenerationTime](LDoc/docs/GeneratorStatistics_StartGenerationTime.md)
  - [EndGenerationTime](LDoc/docs/GeneratorStatistics_EndGenerationTime.md)
  - [Duration](LDoc/docs/GeneratorStatistics_Duration.md)
- - [Clear](LDoc/docs/Markdown_Clear.md)
- - [GetMarkdownLines](LDoc/docs/Markdown_GetMarkdownLines.md)
+ - [Line](LDoc/docs/Markdown_Line.md)
+ - [Lines](LDoc/docs/Markdown_Lines.md)
  - [BlankLine](LDoc/docs/Markdown_BlankLine.md)
- - [HorizontalRule](LDoc/docs/Markdown_HorizontalRule.md)
+ - [GetMarkdownLines](LDoc/docs/Markdown_GetMarkdownLines.md)
+ - [Clear](LDoc/docs/Markdown_Clear.md)
  - [Header](LDoc/docs/Markdown_Header.md)
  - [HeaderAnchor](LDoc/docs/Markdown_HeaderAnchor.md)
  - [HeaderUnderline](LDoc/docs/Markdown_HeaderUnderline.md)
+ - [HorizontalRule](LDoc/docs/Markdown_HorizontalRule.md)
+ - [BlockQuote](LDoc/docs/Markdown_BlockQuote.md)
+ - [Italic](LDoc/docs/Markdown_Italic.md)
+ - [Bold](LDoc/docs/Markdown_Bold.md)
+ - [Strikethrough](LDoc/docs/Markdown_Strikethrough.md)
+ - [Image](LDoc/docs/Markdown_Image.md)
+ - [Link](LDoc/docs/Markdown_Link.md)
+ - [Table](LDoc/docs/Markdown_Table-0.md)
+ - [Table](LDoc/docs/Markdown_Table-1.md)
  - [OrderedList](LDoc/docs/Markdown_OrderedList-0.md)
  - [OrderedList](LDoc/docs/Markdown_OrderedList-1.md)
  - [OrderedList](LDoc/docs/Markdown_OrderedList-2.md)
  - [UnorderedList](LDoc/docs/Markdown_UnorderedList-0.md)
  - [UnorderedList](LDoc/docs/Markdown_UnorderedList-1.md)
  - [UnorderedList](LDoc/docs/Markdown_UnorderedList-2.md)
- - [Code](LDoc/docs/Markdown_Code.md)
- - [BlockQuote](LDoc/docs/Markdown_BlockQuote.md)
- - [Lines](LDoc/docs/Markdown_Lines.md)
- - [Line](LDoc/docs/Markdown_Line.md)
- - [Strikethrough](LDoc/docs/Markdown_Strikethrough.md)
- - [Highlight](LDoc/docs/Markdown_Highlight.md)
- - [InlineCode](LDoc/docs/Markdown_InlineCode.md)
- - [Table](LDoc/docs/Markdown_Table-0.md)
- - [Table](LDoc/docs/Markdown_Table-1.md)
- - [Link](LDoc/docs/Markdown_Link.md)
- - [Image](LDoc/docs/Markdown_Image.md)
- - [Italic](LDoc/docs/Markdown_Italic.md)
- - [Bold](LDoc/docs/Markdown_Bold.md)
  - [Badge](LDoc/docs/Markdown_Badge-0.md)
  - [Badge](LDoc/docs/Markdown_Badge-1.md)
+ - [Code](LDoc/docs/Markdown_Code.md)
+ - [InlineCode](LDoc/docs/Markdown_InlineCode.md)
  - [Gravatar](LDoc/docs/Markdown_Gravatar.md)
  - [Title](LDoc/docs/Markdown_Title.md)
+ - [ForceHtml](LDoc/docs/Markdown_ForceHtml.md)
  - [GetBadges_Info](LDoc/docs/MarkdownDocument_Assembly_GetBadges_Info.md)
  - [GetBadge_FrameworkVersion](LDoc/docs/MarkdownDocument_Assembly_GetBadge_FrameworkVersion.md)
  - [GetBadges_Coverage](LDoc/docs/MarkdownDocument_Assembly_GetBadges_Coverage.md)
@@ -305,7 +305,7 @@
 
 Generation Time | Total
 :---  | :--- 
-Duration | 15 seconds
+Duration | 16 seconds
 
 
 Documents | Total
@@ -319,17 +319,17 @@ Member Markdown Documents | 263
 
 Markdown | Total
 :---  | :--- 
-Lines | 8421
-Headers | 2595
-Tables | 159
-Badges | 2251
+Lines | 8424
+Headers | 2592
+Tables | 160
+Badges | 2242
 
 
 Links | Total
 :---  | :--- 
-Links | 4975
-Local Links | 3884
-System Links | 684
+Links | 4989
+Local Links | 3880
+System Links | 702
 LDoc Links | 0
 External Links | 30
 
@@ -337,11 +337,11 @@ External Links | 30
 ### Errors (45)
 - Could not find code line count for LCore.LDoc.Markdown.ColorSettings.BadgeInfoColor
 - Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Tools.Set<T1, T2>
 - Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
 - Could not find type link for LCore.LUnit.AssemblyCoverage
@@ -362,16 +362,16 @@ External Links | 30
 - Could not find code line number for LCore.LDoc.Markdown.Manifest.MemberHistoryRecord.LineCount
 - Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
+- Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.Tools.Set<T1, T2>
 - Could not find type link for LCore.Tools.Set<T1, T2>
 - Could not find type link for LCore.Tools.Set<T1, T2>
 - Could not find type link for LCore.Tools.Set<T1, T2>
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
-- Could not find type link for LCore.Extensions.L.Align
 - Could not find type link for LCore.LUnit.AssemblyCoverage
 - Could not find type link for LCore.Interfaces.ICodeComment
 - Could not find type link for LCore.LUnit.AssemblyCoverage

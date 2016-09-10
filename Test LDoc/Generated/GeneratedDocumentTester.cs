@@ -39,7 +39,7 @@ namespace LDoc_Tests.LCore.LDoc.Markdown
         }
 
         [Fact]
-        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GeneratedDocument)+ "." + nameof(GeneratedDocument.HeaderUnderline) + "(String, Int32)")]
+        [Trait(Traits.TargetMember,nameof(LCore)+ "." + nameof(global::LCore.LDoc)+ "." + nameof(global::LCore.LDoc.Markdown)+ "." + nameof(GeneratedDocument)+ "." + nameof(GeneratedDocument.HeaderUnderline) + "(String, Int32, Boolean)")]
         public void HeaderUnderline()
         {
             // TODO: Implement method test LCore.LDoc.Markdown.GeneratedDocument.HeaderUnderline
