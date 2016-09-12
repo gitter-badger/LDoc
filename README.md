@@ -2,6 +2,8 @@
 
 ## Home
 
+[![Join the chat at https://gitter.im/CodeSingularity/LDoc](https://badges.gitter.im/CodeSingularity/LDoc.svg)](https://gitter.im/CodeSingularity/LDoc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### Installation Instructions
 Add LDoc as a nuget package:
 ```cs
